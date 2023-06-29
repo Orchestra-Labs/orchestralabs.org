@@ -16,20 +16,17 @@
             height: 100vh;
             align-items: center;
             justify-content: center;
-            overflow-x: scroll; /* Enable horizontal scrolling */
-            scroll-behavior: smooth; /* Smooth scrolling behavior */
         }
         
         .panel {
             width: 40%;
-            min-width: 300px; /* Set a minimum width for each panel */
+            min-width: 300px;
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
             padding: 40px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin: 4% 50%; /* Set top and bottom margin to 4% and left and right margin to 2% */
+            margin: 2%;
             text-align: center;
-            transition: transform 0.3s; /* Add transition for smooth sliding animation */
         }
         
         .panel h2 {
@@ -50,33 +47,5 @@
             <p>Symphony Blockchain is a solution for decentralization of stablecoins.</p>
             <p>It is in development and coming soon!</p>
         </div>
-        <div class="panel">
-            <h2>Current Results</h2>
-            <p>Luna dropped to 80% for three days. Using normalized data, Symphony can drop much further and not only hold its peg, but return to its initial state entirely!</p>
-            <img src="Total-Coins-to-Refill-Exchange-and-Reserve-1.png" alt="Image">
-        </div>
-    </div>
-
-    <script>
-        // JavaScript code to enable carousel functionality
-        const container = document.querySelector('.container');
-        const panels = document.querySelectorAll('.panel');
-        const panelStyles = window.getComputedStyle(panels[0]);
-        const panelWidth = panels[0].offsetWidth + parseFloat(panelStyles.marginLeft) + parseFloat(panelStyles.marginRight) + parseFloat(panelStyles.paddingLeft) + parseFloat(panelStyles.paddingRight); // Width of each panel including margin and padding
-        
-        container.style.width = (panelWidth + 0.04 * window.innerWidth) * panels.length + 'px'; // Set container width including margin
-        
-        // Add event listener for scrolling to the next panel
-        container.addEventListener('scroll', () => {
-            const scrollPosition = container.scrollLeft;
-            const currentPanelIndex = Math.round(scrollPosition / panelWidth);
-            const targetPanelIndex = (currentPanelIndex + 1) % panels.length; // Get the index of the next panel
-            const targetScrollPosition = targetPanelIndex * panelWidth;
-            container.scrollTo({
-                left: targetScrollPosition,
-                behavior: 'smooth'
-            });
-        });
-    </script>
 </body>
 </html>
