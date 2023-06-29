@@ -47,35 +47,9 @@
     <div class="container">
         <div class="panel">
             <h2>Introducing Symphony Blockchain</h2>
-            <p>Symphony Blockchain is a solution for decentralization of stablecoins.</p>
+            <p>Symphony Blockchain is a solution for the decentralization of stablecoins.</p>
             <p>It is in development and coming soon!</p>
         </div>
-        <div class="panel">
-            <h2>Current Results</h2>
-            <p>Luna dropped to 80% for three days. Using normalized data, Symphony can drop much further and not only hold its peg, but return to its initial state entirely!</p>
-            <img src="Total-Coins-to-Refill-Exchange-and-Reserve-1.png" alt="Image">
-        </div>
     </div>
-
-    <script>
-        // JavaScript code to enable carousel functionality
-        const container = document.querySelector('.container');
-        const panels = document.querySelectorAll('.panel');
-        const panelWidth = panels[0].offsetWidth + 40; // Width of each panel including margin
-        
-        container.style.width = panelWidth * panels.length + 'px'; // Set container width
-        
-        // Add event listener for scrolling to the next panel
-        container.addEventListener('scroll', () => {
-            const scrollPosition = container.scrollLeft;
-            const currentPanelIndex = Math.round(scrollPosition / panelWidth);
-            const targetPanelIndex = (currentPanelIndex + 1) % panels.length; // Get the index of the next panel
-            const targetScrollPosition = targetPanelIndex * panelWidth;
-            container.scrollTo({
-                left: targetScrollPosition,
-                behavior: 'smooth'
-            });
-        });
-    </script>
 </body>
 </html>
