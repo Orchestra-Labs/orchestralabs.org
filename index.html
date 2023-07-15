@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Symphony Blockchain Introduction</title>
+    <title>Symphony</title>
     <style>
         body {
             margin: 0;
@@ -13,9 +13,9 @@
         
         .container {
             display: flex;
-            height: 100vh;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
         
         .panel {
@@ -38,7 +38,29 @@
             font-size: 16px;
             line-height: 1.5;
         }
+        
+        .hide {
+            display: none;
+        }
     </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var screenHeight = window.innerHeight;
+            var panels = document.querySelectorAll('.panel');
+
+            for (var i = 0; i < panels.length; i++) {
+                var panel = panels[i];
+                var computedStyle = getComputedStyle(panel);
+                var paddingTop = parseInt(computedStyle.paddingTop);
+                var paddingBottom = parseInt(computedStyle.paddingBottom);
+                var marginTop = parseInt(computedStyle.marginTop);
+                var marginBottom = parseInt(computedStyle.marginBottom);
+
+                var translateYValue = (screenHeight / 2) - (paddingTop + paddingBottom) - (marginTop + marginBottom);
+                panel.style.transform = 'translateY(' + translateYValue + 'px)';
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -47,5 +69,18 @@
             <p>Symphony Blockchain is a solution for decentralization of stablecoins.</p>
             <p>It is in development and coming soon!</p>
         </div>
+
+        <div class="panel">
+            <h2>Introducing Symphony Blockchain</h2>
+            <p>It is in development and coming soon!</p>
+            <img class="image" src="Total-Coins-to-Refill-Exchange-and-Reserve.png" alt="Another Image">
+        </div>
+
+        <div class="panel" id="iframeContainer">
+            <h2>Introducing Symphony Blockchain</h2>
+            <p>If you'd like to be one of the first to try this chain, enter your contact information below!</p>
+            <button id="showIframeButton">Show Form</button>
+        </div>
+    </div>
 </body>
 </html>
