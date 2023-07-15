@@ -62,13 +62,15 @@
             z-index: 999; /* Ensure the buttons are on top */
         }
 
-        .navigation button {
+        .navigation a {
             margin-left: 5px;
             padding: 5px 10px;
             background-color: transparent;
             color: white;
             font-size: 14px;
+            text-decoration: none;
             cursor: pointer;
+            border: none;
         }
     </style>
     <script>
@@ -115,7 +117,8 @@
             navigation.classList.add('navigation');
 
             for (var i = 0; i < panelRows.length; i++) {
-                var button = document.createElement('button');
+                var button = document.createElement('a');
+                button.href = '#';
                 button.innerText = i + 1; // Display row number as button label
 
                 button.addEventListener('click', function(event) {
@@ -163,7 +166,7 @@
                 <td class="panel" id="iframeContainer">
                     <h2>Introducing Symphony Blockchain</h2>
                     <p>If you'd like to be one of the first to try this chain, enter your contact information below!</p>
-                    <button id="showIframeButton">Show Form</button>
+                    <a href="#" id="showIframeButton">Show Form</a>
                 </td>
             </tr>
         </table>
