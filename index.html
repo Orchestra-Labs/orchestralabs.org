@@ -18,15 +18,21 @@
             flex-direction: column;
         }
         
-        .panel {
-            width: 40%;
-            min-width: 300px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        table td {
             padding: 40px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin: 2%;
             text-align: center;
+        }
+        
+        .panel {
+            background-color: rgba(0, 0, 0, 1);
+            color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
         .panel h2 {
@@ -41,6 +47,11 @@
         
         .hide {
             display: none;
+        }
+        
+        .clear {
+            background-color: transparent;
+            height: 50vh; /* Set the height to 50% of the viewport height */
         }
     </style>
     <script>
@@ -59,28 +70,63 @@
                 var translateYValue = (screenHeight / 2) - (paddingTop + paddingBottom) - (marginTop + marginBottom);
                 panel.style.transform = 'translateY(' + translateYValue + 'px)';
             }
+
+            var showIframeButton = document.getElementById('showIframeButton');
+            var iframeContainer = document.getElementById('iframeContainer');
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://docs.google.com/forms/d/e/1FAIpQLSeFk4LrJ_h31xdnlWp0rhvJXZZeuD3K8RY8e1GSnj54BD6New/viewform?embedded=true';
+            iframe.width = '640';
+            iframe.height = '900';
+            iframe.frameBorder = '0';
+            iframe.marginHeight = '0';
+            iframe.marginWidth = '0';
+            iframe.style.display = 'none';
+
+            showIframeButton.addEventListener('click', function() {
+                var paragraph = document.querySelector('#iframeContainer p');
+                paragraph.style.display = 'none';
+                iframeContainer.appendChild(iframe);
+                showIframeButton.style.display = 'none';
+                iframe.style.display = 'unset';
+            });
         });
     </script>
 </head>
 <body>
     <div class="container">
-        <div class="panel">
-            <h2>Introducing Symphony Blockchain</h2>
-            <p>Symphony Blockchain is a solution for decentralization of stablecoins.</p>
-            <p>It is in development and coming soon!</p>
-        </div>
+        <table>
+            <tr>
+                <td class="panel">
+                    <h2>Introducing Symphony Blockchain</h2>
+                    <p>Symphony Blockchain is a solution for decentralization of stablecoins.</p>
+                    <p>It is in development and coming soon!</p>
+                </td>
+            </tr>
 
-        <div class="panel">
-            <h2>Introducing Symphony Blockchain</h2>
-            <p>It is in development and coming soon!</p>
-            <img class="image" src="Total-Coins-to-Refill-Exchange-and-Reserve.png" alt="Another Image">
-        </div>
+            <tr>
+                <td class="clear"></td>
+            </tr>
 
-        <div class="panel" id="iframeContainer">
-            <h2>Introducing Symphony Blockchain</h2>
-            <p>If you'd like to be one of the first to try this chain, enter your contact information below!</p>
-            <button id="showIframeButton">Show Form</button>
-        </div>
+            <tr>
+                <td class="panel">
+                    <h2>Introducing Symphony Blockchain</h2>
+                    <p>It is in development and coming soon!</p>
+                    <img class="image" src="Total-Coins-to-Refill-Exchange-and-Reserve.png" alt="Another Image">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clear"></td>
+            </tr>
+
+            <tr>
+                <td class="panel" id="iframeContainer">
+                    <h2>Introducing Symphony Blockchain</h2>
+                    <p>If you'd like to be one of the first to try this chain, enter your contact information below!</p>
+                    <button id="showIframeButton">Show Form</button>
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
