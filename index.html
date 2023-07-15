@@ -25,7 +25,6 @@
         }
 
         table td {
-            padding: 40px;
             text-align: center;
         }
 
@@ -49,11 +48,7 @@
         }
 
         .clear {
-            height: 50vh;    
-        }
-
-        .clear:last-child{
-            height: 100vh;
+            height: 44vh;    
         }
 
         /* Add new styles for navigation buttons */
@@ -78,18 +73,7 @@
         window.addEventListener('DOMContentLoaded', (event) => {
             var screenHeight = window.innerHeight;
             var panels = document.querySelectorAll('.panel');
-    
-            for (var i = 0; i < panels.length; i++) {
-                var panel = panels[i];
-                var computedStyle = getComputedStyle(panel);
-                var paddingTop = parseInt(computedStyle.paddingTop);
-                var paddingBottom = parseInt(computedStyle.paddingBottom);
-                var marginTop = parseInt(computedStyle.marginTop);
-                var marginBottom = parseInt(computedStyle.marginBottom);
-    
-                var translateYValue = (screenHeight / 2) - (paddingTop + paddingBottom) - (marginTop + marginBottom);
-                panel.style.transform = 'translateY(' + translateYValue + 'px)';
-            }
+            var clearElements = document.querySelectorAll('.clear');
     
             var showIframeButton = document.getElementById('showIframeButton');
             var iframeContainer = document.getElementById('iframeContainer');
@@ -129,14 +113,14 @@
                     var targetRow = panelRows[rowNumber];
 
                     // Calculate the target position
-                    var targetPosition = targetRow.offsetTop - (targetRow.offsetHeight / 2) + (window.innerHeight / 2);
+                    var targetPosition = targetRow.offsetTop + (targetRow.offsetHeight / 2) - (window.innerHeight / 2);
                     var computedStyle = getComputedStyle(targetRow);
                     var marginTop = parseInt(computedStyle.marginTop);
                     var marginBottom = parseInt(computedStyle.marginBottom);
                     var paddingTop = parseInt(computedStyle.paddingTop);
                     var paddingBottom = parseInt(computedStyle.paddingBottom);
 
-                    targetPosition += (marginTop + marginBottom + paddingTop + paddingBottom);
+                    targetPosition -= (marginTop + marginBottom + paddingTop + paddingBottom);
 
                     if (rowNumber === 0){
                         targetPosition = 0
@@ -161,6 +145,10 @@
 <body>
     <div class="container">
         <table>
+            <tr>
+                <td class="clear"></td>
+            </tr>
+
             <tr>
                 <td class="panel">
                     <h2>Introducing Symphony Blockchain</h2>
