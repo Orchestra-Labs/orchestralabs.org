@@ -62,20 +62,42 @@
             color: white;
             background-color: rgba(0, 0, 0, 0.8);
             z-index: 999;
+            height: 52px;
         }
 
         .navbar span {
             margin-right: auto;
             font-size: 16px;
             font-weight: bold;
+            font-size: 20px;
+            font-weight: 300;
+            padding-left: 16px;
         }
 
-        .navbar a {
+        #navlinks{
+            padding-right: 16px;
+            align-items: center;
+        }
+
+        #navlinks a{
             margin-left: 5px;
-            padding: 5px 10px;
-            font-size: 14px;
+            padding: 10px 12px;
+            font-size: 16px;
             cursor: pointer;
             border: none;
+            font-style: normal;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        #navlinks a:focus {
+            text-decoration: underline;
+            font-weight: bold;
+            outline: none;
+        }
+
+        #navlinks a:visited {
+            color: #C3A761;
         }
     </style>
     <script>
@@ -84,6 +106,9 @@
             const clearElements = document.querySelectorAll('.clear');
             const panelRows = document.querySelectorAll('tr:has(td.panel)');
             const navigationLinks = document.querySelectorAll('.navbar a');
+            const homeLink = document.getElementById('homeButton');
+
+            homeLink.focus();
 
             for (let i = 0; i < navigationLinks.length; i++) {
                 const link = navigationLinks[i];
@@ -125,9 +150,11 @@
     <div class="container">
         <div class="navbar">
             <span>Symphony</span>
-            <a href="#" id="homeButton">Home</a>
-            <a href="#" id="solutionButton">Solution</a>
-            <a href="#" id="signUpButton">Sign Up</a>
+            <div id="navlinks">
+                <a href="#" id="homeButton">Home</a>
+                <a href="#" id="solutionButton">Solution</a>
+                <a href="#" id="signUpButton">Sign Up</a>
+            </div>
         </div>
 
         <table>
