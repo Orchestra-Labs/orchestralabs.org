@@ -120,11 +120,13 @@
                 var button = document.createElement('a');
                 button.href = '#';
                 button.innerText = i + 1; // Display row number as button label
+                button.setAttribute('data-row', i); // Set the data attribute to store the row index
 
                 button.addEventListener('click', function(event) {
-                    var rowNumber = parseInt(event.target.innerText);
-                    var targetRow = panelRows[rowNumber - 1];
-                    targetRow.scrollIntoView({ behavior: 'smooth' });
+                event.preventDefault(); // Prevent the default behavior of the anchor tag
+                var rowNumber = parseInt(event.target.getAttribute('data-row'));
+                var targetRow = panelRows[rowNumber];
+                targetRow.scrollIntoView({ behavior: 'smooth' });
                 });
 
                 navigation.appendChild(button);
