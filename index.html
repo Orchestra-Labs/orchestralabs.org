@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Symphony Blockchain Introduction</title>
+    <title>Symphony</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             margin: 0;
@@ -10,42 +11,235 @@
             background: url('Logo.png') no-repeat center center fixed;
             background-size: cover;
         }
-        
+
         .container {
             display: flex;
-            height: 100vh;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
-        
-        .panel {
-            width: 40%;
-            min-width: 300px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin: 2%;
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        table td {
             text-align: center;
         }
-        
-        .panel h2 {
+
+        .panel {
+            color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel h1 {
             font-size: 24px;
             margin-bottom: 20px;
         }
-        
+
         .panel p {
             font-size: 16px;
             line-height: 1.5;
         }
+
+        .hide {
+            display: none;
+        }
+
+        .clear {
+            height: 42vh;    
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            height: 52px;
+        }
+
+        #title{
+            display: flex;
+            align-items: center;
+            padding-left: 16px;
+            height: 52px;
+            cursor: pointer;
+        }
+
+        .navbar-icon {
+            height: 42px;
+            padding: 10px 12px;
+        }
+
+        #title span {
+            font-size: 16px;
+            font-weight: bold;
+            font-size: 20px;
+            font-weight: 300;
+            padding: 10px 12px 10px 2px;
+        }
+
+        #navlinks{
+            padding-right: 16px;
+            align-items: center;
+        }
+
+        #navlinks a{
+            margin-left: 5px;
+            padding: 10px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            font-style: normal;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        #navlinks a.active {
+            text-decoration: underline;
+            font-weight: bold;
+            outline: none;
+        }
+
+        #navlinks a:not(.active):not(:hover) {
+            opacity: 0.8;
+        }
+
+        #navlinks a {
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover, a:visited {
+            color: #C3A761;
+        }
+
+        h1{
+            color: #EDBF6A;
+        }
     </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const panels = document.querySelectorAll('.panel');
+            const clearElements = document.querySelectorAll('.clear');
+            const panelRows = document.querySelectorAll('tr:has(td.panel)');
+            const navigationLinks = document.querySelectorAll('.navbar a');
+            const homeButton = document.getElementById('homeButton');
+            const titleDiv = document.getElementById('title');
+
+            for (let i = 0; i < navigationLinks.length; i++) {
+                const link = navigationLinks[i];
+
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetLink = event.target;
+                    const targetTitle = targetLink.innerText.trim();
+                    const targetRow = Array.from(panelRows).find((row) => row.getAttribute('title') === targetTitle);
+
+                    if (targetRow) {
+                        let targetPosition =
+                            targetRow.offsetTop +
+                            targetRow.offsetHeight / 2 -
+                            window.innerHeight / 2;
+                        const computedStyle = getComputedStyle(targetRow);
+                        const marginTop = parseInt(computedStyle.marginTop);
+                        const marginBottom = parseInt(computedStyle.marginBottom);
+                        const paddingTop = parseInt(computedStyle.paddingTop);
+                        const paddingBottom = parseInt(computedStyle.paddingBottom);
+
+                        targetPosition -= marginTop + marginBottom + paddingTop + paddingBottom;
+
+                        if (targetRow === panelRows[0]) {
+                            targetPosition = 0;
+                        }
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth',
+                        });
+
+                        navigationLinks.forEach((link) => {
+                            link.classList.remove('active');
+                        });
+
+                        targetLink.classList.add('active');
+                    }
+                });
+            }
+        
+            titleDiv.addEventListener('click', () => {
+                homeButton.click();
+            });
+            homeButton.classList.add('active');
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <div class="panel">
-            <h2>Introducing Symphony Blockchain</h2>
-            <p>Symphony Blockchain is a solution for decentralization of stablecoins.</p>
-            <p>It is in development and coming soon!</p>
+        <div class="navbar">
+            <div id="title">
+                <img class="navbar-icon" src="sound-wave.png" alt="Sound Wave Icon">
+                <span>Symphony</span>
+            </div>
+
+            <div id="navlinks">
+                <a href="#" id="homeButton">Home</a>
+                <a href="#" id="solutionButton">Solution</a>
+                <a href="#" id="signUpButton">Sign Up</a>
+            </div>
         </div>
+
+        <table>
+            <tr>
+                <td class="clear"></td>
+            </tr>
+
+            <tr title="Home">
+                <td class="panel">
+                    <h1>The Symphony Blockchain</h1>
+                    <p>Symphony is the solution to the increasing centralization of stablecoins.</p>
+                    <p>It is in the final stages of development and coming soon!</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clear"></td>
+            </tr>
+
+            <tr title="Solution">
+                <td class="panel">
+                    <h1>Bank Runs Solved</h1>
+                    <p>
+                        Results utilizing transaction data from Luna's fall show
+                        <br>
+                        Symphony can drop to 1/4 of its original value and still honor full withdrawals!
+                    </p>
+                    <img class="image" src="Total-Coins-to-Refill-Exchange-and-Reserve.png" alt="Another Image">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clear"></td>
+            </tr>
+
+            <tr title="Sign Up">
+                <td class="panel">
+                    <h1>Be the First</h1>
+                    <p>Enter your contact information below to be one of the first to try this chain!</p>
+                    <a href="https://forms.gle/g7YvaKZKz82XTtr66" target="_blank">Show Form</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clear"></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
