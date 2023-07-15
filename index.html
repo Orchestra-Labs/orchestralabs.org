@@ -102,14 +102,26 @@
             text-decoration: none;
         }
 
-        #navlinks a:focus {
+        #navlinks a.active {
             text-decoration: underline;
             font-weight: bold;
             outline: none;
         }
 
-        a:visited {
+        #navlinks a:not(.active):not(:hover) {
+            opacity: 0.8;
+        }
+
+        #navlinks a {
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover, a:visited {
             color: #C3A761;
+        }
+
+        h1{
+            color: #dac77c;
         }
     </style>
     <script>
@@ -151,15 +163,20 @@
                             top: targetPosition,
                             behavior: 'smooth',
                         });
+
+                        navigationLinks.forEach((link) => {
+                            link.classList.remove('active');
+                        });
+
+                        targetLink.classList.add('active');
                     }
                 });
             }
         
             titleDiv.addEventListener('click', () => {
-                // Trigger a click on the 'Home' button
                 homeButton.click();
             });
-            homeButton.focus();
+            homeButton.classList.add('active');
         });
     </script>
 </head>
