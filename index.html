@@ -34,7 +34,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .panel h2 {
+        .panel h1 {
             font-size: 24px;
             margin-bottom: 20px;
         }
@@ -52,99 +52,80 @@
             height: 42vh;    
         }
 
-        /* Add new styles for navigation buttons */
-        .navigation {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 999; /* Ensure the buttons are on top */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: white;
         }
 
-        .navigation a {
+        .navbar span {
+            margin-right: auto;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navbar a {
             margin-left: 5px;
             padding: 5px 10px;
-            color: white;
             font-size: 14px;
-            text-decoration: none;
             cursor: pointer;
             border: none;
         }
     </style>
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
-            var screenHeight = window.innerHeight;
-            var panels = document.querySelectorAll('.panel');
-            var clearElements = document.querySelectorAll('.clear');
-    
-            var showIframeButton = document.getElementById('showIframeButton');
-            var iframeContainer = document.getElementById('iframeContainer');
-            var iframe = document.createElement('iframe');
-            iframe.src = 'https://docs.google.com/forms/d/e/1FAIpQLSeFk4LrJ_h31xdnlWp0rhvJXZZeuD3K8RY8e1GSnj54BD6New/viewform?embedded=true';
-            iframe.width = '640';
-            iframe.height = '900';
-            iframe.frameBorder = '0';
-            iframe.marginHeight = '0';
-            iframe.marginWidth = '0';
-            iframe.style.display = 'none';
-    
-            showIframeButton.addEventListener('click', function() {
-                var paragraph = document.querySelector('#iframeContainer p');
-                paragraph.style.display = 'none';
-                iframeContainer.appendChild(iframe);
-                showIframeButton.style.display = 'none';
-                iframe.style.display = 'unset';
-            });
-            
-            // Get all the table rows with a td.panel
-            var panelRows = document.querySelectorAll('tr:has(td.panel)');
-    
-            // Create navigation buttons for each panel row
-            var navigation = document.createElement('div');
-            navigation.classList.add('navigation');
-    
-            for (var i = 0; i < panelRows.length; i++) {
-                var button = document.createElement('a');
-                button.href = '#';
-                button.innerText = panelRows[i].getAttribute('title');
-                button.setAttribute('data-row', i); // Set the data attribute to store the row index
-    
-                button.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default behavior of the anchor tag
-                    var rowNumber = parseInt(event.target.getAttribute('data-row'));
-                    var targetRow = panelRows[rowNumber];
+            const panels = document.querySelectorAll('.panel');
+            const clearElements = document.querySelectorAll('.clear');
+            const panelRows = document.querySelectorAll('tr:has(td.panel)');
+            const navigationLinks = document.querySelectorAll('.navbar a');
 
-                    // Calculate the target position
-                    var targetPosition = targetRow.offsetTop + (targetRow.offsetHeight / 2) - (window.innerHeight / 2);
-                    var computedStyle = getComputedStyle(targetRow);
-                    var marginTop = parseInt(computedStyle.marginTop);
-                    var marginBottom = parseInt(computedStyle.marginBottom);
-                    var paddingTop = parseInt(computedStyle.paddingTop);
-                    var paddingBottom = parseInt(computedStyle.paddingBottom);
+            for (let i = 0; i < navigationLinks.length; i++) {
+                const link = navigationLinks[i];
 
-                    targetPosition -= (marginTop + marginBottom + paddingTop + paddingBottom);
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetLink = event.target;
+                    const targetTitle = targetLink.innerText.trim();
+                    const targetRow = Array.from(panelRows).find((row) => row.getAttribute('title') === targetTitle);
 
-                    if (rowNumber === 0){
-                        targetPosition = 0
+                    if (targetRow) {
+                        let targetPosition =
+                            targetRow.offsetTop +
+                            targetRow.offsetHeight / 2 -
+                            window.innerHeight / 2;
+                        const computedStyle = getComputedStyle(targetRow);
+                        const marginTop = parseInt(computedStyle.marginTop);
+                        const marginBottom = parseInt(computedStyle.marginBottom);
+                        const paddingTop = parseInt(computedStyle.paddingTop);
+                        const paddingBottom = parseInt(computedStyle.paddingBottom);
+
+                        targetPosition -= marginTop + marginBottom + paddingTop + paddingBottom;
+
+                        if (targetRow === panelRows[0]) {
+                            targetPosition = 0;
+                        }
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth',
+                        });
                     }
-
-                    // Scroll to the target position
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
                 });
-    
-                navigation.appendChild(button);
             }
-    
-            // Add the navigation buttons to the document
-            document.body.appendChild(navigation);
         });
     </script>
-    
 </head>
 <body>
     <div class="container">
+        <div class="navbar">
+            <span>Symphony</span>
+            <a href="#" id="homeButton">Home</a>
+            <a href="#" id="solutionButton">Solution</a>
+            <a href="#" id="signUpButton">Sign Up</a>
+        </div>
+
         <table>
             <tr>
                 <td class="clear"></td>
@@ -179,10 +160,10 @@
             </tr>
 
             <tr title="Sign Up">
-                <td class="panel" id="iframeContainer">
+                <td class="panel">
                     <h1>Be the First</h1>
                     <p>Enter your contact information below to be one of the first to try this chain!</p>
-                    <a href="#" id="showIframeButton">Show Form</a>
+                    <a href="https://forms.gle/g7YvaKZKz82XTtr66" target="_blank">Show Form</a>
                 </td>
             </tr>
 
