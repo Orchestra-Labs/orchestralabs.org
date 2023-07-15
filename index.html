@@ -77,7 +77,7 @@
         window.addEventListener('DOMContentLoaded', (event) => {
             var screenHeight = window.innerHeight;
             var panels = document.querySelectorAll('.panel');
-
+    
             for (var i = 0; i < panels.length; i++) {
                 var panel = panels[i];
                 var computedStyle = getComputedStyle(panel);
@@ -85,11 +85,11 @@
                 var paddingBottom = parseInt(computedStyle.paddingBottom);
                 var marginTop = parseInt(computedStyle.marginTop);
                 var marginBottom = parseInt(computedStyle.marginBottom);
-
+    
                 var translateYValue = (screenHeight / 2) - (paddingTop + paddingBottom) - (marginTop + marginBottom);
                 panel.style.transform = 'translateY(' + translateYValue + 'px)';
             }
-
+    
             var showIframeButton = document.getElementById('showIframeButton');
             var iframeContainer = document.getElementById('iframeContainer');
             var iframe = document.createElement('iframe');
@@ -100,7 +100,7 @@
             iframe.marginHeight = '0';
             iframe.marginWidth = '0';
             iframe.style.display = 'none';
-
+    
             showIframeButton.addEventListener('click', function() {
                 var paragraph = document.querySelector('#iframeContainer p');
                 paragraph.style.display = 'none';
@@ -111,31 +111,51 @@
             
             // Get all the table rows with a td.panel
             var panelRows = document.querySelectorAll('tr:has(td.panel)');
-
+    
             // Create navigation buttons for each panel row
             var navigation = document.createElement('div');
             navigation.classList.add('navigation');
-
+    
             for (var i = 0; i < panelRows.length; i++) {
                 var button = document.createElement('a');
                 button.href = '#';
                 button.innerText = i + 1; // Display row number as button label
                 button.setAttribute('data-row', i); // Set the data attribute to store the row index
-
+    
                 button.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default behavior of the anchor tag
-                var rowNumber = parseInt(event.target.getAttribute('data-row'));
-                var targetRow = panelRows[rowNumber];
-                targetRow.scrollIntoView({ behavior: 'smooth' });
-                });
+                    event.preventDefault(); // Prevent the default behavior of the anchor tag
+                    var rowNumber = parseInt(event.target.getAttribute('data-row'));
+                    var targetRow = panelRows[rowNumber];
 
+                    // Calculate the target position
+                    var targetPosition = targetRow.offsetTop - (targetRow.offsetHeight / 2) + (window.innerHeight / 2);
+                    var computedStyle = getComputedStyle(targetRow);
+                    var marginTop = parseInt(computedStyle.marginTop);
+                    var marginBottom = parseInt(computedStyle.marginBottom);
+                    var paddingTop = parseInt(computedStyle.paddingTop);
+                    var paddingBottom = parseInt(computedStyle.paddingBottom);
+
+                    targetPosition += (marginTop + marginBottom + paddingTop + paddingBottom);
+
+                    if (rowNumber === 0){
+                        targetPosition = 0
+                    }
+
+                    // Scroll to the target position
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+    
                 navigation.appendChild(button);
             }
-
+    
             // Add the navigation buttons to the document
             document.body.appendChild(navigation);
         });
     </script>
+    
 </head>
 <body>
     <div class="container">
