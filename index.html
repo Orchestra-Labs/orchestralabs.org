@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Symphony</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -49,7 +50,7 @@
         }
 
         .clear {
-            height: 42vh;    
+            height: 42vh;
         }
 
         .navbar {
@@ -64,7 +65,7 @@
             height: 52px;
         }
 
-        #title{
+        #title {
             display: flex;
             align-items: center;
             padding-left: 16px;
@@ -85,12 +86,12 @@
             padding: 10px 12px 10px 2px;
         }
 
-        #navlinks{
+        #navlinks {
             padding-right: 16px;
             align-items: center;
         }
 
-        #navlinks a{
+        #navlinks a {
             margin-left: 5px;
             padding: 10px 12px;
             font-size: 16px;
@@ -116,8 +117,16 @@
             opacity: 0.8;
         }
 
-        h1{
+        h1 {
             color: #EDBF6A;
+        }
+
+        .contact-email {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            font-size: 16px;
         }
     </style>
     <script>
@@ -168,7 +177,7 @@
                     }
                 });
             }
-        
+
             titleDiv.addEventListener('click', () => {
                 homeButton.click();
             });
@@ -176,6 +185,7 @@
         });
     </script>
 </head>
+
 <body>
     <div class="container">
         <div class="navbar">
@@ -228,7 +238,7 @@
                 <td class="panel">
                     <h1>Be the First</h1>
                     <p>Enter your contact information below to be one of the first to try this chain!</p>
-                    <a href="https://forms.gle/g7YvaKZKz82XTtr66" target="_blank">Show Form</a>
+                    <a href="https://forms.gle/z6TkmYvchhnf1zZG7" target="_blank">Show Form</a>
                 </td>
             </tr>
 
@@ -237,5 +247,8 @@
             </tr>
         </table>
     </div>
+
+    <a href="mailto:dblackstone@orchestralabs.org" class="contact-email">Contact: dblackstone@orchestralabs.org</a>
 </body>
+
 </html>
