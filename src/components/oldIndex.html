@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Symphony</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const panels = document.querySelectorAll('.panel');
+            const clearElements = document.querySelectorAll('.clear');
+            const panelRows = document.querySelectorAll('tr:has(td.panel)');
+            const navigationLinks = document.querySelectorAll('.navbar a');
+            const homeButton = document.getElementById('homeButton');
+            const titleDiv = document.getElementById('title');
+
+            for (let i = 0; i < navigationLinks.length; i++) {
+                const link = navigationLinks[i];
+
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetLink = event.target;
+                    const targetTitle = targetLink.innerText.trim();
+                    const targetRow = Array.from(panelRows).find((row) => row.getAttribute('title') === targetTitle);
+
+                    if (targetRow) {
+                        let targetPosition =
+                            targetRow.offsetTop +
+                            targetRow.offsetHeight / 2 -
+                            window.innerHeight / 2;
+                        const computedStyle = getComputedStyle(targetRow);
+                        const marginTop = parseInt(computedStyle.marginTop);
+                        const marginBottom = parseInt(computedStyle.marginBottom);
+                        const paddingTop = parseInt(computedStyle.paddingTop);
+                        const paddingBottom = parseInt(computedStyle.paddingBottom);
+
+                        targetPosition -= marginTop + marginBottom + paddingTop + paddingBottom;
+
+                        if (targetRow === panelRows[0]) {
+                            targetPosition = 0;
+                        }
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth',
+                        });
+
+                        navigationLinks.forEach((link) => {
+                            link.classList.remove('active');
+                        });
+
+                        targetLink.classList.add('active');
+                    }
+                });
+            }
+
+            titleDiv.addEventListener('click', () => {
+                homeButton.click();
+            });
+            homeButton.classList.add('active');
+        });
+    </script>
+</head>
+</html>

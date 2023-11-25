@@ -1,0 +1,63 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+    z-index: 999;
+    height: 52px;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    height: 52px;
+    cursor: pointer;
+}
+
+.navbar-icon {
+    height: 42px;
+    padding: 10px 12px;
+}
+
+#title span {
+    font-size: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px 12px 10px 2px;
+}
+
+#navlinks {
+    padding-right: 16px;
+    align-items: center;
+}
+
+#navlinks a {
+    margin-left: 5px;
+    padding: 10px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+#navlinks a.active {
+    text-decoration: underline;
+    font-weight: bold;
+    outline: none;
+}
+
+a {
+    color: #C3A761;
+    transition: opacity 0.2s ease;
+}
+
+a:not(.active):not(:hover) {
+    opacity: 0.8;
+}
