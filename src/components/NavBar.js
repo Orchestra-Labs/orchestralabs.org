@@ -25,7 +25,6 @@ const NavBar = () => {
           <div id="navlinks">
               <a href="#" className={isActive(NavOptions.HOME)} onClick={() => handleNavClick(NavOptions.HOME)}>Home</a>
               <a href="#" className={isActive(NavOptions.TEST_RESULTS)} onClick={() => handleNavClick(NavOptions.TEST_RESULTS)}>Test Results</a>
-              <a href="#" className={isActive(NavOptions.CONTACT)} onClick={() => handleNavClick(NavOptions.CONTACT)}>Contact</a>
               <a href="#" className={isActive(NavOptions.DEMO)} onClick={() => handleNavClick(NavOptions.DEMO)}>View Demo</a>
           </div>
       </div>

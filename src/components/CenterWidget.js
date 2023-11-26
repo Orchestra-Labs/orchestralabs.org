@@ -5,7 +5,7 @@ import { navigationState } from '../state/NavigationState';
 import NavOptions from "../utils/enums";
 import IntroPanel from "./IntroPanel";
 import TestResults from "./TestResults";
-import Contact from "./Contact";
+import DemoPage from "./DemoPage";
 
 const CenterWidget = () => {
     const { currentPage } = useRecoilValue(navigationState);
@@ -15,8 +15,8 @@ const CenterWidget = () => {
             return <IntroPanel />;
         case NavOptions.TEST_RESULTS:
             return <TestResults />;
-        case NavOptions.CONTACT:
-            return <Contact />;
+        case NavOptions.DEMO:
+            return <DemoPage />;
         default:
             return null;
     }

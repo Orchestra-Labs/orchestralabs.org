@@ -1,5 +1,4 @@
 .social-media-table {
-    width: 100%; /* Set table width */
     border-collapse: collapse; /* Removes space between cells */
 }
 
@@ -9,7 +8,6 @@
 }
 
 .social-media-table img {
-    width: 40px; /* Set icon size */
+    width: 80px; /* Set icon size */
     height: auto; /* Maintain aspect ratio */
 }
-  

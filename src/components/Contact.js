@@ -1,33 +1,35 @@
 import React from "react";
+import "./Contact.css"
 
 const Contact = () => {
-    // twitter, discord, linkedin, and email
     return (
-        <table class="social-media-table">
-            <tr>
-                <td>
-                    <a href="https://facebook.com" target="_blank">
-                        <img src="path-to-facebook-icon.png" alt="Facebook" />
-                    </a>
-                </td>
-                <td>
-                    <a href="https://twitter.com" target="_blank">
-                        <img src="path-to-twitter-icon.png" alt="Twitter" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://instagram.com" target="_blank">
-                        <img src="path-to-instagram-icon.png" alt="Instagram" />
-                    </a>
-                </td>
-                <td>
-                    <a href="https://linkedin.com" target="_blank">
-                        <img src="path-to-linkedin-icon.png" alt="LinkedIn" />
-                    </a>
-                </td>
-            </tr>
+        <table className="social-media-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://discord.com/channels/1162823265975279636/1162823266432466975" target="_blank" rel="noopener noreferrer">
+                            <img src="/discord.png" alt="Discord" className="social-icon" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://twitter.com/orchestra_labs" target="_blank" rel="noopener noreferrer">
+                            <img src="/twitter.png" alt="Twitter" className="social-icon" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://www.linkedin.com/company/orchestra-labs/about" target="_blank" rel="noopener noreferrer">
+                            <img src="/linkedin.png" alt="LinkedIn" className="social-icon" />
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/Orchestra-Labs" target="_blank" rel="noopener noreferrer">
+                            <img src="/github.png" alt="GitHub" className="social-icon" />
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     );
 };
