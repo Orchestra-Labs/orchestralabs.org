@@ -4,40 +4,7 @@
   <meta charset="UTF-8">
   <title>Demo</title>
   <style>
-    .data-label {
-      display: inline-block;
-      width: 150px;
-      font-weight: bold;
-    }
-    .data-value {
-      display: inline-flex;
-      min-width: 300px;
-      max-width: 80%;
-      overflow-x: auto;
-    }
-    .form-item {
-      margin-bottom: 10px;
-    }
-    textarea {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    .container {
-      display: flex;
-    }
-    .left, .right {
-      flex: 1;
-    }
-    #ratioChartContainer {
-      width: 100%;
-      height: 250px;
-      position: relative;
-    }
-    canvas {
-      width: 100% !important;
-      height: 100% !important;
-      position: absolute;
-    }
+
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -524,72 +491,6 @@
   </script>
 </head>
 <body>
-  <div>
-    <div className="container">
-      <div className="left">
-        <div>
-          <h1>Demo Wallet</h1>
-          <p>Note: Data refreshes every 3 second(s). A new block is created every 1 minute(s).</p>
-          <div>
-            <span className="data-label">Wallet Address:</span> <span id="wallet_address" className="data-value"></span><br>
-            <span className="data-label">Wallet Balances:</span> <span id="asset_amounts" className="data-value"></span><br>
-            <span className="data-label">Exchange Balances:</span> <span id="exchange_balances" className="data-value"></span><br>
-            <span className="data-label">Reserve Balances:</span> <span id="reserve_balances" className="data-value"></span><br>
-            <span className="data-label">Collateral Requirement:</span> <span id="collateral_requirement" className="data-value"></span><br>
-          </div>
-        </div>
-        
-        <div>
-          <h1>Send Money / Exchange</h1>
-          <p id="current_fees">Current Fees: Loading...</p>
-          <p id="max_amounts">Maximum Sendable Amounts: Loading...</p>
-
-          <div className="form-item">
-            <label>Transaction Type</label>
-            <select id="transaction_type">
-              <option value="transfer">Transfer</option>
-              <option value="exchange">Exchange</option>
-            </select>
-          </div>
-      
-          <div className="form-item">
-            <label>Sender Asset</label>
-            <select id="sender_asset">
-              <option value='{"name": "Melody", "symbol": "MLD", "type": "On_Chain"}'>Melody</option>
-              <option value='{"name": "Harmony USD", "symbol": "HUSD", "type": "Harmony"}'>HUSD</option>
-            </select>
-          </div>
-      
-          <div className="form-item">
-            <label>Recipient Asset</label>
-            <select id="recipient_asset">
-              <option value='{"name": "Melody", "symbol": "MLD", "type": "On_Chain"}'>Melody</option>
-              <option value='{"name": "Harmony USD", "symbol": "HUSD", "type": "Harmony"}'>HUSD</option>
-            </select>
-          </div>
-      
-          <input className="form-item" id="recipient_wallet_address" type="text" placeholder="Recipient Address">
-          <input className="form-item" id="send_amount" type="text" placeholder="Amount">
-          <p id="estimated_fees">Estimated Fees: N/A</p>
-          <p id="expected_return">Expected Return: N/A</p>
-          <button id="send_money_button">Send / Exchange</button>
-        </div>
-      </div>
-
-      <div className="right">
-        <div>
-          <h2>Exchange Ratio (MLD:HUSD)</h2>
-          <button className="change-ratio-button" data-change-ratio="100">1:1</button>
-          <button className="change-ratio-button" data-change-ratio="75">3:4</button>
-          <button className="change-ratio-button" data-change-ratio="50">1:2</button>
-          <button className="change-ratio-button" data-change-ratio="25">1:4</button>
-        </div>
-
-        <h3>Percent Collateral Met by Block Height</h3>
-        <div id="ratioChartContainer">
-          <canvas id="ratioChart"></canvas> 
-        </div>
-      </div>
-    </div>
+  
 </body>
 </html>

@@ -1,0 +1,6 @@
+.container {
+    display: flex;
+}
+.left, .right {
+    flex: 1;
+}
