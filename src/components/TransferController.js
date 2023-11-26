@@ -180,6 +180,25 @@ const TransferController = () => {
         }
     };
 
+    const calculateExpectedReturn = () => {
+        // Calculate expected return
+        const senderSymbol = JSON.parse(senderAsset).symbol;
+        const recipientSymbol = JSON.parse(recipientAsset).symbol;
+        const symbol = transactionType === 'exchange' ? recipientSymbol : senderSymbol;
+
+        // Assume amountToSend is from a state or another source
+        const amountToSend = 100; // Example amount
+        let returnAmount = amountToSend;
+
+        if (transactionType === 'exchange') {
+            // currentExchangeRatio needs to come from a state or context
+            const currentExchangeRatio = 1; // Example ratio
+            returnAmount = amountToSend * currentExchangeRatio;
+        }
+
+        setExpectedReturn(`Expected Return: ${returnAmount.toFixed(2)} ${symbol}`);
+    }
+
     const handleTransactionTypeChange = (event) => {
         const newType = event.target.value;
         setTransactionType(newType);
@@ -202,29 +221,22 @@ const TransferController = () => {
 
     useEffect(() => {
         calculateAndDisplayFees()
-
-        // Calculate expected return
-        const senderSymbol = JSON.parse(senderAsset).symbol;
-        const recipientSymbol = JSON.parse(recipientAsset).symbol;
-        const symbol = transactionType === 'exchange' ? recipientSymbol : senderSymbol;
-
-        // Assume amountToSend is from a state or another source
-        const amountToSend = 100; // Example amount
-        let returnAmount = amountToSend;
-
-        if (transactionType === 'exchange') {
-            // currentExchangeRatio needs to come from a state or context
-            const currentExchangeRatio = 1; // Example ratio
-            returnAmount = amountToSend * currentExchangeRatio;
-        }
-
-        setExpectedReturn(`Expected Return: ${returnAmount.toFixed(2)} ${symbol}`);
+        calculateExpectedReturn()
     }, [amountToSend, transactionType, senderAsset, recipientAsset, maxSendableAmount]);
 
-    updateMaxSendableAmount()
-    calculateAndDisplayFees()
 
-    setInterval(updateMaxSendableAmount, 3000);
+    useEffect(() => {
+        // Initial load or dependency change logic
+        const intervalId = setInterval(updateMaxSendableAmount, 3000); // Update every 3 seconds
+
+        // Cleanup function to clear the interval
+        return () => clearInterval(intervalId);
+    }, [wallet.address, senderAsset, recipientAsset]);
+
+    useEffect(() => {
+        updateMaxSendableAmount()
+        calculateAndDisplayFees()
+    }, []);
 
     return (
         <>
