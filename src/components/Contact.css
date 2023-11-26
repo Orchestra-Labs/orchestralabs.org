@@ -1,0 +1,15 @@
+.social-media-table {
+    width: 100%; /* Set table width */
+    border-collapse: collapse; /* Removes space between cells */
+}
+
+.social-media-table td {
+    text-align: center; /* Center content in cells */
+    padding: 10px; /* Add padding for spacing */
+}
+
+.social-media-table img {
+    width: 40px; /* Set icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+  

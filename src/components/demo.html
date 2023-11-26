@@ -525,17 +525,17 @@
 </head>
 <body>
   <div>
-    <div class="container">
-      <div class="left">
+    <div className="container">
+      <div className="left">
         <div>
           <h1>Demo Wallet</h1>
           <p>Note: Data refreshes every 3 second(s). A new block is created every 1 minute(s).</p>
           <div>
-            <span class="data-label">Wallet Address:</span> <span id="wallet_address" class="data-value"></span><br>
-            <span class="data-label">Wallet Balances:</span> <span id="asset_amounts" class="data-value"></span><br>
-            <span class="data-label">Exchange Balances:</span> <span id="exchange_balances" class="data-value"></span><br>
-            <span class="data-label">Reserve Balances:</span> <span id="reserve_balances" class="data-value"></span><br>
-            <span class="data-label">Collateral Requirement:</span> <span id="collateral_requirement" class="data-value"></span><br>
+            <span className="data-label">Wallet Address:</span> <span id="wallet_address" className="data-value"></span><br>
+            <span className="data-label">Wallet Balances:</span> <span id="asset_amounts" className="data-value"></span><br>
+            <span className="data-label">Exchange Balances:</span> <span id="exchange_balances" className="data-value"></span><br>
+            <span className="data-label">Reserve Balances:</span> <span id="reserve_balances" className="data-value"></span><br>
+            <span className="data-label">Collateral Requirement:</span> <span id="collateral_requirement" className="data-value"></span><br>
           </div>
         </div>
         
@@ -544,7 +544,7 @@
           <p id="current_fees">Current Fees: Loading...</p>
           <p id="max_amounts">Maximum Sendable Amounts: Loading...</p>
 
-          <div class="form-item">
+          <div className="form-item">
             <label>Transaction Type</label>
             <select id="transaction_type">
               <option value="transfer">Transfer</option>
@@ -552,7 +552,7 @@
             </select>
           </div>
       
-          <div class="form-item">
+          <div className="form-item">
             <label>Sender Asset</label>
             <select id="sender_asset">
               <option value='{"name": "Melody", "symbol": "MLD", "type": "On_Chain"}'>Melody</option>
@@ -560,7 +560,7 @@
             </select>
           </div>
       
-          <div class="form-item">
+          <div className="form-item">
             <label>Recipient Asset</label>
             <select id="recipient_asset">
               <option value='{"name": "Melody", "symbol": "MLD", "type": "On_Chain"}'>Melody</option>
@@ -568,21 +568,21 @@
             </select>
           </div>
       
-          <input class="form-item" id="recipient_wallet_address" type="text" placeholder="Recipient Address">
-          <input class="form-item" id="send_amount" type="text" placeholder="Amount">
+          <input className="form-item" id="recipient_wallet_address" type="text" placeholder="Recipient Address">
+          <input className="form-item" id="send_amount" type="text" placeholder="Amount">
           <p id="estimated_fees">Estimated Fees: N/A</p>
           <p id="expected_return">Expected Return: N/A</p>
           <button id="send_money_button">Send / Exchange</button>
         </div>
       </div>
 
-      <div class="right">
+      <div className="right">
         <div>
           <h2>Exchange Ratio (MLD:HUSD)</h2>
-          <button class="change-ratio-button" data-change-ratio="100">1:1</button>
-          <button class="change-ratio-button" data-change-ratio="75">3:4</button>
-          <button class="change-ratio-button" data-change-ratio="50">1:2</button>
-          <button class="change-ratio-button" data-change-ratio="25">1:4</button>
+          <button className="change-ratio-button" data-change-ratio="100">1:1</button>
+          <button className="change-ratio-button" data-change-ratio="75">3:4</button>
+          <button className="change-ratio-button" data-change-ratio="50">1:2</button>
+          <button className="change-ratio-button" data-change-ratio="25">1:4</button>
         </div>
 
         <h3>Percent Collateral Met by Block Height</h3>

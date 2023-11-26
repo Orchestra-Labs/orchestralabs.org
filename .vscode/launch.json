@@ -1,14 +1,12 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome against localhost",
             "type": "chrome",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "c:\\Users\\visitor\\Documents\\Website\\symphonyblockchain.github.io\\index.html"
+            "url": "http://localhost:3000", // Replace with your app's URL/port
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }

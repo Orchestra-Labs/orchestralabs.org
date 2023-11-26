@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
   background: url('./../public/background.png') no-repeat center center fixed;
   background-size: cover;
+  color: white;
 }
 
 .container {
@@ -11,4 +12,5 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100vh;
 }
