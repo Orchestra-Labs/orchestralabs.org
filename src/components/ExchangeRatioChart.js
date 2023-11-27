@@ -1,26 +1,24 @@
     import React, { useEffect, useState, useRef } from "react";
     import "./ExchangeRatioChart.css";
     import { Chart } from 'chart.js/auto';
+import { fetchBlockchainDataFromAPI } from "../api/api";
     
     const ExchangeRatioChart = () => {
         const [blockchainData, setBlockchainData] = useState([]);
         const chartRef = useRef(null);
         const [chartInstance, setChartInstance] = useState(null);
     
-        const fetchBlockchainData = async () => {
-            try {
-                const response = await fetch('/blockchainData');
-                const data = await response.json();
-                setBlockchainData(data.blockchain || []);
-            } catch (error) {
-                console.error('Error fetching blockchain data:', error);
-            }
-        };
-    
         useEffect(() => {
-            const intervalId = setInterval(fetchBlockchainData, 15000);
+            const fetchData = async () => {
+                const result = await fetchBlockchainDataFromAPI();
+                if (result.success) {
+                    setBlockchainData(result.data);
+                }
+            };
     
-            // Cleanup function to clear the interval
+            fetchData();
+            const intervalId = setInterval(fetchData, 15000);
+    
             return () => clearInterval(intervalId);
         }, []);
     

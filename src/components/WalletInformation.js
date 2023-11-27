@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./WalletInformation.css";
 import { useRecoilState } from "recoil";
 import { walletState } from '../state/WalletState';
+import { fetchDemoData, fetchWalletBalances } from "../api/api";
 
 const WalletInformation = () => {
     const [wallet, setWallet] = useRecoilState(walletState);
@@ -11,10 +12,9 @@ const WalletInformation = () => {
     const [exchangeInfo, setExchangeInfo] = useState({});
 
     useEffect(() => {
-        const fetchDemoData = async () => {
+        const initializeDemoData = async () => {
             try {
-                const response = await fetch('/demodata');
-                const data = await response.json();
+                const data = await fetchDemoData();
                 setWallet(prevWallet => ({ ...prevWallet, address: data.demo_address }));
                 setExchangeInfo({
                     exchangeAddress: data.exchange_address,
@@ -27,31 +27,26 @@ const WalletInformation = () => {
             }
         };
 
-        fetchDemoData();
-    }, []); // Empty dependency array to run only once
+        initializeDemoData();
+    }, []);
 
     useEffect(() => {
-        const fetchWalletBalances = async (address, setter) => {
-            try {
-                const response = await fetch(`/wallets/balance?wallet_address=${address}`);
-                const data = await response.json();
-                setter(data.total_amounts || {});
-            } catch (error) {
-                console.error('Error fetching wallet balance:', error);
+        const updateBalances = async () => {
+            if (wallet.address) {
+                const walletBalances = await fetchWalletBalances(wallet.address);
+                setWallet(prevWallet => ({ ...prevWallet, balances: walletBalances }));
+            }
+            if (exchangeInfo.exchangeAddress) {
+                const exchangeBalances = await fetchWalletBalances(exchangeInfo.exchangeAddress);
+                setExchangeBalances(exchangeBalances);
+            }
+            if (exchangeInfo.reserveAddress) {
+                const reserveBalances = await fetchWalletBalances(exchangeInfo.reserveAddress);
+                setReserveBalances(reserveBalances);
             }
         };
 
-        const balanceInterval = setInterval(() => {
-            if (wallet.address) {
-                fetchWalletBalances(wallet.address, setWallet);
-            }
-            if (exchangeInfo.exchangeAddress) {
-                fetchWalletBalances(exchangeInfo.exchangeAddress, setExchangeBalances);
-            }
-            if (exchangeInfo.reserveAddress) {
-                fetchWalletBalances(exchangeInfo.reserveAddress, setReserveBalances);
-            }
-        }, 3000);
+        const balanceInterval = setInterval(updateBalances, 3000);
 
         return () => clearInterval(balanceInterval);
     }, [wallet.address, exchangeInfo.exchangeAddress, exchangeInfo.reserveAddress]);

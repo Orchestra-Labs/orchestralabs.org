@@ -2,21 +2,19 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import { exchangeRatioState } from '../state/ExchangeRatioState'; // Adjust the path as necessary
+import { changeExchangeRatioApi } from '../api/api';
 
 const ExchangeRatioController = () => {
     const [exchangeRatio, setExchangeRatio] = useRecoilState(exchangeRatioState);
 
     const changeExchangeRatio = async (newRatio) => {
-        try {
-            const response = await fetch(`/changeExchangeRatio?percentage=${newRatio}`, {
-                method: 'POST',
-            });
-            const data = await response.json();
-            console.info(`Exchange ratio changed to ${newRatio}%`, data);
+        const result = await changeExchangeRatioApi(newRatio);
+        if (result.success) {
+            console.info(`Exchange ratio changed to ${newRatio}%`, result.data);
             alert(`Exchange ratio changed to ${newRatio}%`);
             setExchangeRatio(newRatio);
-        } catch (error) {
-            console.error('Error changing exchange ratio:', error);
+        } else {
+            console.error('Error changing exchange ratio:', result.error);
         }
     };
 
