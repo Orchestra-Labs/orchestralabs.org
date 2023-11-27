@@ -49,8 +49,8 @@ export const getMaxSendableAmount = async (walletAddress) => {
   
       // Fetch current transaction fees (as percentages)
       const feeResponse = await fetch('/transactions/fees').then(res => res.json());
-      const minerFeePercent = feeResponse.fee_structure.miner_fee.amount;
-      const reserveFeePercent = feeResponse.fee_structure.reserve_fee.amount;
+      const minerFeePercent = feeResponse.miner_fee.amount;
+      const reserveFeePercent = feeResponse.reserve_fee.amount;
   
       // Calculate total fee factor (1 + sum of fee percentages)
       const totalFeeFactor = 1 + minerFeePercent + reserveFeePercent;
