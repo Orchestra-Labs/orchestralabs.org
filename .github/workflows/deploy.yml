@@ -1,32 +1,30 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy
 on:
   push:
     branches:
-      - main  # Deploy on changes to the main branch
+      - main  # Set your default branch here
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Source
+    - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Setup Node.js
+    - name: Install Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # Choose your Node.js version
+        node-version: '14'  # Set your Node.js version here
 
     - name: Install Dependencies
       run: npm install
 
-    - name: Build React App
+    - name: Build
       run: npm run build
 
-    - name: Deploy to GitHub Pages
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: main  # Deploy to the main branch
-        folder: build  # Folder to deploy
-        target-folder: docs  # Where to put the build artifacts (GitHub Pages can be set to use /docs)
-        clean: true  # Clean out old files
+        branch: gh-pages  # The branch the action should deploy to.
+        folder: build     # The folder the action should deploy.
         token: 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  # Token for authentication
