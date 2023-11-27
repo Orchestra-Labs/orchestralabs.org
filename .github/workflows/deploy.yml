@@ -1,17 +1,17 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
       - main  # Set your default branch here
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout Source
       uses: actions/checkout@v2
 
-    - name: Install Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14'  # Set your Node.js version here
@@ -19,10 +19,10 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Build
+    - name: Build React App
       run: npm run build
 
-    - name: Deploy
+    - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages  # The branch the action should deploy to.
