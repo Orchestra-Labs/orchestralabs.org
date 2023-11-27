@@ -1,30 +1,32 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Deploy on changes to the main branch
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout Source
       uses: actions/checkout@v2
 
-    - name: Install Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '20.9.0'
+        node-version: '14'  # Choose your Node.js version
 
     - name: Install Dependencies
       run: npm install
 
-    - name: Build
+    - name: Build React App
       run: npm run build
 
-    - name: Deploy
+    - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: main
-        folder: build
-        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main  # Deploy to the main branch
+        folder: build  # Folder to deploy
+        target-folder: docs  # Where to put the build artifacts (GitHub Pages can be set to use /docs)
+        clean: true  # Clean out old files
+        token: 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  # Token for authentication
