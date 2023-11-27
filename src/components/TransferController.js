@@ -16,87 +16,52 @@ const TransferController = () => {
     const [maxSendableAmount, setMaxSendableAmount] = useState('Maximum Sendable Amounts: Loading...');
     const [estimatedFees, setEstimatedFees] = useState('Estimated Fees: N/A');
 
-    useEffect(() => {
-        const updateMaxSendableAmount = async () => {
-          const result = await getMaxSendableAmount(wallet.address);
-          if (result.error) {
-            console.error(result.error);
-          } else {
-            setMaxSendableAmount(result.maxAmountsText);
-            setCurrentFees(result.currentFeesText);
-          }
-        };
-    
-        if (wallet.address) {
-          updateMaxSendableAmount();
-        }
-    }, [wallet.address],);
-
-    const buildExchangeTransaction = async () => {
+    const buildTransaction = async (isExchange) => {
+        // Fetch transaction fees
         const { success: feeSuccess, feeStructure, error: feeError } = await fetchTransactionFees();
         if (!feeSuccess) {
             console.error('Failed to fetch transaction fees:', feeError);
             return null;
         }
     
-        const { success: exchangeSuccess, exchangeAddress, error: exchangeError } = await fetchExchangeData();
-        if (!exchangeSuccess) {
-            console.error('Failed to fetch exchange data:', exchangeError);
-            return null;
-        }
-        
-        return {
-            exchange_output: {
-                recipient_wallet_address: recipientWalletAddress,
-                asset: JSON.parse(recipientAsset),
-                amount: null,
-            },
-            unsigned_transaction_request: {
-                transaction: {
-                    transaction_input: {
-                        time_sent: Date.now(),
-                        sender_wallet_address: wallet.address,
-                        transaction_type: transactionType,
-                    },
-                    transaction_output: {
-                        recipient_wallet_address: exchangeAddress,
-                        asset: JSON.parse(senderAsset),
-                        amount: parseFloat(amountToSend),
-                    },
-                    transaction_fees: feeStructure,
-                },
-                sender_private_key: wallet.privateKey,
-                sender_public_key: wallet.publicKey,
+        // Additional steps for exchange transactions
+        let exchangeAddress = null;
+        if (isExchange) {
+            const { success: exchangeSuccess, exchangeAddress: fetchedExchangeAddress, error: exchangeError } = await fetchExchangeData();
+            if (!exchangeSuccess) {
+                console.error('Failed to fetch exchange data:', exchangeError);
+                return null;
             }
-        };
-    };
-
-    const buildTransaction = async () => {
-        const { success, feeStructure, error } = await fetchTransactionFees();
-      
-        if (!success) {
-            console.error('Failed to fetch transaction fees:', error);
-            return null;
+            exchangeAddress = fetchedExchangeAddress;
         }
     
-        return {
-            transaction: {
-                transaction_input: {
-                    time_sent: Date.now(),
-                    sender_wallet_address: wallet.address,
-                    transaction_type: transactionType,
-                },
-                transaction_output: {
-                    recipient_wallet_address: recipientWalletAddress,
-                    asset: JSON.parse(senderAsset),
-                    amount: parseFloat(amountToSend),
-                },
-                transaction_fees: feeStructure,
-            },
-            sender_private_key: wallet.privateKey,
-            sender_public_key: wallet.publicKey,
+        // Constructing the transaction object
+        const transactionInput = {
+            time_sent: Date.now(),
+            sender_wallet_address: wallet.address,
+            transaction_type: transactionType,
         };
+    
+        const transactionOutput = isExchange ? 
+            { recipient_wallet_address: exchangeAddress, asset: JSON.parse(senderAsset), amount: parseFloat(amountToSend) } : 
+            { recipient_wallet_address: recipientWalletAddress, asset: JSON.parse(senderAsset), amount: parseFloat(amountToSend) };
+    
+        const transaction = {
+            transaction_input: transactionInput,
+            transaction_output: transactionOutput,
+            transaction_fees: feeStructure,
+        };
+    
+        // Additional output for exchange transactions
+        const exchangeOutput = isExchange ? 
+            { recipient_wallet_address: recipientWalletAddress, asset: JSON.parse(recipientAsset), amount: null } : 
+            null;
+    
+        return isExchange ? 
+            { exchange_output: exchangeOutput, unsigned_transaction_request: { transaction, sender_private_key: wallet.privateKey, sender_public_key: wallet.publicKey } } : 
+            { transaction, sender_private_key: wallet.privateKey, sender_public_key: wallet.publicKey };
     };
+    
 
     const sendMoney = async () => {
         const confirmResult = confirm('Are you sure to send?');
@@ -104,26 +69,37 @@ const TransferController = () => {
             alert('Canceled');
             return;
         }
-    
-        let dataPackage = (transactionType === 'exchange') ? await buildExchangeTransaction() : await buildTransaction();
+
+        let dataPackage = await buildTransaction(transactionType === 'exchange');
         if (!dataPackage) {
             alert('Failed to build transaction data.');
             return;
         }
-    
+
         const endpoint = transactionType === 'exchange' ? '/transactions/exchange' : '/transactions';
-    
         const transactionResult = await submitTransaction(endpoint, dataPackage);
-        if (transactionResult.success) {
-            alert('Transaction successful');
-        } else {
-            alert(`Transaction failed: ${transactionResult.message}`);
-        }
-    
+
+        transactionResult.success ? alert('Transaction successful') : alert(`Transaction failed: ${transactionResult.message}`);
         setAmountToSend('0');
         updateMaxSendableAmount();
     };
+
+    // TODO: potentially remove
+    // useEffect(() => {
+    //     const updateMaxSendableAmount = async () => {
+    //       const result = await getMaxSendableAmount(wallet.address);
+    //       if (result.error) {
+    //         console.error(result.error);
+    //       } else {
+    //         setMaxSendableAmount(result.maxAmountsText);
+    //         setCurrentFees(result.currentFeesText);
+    //       }
+    //     };
     
+    //     if (wallet.address) {
+    //       updateMaxSendableAmount();
+    //     }
+    // }, [wallet.address],);
 
     const calculateAndDisplayFees = async () => {
         const amount = parseFloat(amountToSend);
@@ -154,25 +130,6 @@ const TransferController = () => {
         setEstimatedFees(`Estimated Fees - Miner Fee: ${minerFee.toFixed(2)} ${symbol}, Reserve Fee: ${reserveFee.toFixed(2)} ${symbol}, Total Fees: ${totalFees.toFixed(2)} ${symbol}`);
     };
 
-    const calculateExpectedReturn = () => {
-        // Calculate expected return
-        const senderSymbol = JSON.parse(senderAsset).symbol;
-        const recipientSymbol = JSON.parse(recipientAsset).symbol;
-        const symbol = transactionType === 'exchange' ? recipientSymbol : senderSymbol;
-
-        // Assume amountToSend is from a state or another source
-        const amountToSend = 100; // Example amount
-        let returnAmount = amountToSend;
-
-        if (transactionType === 'exchange') {
-            // currentExchangeRatio needs to come from a state or context
-            const currentExchangeRatio = 1; // Example ratio
-            returnAmount = amountToSend * currentExchangeRatio;
-        }
-
-        setExpectedReturn(`Expected Return: ${returnAmount.toFixed(2)} ${symbol}`);
-    }
-
     const handleTransactionTypeChange = (event) => {
         const newType = event.target.value;
         setTransactionType(newType);
@@ -194,23 +151,64 @@ const TransferController = () => {
     };
 
     useEffect(() => {
-        calculateAndDisplayFees()
-        calculateExpectedReturn()
-    }, [amountToSend, transactionType, senderAsset, recipientAsset, maxSendableAmount]);
+        const updateData = async () => {
+            if (wallet.address) {
+                const result = await getMaxSendableAmount(wallet.address);
+                if (result.error) {
+                    console.error(result.error);
+                } else {
+                    setMaxSendableAmount(result.maxAmountsText);
+                }
+            }
+            await calculateAndDisplayFees();
+        };
+        updateData();
 
-
-    useEffect(() => {
-        // Initial load or dependency change logic
-        const intervalId = setInterval(updateMaxSendableAmount, 3000); // Update every 3 seconds
-
-        // Cleanup function to clear the interval
+        const intervalId = setInterval(updateData, 3000); // Update every 3 seconds
         return () => clearInterval(intervalId);
-    }, [wallet.address, senderAsset, recipientAsset]);
+    }, [wallet.address, senderAsset, recipientAsset, amountToSend]);
 
-    useEffect(() => {
-        updateMaxSendableAmount()
-        calculateAndDisplayFees()
-    }, []);
+    // TODO: potentially remove
+    // const calculateExpectedReturn = () => {
+    //     // Calculate expected return
+    //     const senderSymbol = JSON.parse(senderAsset).symbol;
+    //     const recipientSymbol = JSON.parse(recipientAsset).symbol;
+    //     const symbol = transactionType === 'exchange' ? recipientSymbol : senderSymbol;
+
+    //     // Assume amountToSend is from a state or another source
+    //     const amountToSend = 100; // Example amount
+    //     let returnAmount = amountToSend;
+
+    //     if (transactionType === 'exchange') {
+    //         // currentExchangeRatio needs to come from a state or context
+    //         const currentExchangeRatio = 1; // Example ratio
+    //         returnAmount = amountToSend * currentExchangeRatio;
+    //     }
+
+    //     setExpectedReturn(`Expected Return: ${returnAmount.toFixed(2)} ${symbol}`);
+    // }
+
+    // TODO: potentially remove
+    // useEffect(() => {
+    //     calculateAndDisplayFees()
+    //     calculateExpectedReturn()
+    // }, [amountToSend, transactionType, senderAsset, recipientAsset, maxSendableAmount]);
+
+
+    // TODO: potentially remove
+    // useEffect(() => {
+    //     // Initial load or dependency change logic
+    //     const intervalId = setInterval(updateMaxSendableAmount, 3000); // Update every 3 seconds
+
+    //     // Cleanup function to clear the interval
+    //     return () => clearInterval(intervalId);
+    // }, [wallet.address, senderAsset, recipientAsset]);
+
+    // TODO: potentially remove
+    // useEffect(() => {
+    //     updateMaxSendableAmount()
+    //     calculateAndDisplayFees()
+    // }, []);
 
     return (
         <>
