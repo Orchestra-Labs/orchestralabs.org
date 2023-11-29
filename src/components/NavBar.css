@@ -23,11 +23,15 @@
     padding: 10px 12px;
 }
 
+#title a {
+    display: contents;
+    color: white;
+}
+
 #title span {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: bold;
     padding: 10px 12px 10px 2px;
-    display: flex;
     align-items: center;
 }
 
@@ -47,6 +51,7 @@
     font-weight: 400;
     text-decoration: none;
     transition: opacity 0.2s ease;
+    color: white;
 }
 
 #navlinks a.active {
