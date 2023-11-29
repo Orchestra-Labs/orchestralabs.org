@@ -1,7 +1,6 @@
 import React from "react";
-import './NavBar.css';
 
-const IntroPanel = () => {
+const Home = () => {
     return (
         <div className="container">
             <h1>The Symphony Blockchain</h1>
@@ -11,4 +10,4 @@ const IntroPanel = () => {
     );
 };
 
-export default IntroPanel;
+export default Home;

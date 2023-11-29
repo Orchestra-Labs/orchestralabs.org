@@ -1,35 +1,31 @@
 import React from 'react';
 import './NavBar.css';
-import { useRecoilState } from 'recoil';
-import { navigationState } from '../state/NavigationState';
+import { Link, useLocation } from 'react-router-dom';
 import NavOptions from '../utils/enums';
 
 const NavBar = () => {
-    const [navState, setNavState] = useRecoilState(navigationState);
-  
-    const handleNavClick = (navButton) => {
-      setNavState({ currentPage: navButton });
+    const location = useLocation();
+
+    const isActive = (path) => {
+        return location.pathname === path ? 'active' : '';
     };
 
-    const isActive = (navButton) => {
-        return navState.currentPage === navButton ? 'active' : '';
-    };
-  
     return (
-      <div className="navbar">
-          <div id="title" onClick={() => handleNavClick(NavOptions.HOME)}>
-              <img className="navbar-icon" src="sound-wave.png" alt="Sound Wave Icon" />
-              <span>Symphony</span>
-          </div>
-  
-          <div id="navlinks">
-              <a href="#" className={isActive(NavOptions.HOME)} onClick={() => handleNavClick(NavOptions.HOME)}>Home</a>
-              <a href="#" className={isActive(NavOptions.TEST_RESULTS)} onClick={() => handleNavClick(NavOptions.TEST_RESULTS)}>Test Results</a>
-              <a href="#" className={isActive(NavOptions.DEMO)} onClick={() => handleNavClick(NavOptions.DEMO)}>View Demo</a>
-          </div>
-      </div>
+        <div className="navbar">
+            <div id="title" className={isActive(NavOptions.HOME)}>
+                <Link to={NavOptions.HOME}>
+                    <img className="navbar-icon" src="sound-wave.png" alt="Sound Wave Icon" />
+                    <span>Symphony</span>
+                </Link>
+            </div>
+
+            <div id="navlinks">
+                <Link to={NavOptions.HOME} className={isActive(NavOptions.HOME)}>Home</Link>
+                <Link to={NavOptions.TEST_RESULTS} className={isActive(NavOptions.TEST_RESULTS)}>Test Results</Link>
+                <Link to={NavOptions.DEMO} className={isActive(NavOptions.DEMO)}>View Demo</Link>
+            </div>
+        </div>
     );
-  };
-  
-  export default NavBar;
-  
+};
+
+export default NavBar;
