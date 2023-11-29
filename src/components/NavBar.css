@@ -24,19 +24,20 @@
 }
 
 #title span {
-    font-size: 16px;
-    font-weight: bold;
     font-size: 20px;
     font-weight: 300;
     padding: 10px 12px 10px 2px;
+    display: flex;
+    align-items: center;
 }
 
 #navlinks {
     padding-right: 16px;
     align-items: center;
+    display: flex;
 }
 
-#navlinks a {
+#navlinks a{
     margin-left: 5px;
     padding: 10px 12px;
     font-size: 16px;
@@ -45,19 +46,17 @@
     font-style: normal;
     font-weight: 400;
     text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
 #navlinks a.active {
     text-decoration: underline;
     font-weight: bold;
     outline: none;
-}
-
-a {
     color: #C3A761;
-    transition: opacity 0.2s ease;
+    opacity: 1;
 }
 
-a:not(.active):not(:hover) {
-    opacity: 0.8;
+#navlinks a:hover {
+    opacity: 1;
 }
