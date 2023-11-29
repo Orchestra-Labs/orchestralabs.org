@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import TestResults from "./components/TestResults";
 import DemoPage from "./components/DemoPage";
 import LocationHandler from "./components/LocationHandler";
+import NotFound from "./components/NotFound";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path={NavOptions.HOME} element={<Home />} />
           <Route path={NavOptions.TEST_RESULTS} element={<TestResults />} />
           <Route path={NavOptions.DEMO} element={<DemoPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <BottomNavBar />
       </div>

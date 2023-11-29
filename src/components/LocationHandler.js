@@ -1,4 +1,3 @@
-// LocationHandler.js
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSetRecoilState } from "recoil";
@@ -12,7 +11,7 @@ const LocationHandler = () => {
     setLocation(location.pathname);
   }, [location, setLocation]);
 
-  return null; // This component does not render anything
+  return null;
 };
 
 export default LocationHandler;
