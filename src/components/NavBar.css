@@ -41,7 +41,7 @@
     display: flex;
 }
 
-#navlinks a{
+#navlinks a {
     margin-left: 5px;
     padding: 10px 12px;
     font-size: 16px;
@@ -63,5 +63,5 @@
 }
 
 #navlinks a:hover {
-    opacity: 1;
+    color: burlywood;
 }
