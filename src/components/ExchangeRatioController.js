@@ -9,7 +9,7 @@ const ExchangeRatioController = () => {
     const changeExchangeRatio = async (newRatio) => {
         const result = await changeExchangeRatioApi(newRatio);
         if (result.success) {
-            console.info(`Exchange ratio changed to ${newRatio}%`, result.data);
+            console.info(`Exchange ratio changed to ${newRatio}%`);
             alert(`Exchange ratio changed to ${newRatio}%`);
             setExchangeRatio(newRatio);
         } else {

@@ -30,8 +30,7 @@ export const changeExchangeRatioApi = async (newRatio) => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        const data = await response.json();
-        return { success: true, data: data };
+        return { success: true };
     } catch (error) {
         console.error('Error changing exchange ratio:', error);
         return { success: false, error: error };
