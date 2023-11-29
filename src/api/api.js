@@ -24,7 +24,7 @@ export const fetchWalletBalances = async (address) => {
 
 export const changeExchangeRatioApi = async (newRatio) => {
     try {
-        const response = await fetch(`${BASE_URL}/changeExchangeRatio?percentage=${newRatio}`, {
+        const response = await fetch(`${BASE_URL}/changeRatio?percentage=${newRatio}`, {
             method: 'POST',
         });
         if (!response.ok) {
@@ -35,41 +35,6 @@ export const changeExchangeRatioApi = async (newRatio) => {
     } catch (error) {
         console.error('Error changing exchange ratio:', error);
         return { success: false, error: error };
-    }
-};
-
-export const getMaxSendableAmount = async (walletAddress) => {
-    if (!walletAddress) {
-      return { error: 'No wallet address provided.' };
-    }
-  
-    try {
-      // Fetch current wallet balance
-      const walletBalanceResponse = await fetch(`${BASE_URL}/wallets/balance?wallet_address=${walletAddress}`).then(res => res.json());
-  
-      // Fetch current transaction fees (as percentages)
-      const feeResponse = await fetch('/transactions/fees').then(res => res.json());
-      const minerFeePercent = feeResponse.miner_fee.amount;
-      const reserveFeePercent = feeResponse.reserve_fee.amount;
-  
-      // Calculate total fee factor (1 + sum of fee percentages)
-      const totalFeeFactor = 1 + minerFeePercent + reserveFeePercent;
-  
-      // Calculate maximum sendable amount before fees
-      let maxAmountsText = 'Maximum Sendable Amounts: ';
-      for (const [assetJSON, balance] of Object.entries(walletBalanceResponse['total_amounts'])) {
-        const asset = JSON.parse(assetJSON);
-        const maxSendableAmountBeforeFees = balance / totalFeeFactor;
-        maxAmountsText += `${asset.name}: ${maxSendableAmountBeforeFees.toFixed(2)} `;
-      }
-  
-      return {
-        maxAmountsText: maxAmountsText.trim(),
-        currentFeesText: `Current Fees - Miner Fee: ${minerFeePercent * 100}%, Reserve Fee: ${reserveFeePercent * 100}%`
-      };
-    } catch (error) {
-      console.error('Error updating max sendable amounts:', error);
-      return { error: error.message };
     }
 };
 
@@ -86,7 +51,7 @@ export const fetchTransactionFees = async () => {
         console.error('Error fetching transaction fees:', error);
         return {
             success: false,
-            error: error.message, // Providing the error message for better error handling
+            error: error.message,
         };
     }
 };
@@ -104,7 +69,7 @@ export const fetchExchangeData = async () => {
         console.error('Error fetching exchange info:', error);
         return {
             success: false,
-            error: error.message, // Providing the error message for better error handling
+            error: error.message,
         };
     }
 };

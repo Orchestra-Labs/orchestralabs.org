@@ -1,7 +1,6 @@
-// ExchangeRatioController.js
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import { exchangeRatioState } from '../state/ExchangeRatioState'; // Adjust the path as necessary
+import { exchangeRatioState } from '../state/ExchangeRatioState';
 import { changeExchangeRatioApi } from '../api/api';
 
 const ExchangeRatioController = () => {

@@ -1,9 +1,8 @@
-// TransferController.js
 import React, { useState, useEffect } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { transactionTypeState, senderAssetState, recipientAssetState } from '../state/TransactionState';
 import { walletState } from '../state/WalletState';
-import { fetchExchangeData, fetchTransactionFees, getMaxSendableAmount, submitTransaction } from '../api/api';
+import { fetchExchangeData, fetchTransactionFees, fetchWalletBalances, submitTransaction } from '../api/api';
 
 const TransferController = () => {
     const [transactionType, setTransactionType] = useRecoilState(transactionTypeState);
@@ -81,7 +80,7 @@ const TransferController = () => {
 
         transactionResult.success ? alert('Transaction successful') : alert(`Transaction failed: ${transactionResult.message}`);
         setAmountToSend('0');
-        updateMaxSendableAmount();
+        // updateMaxSendableAmount();
     };
 
     // TODO: potentially remove
@@ -149,6 +148,40 @@ const TransferController = () => {
     const handleRecipientAssetChange = (event) => {
         setRecipientAsset(event.target.value);
     };
+
+    const getMaxSendableAmount = async (walletAddress) => {
+        if (!walletAddress) {
+          return { error: 'No wallet address provided.' };
+        }
+      
+        try {
+          // Fetch current wallet balance using fetchWalletBalances function
+          const walletBalances = await fetchWalletBalances(walletAddress);
+    
+          // Fetch current transaction fees using fetchTransactionFees function
+          const transactionFees = await fetchTransactionFees();
+          const minerFeePercent = transactionFees.miner_fee.amount;
+          const reserveFeePercent = transactionFees.reserve_fee.amount;
+    
+          // Calculate total fee factor (1 + sum of fee percentages)
+          const totalFeeFactor = 1 + minerFeePercent + reserveFeePercent;
+    
+          // Calculate maximum sendable amount before fees
+          let maxAmountsText = 'Maximum Sendable Amounts: ';
+          for (const [asset, balance] of Object.entries(walletBalances)) {
+            const maxSendableAmountBeforeFees = balance / totalFeeFactor;
+            maxAmountsText += `${asset}: ${maxSendableAmountBeforeFees.toFixed(2)} `;
+          }
+    
+          return {
+            maxAmountsText: maxAmountsText.trim(),
+            currentFeesText: `Current Fees - Miner Fee: ${(minerFeePercent * 100).toFixed(2)}%, Reserve Fee: ${(reserveFeePercent * 100).toFixed(2)}%`
+          };
+        } catch (error) {
+          console.error('Error updating max sendable amounts:', error);
+          return { error: error.message };
+        }
+    };    
 
     useEffect(() => {
         const updateData = async () => {
