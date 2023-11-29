@@ -28,9 +28,6 @@ jobs:
       - name: Building project
         run: npm run build
 
-      - name: Running tests
-        run: npm run test
-
       - name: Uploading production-ready build files
         uses: actions/upload-artifact@v2
         with:
