@@ -8,9 +8,11 @@ const TransferController = () => {
     const [transactionType, setTransactionType] = useRecoilState(transactionTypeState);
     const [senderAsset, setSenderAsset] = useRecoilState(senderAssetState);
     const [recipientAsset, setRecipientAsset] = useRecoilState(recipientAssetState);
+    const [currentFees, setCurrentFees] = useState({})
     const wallet = useRecoilValue(walletState);
     const [recipientWalletAddress, setRecipientWalletAddress] = useState('');
     const [amountToSend, setAmountToSend] = useState('');
+    const [currentFeesText, setCurrentFeesText] = useState('Loading...');
     const [expectedReturn, setExpectedReturn] = useState('Expected Return: N/A');
     const [maxSendableAmount, setMaxSendableAmount] = useState('Maximum Sendable Amounts: Loading...');
     const [estimatedFees, setEstimatedFees] = useState('Estimated Fees: N/A');
@@ -100,34 +102,43 @@ const TransferController = () => {
     //     }
     // }, [wallet.address],);
 
-    const calculateAndDisplayFees = async () => {
-        const amount = parseFloat(amountToSend);
-        if (isNaN(amount) || amount <= 0) {
-            setEstimatedFees('Estimated Fees: N/A');
-            return;
-        }
+    const calculateCurrentFees = () => {
+        if (currentFees) {
+          // Here you format the fees as you want them to appear
+          const minerFee = currentFees.miner_fee?.amount || 0;
+          const reserveFee = currentFees.reserve_fee?.amount || 0;
 
-        const feeResult = await fetchTransactionFees();
-        if (!feeResult.success) {
-            console.error('Error calculating fees:', feeResult.error);
-            // Handle the error in your UI as needed
-            setEstimatedFees('Error in calculating fees');
-            return;
+          const minerFeePercent = minerFee * 100
+          const reserveFeePercent = reserveFee * 100
+
+          const formattedFees = `Miner Fee: ${minerFeePercent.toFixed(2)}%, Reserve Fee: ${reserveFeePercent.toFixed(2)}%`;
+      
+          setCurrentFeesText(formattedFees);
+        } else {
+          setCurrentFeesText('Loading...');
         }
-    
-        // Extract fee percentages from the fee structure
-        const minerFeePercent = feeResult.feeStructure.miner_fee.amount;
-        const reserveFeePercent = feeResult.feeStructure.reserve_fee.amount;
+      }
+
+    const calculateExpectedFees = () => {
+        const amount = parseFloat(amountToSend);
+        if (isNaN(amount) || amount <= 0 || Object.keys(currentFees).length === 0) {
+          setEstimatedFees('Estimated Fees: N/A');
+          return;
+        }
+      
+        // Extract fee percentages from the fee structure stored in state
+        const minerFeePercent = currentFees.miner_fee?.amount || 0;
+        const reserveFeePercent = currentFees.reserve_fee?.amount || 0;
         const symbol = JSON.parse(senderAsset).symbol;
-    
+      
         // Calculate fees
         const minerFee = amount * minerFeePercent;
         const reserveFee = amount * reserveFeePercent;
         const totalFees = minerFee + reserveFee;
-    
+      
         // Update estimated fees
         setEstimatedFees(`Estimated Fees - Miner Fee: ${minerFee.toFixed(2)} ${symbol}, Reserve Fee: ${reserveFee.toFixed(2)} ${symbol}, Total Fees: ${totalFees.toFixed(2)} ${symbol}`);
-    };
+      };
 
     const handleTransactionTypeChange = (event) => {
         const newType = event.target.value;
@@ -149,26 +160,17 @@ const TransferController = () => {
         setRecipientAsset(event.target.value);
     };
 
-    const getMaxSendableAmount = async (walletAddress) => {
-        if (!walletAddress) {
-          return { error: 'No wallet address provided.' };
-        }
+    const getMaxSendableAmount = async () => {
+        try {    
+          const minerFeePercent = currentFees.miner_fee?.amount || 0;
+          const reserveFeePercent = currentFees.reserve_fee?.amount || 0;
       
-        try {
-          // Fetch current wallet balance using fetchWalletBalances function
-          const walletBalances = await fetchWalletBalances(walletAddress);
-    
-          // Fetch current transaction fees using fetchTransactionFees function
-          const transactionFees = await fetchTransactionFees();
-          const minerFeePercent = transactionFees.feeStructure.miner_fee.amount;
-          const reserveFeePercent = transactionFees.feeStructure.reserve_fee.amount;
-    
           // Calculate total fee factor (1 + sum of fee percentages)
           const totalFeeFactor = 1 + minerFeePercent + reserveFeePercent;
     
           // Calculate maximum sendable amount before fees
           let maxAmountsText = 'Maximum Sendable Amounts: ';
-          for (const [assetJSON, balance] of Object.entries(walletBalances)) {
+          for (const [assetJSON, balance] of Object.entries(wallet.balances)) {
             const maxSendableAmountBeforeFees = balance / totalFeeFactor;
             const asset = JSON.parse(assetJSON)
             maxAmountsText += `${asset.name} (${asset.symbol}): ${maxSendableAmountBeforeFees.toFixed(2)} `;
@@ -182,25 +184,38 @@ const TransferController = () => {
           console.error('Error updating max sendable amounts:', error);
           return { error: error.message };
         }
-    };    
+    };
 
     useEffect(() => {
-        const updateData = async () => {
-            if (wallet.address) {
-                const result = await getMaxSendableAmount(wallet.address);
-                if (result.error) {
-                    console.error(result.error);
-                } else {
-                    setMaxSendableAmount(result.maxAmountsText);
-                }
-            }
-            await calculateAndDisplayFees();
+        const fetchAndUpdateFees = async () => {
+          const feeResult = await fetchTransactionFees();
+          if (feeResult.success) {
+            setCurrentFees(feeResult.feeStructure);
+          } else {
+            console.error('Error fetching fees:', feeResult.error);
+          }
         };
-        updateData();
+      
+        fetchAndUpdateFees(); // Fetch fees immediately on mount
+        const intervalId = setInterval(fetchAndUpdateFees, 3000); // Update fees every 3 seconds
+      
+        return () => clearInterval(intervalId); // Cleanup interval on unmount
+      }, []);
 
-        const intervalId = setInterval(updateData, 3000); // Update every 3 seconds
-        return () => clearInterval(intervalId);
-    }, [wallet.address, senderAsset, recipientAsset, amountToSend]);
+      useEffect(() => {
+        // Ensure wallet address is available
+        if (wallet.address) {
+          calculateCurrentFees();
+          calculateExpectedFees();
+          getMaxSendableAmount().then((result) => {
+            if (result.error) {
+              console.error(result.error);
+            } else {
+              setMaxSendableAmount(result.maxAmountsText);
+            }
+          });
+        }
+      }, [currentFees]);
 
     // TODO: potentially remove
     // const calculateExpectedReturn = () => {
@@ -247,7 +262,7 @@ const TransferController = () => {
     return (
         <>
             <h1>Send Money / Exchange</h1>
-            <p id="current_fees">Current Fees: Loading...</p>
+            <p id="current_fees">Current Fees: {currentFeesText}</p>
             <p>{maxSendableAmount}</p>
 
             <div className="form-item">
