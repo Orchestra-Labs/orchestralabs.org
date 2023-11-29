@@ -40,11 +40,11 @@ export const changeExchangeRatioApi = async (newRatio) => {
 export const fetchTransactionFees = async () => {
     try {
         const feesResponse = await fetch(`${BASE_URL}/transactions/fees`);
-        const feeQueryResult = await feesResponse.json();
-
+        const feeQueryResult = await feesResponse.text();
+        
         return {
             success: true,
-            feeStructure: feeQueryResult.fee_structure,
+            feeStructure: JSON.parse(feeQueryResult),
         };
     } catch (error) {
         console.error('Error fetching transaction fees:', error);

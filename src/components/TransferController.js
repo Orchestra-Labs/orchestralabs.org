@@ -160,17 +160,18 @@ const TransferController = () => {
     
           // Fetch current transaction fees using fetchTransactionFees function
           const transactionFees = await fetchTransactionFees();
-          const minerFeePercent = transactionFees.miner_fee.amount;
-          const reserveFeePercent = transactionFees.reserve_fee.amount;
+          const minerFeePercent = transactionFees.feeStructure.miner_fee.amount;
+          const reserveFeePercent = transactionFees.feeStructure.reserve_fee.amount;
     
           // Calculate total fee factor (1 + sum of fee percentages)
           const totalFeeFactor = 1 + minerFeePercent + reserveFeePercent;
     
           // Calculate maximum sendable amount before fees
           let maxAmountsText = 'Maximum Sendable Amounts: ';
-          for (const [asset, balance] of Object.entries(walletBalances)) {
+          for (const [assetJSON, balance] of Object.entries(walletBalances)) {
             const maxSendableAmountBeforeFees = balance / totalFeeFactor;
-            maxAmountsText += `${asset}: ${maxSendableAmountBeforeFees.toFixed(2)} `;
+            const asset = JSON.parse(assetJSON)
+            maxAmountsText += `${asset.name} (${asset.symbol}): ${maxSendableAmountBeforeFees.toFixed(2)} `;
           }
     
           return {
