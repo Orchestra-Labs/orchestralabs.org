@@ -62,7 +62,6 @@ const TransferController = () => {
             { exchange_output: exchangeOutput, unsigned_transaction_request: { transaction, sender_private_key: wallet.privateKey, sender_public_key: wallet.publicKey } } : 
             { transaction, sender_private_key: wallet.privateKey, sender_public_key: wallet.publicKey };
     };
-    
 
     const sendMoney = async () => {
         const confirmResult = confirm('Are you sure to send?');
@@ -82,25 +81,7 @@ const TransferController = () => {
 
         transactionResult.success ? alert('Transaction successful') : alert(`Transaction failed: ${transactionResult.message}`);
         setAmountToSend('0');
-        // updateMaxSendableAmount();
     };
-
-    // TODO: potentially remove
-    // useEffect(() => {
-    //     const updateMaxSendableAmount = async () => {
-    //       const result = await getMaxSendableAmount(wallet.address);
-    //       if (result.error) {
-    //         console.error(result.error);
-    //       } else {
-    //         setMaxSendableAmount(result.maxAmountsText);
-    //         setCurrentFees(result.currentFeesText);
-    //       }
-    //     };
-    
-    //     if (wallet.address) {
-    //       updateMaxSendableAmount();
-    //     }
-    // }, [wallet.address],);
 
     const calculateCurrentFees = () => {
         if (currentFees) {
@@ -143,11 +124,17 @@ const TransferController = () => {
     const handleTransactionTypeChange = (event) => {
         const newType = event.target.value;
         setTransactionType(newType);
+    
         if (newType === 'transfer') {
             setRecipientAsset(senderAsset);
+        } else if (newType === 'exchange') {
+            const oppositeAsset = senderAsset === '{"name": "Melody", "symbol": "MLD", "type": "On_Chain"}' 
+                                  ? '{"name": "Harmony USD", "symbol": "HUSD", "type": "Harmony"}'
+                                  : '{"name": "Melody", "symbol": "MLD", "type": "On_Chain"}';
+            setRecipientAsset(oppositeAsset);
         }
     };
-
+    
     const handleSenderAssetChange = (event) => {
         const newAsset = event.target.value;
         setSenderAsset(newAsset);
@@ -200,9 +187,9 @@ const TransferController = () => {
         const intervalId = setInterval(fetchAndUpdateFees, 3000); // Update fees every 3 seconds
       
         return () => clearInterval(intervalId); // Cleanup interval on unmount
-      }, []);
+    }, []);
 
-      useEffect(() => {
+    useEffect(() => {
         // Ensure wallet address is available
         if (wallet.address) {
           calculateCurrentFees();
@@ -215,34 +202,53 @@ const TransferController = () => {
             }
           });
         }
-      }, [currentFees]);
+    }, [currentFees]);
 
-    // TODO: potentially remove
-    // const calculateExpectedReturn = () => {
-    //     // Calculate expected return
-    //     const senderSymbol = JSON.parse(senderAsset).symbol;
-    //     const recipientSymbol = JSON.parse(recipientAsset).symbol;
-    //     const symbol = transactionType === 'exchange' ? recipientSymbol : senderSymbol;
+    useEffect(() => {
+        const calculateExpectedReturn = () => {
+          if (!amountToSend || !senderAsset || !recipientAsset) {
+            setExpectedReturn('Expected Return: N/A');
+            return;
+          }
+      
+          const amount = parseFloat(amountToSend);
+          if (isNaN(amount)) {
+            setExpectedReturn('Expected Return: N/A');
+            return;
+          }
 
-    //     // Assume amountToSend is from a state or another source
-    //     const amountToSend = 100; // Example amount
-    //     let returnAmount = amountToSend;
+          const senderSymbol = JSON.parse(senderAsset).symbol;
+          const recipientSymbol = JSON.parse(recipientAsset).symbol;
+          const symbol = transactionType === 'exchange' ? recipientSymbol : senderSymbol;
 
-    //     if (transactionType === 'exchange') {
-    //         // currentExchangeRatio needs to come from a state or context
-    //         const currentExchangeRatio = 1; // Example ratio
-    //         returnAmount = amountToSend * currentExchangeRatio;
-    //     }
+          // Assume amountToSend is from a state or another source
+          let returnAmount = amount;
 
-    //     setExpectedReturn(`Expected Return: ${returnAmount.toFixed(2)} ${symbol}`);
-    // }
+          if (transactionType === 'exchange') {
+            // currentExchangeRatio needs to come from a state or context
+            const currentExchangeRatio = 1; // Example ratio
+            returnAmount = amountToSend * currentExchangeRatio;
+          }
+            
+          setExpectedReturn(`Expected Return: ${returnAmount.toFixed(2)} ${symbol}`);
+        };
+      
+        calculateExpectedReturn();
+    }, [amountToSend, transactionType, senderAsset, recipientAsset]);
 
-    // TODO: potentially remove
-    // useEffect(() => {
-    //     calculateAndDisplayFees()
-    //     calculateExpectedReturn()
-    // }, [amountToSend, transactionType, senderAsset, recipientAsset, maxSendableAmount]);
-
+    useEffect(() => {
+        // Ensure wallet balances are available
+        if (wallet.balances) {
+          getMaxSendableAmount().then((result) => {
+            if (result.error) {
+              console.error(result.error);
+            } else {
+              setMaxSendableAmount(result.maxAmountsText);
+            }
+          });
+        }
+    }, [wallet.balances]); // Dependency on wallet.balances
+      
 
     // TODO: potentially remove
     // useEffect(() => {
