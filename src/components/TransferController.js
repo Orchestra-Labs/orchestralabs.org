@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { transactionTypeState, senderAssetState, recipientAssetState } from '../state/TransactionState';
 import { walletState } from '../state/WalletState';
-import { fetchExchangeData, fetchTransactionFees, fetchWalletBalances, submitTransaction } from '../api/api';
+import { fetchExchangeData, fetchTransactionFees, submitTransaction } from '../api/api';
+import CryptoJS from 'crypto-js';
+import { v4 as uuidv4 } from 'uuid';
 
 const TransferController = () => {
     const [transactionType, setTransactionType] = useRecoilState(transactionTypeState);
@@ -16,6 +18,11 @@ const TransferController = () => {
     const [expectedReturn, setExpectedReturn] = useState('Expected Return: N/A');
     const [maxSendableAmount, setMaxSendableAmount] = useState('Maximum Sendable Amounts: Loading...');
     const [estimatedFees, setEstimatedFees] = useState('Estimated Fees: N/A');
+
+    function signTransaction(serializedTransaction, key) {
+        const signature = CryptoJS.HmacSHA256(serializedTransaction, key);
+        return signature.toString(CryptoJS.enc.Base64);
+    }
 
     const buildTransaction = async (isExchange) => {
         // Fetch transaction fees
@@ -38,6 +45,7 @@ const TransferController = () => {
     
         // Constructing the transaction object
         const transactionInput = {
+            id: uuidv4(),
             time_sent: Date.now(),
             sender_wallet_address: wallet.address,
             transaction_type: transactionType,
@@ -47,10 +55,31 @@ const TransferController = () => {
             { recipient_wallet_address: exchangeAddress, asset: JSON.parse(senderAsset), amount: parseFloat(amountToSend) } : 
             { recipient_wallet_address: recipientWalletAddress, asset: JSON.parse(senderAsset), amount: parseFloat(amountToSend) };
     
+        const sendingFees = feeStructure
+        sendingFees.miner_fee.amount = sendingFees.miner_fee.amount * transactionOutput.amount
+        sendingFees.miner_fee.asset = transactionOutput.asset
+        sendingFees.reserve_fee.amount = sendingFees.reserve_fee.amount * transactionOutput.amount
+        sendingFees.reserve_fee.asset = transactionOutput.asset
+
         const transaction = {
             transaction_input: transactionInput,
             transaction_output: transactionOutput,
-            transaction_fees: feeStructure,
+            transaction_fees: sendingFees,
+        };
+
+        const serializedTransaction = JSON.stringify(transaction);
+
+        const signature = signTransaction(serializedTransaction, wallet.privateKey);
+
+        const sigKeyPair = {
+            signature: signature,
+            public_key: wallet.publicKey
+        };
+
+        const signedTransactionRequest = {
+            transaction: transaction,
+            signature_pairs: [sigKeyPair],
+            signature_threshold: 1,
         };
     
         // Additional output for exchange transactions
@@ -59,8 +88,8 @@ const TransferController = () => {
             null;
     
         return isExchange ? 
-            { exchange_output: exchangeOutput, unsigned_transaction_request: { transaction, sender_private_key: wallet.privateKey, sender_public_key: wallet.publicKey } } : 
-            { transaction, sender_private_key: wallet.privateKey, sender_public_key: wallet.publicKey };
+            { exchange_output: exchangeOutput, signed_transaction_request: signedTransactionRequest } : 
+            signedTransactionRequest;
     };
 
     const sendMoney = async () => {

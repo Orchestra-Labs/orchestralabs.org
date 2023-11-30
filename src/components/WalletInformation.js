@@ -15,7 +15,12 @@ const WalletInformation = () => {
         const initializeDemoData = async () => {
             try {
                 const data = await fetchDemoData();
-                setWallet(prevWallet => ({ ...prevWallet, address: data.demo_address }));
+                setWallet(prevWallet => ({
+                    ...prevWallet, 
+                    address: data.demo_address,
+                    privateKey: data.demo_private_key,
+                    publicKey: data.demo_public_key
+                }));
                 setExchangeInfo({
                     exchangeAddress: data.exchange_address,
                     reserveAddress: data.reserve_address,
