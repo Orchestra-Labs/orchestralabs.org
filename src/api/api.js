@@ -1,6 +1,6 @@
 import { BASE_URL } from "../config/config";
-import { API_ENDPOINTS } from '../utils/apiConstants';
-import { TransactionOptions } from "../utils/optionValues";
+import { API_ENDPOINTS } from "./../utils/apiConstants";
+import { TransactionOptions, transactionOptions } from "../utils/optionValues";
 
 export const fetchDemoData = async () => {
     try {
@@ -76,7 +76,7 @@ export const fetchExchangeData = async () => {
 };
 
 export const submitTransaction = async (transactionType, dataPackage) => {
-    const endpoint = transactionType === TransactionOptions.Exchange.value ? 
+    const endpoint = transactionType === transactionOptions.exchange.value ? 
         API_ENDPOINTS.TRANSACTION_EXCHANGE : 
         API_ENDPOINTS.SUBMIT_TRANSACTION;
 

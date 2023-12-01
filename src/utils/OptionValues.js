@@ -4,23 +4,23 @@ export const NavOptions = {
   DEMO: '/demo',
 };
 
-export const TokenOptions = {
+export const tokenOptions = {
   Melody: {
-    JSONValue: '{"name": "Melody", "symbol": "MLD", "type": "On_Chain"}',
+    jsonValue: '{"name": "Melody", "symbol": "MLD", "type": "On_Chain"}',
     displayText: "Melody"
   },
   HUSD: {
-    JSONValue: '{"name": "Harmony USD", "symbol": "HUSD", "type": "Harmony"}',
+    jsonValue: '{"name": "Harmony USD", "symbol": "HUSD", "type": "Harmony"}',
     displayText: "HUSD"
   }
 };
 
-export const TransactionOptions = {
-  Transfer: {
+export const transactionOptions = {
+  transfer: {
     value: "transfer",
     displayText: "Transfer"
   },
-  Exchange: {
+  exchange: {
     value: "exchange",
     displayText: "Exchange"
   }
