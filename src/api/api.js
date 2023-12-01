@@ -1,8 +1,10 @@
 import { BASE_URL } from "../config/config";
+import { API_ENDPOINTS } from '../utils/APIConstants';
+import { TransactionOptions } from "../utils/OptionValues";
 
 export const fetchDemoData = async () => {
     try {
-        const response = await fetch(`${BASE_URL}/demodata`);
+        const response = await fetch(`${BASE_URL}${API_ENDPOINTS.DEMO_DATA}`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -13,7 +15,7 @@ export const fetchDemoData = async () => {
 
 export const fetchWalletBalances = async (address) => {
     try {
-        const response = await fetch(`${BASE_URL}/wallets/balance?wallet_address=${address}`);
+        const response = await fetch(`${BASE_URL}${API_ENDPOINTS.WALLET_BALANCES}?wallet_address=${address}`);
         const data = await response.json();
         return data.total_amounts || {};
     } catch (error) {
@@ -24,7 +26,7 @@ export const fetchWalletBalances = async (address) => {
 
 export const changeExchangeRatioApi = async (newRatio) => {
     try {
-        const response = await fetch(`${BASE_URL}/changeRatio?percentage=${newRatio}`, {
+        const response = await fetch(`${BASE_URL}${API_ENDPOINTS.CHANGE_EXCHANGE_RATIO}?percentage=${newRatio}`, {
             method: 'POST',
         });
         if (!response.ok) {
@@ -39,7 +41,7 @@ export const changeExchangeRatioApi = async (newRatio) => {
 
 export const fetchTransactionFees = async () => {
     try {
-        const feesResponse = await fetch(`${BASE_URL}/transactions/fees`);
+        const feesResponse = await fetch(`${BASE_URL}${API_ENDPOINTS.TRANSACTION_FEES}`);
         const feeQueryResult = await feesResponse.text();
         
         return {
@@ -57,7 +59,7 @@ export const fetchTransactionFees = async () => {
 
 export const fetchExchangeData = async () => {
     try {
-        const exchangeResponse = await fetch(`${BASE_URL}/transactions/exchange`);
+        const exchangeResponse = await fetch(`${BASE_URL}${API_ENDPOINTS.TRANSACTION_EXCHANGE}`);
         const exchangeQueryResult = await exchangeResponse.json();
 
         return {
@@ -73,7 +75,11 @@ export const fetchExchangeData = async () => {
     }
 };
 
-export const submitTransaction = async (endpoint, dataPackage) => {
+export const submitTransaction = async (transactionType, dataPackage) => {
+    const endpoint = transactionType === TransactionOptions.Exchange.value ? 
+        API_ENDPOINTS.TRANSACTION_EXCHANGE : 
+        API_ENDPOINTS.SUBMIT_TRANSACTION;
+
     try {
         const response = await fetch(endpoint, {
             method: 'POST',
@@ -86,7 +92,7 @@ export const submitTransaction = async (endpoint, dataPackage) => {
         if (response.ok) {
             return { success: true };
         } else {
-            return { success: false, message: 'Error sending Exchange Request' };
+            return { success: false, message: 'Error sending transaction request' };
         }
     } catch (error) {
         console.error(error);
@@ -96,7 +102,7 @@ export const submitTransaction = async (endpoint, dataPackage) => {
 
 export const fetchBlockchainDataFromAPI = async () => {
     try {
-        const response = await fetch(`${BASE_URL}/`);
+        const response = await fetch(`${BASE_URL}${API_ENDPOINTS.BLOCKCHAIN_DATA}`);
         const JSONData = await response.text();
         const data = JSON.parse(JSONData)
         return {

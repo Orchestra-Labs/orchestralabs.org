@@ -109,8 +109,7 @@ const TransferController = () => {
             return;
         }
 
-        const endpoint = transactionType === TransactionOptions.Exchange.value ? '/transactions/exchange' : '/transactions';
-        const transactionResult = await submitTransaction(endpoint, dataPackage);
+        const transactionResult = await submitTransaction(transactionType, dataPackage);
 
         transactionResult.success ? alert('Transaction successful') : alert(`Transaction failed: ${transactionResult.message}`);
         setAmountToSend('0');
@@ -211,8 +210,9 @@ const TransferController = () => {
           if(wallet?.balances != null){
             for (const [assetJSON, balance] of Object.entries(wallet.balances)) {
                 const maxSendableAmountBeforeFees = balance / totalFeeFactor;
-                const asset = JSON.parse(assetJSON)
-                maxAmountsText += `${asset.name} (${asset.symbol}): ${maxSendableAmountBeforeFees.toFixed(2)} `;
+                const asset = JSON.parse(assetJSON);
+                // Use toFixed for display purposes only, not for calculations
+                maxAmountsText += `${asset.name} (${asset.symbol}): ${maxSendableAmountBeforeFees.toFixed(8)} `;
             }
           }
     
@@ -224,7 +224,7 @@ const TransferController = () => {
           console.error('Error updating max sendable amounts:', error);
           return { error: error.message };
         }
-    };
+    };    
 
     useEffect(() => {
         const fetchAndUpdateFees = async () => {

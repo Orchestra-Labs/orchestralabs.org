@@ -63,7 +63,7 @@ const WalletInformation = () => {
     
         return Object.entries(balances).map(([assetJSON, amount]) => {
             const asset = JSON.parse(assetJSON);
-            return <p key={asset.symbol}>{`${asset.name} (${asset.symbol}): ${amount}`}</p>;
+            return <p key={asset.symbol}>{`${asset.name} (${asset.symbol}): ${amount.toFixed(8)}`}</p>;
         });
     };    
 
