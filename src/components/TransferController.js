@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { transactionTypeState, senderAssetState, recipientAssetState } from '../state/TransactionState';
-import { walletState } from '../state/WalletState';
+import { transactionTypeState, senderAssetState, recipientAssetState } from '../atoms/transactionAtom';
+import { walletState } from '../atoms/walletAtom';
 import { fetchExchangeData, fetchTransactionFees, submitTransaction } from '../api/api';
 import CryptoJS from 'crypto-js';
 import { v4 as uuidv4 } from 'uuid';
-import { TokenOptions, TransactionOptions } from '../utils/OptionValues';
+import { TokenOptions, TransactionOptions } from '../utils/optionValues';
 
 const TransferController = () => {
     const [transactionType, setTransactionType] = useRecoilState(transactionTypeState);

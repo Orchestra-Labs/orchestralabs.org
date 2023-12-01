@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 import { Link, useLocation } from 'react-router-dom';
-import {NavOptions} from '../utils/OptionValues';
+import {NavOptions} from '../utils/optionValues';
 
 const NavBar = () => {
     const location = useLocation();

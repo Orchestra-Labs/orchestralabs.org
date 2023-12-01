@@ -1,5 +1,5 @@
 import { atom } from 'recoil';
-import {NavOptions} from '../utils/OptionValues';
+import {NavOptions} from '../utils/optionValues';
 
 export const navigationState = atom({
   key: 'navigationState',

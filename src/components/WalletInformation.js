@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./WalletInformation.css";
 import { useRecoilState } from "recoil";
-import { walletState } from '../state/WalletState';
+import { walletState } from '../atoms/walletAtom';
 import { fetchDemoData, fetchWalletBalances } from "../api/api";
 
 const WalletInformation = () => {
