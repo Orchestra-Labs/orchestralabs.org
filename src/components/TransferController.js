@@ -149,32 +149,50 @@ const TransferController = () => {
       
         // Update estimated fees
         setEstimatedFees(`Estimated Fees - Miner Fee: ${minerFee.toFixed(2)} ${symbol}, Reserve Fee: ${reserveFee.toFixed(2)} ${symbol}, Total Fees: ${totalFees.toFixed(2)} ${symbol}`);
-      };
+    };
 
-    const handleTransactionTypeChange = (event) => {
-        const newType = event.target.value;
-        setTransactionType(newType);
-    
-        if (newType === TransactionOptions.Transfer.value) {
-            setRecipientAsset(senderAsset);
-        } else if (newType === TransactionOptions.Exchange.value) {
-            const oppositeAsset = senderAsset === TokenOptions.Melody.JSONValue 
-                                  ? TokenOptions.HUSD.JSONValue
-                                  : TokenOptions.Melody.JSONValue;
+    const updateSenderAsset = (newTransactionType, newRecipientAsset) => {
+        if (newTransactionType === TransactionOptions.Transfer.value) {
+            setSenderAsset(newRecipientAsset);
+        } else if (newTransactionType === TransactionOptions.Exchange.value) {
+            const MelodyJSON = TokenOptions.Melody.JSONValue
+            const HUSDJSON = TokenOptions.HUSD.JSONValue
+            const oppositeAsset = newRecipientAsset ===  MelodyJSON
+                                  ? HUSDJSON
+                                  : MelodyJSON;
+            setSenderAsset(oppositeAsset);
+        }
+    }
+
+    const updateRecipientAsset = (newTransactionType, newSenderAsset) => {
+        if (newTransactionType === TransactionOptions.Transfer.value) {
+            setRecipientAsset(newSenderAsset);
+        } else if (newTransactionType === TransactionOptions.Exchange.value) {
+            const MelodyJSON = TokenOptions.Melody.JSONValue
+            const HUSDJSON = TokenOptions.HUSD.JSONValue
+            const oppositeAsset = newSenderAsset ===  MelodyJSON
+                                  ? HUSDJSON
+                                  : MelodyJSON;
             setRecipientAsset(oppositeAsset);
         }
+    }
+
+    const handleTransactionTypeChange = (event) => {
+        const newTransactionType = event.target.value;
+        setTransactionType(newTransactionType);
+        updateRecipientAsset(newTransactionType, senderAsset)    
     };
     
     const handleSenderAssetChange = (event) => {
         const newAsset = event.target.value;
         setSenderAsset(newAsset);
-        if (transactionType === TransactionOptions.Transfer.value) {
-            setRecipientAsset(newAsset);
-        }
+        updateRecipientAsset(transactionType, newAsset)
     };
 
     const handleRecipientAssetChange = (event) => {
-        setRecipientAsset(event.target.value);
+        const newAsset = event.target.value;
+        setRecipientAsset(newAsset);
+        updateSenderAsset(transactionType, newAsset)
     };
 
     const getMaxSendableAmount = async () => {
