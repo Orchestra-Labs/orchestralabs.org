@@ -187,10 +187,12 @@ const TransferController = () => {
     
           // Calculate maximum sendable amount before fees
           let maxAmountsText = 'Maximum Sendable Amounts: ';
-          for (const [assetJSON, balance] of Object.entries(wallet.balances)) {
-            const maxSendableAmountBeforeFees = balance / totalFeeFactor;
-            const asset = JSON.parse(assetJSON)
-            maxAmountsText += `${asset.name} (${asset.symbol}): ${maxSendableAmountBeforeFees.toFixed(2)} `;
+          if(wallet?.balances != null){
+            for (const [assetJSON, balance] of Object.entries(wallet.balances)) {
+                const maxSendableAmountBeforeFees = balance / totalFeeFactor;
+                const asset = JSON.parse(assetJSON)
+                maxAmountsText += `${asset.name} (${asset.symbol}): ${maxSendableAmountBeforeFees.toFixed(2)} `;
+            }
           }
     
           return {
