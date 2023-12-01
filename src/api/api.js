@@ -83,14 +83,10 @@ export const submitTransaction = async (endpoint, dataPackage) => {
             body: JSON.stringify(dataPackage),
         });
 
-        const responseDataJSON = await response.text();
-        const responseData = JSON.parse(responseDataJSON)
-        if (response.ok && responseData.message !== 'fail') {
-            // Transaction was successful
+        if (response.ok) {
             return { success: true };
         } else {
-            // Transaction failed
-            return { success: false, message: responseData.message || 'Unknown error' };
+            return { success: false, message: 'Error sending Exchange Request' };
         }
     } catch (error) {
         console.error(error);

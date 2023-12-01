@@ -27,21 +27,24 @@ const TransferController = () => {
 
     const buildTransaction = async (isExchange) => {
         // Fetch transaction fees
-        const { success: feeSuccess, feeStructure, error: feeError } = await fetchTransactionFees();
-        if (!feeSuccess) {
-            console.error('Failed to fetch transaction fees:', feeError);
+        const feeResult = await fetchTransactionFees();
+        if (!feeResult.success) {
+            console.error('Failed to fetch transaction fees:', feeResult.error);
             return null;
         }
+
+        const feeStructure = feeResult.feeStructure
     
         // Additional steps for exchange transactions
         let exchangeAddress = null;
         if (isExchange) {
-            const { success: exchangeSuccess, exchangeAddress: fetchedExchangeAddress, error: exchangeError } = await fetchExchangeData();
-            if (!exchangeSuccess) {
-                console.error('Failed to fetch exchange data:', exchangeError);
+            const exchangeResult = await fetchExchangeData();
+            if (!exchangeResult.success) {
+                console.error('Failed to fetch exchange data:', exchangeResult.error);
                 return null;
             }
-            exchangeAddress = fetchedExchangeAddress;
+
+            exchangeAddress = exchangeResult.exchangeAddress;
         }
     
         // Constructing the transaction object
@@ -283,6 +286,7 @@ const TransferController = () => {
           setExpectedReturn(`Expected Return: ${returnAmount.toFixed(2)} ${symbol}`);
         };
       
+        calculateExpectedFees();
         calculateExpectedReturn();
     }, [amountToSend, transactionType, senderAsset, recipientAsset]);
 
