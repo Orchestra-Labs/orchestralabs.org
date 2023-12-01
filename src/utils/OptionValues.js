@@ -10,7 +10,7 @@ export const TokenOptions = {
     displayText: "Melody"
   },
   HUSD: {
-    value: '{"name": "Harmony USD", "symbol": "HUSD", "type": "Harmony"}',
+    JSONValue: '{"name": "Harmony USD", "symbol": "HUSD", "type": "Harmony"}',
     displayText: "HUSD"
   }
 };

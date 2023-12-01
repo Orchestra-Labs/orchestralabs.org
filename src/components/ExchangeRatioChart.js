@@ -2,17 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 import "./ExchangeRatioChart.css";
 import { Chart } from 'chart.js/auto';
 import { fetchBlockchainDataFromAPI } from "../api/api";
-import { useRecoilValue } from 'recoil';
-import { exchangeRatioState, reserveRatioState } from '../state/CollateralState';
 
 const ExchangeRatioChart = () => {
     const [blockchainData, setBlockchainData] = useState([]);
     const chartRef = useRef(null);
     const [chartInstance, setChartInstance] = useState(null);
-    const [chartData, setChartData] = useState([]);
-
-    const exchangeRatio = useRecoilValue(exchangeRatioState);
-    const reserveRatio = useRecoilValue(reserveRatioState);
+    const [lastLength, setLastLength] = useState(0); // Track the last length of blockchainData
 
     // Initialize chart
     useEffect(() => {
@@ -56,7 +51,7 @@ const ExchangeRatioChart = () => {
         };
     }, []);
 
-    // Fetch data
+    // Fetch blockchain data
     useEffect(() => {
         const fetchData = async () => {
             const result = await fetchBlockchainDataFromAPI();
@@ -71,42 +66,28 @@ const ExchangeRatioChart = () => {
         return () => clearInterval(intervalId);
     }, []);
 
-    // Update chart data
+    // Update chart data based on blockchainData
     useEffect(() => {
-        if (chartInstance && chartData.length > 0) {
-            const lastDataPoint = chartData[chartData.length - 1];
-            chartInstance.data.labels.push(lastDataPoint.blockHeight);
-            chartInstance.data.datasets[0].data.push(lastDataPoint.exchangeRatio);
-            chartInstance.data.datasets[1].data.push(lastDataPoint.reserveRatio);
-            chartInstance.update();
+        if (chartInstance) {
+            // If it's the first time setting the data, read all of it
+            if (lastLength === 0 && blockchainData.length > 0) {
+                chartInstance.data.labels = blockchainData.map((_, index) => index + 1);
+                chartInstance.data.datasets[0].data = blockchainData.map(block => block.exchange_ratio);
+                chartInstance.data.datasets[1].data = blockchainData.map(block => block.reserve_ratio);
+                chartInstance.update();
+                setLastLength(blockchainData.length);
+            }
+            // For subsequent updates, add only the new data
+            else if (blockchainData.length > lastLength) {
+                const latestBlock = blockchainData[blockchainData.length - 1];
+                chartInstance.data.labels.push(blockchainData.length);
+                chartInstance.data.datasets[0].data.push(latestBlock.exchange_ratio);
+                chartInstance.data.datasets[1].data.push(latestBlock.reserve_ratio);
+                chartInstance.update();
+                setLastLength(blockchainData.length);
+            }
         }
-    }, [chartData]);
-
-    // Add or update data point
-    useEffect(() => {
-        if (blockchainData.length > 0) {
-            const newPoint = {
-                blockHeight: blockchainData.length,
-                exchangeRatio: exchangeRatio,
-                reserveRatio: reserveRatio
-            };
-
-            setChartData(prevData => {
-                const isDataNew = !prevData.length || 
-                  prevData[prevData.length - 1].blockHeight !== newPoint.blockHeight ||
-                  prevData[prevData.length - 1].exchangeRatio !== newPoint.exchangeRatio ||
-                  prevData[prevData.length - 1].reserveRatio !== newPoint.reserveRatio;
-
-                if (isDataNew) {
-                    return [...prevData, newPoint]; // Add new data point
-                } else {
-                    // Overwrite the last data point
-                    return prevData.map((item, index) => 
-                        index === prevData.length - 1 ? newPoint : item);
-                }
-            });
-        }
-    }, [exchangeRatio, reserveRatio, blockchainData]);
+    }, [blockchainData, chartInstance, lastLength]);
 
     return (
         <>

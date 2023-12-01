@@ -1,10 +1,8 @@
-import React from 'react';
-import { useRecoilState } from 'recoil';
-import { exchangeRatioState } from '../state/CollateralState';
+import React, { useState } from 'react';
 import { changeExchangeRatioApi } from '../api/api';
 
 const ExchangeRatioController = () => {
-    const [exchangeRatio, setExchangeRatio] = useRecoilState(exchangeRatioState);
+    const [exchangeRatio, setExchangeRatio] = useState(100);
 
     const changeExchangeRatio = async (newRatio) => {
         const result = await changeExchangeRatioApi(newRatio);

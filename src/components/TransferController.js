@@ -298,22 +298,6 @@ const TransferController = () => {
           });
         }
     }, [wallet.balances]); // Dependency on wallet.balances
-      
-
-    // TODO: potentially remove
-    // useEffect(() => {
-    //     // Initial load or dependency change logic
-    //     const intervalId = setInterval(updateMaxSendableAmount, 3000); // Update every 3 seconds
-
-    //     // Cleanup function to clear the interval
-    //     return () => clearInterval(intervalId);
-    // }, [wallet.address, senderAsset, recipientAsset]);
-
-    // TODO: potentially remove
-    // useEffect(() => {
-    //     updateMaxSendableAmount()
-    //     calculateAndDisplayFees()
-    // }, []);
 
     return (
         <>
