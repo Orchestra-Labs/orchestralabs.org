@@ -82,7 +82,7 @@ const ExchangeRatioChart = () => {
         }
     }, [chartData]);
 
-    // Add data point
+    // Add or update data point
     useEffect(() => {
         if (blockchainData.length > 0) {
             const newPoint = {
@@ -90,7 +90,21 @@ const ExchangeRatioChart = () => {
                 exchangeRatio: exchangeRatio,
                 reserveRatio: reserveRatio
             };
-            setChartData(prevData => [...prevData, newPoint]);
+
+            setChartData(prevData => {
+                const isDataNew = !prevData.length || 
+                  prevData[prevData.length - 1].blockHeight !== newPoint.blockHeight ||
+                  prevData[prevData.length - 1].exchangeRatio !== newPoint.exchangeRatio ||
+                  prevData[prevData.length - 1].reserveRatio !== newPoint.reserveRatio;
+
+                if (isDataNew) {
+                    return [...prevData, newPoint]; // Add new data point
+                } else {
+                    // Overwrite the last data point
+                    return prevData.map((item, index) => 
+                        index === prevData.length - 1 ? newPoint : item);
+                }
+            });
         }
     }, [exchangeRatio, reserveRatio, blockchainData]);
 
