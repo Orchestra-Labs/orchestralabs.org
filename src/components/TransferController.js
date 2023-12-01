@@ -5,7 +5,7 @@ import { walletState } from '../atoms/walletAtom';
 import { fetchExchangeData, fetchTransactionFees, submitTransaction } from '../api/api';
 import CryptoJS from 'crypto-js';
 import { v4 as uuidv4 } from 'uuid';
-import { TokenOptions, TransactionOptions } from '../utils/optionValues';
+import { tokenOptions, transactionOptions } from '../utils/optionValues';
 
 const TransferController = () => {
     const [transactionType, setTransactionType] = useRecoilState(transactionTypeState);
@@ -154,11 +154,11 @@ const TransferController = () => {
     };
 
     const updateSenderAsset = (newTransactionType, newRecipientAsset) => {
-        if (newTransactionType === TransactionOptions.Transfer.value) {
+        if (newTransactionType === transactionOptions.transfer.value) {
             setSenderAsset(newRecipientAsset);
-        } else if (newTransactionType === TransactionOptions.Exchange.value) {
-            const MelodyJSON = TokenOptions.Melody.JSONValue
-            const HUSDJSON = TokenOptions.HUSD.JSONValue
+        } else if (newTransactionType === transactionOptions.exchange.value) {
+            const MelodyJSON = tokenOptions.Melody.JSONValue
+            const HUSDJSON = tokenOptions.HUSD.JSONValue
             const oppositeAsset = newRecipientAsset ===  MelodyJSON
                                   ? HUSDJSON
                                   : MelodyJSON;
@@ -167,11 +167,11 @@ const TransferController = () => {
     }
 
     const updateRecipientAsset = (newTransactionType, newSenderAsset) => {
-        if (newTransactionType === TransactionOptions.Transfer.value) {
+        if (newTransactionType === transactionOptions.transfer.value) {
             setRecipientAsset(newSenderAsset);
-        } else if (newTransactionType === TransactionOptions.Exchange.value) {
-            const MelodyJSON = TokenOptions.Melody.JSONValue
-            const HUSDJSON = TokenOptions.HUSD.JSONValue
+        } else if (newTransactionType === transactionOptions.exchange.value) {
+            const MelodyJSON = tokenOptions.Melody.JSONValue
+            const HUSDJSON = tokenOptions.HUSD.JSONValue
             const oppositeAsset = newSenderAsset ===  MelodyJSON
                                   ? HUSDJSON
                                   : MelodyJSON;
@@ -272,12 +272,12 @@ const TransferController = () => {
 
           const senderSymbol = JSON.parse(senderAsset).symbol;
           const recipientSymbol = JSON.parse(recipientAsset).symbol;
-          const symbol = transactionType === TransactionOptions.Exchange.value ? recipientSymbol : senderSymbol;
+          const symbol = transactionType === transactionOptions.exchange.value ? recipientSymbol : senderSymbol;
 
           // Assume amountToSend is from a state or another source
           let returnAmount = amount;
 
-          if (transactionType === TransactionOptions.Exchange.value) {
+          if (transactionType === transactionOptions.exchange.value) {
             // currentExchangeRatio needs to come from a state or context
             const currentExchangeRatio = 1; // Example ratio
             returnAmount = amountToSend * currentExchangeRatio;
@@ -312,24 +312,24 @@ const TransferController = () => {
             <div className="form-item">
                 <label>Transaction Type</label>
                 <select id="transaction_type" value={transactionType} onChange={handleTransactionTypeChange}>
-                <option value={TransactionOptions.Transfer.value}>{TransactionOptions.Transfer.displayText}</option>
-                <option value={TransactionOptions.Exchange.value}>{TransactionOptions.Exchange.displayText}</option>
+                <option value={transactionOptions.transfer.value}>{transactionOptions.transfer.displayText}</option>
+                <option value={transactionOptions.exchange.value}>{transactionOptions.exchange.displayText}</option>
                 </select>
             </div>
 
             <div className="form-item">
                 <label>Sender Asset</label>
                 <select id="sender_asset" value={senderAsset} onChange={handleSenderAssetChange}>
-                <option value={TokenOptions.Melody.JSONValue}>{TokenOptions.Melody.displayText}</option>
-                    <option value={TokenOptions.HUSD.JSONValue}>{TokenOptions.HUSD.displayText}</option>
+                <option value={tokenOptions.Melody.JSONValue}>{tokenOptions.Melody.displayText}</option>
+                    <option value={tokenOptions.HUSD.JSONValue}>{tokenOptions.HUSD.displayText}</option>
                 </select>
             </div>
 
             <div className="form-item">
                 <label>Recipient Asset</label>
                 <select id="recipient_asset" value={recipientAsset} onChange={handleRecipientAssetChange} disabled={transactionType === 'transfer'}>
-                <option value={TokenOptions.Melody.JSONValue}>{TokenOptions.Melody.displayText}</option>
-                    <option value={TokenOptions.HUSD.JSONValue}>{TokenOptions.HUSD.displayText}</option>
+                <option value={tokenOptions.Melody.JSONValue}>{tokenOptions.Melody.displayText}</option>
+                    <option value={tokenOptions.HUSD.JSONValue}>{tokenOptions.HUSD.displayText}</option>
                 </select>
             </div>
 

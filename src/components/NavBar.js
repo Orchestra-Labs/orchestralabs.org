@@ -2,6 +2,7 @@ import React from 'react';
 import './NavBar.css';
 import { Link, useLocation } from 'react-router-dom';
 import {NavOptions} from '../utils/optionValues';
+import soundWaveIcon from './../images/sound-wave.png';
 
 const NavBar = () => {
     const location = useLocation();
@@ -14,7 +15,7 @@ const NavBar = () => {
         <div className="navbar">
             <div id="title" className={isActive(NavOptions.HOME)}>
                 <Link to={NavOptions.HOME}>
-                    <img className="navbar-icon" src="sound-wave.png" alt="Sound Wave Icon" />
+                    <img className="navbar-icon" src={soundWaveIcon} alt="Sound Wave Icon" />
                     <span>Symphony</span>
                 </Link>
             </div>

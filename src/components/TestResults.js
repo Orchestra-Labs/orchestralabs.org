@@ -1,5 +1,6 @@
 import React from "react";
 import './TestResults.css';
+import testResults from './../images/Total-Coins-to-Refill-Exchange-and-Reserve.png';
 
 const TestResults = () => {
     return (
@@ -7,7 +8,7 @@ const TestResults = () => {
             <p className="test-results-text">
                 Results utilizing transaction data from Luna's fall show Symphony can drop to 25% of its original value and still honor full withdrawals!
             </p>
-            <img className="image" src="Total-Coins-to-Refill-Exchange-and-Reserve.png" alt="Another Image"></img>
+            <img className="image" src={testResults} alt="Another Image"></img>
         </div>
     );
 };
