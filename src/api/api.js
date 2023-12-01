@@ -83,19 +83,17 @@ export const submitTransaction = async (endpoint, dataPackage) => {
             body: JSON.stringify(dataPackage),
         });
 
-        const responseData = await response.json();
+        const responseDataJSON = await response.text();
+        const responseData = JSON.parse(responseDataJSON)
         if (response.ok && responseData.message !== 'fail') {
             // Transaction was successful
-            alert('Transaction successful');
             return { success: true };
         } else {
             // Transaction failed
-            alert('Transaction failed');
             return { success: false, message: responseData.message || 'Unknown error' };
         }
     } catch (error) {
         console.error(error);
-        alert('Transaction failed');
         return { success: false, message: error.message || 'Unknown error' };
     }
 };
