@@ -1,4 +1,3 @@
-// state.js
 import { atom } from 'recoil';
 
 export const transactionTypeState = atom({

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./WalletInformation.css";
 import { useRecoilState } from "recoil";
-import { walletState } from '../state/WalletState';
+import { walletState } from '../atoms/walletAtom';
 import { fetchDemoData, fetchWalletBalances } from "../api/api";
 
 const WalletInformation = () => {
@@ -15,7 +15,12 @@ const WalletInformation = () => {
         const initializeDemoData = async () => {
             try {
                 const data = await fetchDemoData();
-                setWallet(prevWallet => ({ ...prevWallet, address: data.demo_address }));
+                setWallet(prevWallet => ({
+                    ...prevWallet, 
+                    address: data.demo_address,
+                    privateKey: data.demo_private_key,
+                    publicKey: data.demo_public_key
+                }));
                 setExchangeInfo({
                     exchangeAddress: data.exchange_address,
                     reserveAddress: data.reserve_address,
@@ -58,7 +63,7 @@ const WalletInformation = () => {
     
         return Object.entries(balances).map(([assetJSON, amount]) => {
             const asset = JSON.parse(assetJSON);
-            return <p key={asset.symbol}>{`${asset.name} (${asset.symbol}): ${amount}`}</p>;
+            return <p key={asset.symbol}>{`${asset.name} (${asset.symbol}): ${amount.toFixed(8)}`}</p>;
         });
     };    
 
