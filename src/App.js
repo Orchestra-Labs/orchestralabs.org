@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import './App.css';
 import BottomNavBar from "./components/BottomNavBar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavOptions from "./utils/enums";
+import {NavOptions} from "./utils/OptionValues";
 import Home from "./components/Home";
 import TestResults from "./components/TestResults";
 import DemoPage from "./components/DemoPage";

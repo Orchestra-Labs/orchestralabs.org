@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import { exchangeRatioState } from '../state/ExchangeRatioState';
+import { exchangeRatioState } from '../state/CollateralState';
 import { changeExchangeRatioApi } from '../api/api';
 
 const ExchangeRatioController = () => {

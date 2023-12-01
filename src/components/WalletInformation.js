@@ -3,6 +3,8 @@ import "./WalletInformation.css";
 import { useRecoilState } from "recoil";
 import { walletState } from '../state/WalletState';
 import { fetchDemoData, fetchWalletBalances } from "../api/api";
+import { exchangeRatioState, reserveRatioState } from '../state/CollateralState';
+import { TokenOptions } from "../utils/OptionValues";
 
 const WalletInformation = () => {
     const [wallet, setWallet] = useRecoilState(walletState);
@@ -10,6 +12,21 @@ const WalletInformation = () => {
     const [reserveBalances, setReserveBalances] = useState({});
     const [collateralRequirement, setCollateralRequirement] = useState(0);
     const [exchangeInfo, setExchangeInfo] = useState({});
+    // const [exchangeRatio, setExchangeRatio] = useRecoilState(exchangeRatioState);
+    // const [reserveRatio, setReserveRatio] = useRecoilState(reserveRatioState);
+
+    // const calculateCollateralRatio = (balances) => {
+    //     let currentCollateral = 0;
+      
+    //     for (const [assetJSON, balance] of Object.entries(balances)) {
+    //       if (assetJSON == TokenOptions.Melody.JSONValue) {
+    //         currentCollateral += balance;
+    //       }
+    //     }
+      
+    //     const collateralRatio = currentCollateral / collateralRequirement;
+    //     return collateralRatio;
+    //   };
 
     useEffect(() => {
         const initializeDemoData = async () => {
@@ -49,6 +66,11 @@ const WalletInformation = () => {
                 const reserveBalances = await fetchWalletBalances(exchangeInfo.reserveAddress);
                 setReserveBalances(reserveBalances);
             }
+
+            // const newExchangeRatio = calculateCollateralRatio(exchangeBalances);
+            // const newReserveRatio = calculateCollateralRatio(reserveBalances);
+            // setExchangeRatio(newExchangeRatio);
+            // setReserveRatio(newReserveRatio);
         };
 
         const balanceInterval = setInterval(updateBalances, 3000);

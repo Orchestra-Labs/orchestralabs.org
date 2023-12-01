@@ -102,8 +102,9 @@ export const submitTransaction = async (endpoint, dataPackage) => {
 
 export const fetchBlockchainDataFromAPI = async () => {
     try {
-        const response = await fetch(`${BASE_URL}/blockchainData`);
-        const data = await response.json();
+        const response = await fetch(`${BASE_URL}/`);
+        const JSONData = await response.text();
+        const data = JSON.parse(JSONData)
         return {
             success: true,
             data: data.blockchain || []
