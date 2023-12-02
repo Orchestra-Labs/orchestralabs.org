@@ -12,7 +12,7 @@ import NotFound from "./components/NotFound";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/orchestralabs.org">
+    <BrowserRouter basename="/">
       <LocationHandler />
       <div className="container">
         <NavBar />
