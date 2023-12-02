@@ -9,7 +9,7 @@ const LocationHandler = () => {
 
   useEffect(() => {
     setLocation(location.pathname);
-  }, [location, setLocation]);
+  }, [location]);
 
   return null;
 };

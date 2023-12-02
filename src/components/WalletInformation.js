@@ -54,7 +54,7 @@ const WalletInformation = () => {
         const balanceInterval = setInterval(updateBalances, 3000);
 
         return () => clearInterval(balanceInterval);
-    }, [wallet.address, exchangeInfo.exchangeAddress, exchangeInfo.reserveAddress]);
+    }, [wallet, exchangeInfo]);
 
     const renderBalances = (balances) => {
         if (!balances || Object.keys(balances).length === 0) {

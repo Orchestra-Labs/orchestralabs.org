@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LocationHandler from "./components/LocationHandler";
 import {NavOptions} from "./utils/optionValues";
@@ -8,10 +7,6 @@ import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import TestResults from "./components/TestResults";
 import DemoPage from "./components/DemoPage";
-
-
-
-
 import './App.css';
 
 function App() {

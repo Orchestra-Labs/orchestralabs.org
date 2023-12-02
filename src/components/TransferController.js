@@ -301,7 +301,7 @@ const TransferController = () => {
             }
           });
         }
-    }, [wallet.balances]); // Dependency on wallet.balances
+    }, [wallet]);
 
     return (
         <>

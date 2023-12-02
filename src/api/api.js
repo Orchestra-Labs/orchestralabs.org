@@ -1,6 +1,6 @@
 import { BASE_URL } from "../config/config";
 import { API_ENDPOINTS } from "./../utils/apiConstants";
-import { TransactionOptions, transactionOptions } from "../utils/optionValues";
+import { transactionOptions } from "../utils/optionValues";
 
 export const fetchDemoData = async () => {
     try {
