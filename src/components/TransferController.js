@@ -97,11 +97,11 @@ const TransferController = () => {
     };
 
     const sendMoney = async () => {
-        const confirmResult = confirm('Are you sure to send?');
-        if (!confirmResult) {
-            alert('Canceled');
-            return;
-        }
+        // const confirmResult = confirm('Are you sure to send?');
+        // if (!confirmResult) {
+        //     alert('Canceled');
+        //     return;
+        // }
 
         let dataPackage = await buildTransaction(transactionType === 'exchange');
         if (!dataPackage) {
