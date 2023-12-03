@@ -27,7 +27,7 @@ export const fetchWalletBalances = async (address) => {
 export const changeExchangeRatioApi = async (newRatio) => {
     try {
         const response = await fetch(`${BASE_URL}${API_ENDPOINTS.CHANGE_EXCHANGE_RATIO}?percentage=${newRatio}`, {
-            method: 'POST',
+            method: 'POST'
         });
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -81,12 +81,13 @@ export const submitTransaction = async (transactionType, dataPackage) => {
         API_ENDPOINTS.SUBMIT_TRANSACTION;
 
     try {
-        const response = await fetch(endpoint, {
+        const response = await fetch(`${BASE_URL}${endpoint}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(dataPackage),
+            json: true
         });
 
         if (response.ok) {
