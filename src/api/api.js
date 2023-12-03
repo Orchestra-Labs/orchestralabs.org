@@ -87,7 +87,6 @@ export const submitTransaction = async (transactionType, dataPackage) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(dataPackage),
-            json: true
         });
 
         if (response.ok) {
