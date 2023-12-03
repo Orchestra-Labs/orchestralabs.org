@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f3a9836.css",
+    "main.js": "/static/js/main.d8b4dffb.js",
+    "static/js/787.29d8ecd8.chunk.js": "/static/js/787.29d8ecd8.chunk.js",
+    "static/media/background.png": "/static/media/background.f65d53a920904e569c69.png",
+    "static/media/Total-Coins-to-Refill-Exchange-and-Reserve.png": "/static/media/Total-Coins-to-Refill-Exchange-and-Reserve.f890305e0e947a7c2b28.png",
+    "static/media/discord.svg": "/static/media/discord.db90360f68cd959d04a853144e061e4d.svg",
+    "static/media/github.svg": "/static/media/github.6cc3d9da94adab1378248064945cdf46.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.fd9e42980a314c0ab7ddcc9967529150.svg",
+    "index.html": "/index.html",
+    "static/media/twitter.svg": "/static/media/twitter.8ca7b13eb4941356562972f4cb2e7d89.svg",
+    "main.9f3a9836.css.map": "/static/css/main.9f3a9836.css.map",
+    "main.d8b4dffb.js.map": "/static/js/main.d8b4dffb.js.map",
+    "787.29d8ecd8.chunk.js.map": "/static/js/787.29d8ecd8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f3a9836.css",
+    "static/js/main.d8b4dffb.js"
+  ]
+}
