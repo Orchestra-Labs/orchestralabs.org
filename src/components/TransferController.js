@@ -97,12 +97,6 @@ const TransferController = () => {
     };
 
     const sendMoney = async () => {
-        // const confirmResult = confirm('Are you sure to send?');
-        // if (!confirmResult) {
-        //     alert('Canceled');
-        //     return;
-        // }
-
         let dataPackage = await buildTransaction(transactionType === 'exchange');
         if (!dataPackage) {
             alert('Failed to build transaction data.');
@@ -170,8 +164,8 @@ const TransferController = () => {
         if (newTransactionType === transactionOptions.transfer.value) {
             setRecipientAsset(newSenderAsset);
         } else if (newTransactionType === transactionOptions.exchange.value) {
-            const MelodyJSON = tokenOptions.Melody.JSONValue
-            const HUSDJSON = tokenOptions.HUSD.JSONValue
+            const MelodyJSON = tokenOptions.Melody.jsonValue
+            const HUSDJSON = tokenOptions.HUSD.jsonValue
             const oppositeAsset = newSenderAsset ===  MelodyJSON
                                   ? HUSDJSON
                                   : MelodyJSON;
@@ -301,7 +295,7 @@ const TransferController = () => {
             }
           });
         }
-    }, [wallet.balances]); // Dependency on wallet.balances
+    }, [wallet]);
 
     return (
         <>
@@ -320,16 +314,16 @@ const TransferController = () => {
             <div className="form-item">
                 <label>Sender Asset</label>
                 <select id="sender_asset" value={senderAsset} onChange={handleSenderAssetChange}>
-                <option value={tokenOptions.Melody.JSONValue}>{tokenOptions.Melody.displayText}</option>
-                    <option value={tokenOptions.HUSD.JSONValue}>{tokenOptions.HUSD.displayText}</option>
+                <option value={tokenOptions.Melody.jsonValue}>{tokenOptions.Melody.displayText}</option>
+                    <option value={tokenOptions.HUSD.jsonValue}>{tokenOptions.HUSD.displayText}</option>
                 </select>
             </div>
 
             <div className="form-item">
                 <label>Recipient Asset</label>
                 <select id="recipient_asset" value={recipientAsset} onChange={handleRecipientAssetChange} disabled={transactionType === 'transfer'}>
-                <option value={tokenOptions.Melody.JSONValue}>{tokenOptions.Melody.displayText}</option>
-                    <option value={tokenOptions.HUSD.JSONValue}>{tokenOptions.HUSD.displayText}</option>
+                <option value={tokenOptions.Melody.jsonValue}>{tokenOptions.Melody.displayText}</option>
+                    <option value={tokenOptions.HUSD.jsonValue}>{tokenOptions.HUSD.displayText}</option>
                 </select>
             </div>
 

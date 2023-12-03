@@ -8,7 +8,7 @@ const TestResults = () => {
             <p className="test-results-text">
                 Results utilizing transaction data from Luna's fall show Symphony can drop to 25% of its original value and still honor full withdrawals!
             </p>
-            <img className="image" src={testResults} alt="Another Image"></img>
+            <img className="image" src={testResults} alt="Result of value drop testing of Symphony exchange"/>
         </div>
     );
 };
