@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { transactionTypeState, senderAssetState, recipientAssetState } from '../atoms/transactionAtom';
-import { walletState } from '../atoms/walletAtom';
+import { demoWalletState } from '../atoms/walletBalanceAtom';
 import { fetchExchangeData, fetchTransactionFees, submitTransaction } from '../api/api';
 import CryptoJS from 'crypto-js';
 import { v4 as uuidv4 } from 'uuid';
 import { tokenOptions, transactionOptions } from '../utils/optionValues';
+import { infoUpdateCountdownState } from '../atoms/timerAtom';
 
 const TransferController = () => {
     const [transactionType, setTransactionType] = useRecoilState(transactionTypeState);
     const [senderAsset, setSenderAsset] = useRecoilState(senderAssetState);
     const [recipientAsset, setRecipientAsset] = useRecoilState(recipientAssetState);
     const [currentFees, setCurrentFees] = useState({})
-    const wallet = useRecoilValue(walletState);
+    const wallet = useRecoilValue(demoWalletState);
     const [recipientWalletAddress, setRecipientWalletAddress] = useState('');
     const [amountToSend, setAmountToSend] = useState('');
     const [currentFeesText, setCurrentFeesText] = useState('Loading...');
     const [expectedReturn, setExpectedReturn] = useState('Expected Return: N/A');
     const [maxSendableAmount, setMaxSendableAmount] = useState('Maximum Sendable Amounts: Loading...');
     const [estimatedFees, setEstimatedFees] = useState('Estimated Fees: N/A');
+    const infoUpdateCountdown = useRecoilValue(infoUpdateCountdownState);
 
     function signTransaction(serializedTransaction, key) {
         const signature = CryptoJS.HmacSHA256(serializedTransaction, key);
@@ -218,23 +220,27 @@ const TransferController = () => {
           console.error('Error updating max sendable amounts:', error);
           return { error: error.message };
         }
-    };    
+    };
+
+    const fetchAndUpdateFees = async () => {
+      const feeResult = await fetchTransactionFees();
+      if (feeResult.success) {
+        setCurrentFees(feeResult.feeStructure);
+      } else {
+        console.error('Error fetching fees:', feeResult.error);
+      }
+    };
 
     useEffect(() => {
-        const fetchAndUpdateFees = async () => {
-          const feeResult = await fetchTransactionFees();
-          if (feeResult.success) {
-            setCurrentFees(feeResult.feeStructure);
-          } else {
-            console.error('Error fetching fees:', feeResult.error);
-          }
-        };
-      
-        fetchAndUpdateFees(); // Fetch fees immediately on mount
-        const intervalId = setInterval(fetchAndUpdateFees, 3000); // Update fees every 3 seconds
-      
-        return () => clearInterval(intervalId); // Cleanup interval on unmount
+        fetchAndUpdateFees();
     }, []);
+
+    useEffect(() => {
+      if (infoUpdateCountdown === 3) {
+        fetchAndUpdateFees();
+      }
+
+    }, [infoUpdateCountdown]);
 
     useEffect(() => {
         // Ensure wallet address is available
