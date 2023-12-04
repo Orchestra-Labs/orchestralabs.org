@@ -3,7 +3,7 @@ import "./WalletInformation.css";
 import { useRecoilState } from "recoil";
 import { collateralRequirementState, demoWalletState, exchangeBalancesState, reserveBalancesState } from '../atoms/walletBalanceAtom';
 import { fetchDemoData, fetchWalletBalances } from "../api/api";
-import { blockCreationCountdownState, infoUpdateCountdownState } from "../atoms/timerAtom";
+import { infoUpdateCountdownState } from "../atoms/timerAtom";
 
 const WalletInformation = () => {
     const [demoWallet, setDemoWallet] = useRecoilState(demoWalletState);
@@ -12,7 +12,6 @@ const WalletInformation = () => {
     const [collateralRequirement, setCollateralRequirement] = useRecoilState(collateralRequirementState);
     const [exchangeInfo, setExchangeInfo] = useState({});
     const [infoUpdateCountdown, setInfoUpdateCountdown] = useRecoilState(infoUpdateCountdownState);
-    const [blockCreationCountdown, setBlockCreationCountdown] = useRecoilState(blockCreationCountdownState);
 
     const updateBalances = async () => {
         if (demoWallet.address) {
@@ -82,14 +81,9 @@ const WalletInformation = () => {
         const infoUpdateTimer = setInterval(() => {
             setInfoUpdateCountdown(prevCountdown => prevCountdown > 0 ? prevCountdown - 1 : 3);
         }, 1000);
-        
-        const blockCreationTimer = setInterval(() => {
-            setBlockCreationCountdown(prevCountdown => prevCountdown > 0 ? prevCountdown - 1 : 60);
-        }, 1000);
 
         return () => {
             clearInterval(infoUpdateTimer);
-            clearInterval(blockCreationTimer);
         };
     }, []);
 
@@ -106,7 +100,7 @@ const WalletInformation = () => {
     return (
         <>
             <h1>Demo Wallet</h1>
-            <p>Next data update in: {infoUpdateCountdown}s. Next block in: {blockCreationCountdown}s.</p>
+            <p>Next data update in: {infoUpdateCountdown}s. Blocks will finalize every 1-3 minutes.</p>
             <p>Give two blocks for blockchain to react to environmental changes.</p>
             <p>Delays may occur due to Google App Engine Deployment (dynamic allocation, not always-on server).</p>
             <div>
