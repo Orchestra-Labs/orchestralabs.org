@@ -19,35 +19,41 @@ const ExchangeRatioController = () => {
 
     return (
         <>
-            <h1>Exchange Ratio (MLD:HUSD)</h1>
-            <button 
-                className="change-ratio-button" 
-                onClick={() => changeExchangeRatio(100)}
-                disabled={isButtonDisabled(100)}
-            >
-                1:1
-            </button>
-            <button 
-                className="change-ratio-button" 
-                onClick={() => changeExchangeRatio(75)}
-                disabled={isButtonDisabled(75)}
-            >
-                3:4
-            </button>
-            <button 
-                className="change-ratio-button" 
-                onClick={() => changeExchangeRatio(50)}
-                disabled={isButtonDisabled(50)}
-            >
-                1:2
-            </button>
-            <button 
-                className="change-ratio-button" 
-                onClick={() => changeExchangeRatio(25)}
-                disabled={isButtonDisabled(25)}
-            >
-                1:4
-            </button>
+            <h1 className='center-text'>Exchange Ratio (MLD:HUSD)</h1>
+            <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }} >
+                <button 
+                    className="change-ratio-button" 
+                    onClick={() => changeExchangeRatio(100)}
+                    disabled={isButtonDisabled(100)}
+                >
+                    1:1
+                </button>
+                <button 
+                    className="change-ratio-button" 
+                    onClick={() => changeExchangeRatio(75)}
+                    disabled={isButtonDisabled(75)}
+                >
+                    3:4
+                </button>
+                <button 
+                    className="change-ratio-button" 
+                    onClick={() => changeExchangeRatio(50)}
+                    disabled={isButtonDisabled(50)}
+                >
+                    1:2
+                </button>
+                <button 
+                    className="change-ratio-button" 
+                    onClick={() => changeExchangeRatio(25)}
+                    disabled={isButtonDisabled(25)}
+                >
+                    1:4
+                </button>
+            </div>
         </>
     );
 };

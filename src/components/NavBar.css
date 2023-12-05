@@ -65,3 +65,58 @@
 #navlinks a:hover {
     color: burlywood;
 }
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+    z-index: 999;
+    height: 52px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#demo-navlinks {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 78px;
+    color: white;
+    padding-right: 16px;
+    align-items: center;
+    display: flex;
+    margin-left: 5px;
+    padding: 0px 12px;
+    font-size: 16px;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    color: white;
+}
+
+#demo-navlinks a {
+    margin-left: 5px;
+    padding: 0px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    color: white;
+}
+
+
+#demo-navlinks a:hover {
+    color: burlywood;
+}

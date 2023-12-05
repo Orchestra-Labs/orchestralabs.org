@@ -13,14 +13,17 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <LocationHandler />
-      <div className="container">
+      <div className="container display-flex">
         <NavBar />
+        <div className='centerItem display-flex'>
         <Routes>
           <Route path={NavOptions.HOME} element={<Home />} />
           <Route path={NavOptions.TEST_RESULTS} element={<TestResults />} />
           <Route path={NavOptions.DEMO} element={<DemoPage/>} />
+          <Route path={NavOptions.CHART} element={<DemoPage/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </div>
         <BottomNavBar />
       </div>
     </BrowserRouter>

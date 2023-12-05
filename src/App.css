@@ -8,9 +8,20 @@ body {
 }
 
 .container {
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 108px); /* Adjusted height */
+  padding-top: 26px; /* Half height of NavBar */
+}
+
+.centerItem {
+  max-height: calc(100vh - 108px);
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-flex {
+  display: flex;
 }

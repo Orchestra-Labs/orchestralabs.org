@@ -111,7 +111,7 @@ const ExchangeRatioChart = () => {
 
     return (
         <>
-            <h3>Percent Collateral Met by Block Height</h3>
+            <h3 className="center-text">Percent Collateral Met by Block Height</h3>
             <div id="ratioChartContainer">
                 <canvas ref={chartRef} id="ratioChart"></canvas> 
             </div>

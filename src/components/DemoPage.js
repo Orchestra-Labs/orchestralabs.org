@@ -1,30 +1,36 @@
 import React from "react";
 import WalletInformation from "./WalletInformation";
-import TransferController from "./TransferController";
-import ExchangeRatioController from "./ExchangeRatioController";
+import DemoController from "./DemoData";
 import ExchangeRatioChart from "./ExchangeRatioChart";
-import "./DemoPage.css"
+import { useLocation } from "react-router";
+import { NavOptions } from "../utils/optionValues";
+import ExchangeRatioController from "./ExchangeRatioController";
 
 const DemoPage = () => {
+    const location = useLocation();
+
     return (
-        <table className="container">
-            <tbody>
-                <tr>
-                    <td className="left">
-                        <WalletInformation />
-                        <ExchangeRatioController />
-                    </td>
-                    <td className="right">
-                        <TransferController />
-                    </td>
-                </tr>
-                <tr>
-                    <td colSpan="2">
-                        <ExchangeRatioChart />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <>
+            {location.pathname === NavOptions.DEMO && (
+                <DemoController />
+            )}
+            {location.pathname === NavOptions.CHART && (
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ExchangeRatioController />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ExchangeRatioChart />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            )}
+        </>
     );
 };
 

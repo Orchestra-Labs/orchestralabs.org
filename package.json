@@ -47,6 +47,9 @@
       "last 1 safari version"
     ]
   },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^latest"
+  },
   "resolutions": {
     "**/nth-check": "^2.0.1",
     "**/postcss": ">=8.4.31"

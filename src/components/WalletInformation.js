@@ -102,7 +102,6 @@ const WalletInformation = () => {
             <h1>Demo Wallet</h1>
             <p>Next data update in: {infoUpdateCountdown}s. Blocks will finalize every 1-3 minutes.</p>
             <p>Give two blocks for blockchain to react to environmental changes.</p>
-            <p>Delays may occur due to Google App Engine Deployment (dynamic allocation, not always-on server).</p>
             <div>
                 <span className="data-label">Wallet Address:</span> <span className="data-value">{demoWallet.address}</span><br />
                 <span className="data-label">Wallet Balances:</span> <span className="data-value">{renderBalances(demoWallet.balances)}</span><br />
