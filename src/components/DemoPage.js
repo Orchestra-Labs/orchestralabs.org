@@ -1,24 +1,21 @@
-import React, { useEffect, useState, useRef } from "react";
-import WalletInformation from "./WalletInformation";
+import React, { useEffect, useState } from "react";
 import DemoController from "./DemoData";
 import ExchangeRatioChart from "./ExchangeRatioChart";
 import { useLocation } from "react-router";
 import { NavOptions, tokenOptions } from "../utils/optionValues";
 import ExchangeRatioController from "./ExchangeRatioController";
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import { fetchBlockchainDataFromAPI, fetchDemoData, fetchWalletBalances } from "../api/api";
 import { infoUpdateCountdownState } from "../atoms/timerAtom";
 import { chartDataState } from "../atoms/chartDataAtom";
 import { collateralRequirementState, demoWalletState, exchangeBalancesState, reserveBalancesState } from "../atoms/walletBalanceAtom";
 import { exchangeInfoState } from "../atoms/exchangeAtom";
-import { Chart } from 'chart.js/auto';
 
 const DemoPage = () => {
-    const chartRef = useRef(null);
     const location = useLocation();
     const [shouldCreateChart, setShouldCreateChart] = useState(false);
     const [chartInstance, setChartInstance] = useState(null);
-    const [chartData, setChartData] = useRecoilState(chartDataState);
+    const setChartData = useSetRecoilState(chartDataState);
     const [infoUpdateCountdown, setInfoUpdateCountdown] = useRecoilState(infoUpdateCountdownState);
     const [collateralRequirement, setCollateralRequirement] = useRecoilState(collateralRequirementState);
     const [demoWallet, setDemoWallet] = useRecoilState(demoWalletState);
