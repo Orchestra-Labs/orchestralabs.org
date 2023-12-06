@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./WalletInformation.css";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { collateralRequirementState, demoWalletState, exchangeBalancesState, reserveBalancesState } from '../atoms/walletBalanceAtom';
-import { fetchDemoData, fetchWalletBalances } from "../api/api";
 import { infoUpdateCountdownState } from "../atoms/timerAtom";
-import { exchangeInfoState } from "../atoms/exchangeAtom";
 
 const WalletInformation = () => {
-    const [demoWallet, setDemoWallet] = useRecoilState(demoWalletState);
-    const [exchangeBalances, setExchangeBalances] = useRecoilState(exchangeBalancesState);
-    const [reserveBalances, setReserveBalances] = useRecoilState(reserveBalancesState);
-    const [collateralRequirement, setCollateralRequirement] = useRecoilState(collateralRequirementState);
-    const [exchangeInfo, setExchangeInfo] = useRecoilState(exchangeInfoState);
-    const [infoUpdateCountdown, setInfoUpdateCountdown] = useRecoilState(infoUpdateCountdownState);
+    const demoWallet = useRecoilValue(demoWalletState);
+    const exchangeBalances = useRecoilValue(exchangeBalancesState);
+    const reserveBalances = useRecoilValue(reserveBalancesState);
+    const collateralRequirement = useRecoilValue(collateralRequirementState);
+    const infoUpdateCountdown = useRecoilValue(infoUpdateCountdownState);
 
     const renderBalances = (balances) => {
         if (!balances || Object.keys(balances).length === 0) {

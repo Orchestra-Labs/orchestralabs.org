@@ -2,21 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 import "./ExchangeRatioChart.css";
 import { Chart } from 'chart.js/auto';
 import { useRecoilValue } from 'recoil';
-import { collateralRequirementState, exchangeBalancesState, reserveBalancesState } from '../atoms/walletBalanceAtom';
-import { fetchBlockchainDataFromAPI } from "../api/api";
-import { tokenOptions } from "../utils/optionValues";
-import { infoUpdateCountdownState } from "../atoms/timerAtom";
 import { chartDataState } from "../atoms/chartDataAtom";
 
 const ExchangeRatioChart = () => {
     const chartRef = useRef(null);
     const [chartInstance, setChartInstance] = useState(null);
     const chartData = useRecoilValue(chartDataState);
-    const exchangeBalances = useRecoilValue(exchangeBalancesState);
-    const reserveBalances = useRecoilValue(reserveBalancesState);
-    const collateralRequirement = useRecoilValue(collateralRequirementState);
-    const [blockchainLength, setBlockchainLength] = useState(0);
-    const infoUpdateCountdown = useRecoilValue(infoUpdateCountdownState);
 
     useEffect(() => {
         if (!chartRef.current) {
