@@ -31,7 +31,7 @@ const NavBar = () => {
                 {location.pathname === NavOptions.DEMO && (
                     <Link to={NavOptions.CHART}>Chart</Link>
                 )}
-                {location.pathname !== NavOptions.DEMO && (
+                {location.pathname === NavOptions.CHART && (
                     <Link to={NavOptions.DEMO}>Data</Link>
                 )}
             </div>

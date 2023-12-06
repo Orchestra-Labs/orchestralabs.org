@@ -8,6 +8,7 @@ body {
 }
 
 .container {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -16,12 +17,9 @@ body {
 }
 
 .centerItem {
+  display: flex;
   max-height: calc(100vh - 108px);
   width: 80%;
   align-items: center;
   justify-content: center;
-}
-
-.display-flex {
-  display: flex;
 }

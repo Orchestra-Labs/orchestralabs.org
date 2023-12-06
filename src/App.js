@@ -13,9 +13,9 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <LocationHandler />
-      <div className="container display-flex">
+      <div className="container">
         <NavBar />
-        <div className='centerItem display-flex'>
+        <div className='centerItem'>
         <Routes>
           <Route path={NavOptions.HOME} element={<Home />} />
           <Route path={NavOptions.TEST_RESULTS} element={<TestResults />} />
