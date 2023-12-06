@@ -20,17 +20,17 @@ const ExchangeRatioChart = ({ shouldCreateChart, setShouldCreateChart }) => {
             const newChartInstance = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: [],
+                    labels: chartData.labels,
                     datasets: [{
                         label: 'Exchange Balance to Collateral Ratio',
                         backgroundColor: 'rgba(54, 162, 235, 0.2)',
                         borderColor: 'rgba(54, 162, 235, 1)',
-                        data: [],
+                        data: chartData.exchangeData,
                     }, {
                         label: 'Reserve Balance to Collateral Ratio',
                         backgroundColor: 'rgba(255, 99, 132, 0.2)',
                         borderColor: 'rgba(255, 99, 132, 1)',
-                        data: [],
+                        data: chartData.reserveData,
                     }],
                 },
                 options: {
@@ -47,6 +47,7 @@ const ExchangeRatioChart = ({ shouldCreateChart, setShouldCreateChart }) => {
             });
 
             setChartInstance(newChartInstance);
+            setShouldCreateChart(false);
         }
     }
 
