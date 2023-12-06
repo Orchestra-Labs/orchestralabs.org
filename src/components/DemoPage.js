@@ -1,13 +1,211 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import WalletInformation from "./WalletInformation";
 import DemoController from "./DemoData";
 import ExchangeRatioChart from "./ExchangeRatioChart";
 import { useLocation } from "react-router";
-import { NavOptions } from "../utils/optionValues";
+import { NavOptions, tokenOptions } from "../utils/optionValues";
 import ExchangeRatioController from "./ExchangeRatioController";
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { fetchBlockchainDataFromAPI, fetchDemoData, fetchWalletBalances } from "../api/api";
+import { infoUpdateCountdownState } from "../atoms/timerAtom";
+import { chartDataState } from "../atoms/chartDataAtom";
+import { collateralRequirementState, demoWalletState, exchangeBalancesState, reserveBalancesState } from "../atoms/walletBalanceAtom";
+import { exchangeInfoState } from "../atoms/exchangeAtom";
+import { Chart } from 'chart.js/auto';
 
 const DemoPage = () => {
+    const chartRef = useRef(null);
     const location = useLocation();
+    const [chartInstance, setChartInstance] = useState(null);
+    const [chartData, setChartData] = useRecoilState(chartDataState);
+    const [infoUpdateCountdown, setInfoUpdateCountdown] = useRecoilState(infoUpdateCountdownState);
+    const [collateralRequirement, setCollateralRequirement] = useRecoilState(collateralRequirementState);
+    const [demoWallet, setDemoWallet] = useRecoilState(demoWalletState);
+    const [exchangeBalances, setExchangeBalances] = useRecoilState(exchangeBalancesState);
+    const [reserveBalances, setReserveBalances] = useRecoilState(reserveBalancesState);
+    const [exchangeInfo, setExchangeInfo] = useRecoilState(exchangeInfoState);
+
+    const updateCollateralRequirement = async () => {
+        try {
+            const data = await fetchDemoData();
+            setCollateralRequirement(data.collateral_requirement);
+        } catch (error) {
+            console.error('Error fetching wallet data:', error);
+        }
+    };
+
+    const calculatePercentCollateralMet = (balance, collateralRequirement) => {
+        return collateralRequirement > 0 ? (balance / collateralRequirement) * 100 : 100;
+    };
+
+    const fetchData = async () => {
+        const result = await fetchBlockchainDataFromAPI();
+        if (result.success) {
+            const melodyKey = tokenOptions.Melody.jsonValue.split(' ').join('');
+
+            setChartData(prevChartData => {
+                const updatedLabels = [...prevChartData.labels];
+                const updatedExchangeData = [...prevChartData.exchangeData];
+                const updatedReserveData = [...prevChartData.reserveData];
+            
+                const blockchainLength = result.data.length;
+                const dataIndex = updatedLabels.findIndex(label => label === blockchainLength);
+            
+                if (dataIndex !== -1) {
+                    // Update existing data point
+                    updatedExchangeData[dataIndex] = calculatePercentCollateralMet(
+                        exchangeBalances[melodyKey], collateralRequirement
+                    );
+                    updatedReserveData[dataIndex] = calculatePercentCollateralMet(
+                        reserveBalances[melodyKey], collateralRequirement
+                    );
+                } else {
+                    // Add new data point
+                    updatedLabels.push(blockchainLength);
+                    updatedExchangeData.push(
+                        calculatePercentCollateralMet(exchangeBalances[melodyKey], collateralRequirement)
+                    );
+                    updatedReserveData.push(
+                        calculatePercentCollateralMet(reserveBalances[melodyKey], collateralRequirement)
+                    );
+                }
+            
+                return {
+                    labels: updatedLabels,
+                    exchangeData: updatedExchangeData,
+                    reserveData: updatedReserveData
+                };
+            });            
+        }
+    };
+
+    const updateBalances = async () => {
+        if (demoWallet.address) {
+            const walletBalances = await fetchWalletBalances(demoWallet.address);
+            if (walletBalances) { // Check if the data is valid and the component is still mounted
+                setDemoWallet(prevWallet => ({ ...prevWallet, balances: walletBalances }));
+            }
+        }
+        if (exchangeInfo.exchangeAddress) {
+            const exchangeBalances = await fetchWalletBalances(exchangeInfo.exchangeAddress);
+            if (exchangeBalances) {
+                setExchangeBalances(exchangeBalances);
+            }
+        }
+        if (exchangeInfo.reserveAddress) {
+            const reserveBalances = await fetchWalletBalances(exchangeInfo.reserveAddress);
+            if (reserveBalances) {
+                setReserveBalances(reserveBalances);
+            }
+        }
+    };
+
+    const initializeDemoData = async () => {
+        try {
+            const data = await fetchDemoData();
+            setDemoWallet(prevWallet => ({
+                ...prevWallet,
+                address: data.demo_address,
+                privateKey: data.demo_private_key,
+                publicKey: data.demo_public_key
+            }));
+            setExchangeInfo({
+                exchangeAddress: data.exchange_address,
+                reserveAddress: data.reserve_address,
+                exchangeRatio: data.exchange_ratio,
+            });
+            setCollateralRequirement(data.collateral_requirement);
+        } catch (error) {
+            console.error('Error fetching wallet data:', error);
+        }
+    };
+
+    const updateChart = () => {
+        if (chartInstance) {
+            chartInstance.data.labels = chartData.labels;
+            chartInstance.data.datasets[0].data = chartData.exchangeData;
+            chartInstance.data.datasets[1].data = chartData.reserveData;
+            chartInstance.update();
+        }
+    }
+
+    const createChart = () => {
+        if (chartRef.current) {
+            const existingChart = Chart.getChart("ratioChart");
+            if (existingChart) {
+                existingChart.destroy();
+            }
+
+            const ctx = chartRef.current.getContext('2d');
+            const newChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [], // This will be updated with blockchain length
+                    datasets: [{
+                        label: 'Exchange Balance to Collateral Ratio',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        data: [],
+                    }, {
+                        label: 'Reserve Balance to Collateral Ratio',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        data: [],
+                    }],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                stepSize: 25
+                            }
+                        }
+                    }
+                }
+            });
+
+            setChartInstance(newChartInstance);
+        }
+    }
+
+    useEffect(() => {
+        initializeDemoData();
+        createChart();
+
+        const infoUpdateTimer = setInterval(() => {
+            setInfoUpdateCountdown(prevCountdown => prevCountdown > 0 ? prevCountdown - 1 : 3);
+        }, 1000);
+
+        return () => {
+            clearInterval(infoUpdateTimer);
+            if (chartInstance) {
+                chartInstance.destroy();
+                setChartInstance(null);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (infoUpdateCountdown === 3) {
+            fetchData();
+        }
+    }, [infoUpdateCountdown, chartData]);
+
+    useEffect(() => {        
+        const balanceInterval = setInterval(updateBalances, 3000);
+        const collateralDataInterval = setInterval(updateCollateralRequirement, 3000);        
+
+        return () => {
+            clearInterval(collateralDataInterval);
+            clearInterval(balanceInterval);
+        };
+    }, [demoWallet]);
+
+    useEffect(() => {
+        updateChart();    
+    }, [chartData]);
 
     return (
         <>
@@ -24,7 +222,10 @@ const DemoPage = () => {
                         </tr>
                         <tr>
                             <td>
-                                <ExchangeRatioChart />
+                                <h3 className="center-text">Percent Collateral Met by Block Height</h3>
+                                <div id="ratioChartContainer">
+                                    <canvas ref={chartRef} id="ratioChart"></canvas> 
+                                </div>                            
                             </td>
                         </tr>
                     </tbody>

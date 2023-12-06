@@ -6,32 +6,30 @@ import { collateralRequirementState, exchangeBalancesState, reserveBalancesState
 import { fetchBlockchainDataFromAPI } from "../api/api";
 import { tokenOptions } from "../utils/optionValues";
 import { infoUpdateCountdownState } from "../atoms/timerAtom";
+import { chartDataState } from "../atoms/chartDataAtom";
 
 const ExchangeRatioChart = () => {
     const chartRef = useRef(null);
     const [chartInstance, setChartInstance] = useState(null);
+    const chartData = useRecoilValue(chartDataState);
     const exchangeBalances = useRecoilValue(exchangeBalancesState);
     const reserveBalances = useRecoilValue(reserveBalancesState);
     const collateralRequirement = useRecoilValue(collateralRequirementState);
     const [blockchainLength, setBlockchainLength] = useState(0);
     const infoUpdateCountdown = useRecoilValue(infoUpdateCountdownState);
 
-    const fetchData = async () => {
-        const result = await fetchBlockchainDataFromAPI();
-        if (result.success) {
-            setBlockchainLength(result.data.length);
-        }
-    };
-
-    // Calculate the percent collateral met based on balances
-    const calculatePercentCollateralMet = (melodyBalance, collateralRequirement) => {
-        // Ensure totalCollateral is not zero to avoid division by zero error
-        return collateralRequirement > 0 ? (melodyBalance / collateralRequirement) * 100 : 100;
-    };
-
-    // Initialize chart
     useEffect(() => {
+        if (!chartRef.current) {
+            console.warn("Canvas element is not rendered yet.");
+            return;
+        }
+    
         const ctx = chartRef.current.getContext('2d');
+        if (!ctx) {
+            console.warn("Failed to get canvas context.");
+            return;
+        }
+    
         const newChartInstance = new Chart(ctx, {
             type: 'line',
             data: {
@@ -60,55 +58,31 @@ const ExchangeRatioChart = () => {
                 }
             }
         });
-
+    
         setChartInstance(newChartInstance);
-        fetchData();
-
+    
         return () => {
             if (newChartInstance) {
                 newChartInstance.destroy();
             }
         };
-    }, []);
-
-    useEffect(() => {
-        if (infoUpdateCountdown === 3) {
-            fetchData();
-        }
-
-    }, [infoUpdateCountdown]);
+    }, [chartData]);
 
     // Update chart when collateral requirements are updated
     useEffect(() => {
-        if (chartInstance && blockchainLength > 0) {
-            const melodyKey = tokenOptions.Melody.jsonValue.split(' ').join('');
-            const dataIndex = chartInstance.data.labels.findIndex(label => label === blockchainLength);
-    
-            // If blockchainLength is already in the labels, update the corresponding data point
-            // Otherwise, add a new data point
-            if (dataIndex !== -1) {
-                // Update existing data point
-                chartInstance.data.datasets[0].data[dataIndex] = calculatePercentCollateralMet(
-                    exchangeBalances[melodyKey], collateralRequirement
-                );
-                chartInstance.data.datasets[1].data[dataIndex] = calculatePercentCollateralMet(
-                    reserveBalances[melodyKey], collateralRequirement
-                );
-            } else {
-                // Add new data point
-                chartInstance.data.labels.push(blockchainLength);
-                chartInstance.data.datasets[0].data.push(
-                    calculatePercentCollateralMet(exchangeBalances[melodyKey], collateralRequirement)
-                );
-                chartInstance.data.datasets[1].data.push(
-                    calculatePercentCollateralMet(reserveBalances[melodyKey], collateralRequirement)
-                );
+        // Delay the update slightly to ensure DOM is ready
+        const updateChart = () => {
+            if (chartInstance) {
+                chartInstance.data.labels = chartData.labels;
+                chartInstance.data.datasets[0].data = chartData.exchangeData;
+                chartInstance.data.datasets[1].data = chartData.reserveData;
+                chartInstance.update();
             }
+        };
     
-            chartInstance.update();
-        }
-    }, [collateralRequirement, chartInstance, blockchainLength, exchangeBalances, reserveBalances]);    
-
+        updateChart();    
+    }, [chartData, chartInstance]);
+    
     return (
         <>
             <h3 className="center-text">Percent Collateral Met by Block Height</h3>
