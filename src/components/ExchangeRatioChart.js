@@ -4,75 +4,82 @@ import { Chart } from 'chart.js/auto';
 import { useRecoilValue } from 'recoil';
 import { chartDataState } from "../atoms/chartDataAtom";
 
-const ExchangeRatioChart = () => {
+const ExchangeRatioChart = ({ shouldCreateChart, setShouldCreateChart }) => {
     const chartRef = useRef(null);
     const [chartInstance, setChartInstance] = useState(null);
     const chartData = useRecoilValue(chartDataState);
 
-    useEffect(() => {
-        if (!chartRef.current) {
-            console.warn("Canvas element is not rendered yet.");
-            return;
-        }
-    
-        const ctx = chartRef.current.getContext('2d');
-        if (!ctx) {
-            console.warn("Failed to get canvas context.");
-            return;
-        }
-    
-        const newChartInstance = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: [], // This will be updated with blockchain length
-                datasets: [{
-                    label: 'Exchange Balance to Collateral Ratio',
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    data: [],
-                }, {
-                    label: 'Reserve Balance to Collateral Ratio',
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    data: [],
-                }],
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100,
-                        ticks: {
-                            stepSize: 25
+    const createChart = () => {
+        if (chartRef.current && !chartInstance) {
+            const existingChart = Chart.getChart("ratioChart");
+            if (existingChart) {
+                existingChart.destroy();
+            }
+
+            const ctx = chartRef.current.getContext('2d');
+            const newChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Exchange Balance to Collateral Ratio',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        data: [],
+                    }, {
+                        label: 'Reserve Balance to Collateral Ratio',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        data: [],
+                    }],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                stepSize: 25
+                            }
                         }
                     }
                 }
-            }
-        });
-    
-        setChartInstance(newChartInstance);
-    
+            });
+
+            setChartInstance(newChartInstance);
+        }
+    }
+
+    const updateChart = () => {
+        if (chartInstance) {
+            chartInstance.data.labels = chartData.labels;
+            chartInstance.data.datasets[0].data = chartData.exchangeData;
+            chartInstance.data.datasets[1].data = chartData.reserveData;
+            chartInstance.update();
+        }
+    }
+
+    useEffect(() => {
+        setShouldCreateChart(true);
+
         return () => {
-            if (newChartInstance) {
-                newChartInstance.destroy();
+            if (chartInstance) {
+                chartInstance.destroy();
+                setChartInstance(null);
             }
         };
+    }, []);
+    
+    useEffect(() => {
+        updateChart();    
     }, [chartData]);
 
-    // Update chart when collateral requirements are updated
     useEffect(() => {
-        // Delay the update slightly to ensure DOM is ready
-        const updateChart = () => {
-            if (chartInstance) {
-                chartInstance.data.labels = chartData.labels;
-                chartInstance.data.datasets[0].data = chartData.exchangeData;
-                chartInstance.data.datasets[1].data = chartData.reserveData;
-                chartInstance.update();
-            }
-        };
-    
-        updateChart();    
-    }, [chartData, chartInstance]);
+        if (shouldCreateChart && chartRef.current) {
+            createChart();
+            setShouldCreateChart(false);
+        }
+    }, [shouldCreateChart]);
     
     return (
         <>

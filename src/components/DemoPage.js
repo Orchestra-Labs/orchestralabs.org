@@ -16,6 +16,7 @@ import { Chart } from 'chart.js/auto';
 const DemoPage = () => {
     const chartRef = useRef(null);
     const location = useLocation();
+    const [shouldCreateChart, setShouldCreateChart] = useState(false);
     const [chartInstance, setChartInstance] = useState(null);
     const [chartData, setChartData] = useRecoilState(chartDataState);
     const [infoUpdateCountdown, setInfoUpdateCountdown] = useRecoilState(infoUpdateCountdownState);
@@ -120,59 +121,9 @@ const DemoPage = () => {
         }
     };
 
-    const updateChart = () => {
-        if (chartInstance) {
-            chartInstance.data.labels = chartData.labels;
-            chartInstance.data.datasets[0].data = chartData.exchangeData;
-            chartInstance.data.datasets[1].data = chartData.reserveData;
-            chartInstance.update();
-        }
-    }
-
-    const createChart = () => {
-        if (chartRef.current) {
-            const existingChart = Chart.getChart("ratioChart");
-            if (existingChart) {
-                existingChart.destroy();
-            }
-
-            const ctx = chartRef.current.getContext('2d');
-            const newChartInstance = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: [], // This will be updated with blockchain length
-                    datasets: [{
-                        label: 'Exchange Balance to Collateral Ratio',
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        data: [],
-                    }, {
-                        label: 'Reserve Balance to Collateral Ratio',
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        data: [],
-                    }],
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 100,
-                            ticks: {
-                                stepSize: 25
-                            }
-                        }
-                    }
-                }
-            });
-
-            setChartInstance(newChartInstance);
-        }
-    }
-
     useEffect(() => {
         initializeDemoData();
-        createChart();
+        setShouldCreateChart(true);
 
         const infoUpdateTimer = setInterval(() => {
             setInfoUpdateCountdown(prevCountdown => prevCountdown > 0 ? prevCountdown - 1 : 3);
@@ -188,10 +139,16 @@ const DemoPage = () => {
     }, []);
 
     useEffect(() => {
+        if (location.pathname === NavOptions.CHART) {
+            setShouldCreateChart(true);
+        }
+    }, [location.pathname]);    
+
+    useEffect(() => {
         if (infoUpdateCountdown === 3) {
             fetchData();
         }
-    }, [infoUpdateCountdown, chartData]);
+    }, [infoUpdateCountdown]);
 
     useEffect(() => {        
         const balanceInterval = setInterval(updateBalances, 3000);
@@ -202,10 +159,6 @@ const DemoPage = () => {
             clearInterval(balanceInterval);
         };
     }, [demoWallet]);
-
-    useEffect(() => {
-        updateChart();    
-    }, [chartData]);
 
     return (
         <>
@@ -222,10 +175,10 @@ const DemoPage = () => {
                         </tr>
                         <tr>
                             <td>
-                                <h3 className="center-text">Percent Collateral Met by Block Height</h3>
-                                <div id="ratioChartContainer">
-                                    <canvas ref={chartRef} id="ratioChart"></canvas> 
-                                </div>                            
+                                <ExchangeRatioChart
+                                    shouldCreateChart={shouldCreateChart}
+                                    setShouldCreateChart={setShouldCreateChart}
+                                />
                             </td>
                         </tr>
                     </tbody>
