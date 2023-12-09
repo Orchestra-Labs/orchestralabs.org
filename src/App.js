@@ -6,8 +6,9 @@ import BottomNavBar from "./components/BottomNavBar";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import TestResults from "./components/TestResults";
-import DemoPage from "./components/DemoPage";
 import './App.css';
+import InteractiveDemoPage from './components/InteractiveDemoPage';
+import DemoPage from './components/DemoPage';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path={NavOptions.HOME} element={<Home />} />
           <Route path={NavOptions.TEST_RESULTS} element={<TestResults />} />
           <Route path={NavOptions.DEMO} element={<DemoPage/>} />
-          <Route path={NavOptions.CHART} element={<DemoPage/>} />
+          <Route path={NavOptions.CHART} element={<InteractiveDemoPage/>} />
+          <Route path={NavOptions.INTERACTIVE_DEMO} element={<InteractiveDemoPage/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </div>

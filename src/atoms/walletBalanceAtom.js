@@ -10,6 +10,11 @@ export const exchangeBalancesState = atom({
   default: {},
 });
 
+export const exchangeRatioState = atom({
+  key: 'exchangeRatioState',
+  default: 100,
+});
+
 export const reserveBalancesState = atom({
   key: 'reserveBalancesState',
   default: {},

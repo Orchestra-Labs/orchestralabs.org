@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { changeExchangeRatioApi } from '../api/api';
+import { useRecoilState } from 'recoil';
+import { exchangeRatioState } from '../atoms/walletBalanceAtom';
 
 const ExchangeRatioController = () => {
-    const [exchangeRatio, setExchangeRatio] = useState(100);
+    const [exchangeRatio, setExchangeRatio] = useRecoilState(exchangeRatioState);
 
     const changeExchangeRatio = async (newRatio) => {
         const result = await changeExchangeRatioApi(newRatio);

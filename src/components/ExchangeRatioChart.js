@@ -22,13 +22,13 @@ const ExchangeRatioChart = ({ shouldCreateChart, setShouldCreateChart }) => {
                 data: {
                     labels: chartData.labels,
                     datasets: [{
-                        label: 'Exchange Balance to Collateral Ratio',
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        label: 'Exchange Fill Percent',
+                        backgroundColor: 'rgba(54, 162, 235, 1)',
                         borderColor: 'rgba(54, 162, 235, 1)',
                         data: chartData.exchangeData,
                     }, {
-                        label: 'Reserve Balance to Collateral Ratio',
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        label: 'Reserve Fill Percent',
+                        backgroundColor: 'rgba(255, 99, 132, 1)',
                         borderColor: 'rgba(255, 99, 132, 1)',
                         data: chartData.reserveData,
                     }],
@@ -42,6 +42,16 @@ const ExchangeRatioChart = ({ shouldCreateChart, setShouldCreateChart }) => {
                                 stepSize: 25
                             }
                         }
+                    },
+                    x: {
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.7)' // Lighten text color
+                        }
+                    }
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'rgba(255, 255, 255, 0.7)' // Lighten legend text color
                     }
                 }
             });

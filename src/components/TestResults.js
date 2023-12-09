@@ -1,6 +1,6 @@
 import React from "react";
 import './TestResults.css';
-import testResults from './../images/Total-Coins-to-Refill-Exchange-and-Reserve.png';
+import testResults from './../assets/images/test-results.png';
 
 const TestResults = () => {
     return (

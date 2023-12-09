@@ -2,7 +2,8 @@ export const NavOptions = {
   HOME: '/',
   TEST_RESULTS: '/test_results',
   DEMO: '/demo',
-  CHART: '/chart'
+  CHART: '/chart',
+  INTERACTIVE_DEMO: '/interactive_demo'
 };
 
 export const tokenOptions = {

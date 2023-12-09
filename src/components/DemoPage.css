@@ -1,0 +1,6 @@
+.video-container {
+    display: flex;
+    justify-content: center; /* center the video horizontally */
+    align-items: center; /* center the video vertically */
+    height: 100%;
+}

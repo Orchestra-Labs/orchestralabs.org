@@ -1,9 +1,9 @@
 import React from "react";
 import "./BottomNavBar.css";
-import discordIcon from "./../images/discord.svg";
-import twitterIcon from "./../images/twitter.svg";
-import linkedInIcon from "./../images/linkedin.svg";
-import githubIcon from "./../images/github.svg";
+import discordIcon from "./../assets/images/discord.svg";
+import twitterIcon from "./../assets/images/twitter.svg";
+import linkedInIcon from "./../assets/images/linkedin.svg";
+import githubIcon from "./../assets/images/github.svg";
 
 const BottomNavBar = () => {
     return (
