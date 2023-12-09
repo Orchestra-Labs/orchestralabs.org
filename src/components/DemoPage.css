@@ -1,18 +1,20 @@
 .video-container {
-    position: fixed; /* Use fixed to cover the entire viewport */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f0f0f0; /* light grey background */
+    padding: 7.5%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 1s ease; /* Transition effect for background color */
 }
 
 video {
-    width: 100%;
+    width: 80%;
     height: 100%;
-    object-fit: cover; /* Ensures the aspect ratio is maintained without stretching */
+    object-fit: cover;
 }
