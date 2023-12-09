@@ -3,15 +3,18 @@
     width: 150px;
     font-weight: bold;
 }
+
 .data-value {
     display: inline-flex;
     min-width: 300px;
-    max-width: 80%;
+    max-width: 200px;
     overflow-x: auto;
 }
+
 .form-item {
     margin-bottom: 10px;
 }
+
 textarea {
     width: 100%;
     margin-bottom: 10px;

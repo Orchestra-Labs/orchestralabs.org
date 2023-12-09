@@ -3,8 +3,13 @@
     height: 250px;
     position: relative;
 }
+
 canvas {
     width: 100% !important;
     height: 100% !important;
     position: absolute;
+}
+
+.center-text {
+    text-align: center;
 }

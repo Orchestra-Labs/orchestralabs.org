@@ -15,12 +15,15 @@ function App() {
       <LocationHandler />
       <div className="container">
         <NavBar />
+        <div className='centerItem'>
         <Routes>
           <Route path={NavOptions.HOME} element={<Home />} />
           <Route path={NavOptions.TEST_RESULTS} element={<TestResults />} />
           <Route path={NavOptions.DEMO} element={<DemoPage/>} />
+          <Route path={NavOptions.CHART} element={<DemoPage/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </div>
         <BottomNavBar />
       </div>
     </BrowserRouter>

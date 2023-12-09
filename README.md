@@ -21,14 +21,14 @@ Orchestralabs is a modern web application utilizing React and various supporting
 This project is marked as private. To install dependencies, run:
 
 ```bash
-npm install
+yarn
 ```
 
 ## Available Scripts
 In the project directory, you can run:
 
-`npm start`: Runs the app in development mode.
-`npm run build`: Builds the app for production.
-`npm run test`: Launches the test runner.
-`npm run deploy`: Deploys the application to GitHub Pages.
-`npm run eject`: Removes the single build dependency from your project.
+`yarn start`: Runs the app in development mode.
+`yarn build`: Builds the app for production.
+`yarn test`: Launches the test runner.
+`yarn deploy`: Deploys the application to GitHub Pages.
+`yarn eject`: Removes the single build dependency from your project.

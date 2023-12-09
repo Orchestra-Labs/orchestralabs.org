@@ -194,32 +194,34 @@ const TransferController = () => {
     };
 
     const getMaxSendableAmount = async () => {
-        try {    
-          const minerFeePercent = currentFees.miner_fee?.amount || 0;
-          const reserveFeePercent = currentFees.reserve_fee?.amount || 0;
-      
-          // Calculate total fee factor (1 + sum of fee percentages)
-          const totalFeeFactor = 1 + minerFeePercent + reserveFeePercent;
+      try {    
+        const minerFeePercent = currentFees.miner_fee?.amount || 0;
+        const reserveFeePercent = currentFees.reserve_fee?.amount || 0;
     
-          // Calculate maximum sendable amount before fees
-          let maxAmountsText = 'Maximum Sendable Amounts: ';
-          if(wallet?.balances != null){
-            for (const [assetJSON, balance] of Object.entries(wallet.balances)) {
-                const maxSendableAmountBeforeFees = balance / totalFeeFactor;
-                const asset = JSON.parse(assetJSON);
-                // Use toFixed for display purposes only, not for calculations
-                maxAmountsText += `${asset.name} (${asset.symbol}): ${maxSendableAmountBeforeFees.toFixed(8)} `;
-            }
+        // Calculate total fee factor (1 + sum of fee percentages)
+        const totalFeeFactor = 1 + minerFeePercent + reserveFeePercent;
+  
+        // Prepare an array to hold list items
+        let maxAmountsList = [];
+  
+        if(wallet?.balances != null){
+          for (const [assetJSON, balance] of Object.entries(wallet.balances)) {
+              const maxSendableAmountBeforeFees = balance / totalFeeFactor;
+              const asset = JSON.parse(assetJSON);
+              // Add each item to the list
+              maxAmountsList.push(
+                <li key={asset.symbol}>
+                  {`${asset.name} (${asset.symbol}): ${maxSendableAmountBeforeFees.toFixed(8)}`}
+                </li>
+              );
           }
-    
-          return {
-            maxAmountsText: maxAmountsText.trim(),
-            currentFeesText: `Current Fees - Miner Fee: ${(minerFeePercent * 100).toFixed(2)}%, Reserve Fee: ${(reserveFeePercent * 100).toFixed(2)}%`
-          };
-        } catch (error) {
-          console.error('Error updating max sendable amounts:', error);
-          return { error: error.message };
         }
+  
+        setMaxSendableAmount(<ul>{maxAmountsList}</ul>);
+        setCurrentFeesText(`Current Fees - Miner Fee: ${(minerFeePercent * 100).toFixed(2)}%, Reserve Fee: ${(reserveFeePercent * 100).toFixed(2)}%`);
+      } catch (error) {
+        console.error('Error updating max sendable amounts:', error);
+      }
     };
 
     const fetchAndUpdateFees = async () => {
@@ -247,13 +249,7 @@ const TransferController = () => {
         if (wallet.address) {
           calculateCurrentFees();
           calculateExpectedFees();
-          getMaxSendableAmount().then((result) => {
-            if (result.error) {
-              console.error(result.error);
-            } else {
-              setMaxSendableAmount(result.maxAmountsText);
-            }
-          });
+          getMaxSendableAmount();
         }
     }, [currentFees]);
 
@@ -293,13 +289,7 @@ const TransferController = () => {
     useEffect(() => {
         // Ensure wallet balances are available
         if (wallet.balances) {
-          getMaxSendableAmount().then((result) => {
-            if (result.error) {
-              console.error(result.error);
-            } else {
-              setMaxSendableAmount(result.maxAmountsText);
-            }
-          });
+          getMaxSendableAmount()
         }
     }, [wallet]);
 
@@ -307,7 +297,9 @@ const TransferController = () => {
         <>
             <h1>Send Money / Exchange</h1>
             <p id="current_fees">Current Fees: {currentFeesText}</p>
-            <p>{maxSendableAmount}</p>
+            <span >Wallet Address:</span> 
+            <span className="data-value">{maxSendableAmount}</span><br />
+
 
             <div className="form-item">
                 <label>Transaction Type</label>
