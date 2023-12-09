@@ -32,7 +32,7 @@ const NavBar = () => {
                     <Link to={NavOptions.CHART}>Chart</Link>
                 )}
                 {location.pathname === NavOptions.CHART && (
-                    <Link to={NavOptions.DEMO}>Data</Link>
+                    <Link to={NavOptions.INTERACTIVE_DEMO}>Data</Link>
                 )}
             </div>
         </div>

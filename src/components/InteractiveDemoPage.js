@@ -1,5 +1,5 @@
 import "./InteractiveDemoPage.css"
-import DemoController from "./DemoData";
+import DemoController from "./InteractiveDemoController";
 import ExchangeRatioChart from "./ExchangeRatioChart";
 import { useLocation } from "react-router";
 import { NavOptions, tokenOptions } from "../utils/optionValues";
@@ -160,7 +160,7 @@ const InteractiveDemoPage = () => {
 
     return (
         <>
-            {location.pathname === NavOptions.DEMO && (
+            {location.pathname === NavOptions.INTERACTIVE_DEMO && (
                 <DemoController />
             )}
             {location.pathname === NavOptions.CHART && (
