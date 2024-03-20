@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { ComponentType, FC } from 'react';
+import { Outlet } from 'react-router-dom';
 
+import { Footer, Header } from '@/components';
 import { design } from '@/theme/design';
 
 const Root = styled.div`
@@ -13,8 +15,24 @@ const Root = styled.div`
   flex-direction: column;
 `;
 
+const Content = styled.main`
+  max-width: 1152px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  flex: 1;
+`;
+
 const MainLayout: FC = () => {
-  return <Root>MainLayout</Root>;
+  return (
+    <Root>
+      <Header />
+      <Content>
+        <Outlet />
+      </Content>
+      <Footer />
+    </Root>
+  );
 };
 
 export default MainLayout as ComponentType;
