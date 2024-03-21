@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+
+    /* Bundler mode */
+    "moduleResolution": "Node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+//    "jsxImportSource": "@emotion/react",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+
+    "types": [
+      "vite/client",
+    ],
+    "typeRoots": [
+      "src/types/**/*",
+      "node_modules/@types"
+    ],
+
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+
+  "include": [
+    "vite.config.ts",
+    ".eslintrc.js",
+    "src",
+  ]
+}
