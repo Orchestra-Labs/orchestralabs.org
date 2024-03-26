@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Stack, Text } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 import { SocialLinks } from '@/components';
 import { design } from '@/theme/design';
@@ -25,22 +26,29 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Footer = () => (
-  <Root>
-    <Wrapper>
-      <Stack gap="xl" align="center">
-        <NavItems linkColor={design.colors.dustyGrey} />
-        <SocialLinks iconFill={design.colors.dustyGrey} />
-        <Text
-          styles={{
-            root: {
-              color: design.colors.dustyGrey,
-            },
-          }}
-        >
-          © 2024 Symphony, Inc. All rights reserved
-        </Text>
-      </Stack>
-    </Wrapper>
-  </Root>
-);
+export const Footer = () => {
+  const isMobile = useMediaQuery('(max-width: 48em)');
+
+  return (
+    <Root>
+      <Wrapper>
+        <Stack gap="xl" align="center">
+          <NavItems
+            linkColor={design.colors.dustyGrey}
+            direction={isMobile ? 'column' : 'row'}
+          />
+          <SocialLinks iconFill={design.colors.dustyGrey} />
+          <Text
+            styles={{
+              root: {
+                color: design.colors.dustyGrey,
+              },
+            }}
+          >
+            © 2024 Symphony, Inc. All rights reserved
+          </Text>
+        </Stack>
+      </Wrapper>
+    </Root>
+  );
+};

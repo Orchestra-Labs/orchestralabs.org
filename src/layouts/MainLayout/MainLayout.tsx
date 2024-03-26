@@ -16,10 +16,7 @@ const Root = styled.div`
 `;
 
 const Content = styled.main`
-  max-width: 1152px;
   width: 100%;
-  padding: 0 16px;
-  margin: 0 auto;
   flex: 1;
 `;
 
