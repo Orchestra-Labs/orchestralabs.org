@@ -1,9 +1,19 @@
 import { createTheme, MantineProvider, rem } from '@mantine/core';
 import React from 'react';
 
+import { design } from '@/theme/design';
+
 export const theme = createTheme({
   primaryColor: 'blue',
   defaultRadius: rem(8),
+  fontFamily: 'Inter, sans-serif',
+  lineHeights: {
+    xs: rem(21.6),
+    sm: rem(25.2),
+    md: rem(28.8),
+    lg: rem(32.4),
+    xl: rem(36),
+  },
   fontSizes: {
     xs: rem(12),
     sm: rem(14),
@@ -12,7 +22,7 @@ export const theme = createTheme({
     xl: rem(20),
   },
   headings: {
-    fontFamily: 'Inter',
+    fontFamily: 'Inter, sans-serif',
     fontWeight: '600',
     textWrap: 'wrap',
     sizes: {
@@ -48,6 +58,25 @@ export const theme = createTheme({
       styles: {
         root: {
           zIndex: 10,
+        },
+      },
+    },
+    Button: {
+      defaultProps: {
+        color: design.colors.darkGrey,
+        px: rem(43.5),
+        py: rem(14.5),
+        h: 'auto',
+        radius: rem(50),
+      },
+      styles: {
+        label: {
+          fontSize: design.typography.size.buttonSm.fontSize,
+          lineHeight: design.typography.size.buttonSm.lineHeight,
+          '@media screen and (minWidth: 48em)': {
+            fontSize: design.typography.size.buttonLg.fontSize,
+            lineHeight: design.typography.size.buttonLg.lineHeight,
+          },
         },
       },
     },
