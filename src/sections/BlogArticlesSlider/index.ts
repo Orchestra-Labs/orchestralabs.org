@@ -1,0 +1,1 @@
+export { BlogArticlesSlider } from './BlogArticlesSlider';
