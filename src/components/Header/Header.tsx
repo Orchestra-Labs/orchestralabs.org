@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import React from 'react';
+import React, { MutableRefObject, useEffect, useRef } from 'react';
 
 import { Logo } from '@/assets/icons/Logo';
 import { MobileMenu, SocialLinks } from '@/components';
@@ -10,9 +10,12 @@ import { design } from '@/theme/design';
 import { NavItems } from '../NavItems';
 
 const Root = styled.header`
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 28px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 28px 25px;
   @media screen and (min-width: 62em) {
     padding: 30px 24px;
   }
@@ -20,6 +23,7 @@ const Root = styled.header`
 
 const Wrapper = styled.div`
   margin: 0 auto;
+  max-height: 44px;
   max-width: 1278px;
   width: 100%;
   display: flex;
@@ -44,10 +48,30 @@ const LogoWrapper = styled.a`
 export type HeaderProps = Record<string, unknown>;
 
 export const Header: React.FC = () => {
+  const headerRef = useRef<HTMLDivElement | null>(
+    null,
+  ) as MutableRefObject<HTMLDivElement>;
+
   const [opened, { toggle }] = useDisclosure();
 
+  useEffect(() => {
+    const handleBackgroundOnScroll = () => {
+      const opacity = window.scrollY / 200;
+
+      if (headerRef?.current) {
+        headerRef.current.style!.backgroundColor = `rgba(10, 9, 13, ${opacity})`;
+      }
+    };
+
+    window.addEventListener('scroll', handleBackgroundOnScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleBackgroundOnScroll);
+    };
+  }, []);
+
   return (
-    <Root>
+    <Root ref={headerRef}>
       <Wrapper>
         <LogoWrapper href={import.meta.env.VITE_PUBLIC_APP_URL}>
           <Logo />
