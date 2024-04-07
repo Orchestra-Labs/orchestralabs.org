@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "start": "yarn install && tsc && vite build && vite",
+    "start": "yarn install && yarn build && yarn serve",
+    "serve": "vite preview --port $PORT",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
