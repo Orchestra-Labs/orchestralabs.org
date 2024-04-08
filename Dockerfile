@@ -1,14 +1,11 @@
 FROM node:20.9.0
 WORKDIR /usr/src/app
 
-COPY package.json yarn.lock ./
-
-RUN yarn install
-
 COPY . .
 
-RUN yarn build
-
+ENV PORT=4173
 EXPOSE 4173
 
-CMD ["yarn", "start"]
+RUN yarn install --verbose
+RUN yarn build
+RUN yarn start
