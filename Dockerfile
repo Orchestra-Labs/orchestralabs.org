@@ -3,9 +3,8 @@ FROM node:20.9.0
 WORKDIR /usr/src/app
 
 COPY package.json .
-COPY yarn.lock .
 
-RUN yarn install --frozen-lockfile
+RUN yarn install
 
 COPY . .
 
