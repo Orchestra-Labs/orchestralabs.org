@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "start": "yarn install && yarn build && yarn serve",
+    "start": "yarn serve",
     "serve": "vite preview --port $PORT",
     "dev": "vite",
     "build": "tsc && vite build",
