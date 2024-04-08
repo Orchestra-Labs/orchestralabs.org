@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--no-cache', '-t', 'gcr.io/$PROJECT_ID/your-app', '.']
+  args: ['build', '--no-cache', '-t', 'gcr.io/$PROJECT_ID/symphony-site', '.']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
 timeout: '1600s'
