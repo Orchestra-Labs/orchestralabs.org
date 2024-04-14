@@ -102,7 +102,7 @@ const ROWS = [
     id: 2,
     title: '< 3 seconds',
     subtitle: 'Transaction finalization time',
-    shadowText: '<3 seconds',
+    shadowText: '< 3 seconds',
   },
   {
     id: 3,
