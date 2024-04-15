@@ -80,7 +80,7 @@ const ShadowText = styled.span`
     display: block;
     position: absolute;
     top: 0;
-    color: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.08);
     font-size: 120px;
     font-weight: 600;
     line-height: 168px;
@@ -94,15 +94,15 @@ const ShadowText = styled.span`
 const ROWS = [
   {
     id: 1,
-    title: '5000 TPS',
+    title: '10000 TPS',
     subtitle: 'Transactions per second',
-    shadowText: '5000 TPS',
+    shadowText: '10000 TPS',
   },
   {
     id: 2,
     title: '< 3 seconds',
-    subtitle: 'Time for transaction validating',
-    shadowText: '3 seconds',
+    subtitle: 'Transaction finalization time',
+    shadowText: '< 3 seconds',
   },
   {
     id: 3,

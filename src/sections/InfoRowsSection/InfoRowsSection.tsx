@@ -27,6 +27,7 @@ const SectionTitle = styled(MTitle)`
   text-align: center;
   max-width: 80%;
   margin: 0 auto 50px;
+  color: ${design.colors.showWhite};
   font-size: ${design.headings.size.h4.fontSize};
   line-height: ${design.headings.size.h4.lineHeight};
   @media screen and (min-width: 48em) {

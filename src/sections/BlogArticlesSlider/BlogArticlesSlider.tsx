@@ -49,6 +49,7 @@ const HeaderBox = styled.div`
 `;
 
 const SectionTitle = styled(MTitle)`
+  color: ${design.colors.showWhite};
   font-size: ${design.headings.size.h4.fontSize};
   line-height: ${design.headings.size.h4.lineHeight};
   @media screen and (min-width: 48em) {

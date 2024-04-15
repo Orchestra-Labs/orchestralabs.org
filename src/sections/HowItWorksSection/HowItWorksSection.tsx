@@ -50,6 +50,7 @@ const RowContent = styled.div`
 `;
 
 const Title = styled(MTitle)`
+  color: ${design.colors.showWhite};
   text-align: center;
   margin-bottom: 15px;
   font-size: ${design.headings.size.h4.fontSize};
