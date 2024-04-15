@@ -6,3 +6,4 @@ export type Article = {
     link: string;
     createdAt: string;
   };
+  
