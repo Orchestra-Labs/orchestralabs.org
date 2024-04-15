@@ -12,6 +12,8 @@ const Root = styled.article`
   display: flex;
   flex-direction: column;
   max-width: 280px;
+  cursor: pointer;
+  overflow: hidden;
   @media screen and (min-width: 48em) {
     max-width: 348px;
   }
@@ -93,13 +95,19 @@ type ArticleSlideProps = {
   data: Article;
 };
 
-export const ArticleSlide: React.FC<ArticleSlideProps> = ({ data }) => (
-  <Root>
-    <StyledImage src={data.image} />
-    <Content>
-      <Date>{data.createdAt}</Date>
-      <Title lineClamp={3}>{data.title}</Title>
-      {/* <Description lineClamp={3}>{data.description}</Description> */}
-    </Content>
-  </Root>
-);
+export const ArticleSlide: React.FC<ArticleSlideProps> = ({ data }) => {
+  const handleClick = () => {
+    window.open(data.link, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <Root onClick={handleClick}>
+      <StyledImage src={data.image} />
+      <Content>
+        <Date>{data.createdAt}</Date>
+        <Title lineClamp={3}>{data.title}</Title>
+        {/* <Description lineClamp={3}>{data.description}</Description> */}
+      </Content>
+    </Root>
+  )
+};
