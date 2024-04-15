@@ -18,7 +18,4 @@ export default defineConfig({
     open: true,
     host: true,
   },
-  preview: {
-    open: false,
-  },
 });
