@@ -3,10 +3,8 @@ import { FlexProps } from '@mantine/core/lib';
 import React from 'react';
 
 import { Discord } from '@/assets/icons/Discord';
-// import { Facebook } from '@/assets/icons/Facebook';
 import { Telegram } from '@/assets/icons/Telegram';
 import { XIcon } from '@/assets/icons/X';
-// import { Youtube } from '@/assets/icons/Youtube';
 import { design } from '@/theme/design';
 import { GitHub } from '@/assets/icons/GitHub';
 
@@ -18,8 +16,6 @@ const SOCIAL_LINKS = [
   { id: 1, url: "https://twitter.com/orchestra_labs", Icon: XIcon },
   { id: 2, url: "https://t.me/+xFieHCYYyx41NGQx", Icon: Telegram },
   { id: 3, url: "https://github.com/Orchestra-Labs", Icon: GitHub},
-  // { id: 3, url: "#", Icon: Youtube },
-  // { id: 3, url: "#", Icon: Facebook },
   { id: 4, url: "https://discord.gg/3fvGM779", Icon: Discord }
 ];
 
