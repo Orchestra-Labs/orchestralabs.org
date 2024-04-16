@@ -4,6 +4,7 @@ export const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
   <svg
     width="21"
     height="18"
+    viewBox="1 0 17 17"
     fill="#F2F2FA"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
