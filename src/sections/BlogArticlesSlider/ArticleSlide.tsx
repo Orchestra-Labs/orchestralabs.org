@@ -4,6 +4,7 @@ import { TextProps } from '@mantine/core/lib/components/Text/Text';
 import React, { PropsWithChildren } from 'react';
 
 import { design } from '@/theme/design';
+import { Article } from './Article';
 
 const Root = styled.article`
   border-radius: 16px;
@@ -11,6 +12,8 @@ const Root = styled.article`
   display: flex;
   flex-direction: column;
   max-width: 280px;
+  cursor: pointer;
+  overflow: hidden;
   @media screen and (min-width: 48em) {
     max-width: 348px;
   }
@@ -53,25 +56,6 @@ const Title = styled(MTitle)`
   }
 `;
 
-const Description = styled(Text)<PropsWithChildren<TextProps>>`
-  color: ${design.colors.dustyGrey};
-  max-width: 80%;
-  text-wrap: balance;
-  font-size: ${rem(10)};
-  line-height: ${rem(18)};
-  margin-top: ${rem(6)};
-  @media screen and (min-width: 48em) {
-    margin-top: ${rem(8)};
-    font-size: ${design.typography.size.bodySm.fontSize};
-    line-height: ${design.typography.size.bodySm.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    margin-top: ${rem(10)};
-    font-size: ${design.typography.size.bodyMd.fontSize};
-    line-height: ${design.typography.size.bodyMd.lineHeight};
-  }
-`;
-
 const Date = styled(Text)<PropsWithChildren<TextProps>>`
   color: ${design.colors.stormGrey};
   font-weight: 600;
@@ -88,25 +72,22 @@ const Date = styled(Text)<PropsWithChildren<TextProps>>`
   }
 `;
 
-type Article = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  createdAt: string;
-};
-
 type ArticleSlideProps = {
   data: Article;
 };
 
-export const ArticleSlide: React.FC<ArticleSlideProps> = ({ data }) => (
-  <Root>
-    <StyledImage src={data.image} />
-    <Content>
-      <Date>{data.createdAt}</Date>
-      <Title lineClamp={1}>{data.title}</Title>
-      <Description lineClamp={3}>{data.description}</Description>
-    </Content>
-  </Root>
-);
+export const ArticleSlide: React.FC<ArticleSlideProps> = ({ data }) => {
+  const handleClick = () => {
+    window.open(data.link, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <Root onClick={handleClick}>
+      <StyledImage src={data.image} />
+      <Content>
+        <Date>{data.createdAt}</Date>
+        <Title lineClamp={3}>{data.title}</Title>
+      </Content>
+    </Root>
+  )
+};

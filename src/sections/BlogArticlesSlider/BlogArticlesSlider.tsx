@@ -9,9 +9,9 @@ import { ArrowPrev } from '@/assets/icons/ArrowPrev';
 import { ArticleSlide } from '@/sections/BlogArticlesSlider/ArticleSlide';
 import { design } from '@/theme/design';
 
-import blogImage1 from '../../assets/images/blog-article1.jpeg';
-import blogImage2 from '../../assets/images/blog-article2.jpeg';
-import blogImage3 from '../../assets/images/blog-article3.jpeg';
+import blogArticleDefault from '../../assets/images/blog-article-default.jpeg';
+import { useEffect, useState } from 'react';
+import { Article } from './Article';
 
 const Root = styled.section`
   background: ${design.colors.darkGrey};
@@ -84,90 +84,86 @@ const ArrowButton = styled.button`
   }
 `;
 
-const SLIDES = [
-  {
-    id: 1,
-    title: 'Exploring the Future of DeFi',
-    description:
-      'Join us as we delve into the latest trends and innovations shaping the decentralized finance landscape',
-    image: blogImage1,
-    createdAt: 'March 12, 2024',
-  },
-  {
-    id: 2,
-    title: 'Blockchain Gaming Revolution',
-    description:
-      'Explore the intersection of blockchain technology and gaming, where players become true owners of in-game assets',
-    image: blogImage2,
-    createdAt: 'March 22, 2024',
-  },
-  {
-    id: 3,
-    title: 'Developer Insights',
-    description:
-      'Gain valuable insights from leading developers in the blockchain space. Learn about innovative projects, development tools, and best practices for building on Symphony',
-    image: blogImage3,
-    createdAt: 'April 10, 2024',
-  },
-  {
-    id: 4,
-    title: 'Exploring the Future of DeFi (2nd)',
-    description:
-      'Join us as we delve into the latest trends and innovations shaping the decentralized finance landscape',
-    image: blogImage1,
-    createdAt: 'March 12, 2024',
-  },
-];
+const mediumArticlesPage = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@orchestra_labs";
 
-export const BlogArticlesSlider = () => (
-  <Root>
-    <Wrapper>
-      <Splide
-        aria-label="Last posts slider"
-        hasTrack={false}
-        options={{
-          autoWidth: true,
-          gap: 30,
-          pagination: false,
-          mediaQuery: 'min',
-          arrows: false,
-          breakpoints: {
-            768: {
-              arrows: false,
-              gap: 37,
+export const BlogArticlesSlider = () => {
+
+  const [slides, setSlides] = useState<Article[]>([]);
+
+  useEffect(() => {
+    fetch(mediumArticlesPage)
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.items) {
+          const articles = data.items.map((item: any) => {
+            const description = item.description.toString();
+            const regexMatch = description.match(/<img[^>]+src="([^">]+)"/);
+            const image = regexMatch ? regexMatch[1] : blogArticleDefault;
+  
+            return {
+              id: parseInt(item.guid),
+              title: item.title,
+              image: image,
+              link: item.link,
+              createdAt: item.pubDate
+            };
+          });
+
+          setSlides(articles);
+          }
+      });
+  }, []);
+
+  return (
+    <Root>
+      <Wrapper>
+        <Splide
+          aria-label="Last posts slider"
+          hasTrack={false}
+          options={{
+            autoWidth: true,
+            gap: 30,
+            pagination: false,
+            mediaQuery: 'min',
+            arrows: false,
+            breakpoints: {
+              768: {
+                arrows: false,
+                gap: 37,
+              },
+              1200: {
+                gap: 45,
+                arrows: true,
+              },
             },
-            1200: {
-              gap: 45,
-              arrows: true,
-            },
-          },
-        }}
-      >
-        <HeaderBox>
-          <SectionTitle>Last posts</SectionTitle>
-          <StyledArrows className="splide__arrows">
-            <ArrowButton
-              type="button"
-              className="splide__arrow splide__arrow--prev"
-            >
-              <ArrowPrev />
-            </ArrowButton>
-            <ArrowButton
-              type="button"
-              className="splide__arrow splide__arrow--next"
-            >
-              <ArrowNext />
-            </ArrowButton>
-          </StyledArrows>
-        </HeaderBox>
-        <SplideTrack>
-          {SLIDES.map(slide => (
-            <SplideSlide key={slide.id}>
-              <ArticleSlide data={slide} />
-            </SplideSlide>
-          ))}
-        </SplideTrack>
-      </Splide>
-    </Wrapper>
-  </Root>
-);
+          }}
+        >
+          <HeaderBox>
+            <SectionTitle>Last posts</SectionTitle>
+            <StyledArrows className="splide__arrows">
+              <ArrowButton
+                type="button"
+                className="splide__arrow splide__arrow--prev"
+              >
+                <ArrowPrev />
+              </ArrowButton>
+              <ArrowButton
+                type="button"
+                className="splide__arrow splide__arrow--next"
+              >
+                <ArrowNext />
+              </ArrowButton>
+            </StyledArrows>
+          </HeaderBox>
+          <SplideTrack>
+            {slides.map(slide => (
+              <SplideSlide key={slide.id}>
+                <ArticleSlide data={slide} />
+              </SplideSlide>
+            ))}
+          </SplideTrack>
+        </Splide>
+      </Wrapper>
+    </Root>
+  )
+};

@@ -9,10 +9,10 @@ type NavItemProps = Pick<FlexProps, 'visibleFrom' | 'gap' | 'direction'> & {
 };
 
 const LINKS = [
-  { id: 1, label: 'Whitepaper' },
-  { id: 2, label: 'Documentation' },
-  { id: 3, label: 'Explorer' },
-  { id: 4, label: 'Blogs' },
+  { id: 1, label: 'Whitepaper', url: '#' },
+  { id: 2, label: 'Documentation', url: '#' },
+  { id: 3, label: 'Explorer', url: '#' },
+  { id: 4, label: 'Blogs', url: 'https://medium.com/@orchestra_labs' },
 ];
 
 export const NavItems: React.FC<NavItemProps> = ({ linkColor, ...props }) => (
@@ -20,6 +20,7 @@ export const NavItems: React.FC<NavItemProps> = ({ linkColor, ...props }) => (
     {LINKS.map(link => (
       <Anchor
         key={link.id}
+        href={link.url}
         styles={{
           root: {
             color: linkColor,
