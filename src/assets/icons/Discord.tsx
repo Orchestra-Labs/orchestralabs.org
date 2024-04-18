@@ -4,6 +4,7 @@ export const Discord: React.FC<React.SVGProps<SVGSVGElement>> = props => (
   <svg
     width="24"
     height="24"
+    viewBox="1 1 21 21"
     fill="#F2F2FA"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
