@@ -56,25 +56,6 @@ const Title = styled(MTitle)`
   }
 `;
 
-// const Description = styled(Text)<PropsWithChildren<TextProps>>`
-//   color: ${design.colors.dustyGrey};
-//   max-width: 80%;
-//   text-wrap: balance;
-//   font-size: ${rem(10)};
-//   line-height: ${rem(18)};
-//   margin-top: ${rem(6)};
-//   @media screen and (min-width: 48em) {
-//     margin-top: ${rem(8)};
-//     font-size: ${design.typography.size.bodySm.fontSize};
-//     line-height: ${design.typography.size.bodySm.lineHeight};
-//   }
-//   @media screen and (min-width: 75em) {
-//     margin-top: ${rem(10)};
-//     font-size: ${design.typography.size.bodyMd.fontSize};
-//     line-height: ${design.typography.size.bodyMd.lineHeight};
-//   }
-// `;
-
 const Date = styled(Text)<PropsWithChildren<TextProps>>`
   color: ${design.colors.stormGrey};
   font-weight: 600;
@@ -106,7 +87,6 @@ export const ArticleSlide: React.FC<ArticleSlideProps> = ({ data }) => {
       <Content>
         <Date>{data.createdAt}</Date>
         <Title lineClamp={3}>{data.title}</Title>
-        {/* <Description lineClamp={3}>{data.description}</Description> */}
       </Content>
     </Root>
   )
