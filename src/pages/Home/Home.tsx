@@ -46,21 +46,21 @@ const FEATURED_LINKS_ROWS = [
   {
     id: 2,
     src: image5,
-    title: 'Join to the community',
+    title: 'Join the community',
     description:
       'Stay connected with our vibrant community of blockchain enthusiasts',
-    link: '#',
+    link: undefined,
     linkLabel: 'Join',
   },
-  {
-    id: 3,
-    src: image6,
-    title: 'Link to the documentation',
-    description:
-      'Dive into our comprehensive documentation to unlock a wealth of knowledge and resources',
-    link: '#',
-    linkLabel: 'Learn More',
-  },
+  // {
+  //   id: 3,
+  //   src: image6,
+  //   title: 'Link to the documentation',
+  //   description:
+  //     'Dive into our comprehensive documentation to unlock a wealth of knowledge and resources',
+  //   link: '#',
+  //   linkLabel: 'Learn More',
+  // },
 ];
 
 const FEATURED_SECTION_TITLE =
