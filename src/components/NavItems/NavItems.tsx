@@ -21,6 +21,8 @@ export const NavItems: React.FC<NavItemProps> = ({ linkColor, ...props }) => (
       <Anchor
         key={link.id}
         href={link.url}
+        target={link.id !== 2 ? "_blank" : undefined}
+        rel={link.id !== 2 ? "noopener noreferrer" : undefined}
         styles={{
           root: {
             color: linkColor,
