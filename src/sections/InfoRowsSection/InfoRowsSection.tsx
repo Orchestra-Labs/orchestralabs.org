@@ -10,6 +10,7 @@ import {
 import React from 'react';
 
 import { design } from '@/theme/design';
+import { SocialLinks } from '@/components';
 
 const Root = styled.div`
   max-width: 1328px;
@@ -148,6 +149,7 @@ type RowType = {
   description: string;
   link?: string;
   linkLabel?: string;
+  showSocials?: boolean;
 };
 
 type InfoRowsSectionProps = {
@@ -179,6 +181,10 @@ export const InfoRowsSection: React.FC<InfoRowsSectionProps> = ({
               </Text>
               {row?.link && row?.linkLabel && (
                 <Link href={row.link}>{row.linkLabel}</Link>
+              )
+              }
+              {row.showSocials && (
+                <SocialLinks />
               )}
             </TextContentWrapper>
           </HalfSideWrapper>

@@ -46,11 +46,12 @@ const FEATURED_LINKS_ROWS = [
   {
     id: 2,
     src: image5,
-    title: 'Join to the community',
+    title: 'Join the community',
     description:
       'Stay connected with our vibrant community of blockchain enthusiasts',
-    link: '#',
+    link: undefined,
     linkLabel: 'Join',
+    showSocials: true,
   },
   {
     id: 3,
@@ -58,7 +59,7 @@ const FEATURED_LINKS_ROWS = [
     title: 'Link to the documentation',
     description:
       'Dive into our comprehensive documentation to unlock a wealth of knowledge and resources',
-    link: '#',
+    link: 'https://docs.osmosis.zone/',
     linkLabel: 'Learn More',
   },
 ];
