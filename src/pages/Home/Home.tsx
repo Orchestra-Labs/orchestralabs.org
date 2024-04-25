@@ -51,6 +51,7 @@ const FEATURED_LINKS_ROWS = [
       'Stay connected with our vibrant community of blockchain enthusiasts',
     link: undefined,
     linkLabel: 'Join',
+    showSocials: true,
   },
   {
     id: 3,

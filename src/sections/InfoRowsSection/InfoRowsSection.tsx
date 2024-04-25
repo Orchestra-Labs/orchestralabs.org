@@ -149,6 +149,7 @@ type RowType = {
   description: string;
   link?: string;
   linkLabel?: string;
+  showSocials?: boolean;
 };
 
 type InfoRowsSectionProps = {
@@ -178,9 +179,11 @@ export const InfoRowsSection: React.FC<InfoRowsSectionProps> = ({
               <Text c={design.colors.dustyGrey as StyleProp<MantineColor>}>
                 {row.description}
               </Text>
-              {row?.link && row?.linkLabel ? (
+              {row?.link && row?.linkLabel && (
                 <Link href={row.link}>{row.linkLabel}</Link>
-              ) : row.id == 2 && (
+              )
+              }
+              {row.showSocials && (
                 <SocialLinks />
               )}
             </TextContentWrapper>
