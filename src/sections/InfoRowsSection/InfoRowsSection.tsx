@@ -181,11 +181,8 @@ export const InfoRowsSection: React.FC<InfoRowsSectionProps> = ({
               </Text>
               {row?.link && row?.linkLabel && (
                 <Link href={row.link}>{row.linkLabel}</Link>
-              )
-              }
-              {row.showSocials && (
-                <SocialLinks />
               )}
+              {row.showSocials && <SocialLinks />}
             </TextContentWrapper>
           </HalfSideWrapper>
         </RowWrapper>

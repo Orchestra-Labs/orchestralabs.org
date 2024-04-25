@@ -84,10 +84,10 @@ const ArrowButton = styled.button`
   }
 `;
 
-const mediumArticlesPage = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@orchestra_labs";
+const mediumArticlesPage =
+  'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@orchestra_labs';
 
 export const BlogArticlesSlider = () => {
-
   const [slides, setSlides] = useState<Article[]>([]);
 
   useEffect(() => {
@@ -99,18 +99,18 @@ export const BlogArticlesSlider = () => {
             const description = item.description.toString();
             const regexMatch = description.match(/<img[^>]+src="([^">]+)"/);
             const image = regexMatch ? regexMatch[1] : blogArticleDefault;
-  
+
             return {
               id: parseInt(item.guid),
               title: item.title,
               image: image,
               link: item.link,
-              createdAt: item.pubDate
+              createdAt: item.pubDate,
             };
           });
 
           setSlides(articles);
-          }
+        }
       });
   }, []);
 
@@ -165,5 +165,5 @@ export const BlogArticlesSlider = () => {
         </Splide>
       </Wrapper>
     </Root>
-  )
+  );
 };

@@ -13,10 +13,10 @@ interface SocialLinksProps extends FlexProps {
 }
 
 const SOCIAL_LINKS = [
-  { id: 1, url: "https://twitter.com/orchestra_labs", Icon: XIcon },
-  { id: 2, url: "https://t.me/+xFieHCYYyx41NGQx", Icon: Telegram },
-  { id: 3, url: "https://github.com/Orchestra-Labs", Icon: GitHub},
-  { id: 4, url: "https://discord.gg/3fvGM779", Icon: Discord }
+  { id: 1, url: 'https://twitter.com/orchestra_labs', Icon: XIcon },
+  { id: 2, url: 'https://t.me/+xFieHCYYyx41NGQx', Icon: Telegram },
+  { id: 3, url: 'https://github.com/Orchestra-Labs', Icon: GitHub },
+  { id: 4, url: 'https://discord.gg/3fvGM779', Icon: Discord },
 ];
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({
@@ -25,7 +25,12 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
 }) => (
   <Flex align="center" gap="lg" {...props}>
     {SOCIAL_LINKS.map(link => (
-      <Anchor key={link.id} display="inline-flex" href={link.url} target="_blank">
+      <Anchor
+        key={link.id}
+        display="inline-flex"
+        href={link.url}
+        target="_blank"
+      >
         <link.Icon color={iconFill} />
       </Anchor>
     ))}

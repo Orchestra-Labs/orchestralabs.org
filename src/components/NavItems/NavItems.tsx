@@ -9,31 +9,31 @@ type NavItemProps = Pick<FlexProps, 'visibleFrom' | 'gap' | 'direction'> & {
 };
 
 const LINKS = [
-  { 
-    id: 1, 
-    label: 'Whitepaper', 
+  {
+    id: 1,
+    label: 'Whitepaper',
     target: '_blank',
     rel: 'noopener noreferrer',
-    url: 'https://docs.google.com/document/d/1t6mzvrnWpbq3wyUlts9HUTcLE97Y6XUol8a_bJJTUlg/edit?usp=sharing' 
+    url: 'https://docs.google.com/document/d/1t6mzvrnWpbq3wyUlts9HUTcLE97Y6XUol8a_bJJTUlg/edit?usp=sharing',
   },
-  { 
-    id: 2, 
-    label: 'Documentation', 
-    url: '#' 
+  {
+    id: 2,
+    label: 'Documentation',
+    url: '#',
   },
-  { 
-    id: 2, 
-    label: 'Explorer', 
+  {
+    id: 2,
+    label: 'Explorer',
     target: '_blank',
     rel: 'noopener noreferrer',
-    url: '#' 
+    url: '#',
   },
-  { 
-    id: 3, 
-    label: 'Blogs', 
+  {
+    id: 3,
+    label: 'Blogs',
     target: '_blank',
     rel: 'noopener noreferrer',
-    url: 'https://medium.com/@orchestra_labs' 
+    url: 'https://medium.com/@orchestra_labs',
   },
 ];
 
