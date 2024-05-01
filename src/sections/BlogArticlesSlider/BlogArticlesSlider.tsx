@@ -3,6 +3,7 @@ import '@splidejs/react-splide/css';
 import styled from '@emotion/styled';
 import { Title as MTitle } from '@mantine/core';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import { useEffect, useState } from 'react';
 
 import { ArrowNext } from '@/assets/icons/ArrowNext';
 import { ArrowPrev } from '@/assets/icons/ArrowPrev';
@@ -10,7 +11,6 @@ import { ArticleSlide } from '@/sections/BlogArticlesSlider/ArticleSlide';
 import { design } from '@/theme/design';
 
 import blogArticleDefault from '../../assets/images/blog-article-default.jpeg';
-import { useEffect, useState } from 'react';
 import { Article } from './Article';
 
 const Root = styled.section`
@@ -84,33 +84,48 @@ const ArrowButton = styled.button`
   }
 `;
 
-const mediumArticlesPage = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@orchestra_labs";
+type MediumArticle = {
+  author: string;
+  categories: string[];
+  content: string;
+  description: string;
+  guid: string;
+  link: string;
+  pubDate: string;
+  thumbnail: string;
+  title: string;
+};
+
+const MEDIUM_ARTICLES_URL =
+  'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@orchestra_labs';
+
+const ID_FROM_URL_REGEX = /[^/]+$/;
+const IMAGE_FROM_DESCRIPTION_REGEX = /<img[^>]+src="([^">]+)"/;
 
 export const BlogArticlesSlider = () => {
-
   const [slides, setSlides] = useState<Article[]>([]);
 
   useEffect(() => {
-    fetch(mediumArticlesPage)
+    fetch(MEDIUM_ARTICLES_URL)
       .then(response => response.json())
       .then(data => {
         if (data && data.items) {
-          const articles = data.items.map((item: any) => {
+          const articles = data.items.map((item: MediumArticle) => {
             const description = item.description.toString();
-            const regexMatch = description.match(/<img[^>]+src="([^">]+)"/);
+            const regexMatch = description.match(IMAGE_FROM_DESCRIPTION_REGEX);
             const image = regexMatch ? regexMatch[1] : blogArticleDefault;
-  
+
             return {
-              id: parseInt(item.guid),
+              id: item?.guid.match(ID_FROM_URL_REGEX)[0],
               title: item.title,
-              image: image,
+              image,
               link: item.link,
-              createdAt: item.pubDate
+              createdAt: item.pubDate,
             };
           });
 
           setSlides(articles);
-          }
+        }
       });
   }, []);
 
@@ -165,5 +180,5 @@ export const BlogArticlesSlider = () => {
         </Splide>
       </Wrapper>
     </Root>
-  )
+  );
 };
