@@ -3,26 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Logo } from '@/assets/icons';
 import { SocialLinks } from '@/components';
-
-const EXPLORER_FOOTER_LINKS = [
-  {
-    id: 1,
-    name: 'COMPANY',
-    links: [
-      { id: 1, name: 'About Us', href: '#' },
-      { id: 2, name: 'Contact Us', href: '#' },
-      { id: 3, name: 'Terms & Privacy', href: '#' },
-    ],
-  },
-  {
-    id: 2,
-    name: 'COMMUNITY',
-    links: [
-      { id: 1, name: 'Api Documentation', href: '' },
-      { id: 2, name: 'Knowledge Base', href: '' },
-    ],
-  },
-];
+import { EXPLORER_FOOTER_LINKS } from '@/constants';
 
 export const Footer = () => (
   <footer className="relative bottom-0 inset-x-0 border-t border-neutral-2">
