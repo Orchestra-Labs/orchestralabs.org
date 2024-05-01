@@ -152,7 +152,7 @@ export const AccountDetails = () => (
         src="/src/assets/images/avatar.png"
         alt="Avatar"
       />
-      <h1 className="text-h1 text-white ml-1 font-semibold">
+      <h1 className="text-h3 text-white ml-1 font-semibold">
         Address{' '}
         <span className="text-h5 font-normal">
           0х95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5

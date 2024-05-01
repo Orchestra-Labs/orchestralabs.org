@@ -51,7 +51,7 @@ const BLOCK = {
 
 export const BlockDetails = () => (
   <div className="page-container">
-    <h1 className="text-h1 text-white font-semibold">Block</h1>
+    <h1 className="text-h3 text-white font-semibold">Block</h1>
     <Tabs defaultValue={TabsLabels.Overview} className="w-full mt-7.5">
       <TabsList>
         <TabsTrigger value={TabsLabels.Overview}>

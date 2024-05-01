@@ -193,7 +193,7 @@ const TABLE_DATA = [
 
 export const AllTokens = () => (
   <div className="page-container">
-    <h1 className="text-h1 text-white font-semibold">Token Tracker</h1>
+    <h1 className="text-h3 text-white font-semibold">Token Tracker</h1>
     <div className="flex flex-col mt-7.5 w-full border border-neutral-2 p-5 pb-2.5 rounded-lg bg-background-dark-grey">
       <Table>
         <TableHeader>

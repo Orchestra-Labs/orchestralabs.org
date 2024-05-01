@@ -7,7 +7,7 @@ import { Button, Input } from '@/ui-kit';
 export const SignIn = () => (
   <div className="page-container">
     <div className="border border-neutral-3 rounded-[20px] mx-auto w-full max-w-[520px] py-9 px-14 flex flex-col items-center">
-      <h1 className="text-h4 md:text-h3 xl:text-h1 text-white font-semibold mb-3">
+      <h1 className="text-h4 md:text-h3 xl:text-h3 text-white font-semibold mb-3">
         Sign In
       </h1>
       <p className="text-base xl:text-lg text-neutral-1">

@@ -24,7 +24,7 @@ const TRANSACTION = {
 
 export const TransactionDetails = () => (
   <div className="page-container">
-    <h1 className="text-h1 text-white font-semibold">Transaction Details</h1>
+    <h1 className="text-h3 text-white font-semibold">Transaction Details</h1>
     <div className="flex flex-col mt-7.5 w-full border border-neutral-2 p-5 rounded-lg bg-background-dark-grey text-base text-white">
       <div className="flex mb-5 flex-col gap-3 lg:flex-row">
         <div className="flex items-center w-full lg:w-2/6">

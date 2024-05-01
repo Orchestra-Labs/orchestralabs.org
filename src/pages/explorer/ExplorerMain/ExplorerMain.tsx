@@ -41,7 +41,7 @@ const CHART_DATA = [
 
 export const ExplorerMain = () => (
   <div className="page-container">
-    <h1 className="text-h4 md:text-h3 xl:text-h1 text-white font-semibold mb-3">
+    <h1 className="text-h4 md:text-h3 xl:text-h3 text-white font-semibold mb-3">
       Symphony Blockchain Explorer
     </h1>
     <div className="flex items-center border border-neutral-2 pr-5 py-3 rounded-lg mt-5 bg-background-dark-grey max-w-[750px] w-full">

@@ -137,7 +137,7 @@ const TABLE_DATA = [
 
 export const AllTransactions = () => (
   <div className="page-container">
-    <h1 className="text-h1 text-white font-semibold">Transactions</h1>
+    <h1 className="text-h3 text-white font-semibold">Transactions</h1>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-7.5 gap-5">
       <div className="flex flex-col w-full border border-neutral-2 p-5 pb-2.5 rounded-lg bg-background-dark-grey">
         <span className="text-base text-neutral-1">Transactions</span>
