@@ -1,28 +1,66 @@
-# Symphony Website
+# ![Orchestra Logo](./src/assets/images/symphony_logo.svg 'Orchestra Logo') Orchestra Labs
 
-## Technologies:
+The front page and first destination for Orchestra Labs developers.
 
-- React
-- Mantine.dev
-- Styled-components
-- Vite
-- Yarn
+## Installation
 
-## Prerequisites:
+To set up this project locally, follow these steps:
 
--   This project is using `npm` as a package manager
--   Node: v20.11.0
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Orchestra-Labs/orchestralabs.org.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd <project-directory>
+   ```
+3. Install dependencies with Yarn:
+   ```bash
+   yarn install
+   ```
 
-In the project directory, you can run:
+## Running the Application
 
-### `yarn run dev`
+You can run the application in development or production mode:
 
-Runs the app in the development mode.
+- Development mode:
+  ```bash
+  yarn dev
+  ```
+  This command runs the app in development mode with hot reloading.
+- Production build and preview:
+  ```bash
+  yarn build
+  yarn preview
+  ```
+  First, build the application for production, then preview the build on a local server. This will require opening a browser window to [localhost](http://localhost:4173/)
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+## Maintenance
 
-### `yarn run build`
+### Updating Dependencies
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Regularly update dependencies to keep the application secure and efficient:
+
+```bash
+yarn upgrade
+```
+
+### Linting
+
+Ensure code quality and consistency by running the linter:
+
+```bash
+yarn lint
+```
+
+### Running Prettier
+
+Format the code to maintain consistency across the codebase:
+
+```bash
+yarn prettier --write .
+```
+
+### Documentation
+
+For more details on how to use Vite (the main tool of this codebase), visit the [Mantine Vite Guide](https://mantine.dev/guides/vite/).

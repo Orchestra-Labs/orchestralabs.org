@@ -99,8 +99,7 @@ export const HeroSection = () => (
       <StyledStack gap="md" maw={rem(882)} ta="center" align="center">
         <Title>Discover a decentralized ecosystem for stablecoins</Title>
         <Subtitle size="xl">
-          Experience the true potential of decentralized stablecoins with
-          Symphony
+          Experience the true potential of decentralized stablecoins with Symphony
         </Subtitle>
         <Button w="fit-content" mt={rem(28)}>
           Get Started

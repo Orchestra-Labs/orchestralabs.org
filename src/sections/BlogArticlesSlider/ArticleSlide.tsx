@@ -89,5 +89,5 @@ export const ArticleSlide: React.FC<ArticleSlideProps> = ({ data }) => {
         <Title lineClamp={3}>{data.title}</Title>
       </Content>
     </Root>
-  )
+  );
 };

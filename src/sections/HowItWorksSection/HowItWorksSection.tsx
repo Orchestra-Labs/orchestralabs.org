@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
-import { Image, Text, Title as MTitle } from '@mantine/core';
-import { PropsWithChildren } from 'react';
+import { Image, Title as MTitle } from '@mantine/core';
 
 import image1 from '@/assets/images/schema.png';
 import image2 from '@/assets/images/schema2.png';
@@ -67,40 +66,18 @@ const Title = styled(MTitle)`
   }
 `;
 
-const ImageLabel = styled(Text)<PropsWithChildren>`
-  font-weight: 600;
-  font-size: 8px;
-  line-height: 10px;
-  color: ${design.colors.primaryBlue};
-  align-self: flex-end;
-  margin-top: 10px;
-  @media screen and (min-width: 48em) {
-    font-size: 15px;
-    line-height: 20px;
-    margin-top: 20px;
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.headings.size.h5.fontSize};
-    line-height: ${design.headings.size.h5.lineHeight};
-    margin-top: 30px;
-  }
-`;
-
 const ROWS = [
   {
     id: 1,
     src: image1,
-    label: 'a. Arbitrage section',
   },
   {
     id: 2,
     src: image2,
-    label: 'b. Fee system',
   },
   {
     id: 3,
     src: image3,
-    label: 'c. Rebalance mechanism',
   },
 ];
 
@@ -112,7 +89,6 @@ export const HowItWorksSection = () => (
         <RowWrapper key={row.id}>
           <RowContent>
             <Image src={row.src} />
-            <ImageLabel>{row.label}</ImageLabel>
           </RowContent>
         </RowWrapper>
       ))}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { cn } from '@/helpers';
+import { SocialLinks } from '@/components';
 
 type RowType = {
   id: number;
@@ -10,6 +11,7 @@ type RowType = {
   description: string;
   link?: string;
   linkLabel?: string;
+  showSocials?: boolean;
 };
 
 type InfoRowsSectionProps = {
@@ -66,6 +68,7 @@ export const InfoRowsSection: React.FC<InfoRowsSectionProps> = ({
                   {row.linkLabel}
                 </Link>
               )}
+              {row?.showSocials && <SocialLinks />}
             </div>
           </div>
         </div>
