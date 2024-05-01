@@ -291,7 +291,7 @@ export const AccountDetails = () => (
                         />
                         <Badge
                           variant="outline"
-                          color={item.type === 'IN' ? 'success' : 'warning'}
+                          type={item.type === 'IN' ? 'success' : 'warning'}
                         >
                           {item.type}
                         </Badge>
@@ -386,7 +386,7 @@ export const AccountDetails = () => (
                         />
                         <Badge
                           variant="outline"
-                          color={item.type === 'IN' ? 'success' : 'warning'}
+                          type={item.type === 'IN' ? 'success' : 'warning'}
                         >
                           {item.type}
                         </Badge>

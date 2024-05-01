@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { cn } from '@/helpers';
 import { SocialLinks } from '@/components';
+import { cn } from '@/helpers';
 
 type RowType = {
   id: number;
@@ -68,7 +68,9 @@ export const InfoRowsSection: React.FC<InfoRowsSectionProps> = ({
                   {row.linkLabel}
                 </Link>
               )}
-              {row?.showSocials && <SocialLinks />}
+              {row?.showSocials && (
+                <SocialLinks className="mt-12.5" linkClassName="text-white" />
+              )}
             </div>
           </div>
         </div>

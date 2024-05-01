@@ -84,7 +84,7 @@ export const BlockDetails = () => (
               <Badge
                 variant="outlined"
                 className="text-base px-4"
-                color={BLOCK.status === 'Finalized' ? 'success' : 'warning'}
+                type={BLOCK.status === 'Finalized' ? 'success' : 'warning'}
               >
                 {BLOCK.status}
               </Badge>

@@ -109,14 +109,14 @@ export const BlogArticlesSlider = () => {
     fetch(MEDIUM_ARTICLES_URL)
       .then(response => response.json())
       .then(data => {
-        if (data && data.items) {
+        if (data && data.items.length) {
           const articles = data.items.map((item: MediumArticle) => {
             const description = item.description.toString();
             const regexMatch = description.match(IMAGE_FROM_DESCRIPTION_REGEX);
             const image = regexMatch ? regexMatch[1] : blogArticleDefault;
 
             return {
-              id: item?.guid.match(ID_FROM_URL_REGEX)[0],
+              id: item.guid.match(ID_FROM_URL_REGEX)![0],
               title: item.title,
               image,
               link: item.link,

@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
         <NavItems items={MAIN_LAYOUT_LINKS} className="hidden lg:flex" />
         <SocialLinks className="hidden lg:flex" linkClassName="text-white" />
         <BurgerButton opened={opened} toggle={toggle} />
-        <MobileMenu opened={opened} links={MAIN_LAYOUT_LINKS} />
+        <MobileMenu opened={opened} toggle={toggle} links={MAIN_LAYOUT_LINKS} />
       </div>
     </header>
   );

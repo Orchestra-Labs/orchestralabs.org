@@ -236,7 +236,7 @@ export const AllTransactions = () => (
                   <Badge
                     variant="outline"
                     className="flex items-center justify-center w-[26px] h-[26px] rounded-full p-1"
-                    color={item.type === 'IN' ? 'success' : 'warning'}
+                    type={item.type === 'IN' ? 'success' : 'warning'}
                   >
                     {item.type === 'IN' ? (
                       <ArrowRight className="w-4 h-4 text-success" />

@@ -57,7 +57,11 @@ export const Header: React.FC = () => {
           </Button>
           <BurgerButton opened={opened} toggle={toggle} />
         </div>
-        <MobileMenu opened={opened} links={EXPLORER_LAYOUT_LINKS} />
+        <MobileMenu
+          opened={opened}
+          toggle={toggle}
+          links={EXPLORER_LAYOUT_LINKS}
+        />
       </div>
     </header>
   );

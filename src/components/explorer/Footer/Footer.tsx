@@ -5,7 +5,7 @@ import { Logo } from '@/assets/icons';
 import { SocialLinks } from '@/components';
 import { EXPLORER_FOOTER_LINKS } from '@/constants';
 
-export const Footer = () => (
+export const Footer: React.FC = () => (
   <footer className="relative bottom-0 inset-x-0 border-t border-neutral-2">
     <div className="mx-auto max-w-[1278px] w-full flex flex-col items-center px-6 py-[50px]">
       <div className="flex gap-8 w-full justify-between flex-col items-center md:items-start md:flex-row">

@@ -49,7 +49,7 @@ export const TransactionDetails = () => (
           <Badge
             variant="outlined"
             className="text-base px-4"
-            color={TRANSACTION.status === 'Success' ? 'success' : 'warning'}
+            type={TRANSACTION.status === 'Success' ? 'success' : 'warning'}
           >
             {TRANSACTION.status}
           </Badge>
