@@ -11,7 +11,7 @@ export const Footer = () => {
           <NavItems
             items={MAIN_LAYOUT_LINKS}
             linkClassName="text-grey"
-            className="flex-col md:flex-row mb-2.5 md:mb-0"
+            className="flex-col gap-5 md:gap-8 md:flex-row mb-2.5 md:mb-0"
           />
           <SocialLinks linkClassName="text-grey" />
           <p className="text-grey text-sm lg:text-base">

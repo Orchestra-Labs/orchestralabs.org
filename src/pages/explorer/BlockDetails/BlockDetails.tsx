@@ -138,10 +138,10 @@ export const BlockDetails = () => (
               <Question className="text-neutral-1 mr-1" />
               <p className="text-neutral-1 text-lg">Withdrawals</p>
             </div>
-            <div className="flex items-center w-full lg:w-4/6">
+            <div className="flex items-center gap-1 w-full lg:w-4/6">
               <Link to="#" className="text-blue hover:text-blue-darker">
                 {BLOCK.withdrawals} withdrawals
-              </Link>{' '}
+              </Link>
               in this block
             </div>
           </div>
@@ -154,12 +154,13 @@ export const BlockDetails = () => (
             <div className="flex items-center w-full lg:w-4/6">
               <Link
                 to="#"
-                className="text-blue hover:text-blue-darker ml-1 break-all"
+                className="text-blue hover:text-blue-darker break-all"
               >
                 {BLOCK.feeRecipient.value}
               </Link>
               <Copy
-                className="text-neutral-1 ml-2 min-w-[18px]"
+                className="text-neutral-1 hover:text-white ml-2 mr-2 min-w-[18px]"
+                role="button"
                 width={18}
                 height={18}
               />{' '}
@@ -257,7 +258,10 @@ export const BlockDetails = () => (
               >
                 {BLOCK.slot}
               </Link>
-              <SquareArrowUpRight className="text-neutral-1" />
+              <SquareArrowUpRight
+                className="text-neutral-1 hover:text-white"
+                role="button"
+              />
             </div>
           </div>
           <div className="flex mb-5 flex-col gap-3 lg:flex-row">
@@ -272,7 +276,10 @@ export const BlockDetails = () => (
               >
                 {BLOCK.epoch}
               </Link>
-              <SquareArrowUpRight className="text-neutral-1" />
+              <SquareArrowUpRight
+                className="text-neutral-1 hover:text-white"
+                role="button"
+              />
             </div>
           </div>
           <div className="flex flex-col gap-3 lg:flex-row">
@@ -287,7 +294,10 @@ export const BlockDetails = () => (
               >
                 {BLOCK.proposerIndex}
               </Link>
-              <SquareArrowUpRight className="text-neutral-1" />
+              <SquareArrowUpRight
+                className="text-neutral-1 hover:text-white"
+                role="button"
+              />
             </div>
           </div>
           <div className="border-t border-neutral-2 my-5" />

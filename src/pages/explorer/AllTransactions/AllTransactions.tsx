@@ -196,7 +196,7 @@ export const AllTransactions = () => (
           {TABLE_DATA.map(item => (
             <TableRow>
               <TableCell className="font-medium">
-                <Eye />
+                <Eye role="button" />
               </TableCell>
               <TableCell>
                 <Link
@@ -230,7 +230,7 @@ export const AllTransactions = () => (
                   </Link>
                   <Copy
                     role="button"
-                    className="ml-2.5 mr-5"
+                    className="ml-2.5 mr-5 text-neutral-1 hover:text-white"
                     width={18}
                     height={18}
                   />
@@ -249,7 +249,11 @@ export const AllTransactions = () => (
               </TableCell>
               <TableCell>
                 <div className="flex items-center">
-                  <List className="mr-2.5" width={18} height={18} />
+                  <List
+                    className="mr-2.5 text-neutral-1"
+                    width={18}
+                    height={18}
+                  />
                   <Link
                     className="text-blue hover:text-blue-darker text-sm"
                     to={`${ROUTES.EXPLORER.ACCOUNT}/${item.to}`}
@@ -258,7 +262,7 @@ export const AllTransactions = () => (
                   </Link>
                   <Copy
                     role="button"
-                    className="ml-2.5"
+                    className="ml-2.5 text-neutral-1 hover:text-white"
                     width={18}
                     height={18}
                   />

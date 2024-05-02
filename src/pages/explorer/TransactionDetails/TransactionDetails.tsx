@@ -35,7 +35,8 @@ export const TransactionDetails = () => (
         <div className="flex items-center w-full lg:w-4/6">
           <p className="truncate">{TRANSACTION.transactionHash}</p>
           <Copy
-            className="text-neutral-1 ml-2 min-w-[18px]"
+            className="text-neutral-1 hover:text-white ml-2 min-w-[18px]"
+            role="button"
             width={18}
             height={18}
           />
@@ -122,7 +123,8 @@ export const TransactionDetails = () => (
             {TRANSACTION.from}
           </Link>
           <Copy
-            className="text-neutral-1 ml-2 min-w-[18px]"
+            className="text-neutral-1 hover:text-white ml-2 min-w-[18px]"
+            role="button"
             width={18}
             height={18}
           />
@@ -141,7 +143,8 @@ export const TransactionDetails = () => (
             {TRANSACTION.to}
           </Link>
           <Copy
-            className="text-neutral-1 ml-2 min-w-[18px]"
+            className="text-neutral-1 hover:text-white ml-2 min-w-[18px]"
+            role="button"
             width={18}
             height={18}
           />

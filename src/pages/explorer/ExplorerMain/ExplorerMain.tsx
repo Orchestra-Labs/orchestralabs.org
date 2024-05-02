@@ -133,7 +133,7 @@ export const ExplorerMain = () => (
           <LineChart
             h={96}
             data={CHART_DATA}
-            className="mt-5"
+            className="mt-5 text-neutral-1"
             dataKey="date"
             withTooltip={false}
             series={[{ name: 'value', color: '#A2A2AA' }]}

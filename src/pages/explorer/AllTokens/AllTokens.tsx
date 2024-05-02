@@ -1,3 +1,5 @@
+import { Hash } from 'lucide-react';
+
 import { cn } from '@/helpers';
 import {
   Table,
@@ -198,7 +200,9 @@ export const AllTokens = () => (
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>#</TableHead>
+            <TableHead className="flex justify-center items-center">
+              <Hash className="text-neutral-1" />
+            </TableHead>
             <TableHead>Token</TableHead>
             <TableHead className="text-blue">Price</TableHead>
             <TableHead className="text-blue">Change (%)</TableHead>
@@ -211,7 +215,9 @@ export const AllTokens = () => (
         <TableBody>
           {TABLE_DATA.map(item => (
             <TableRow key={item.id}>
-              <TableCell className="font-medium">{item.id}</TableCell>
+              <TableCell className="font-medium text-center">
+                {item.id}
+              </TableCell>
               <TableCell>{item.token}</TableCell>
               <TableCell>
                 <div className="flex flex-col">

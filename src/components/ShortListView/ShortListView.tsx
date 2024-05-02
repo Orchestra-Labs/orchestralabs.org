@@ -31,10 +31,7 @@ export const ShortListView: React.FC<ShortListViewProps> = ({
     <div className="flex flex-col overflow-x-auto">{children}</div>
     {linkText && link && (
       <div className="flex justify-center pt-5">
-        <Link
-          to={link}
-          className="uppercase text-neutral-1 hover:text-neutral-3"
-        >
+        <Link to={link} className="uppercase text-neutral-1 hover:text-white">
           {linkText}
         </Link>
       </div>

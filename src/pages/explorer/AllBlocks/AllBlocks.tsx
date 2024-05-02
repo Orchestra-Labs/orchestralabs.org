@@ -229,7 +229,8 @@ export const AllBlocks = () => (
                   {item.from}
                 </Link>
                 <Copy
-                  className="ml-2.5 text-neutral-1"
+                  className="ml-2.5 text-neutral-1 hover:text-white"
+                  role="button"
                   width={18}
                   height={18}
                 />
