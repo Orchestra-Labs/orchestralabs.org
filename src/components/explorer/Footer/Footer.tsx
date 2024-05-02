@@ -43,7 +43,7 @@ export const Footer: React.FC = () => (
         <div />
       </div>
       <p className="text-neutral-3 text-sm lg:text-base mt-8 md:mt-24">
-        © 2024 Symphony, Inc. All rights reserved
+        © 2024 Orchestra Labs, LLC. All rights reserved
       </p>
     </div>
   </footer>
