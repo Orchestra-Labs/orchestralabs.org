@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
       <div className="mx-auto max-h-11 max-w-[1278px] w-full flex justify-between items-center">
         <Link
           className="z-10 w-[127px] h-7 sm:w-[165px] sm:h-[34px] lg:w-[209px] lg:h-11"
-          to={import.meta.env.VITE_PUBLIC_APP_URL}
+          to={import.meta.env.VITE_PUBLIC_APP_URL || window.location.origin}
         >
           <Logo />
         </Link>
