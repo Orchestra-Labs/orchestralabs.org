@@ -1,49 +1,13 @@
-import styled from '@emotion/styled';
-import { Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import React, { MutableRefObject, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Logo } from '@/assets/icons/Logo';
 import { MobileMenu, SocialLinks } from '@/components';
-import { design } from '@/theme/design';
+import { MAIN_LAYOUT_LINKS } from '@/constants';
+import { BurgerButton } from '@/ui-kit';
 
 import { NavItems } from '../NavItems';
-
-const Root = styled.header`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  padding: 28px 25px;
-  @media screen and (min-width: 62em) {
-    padding: 30px 24px;
-  }
-`;
-
-const Wrapper = styled.div`
-  margin: 0 auto;
-  max-height: 44px;
-  max-width: 1278px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const LogoWrapper = styled.a`
-  z-index: 10;
-  width: 127px;
-  height: 28px;
-  @media screen and (min-width: 36em) {
-    width: 165px;
-    height: 34px;
-  }
-  @media screen and (min-width: 62em) {
-    width: 209px;
-    height: 44px;
-  }
-`;
 
 export type HeaderProps = Record<string, unknown>;
 
@@ -71,16 +35,22 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <Root ref={headerRef}>
-      <Wrapper>
-        <LogoWrapper href={import.meta.env.VITE_PUBLIC_APP_URL}>
+    <header
+      className="fixed top-0 inset-x-0 z-10 px-[25px] py-7 lg:px-6 lg:py-7.5"
+      ref={headerRef}
+    >
+      <div className="mx-auto max-h-11 max-w-[1278px] w-full flex justify-between items-center">
+        <Link
+          className="z-10 w-[127px] h-7 sm:w-[165px] sm:h-[34px] lg:w-[209px] lg:h-11"
+          to={import.meta.env.VITE_PUBLIC_APP_URL || window.location.origin}
+        >
           <Logo />
-        </LogoWrapper>
-        <NavItems visibleFrom="md" linkColor={design.colors.showWhite} />
-        <SocialLinks visibleFrom="md" />
-        <Burger opened={opened} onClick={toggle} hiddenFrom="md" />
-        <MobileMenu opened={opened} />
-      </Wrapper>
-    </Root>
+        </Link>
+        <NavItems items={MAIN_LAYOUT_LINKS} className="hidden lg:flex" />
+        <SocialLinks className="hidden lg:flex" linkClassName="text-white" />
+        <BurgerButton opened={opened} toggle={toggle} />
+        <MobileMenu opened={opened} toggle={toggle} links={MAIN_LAYOUT_LINKS} />
+      </div>
+    </header>
   );
 };

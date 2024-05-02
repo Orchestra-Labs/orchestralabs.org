@@ -1,38 +1,31 @@
-import { Anchor, Flex } from '@mantine/core';
-import { FlexProps } from '@mantine/core/lib';
+import { ClassValue } from 'clsx';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import { Discord } from '@/assets/icons/Discord';
-import { Telegram } from '@/assets/icons/Telegram';
-import { XIcon } from '@/assets/icons/X';
-import { design } from '@/theme/design';
-import { GitHub } from '@/assets/icons/GitHub';
+import { SOCIAL_LINKS } from '@/constants';
+import { cn } from '@/helpers';
 
-interface SocialLinksProps extends FlexProps {
-  iconFill?: string;
-}
-
-const SOCIAL_LINKS = [
-  { id: 1, url: 'https://twitter.com/orchestra_labs', Icon: XIcon },
-  { id: 2, url: 'https://t.me/+xFieHCYYyx41NGQx', Icon: Telegram },
-  { id: 3, url: 'https://github.com/Orchestra-Labs', Icon: GitHub },
-  { id: 4, url: 'https://discord.gg/3fvGM779', Icon: Discord },
-];
+type SocialLinksProps = {
+  className?: string;
+  linkClassName?: string;
+};
 
 export const SocialLinks: React.FC<SocialLinksProps> = ({
-  iconFill = design.colors.showWhite,
-  ...props
+  className,
+  linkClassName,
 }) => (
-  <Flex align="center" gap="lg" {...props}>
+  <div
+    className={cn('flex flex-row items-center gap-5', className as ClassValue)}
+  >
     {SOCIAL_LINKS.map(link => (
-      <Anchor
+      <NavLink
         key={link.id}
-        display="inline-flex"
-        href={link.url}
+        className={cn('inline-flex', linkClassName as ClassValue)}
+        to={link.url}
         target="_blank"
       >
-        <link.Icon color={iconFill} />
-      </Anchor>
+        <link.Icon />
+      </NavLink>
     ))}
-  </Flex>
+  </div>
 );

@@ -32,7 +32,7 @@
 
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     }
   },
@@ -40,6 +40,7 @@
   "include": [
     "vite.config.ts",
     ".eslintrc.js",
-    "src",
+    "src/**/*",
+    "tailwind.config.js"
   ]
 }

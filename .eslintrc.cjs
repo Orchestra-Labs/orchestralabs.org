@@ -25,6 +25,7 @@ module.exports = {
     'react/jsx-no-useless-fragment': ['warn', { allowSingleChild: true }],
     '@typescript-eslint/no-empty-interface': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'no-plusplus': 'off',
     'no-restricted-syntax': 'warn',
     'import/extensions': [

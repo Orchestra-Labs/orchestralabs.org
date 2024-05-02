@@ -1,146 +1,8 @@
-import styled from '@emotion/styled';
-import {
-  Image,
-  ImageProps,
-  MantineColor,
-  StyleProp,
-  Text,
-  Title as MTitle,
-} from '@mantine/core';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { design } from '@/theme/design';
 import { SocialLinks } from '@/components';
-
-const Root = styled.div`
-  max-width: 1328px;
-  margin: 0 auto;
-  padding: 60px 25px;
-  @media screen and (min-width: 48em) {
-    padding: 10px 0 35px;
-  }
-  @media screen and (min-width: 75em) {
-    padding: 10px 24px 35px;
-  }
-`;
-
-const SectionTitle = styled(MTitle)`
-  text-align: center;
-  max-width: 80%;
-  margin: 0 auto 50px;
-  color: ${design.colors.showWhite};
-  font-size: ${design.headings.size.h4.fontSize};
-  line-height: ${design.headings.size.h4.lineHeight};
-  @media screen and (min-width: 48em) {
-    margin: 0 auto 30px;
-    font-size: ${design.headings.size.h2.fontSize};
-    line-height: ${design.headings.size.h2.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    margin-bottom: 90px;
-    font-size: ${design.typography.size.display1.fontSize};
-    line-height: ${design.typography.size.display1.lineHeight};
-  }
-`;
-
-const RowsList = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const RowWrapper = styled.div<{ revertType: 'odd' | 'even' }>`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 40px 0;
-  border-bottom: 1px solid #363636;
-  @media screen and (min-width: 48em) {
-    flex-direction: row;
-    padding: 70px 76px;
-    &:nth-of-type(${props => props.revertType}) {
-      flex-direction: row-reverse;
-    }
-  }
-  @media screen and (min-width: 75em) {
-    padding: 70px 125px;
-  }
-
-  &:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-`;
-
-const HalfSideWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media screen and (min-width: 48em) {
-    max-width: 55%;
-  }
-`;
-
-const TextContentWrapper = styled.div<{ textAlign?: string }>`
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
-  text-align: ${props => props?.textAlign};
-`;
-
-const StyledImage = styled(Image)<ImageProps>`
-  width: 50%;
-  max-width: 211px;
-  margin-bottom: 40px;
-  @media screen and (min-width: 48em) {
-    width: 29.2vw;
-    max-width: 300px;
-    margin-bottom: 0;
-  }
-  @media screen and (min-width: 75em) {
-    width: 26.1vw;
-    max-width: 352px;
-  }
-`;
-
-const Title = styled(MTitle)`
-  font-size: ${design.headings.size.h4.fontSize};
-  line-height: ${design.headings.size.h4.lineHeight};
-  @media screen and (min-width: 48em) {
-    white-space: pre-line;
-    font-size: ${design.headings.size.h3.fontSize};
-    line-height: ${design.headings.size.h3.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.headings.size.h1.fontSize};
-    line-height: ${design.headings.size.h1.lineHeight};
-  }
-`;
-
-const Link = styled.a`
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-  width: 100%;
-  min-height: 48px;
-  min-width: 176px;
-  padding: 12px;
-  border-radius: 50px;
-  color: ${design.colors.dustyGrey};
-  background: ${design.colors.darkGrey};
-  font-size: ${design.typography.size.buttonSm.fontSize};
-  line-height: ${design.typography.size.buttonSm.lineHeight};
-  text-align: center;
-  @media screen and (min-width: 48em) {
-    width: fit-content;
-    margin-top: 50px;
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.typography.size.buttonLg.fontSize};
-    line-height: ${design.typography.size.buttonLg.lineHeight};
-  }
-`;
+import { cn } from '@/helpers';
 
 type RowType = {
   id: number;
@@ -165,28 +27,54 @@ export const InfoRowsSection: React.FC<InfoRowsSectionProps> = ({
   revertType = 'odd',
   textAlign = 'left',
 }) => (
-  <Root>
-    {title && <SectionTitle>{title}</SectionTitle>}
-    <RowsList>
+  <section className="section-container px-25px py-15 md:px-0 md:pt-2.5 md:pb-[35px] lg:px-6">
+    {title && (
+      <h1 className="text-center font-semibold max-w-[80%] mx-auto mb-12.5 text-white text-h4 md:mb-7.5 md:text-h2 lg:mb-[90px] xl:text-display1">
+        {title}
+      </h1>
+    )}
+    <div className="flex flex-col">
       {rows.map(row => (
-        <RowWrapper key={row.id} revertType={revertType}>
-          <HalfSideWrapper>
-            <StyledImage src={row.src} />
-          </HalfSideWrapper>
-          <HalfSideWrapper>
-            <TextContentWrapper textAlign={textAlign}>
-              <Title c={design.colors.showWhite}>{row.title}</Title>
-              <Text c={design.colors.dustyGrey as StyleProp<MantineColor>}>
-                {row.description}
-              </Text>
+        <div
+          key={row.id}
+          className={cn(
+            'flex flex-col justify-between py-10 border-b border-[#363636] md:flex-row md:py-[70px] md:px-19 lg:px-32',
+            'last:border-0 last:pb-0',
+            revertType === 'odd' && 'md:odd:flex-row-reverse',
+            revertType === 'even' && 'md:even:flex-row-reverse',
+          )}
+        >
+          <div className="flex items-center justify-center md:max-w-[55%]">
+            <img
+              className="w-1/2 max-w-[211px] mb-10 md:w-[29.2vw] md:max-w-[300px] md:mb-0 lg:w-[26.1vw] lg:max-w-[352px]"
+              src={row.src}
+              alt="Info row"
+            />
+          </div>
+          <div className="flex items-center justify-center md:max-w-[55%]">
+            <div className={cn('flex flex-col gap-6', `text-${textAlign}`)}>
+              <h2 className="font-semibold text-h4 md:text-h3 xl:text-h1 whitespace-pre-line text-white">
+                {row.title}
+              </h2>
+              <p className="text-lg/7 text-grey">{row.description}</p>
               {row?.link && row?.linkLabel && (
-                <Link href={row.link}>{row.linkLabel}</Link>
+                <Link
+                  to={row.link}
+                  className={cn(
+                    'inline-flex items-center justify-center mt-7.5 w-full min-w-[176px] min-h-12 p-3 rounded-[50px] text-grey bg-background-dark-grey text-base text-center',
+                    'no-underline md:w-fit md:mt-12.5 xl:text-lg',
+                  )}
+                >
+                  {row.linkLabel}
+                </Link>
               )}
-              {row.showSocials && <SocialLinks />}
-            </TextContentWrapper>
-          </HalfSideWrapper>
-        </RowWrapper>
+              {row?.showSocials && (
+                <SocialLinks className="mt-12.5" linkClassName="text-white" />
+              )}
+            </div>
+          </div>
+        </div>
       ))}
-    </RowsList>
-  </Root>
+    </div>
+  </section>
 );
