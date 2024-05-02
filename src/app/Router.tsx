@@ -42,7 +42,7 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <ExplorerMain />,
         },
         {
-          path: ROUTES.EXPLORER.ACCOUNT_DETAILS,
+          path: `${ROUTES.EXPLORER.ACCOUNT}/:id`,
           element: <AccountDetails />,
         },
         {
@@ -58,11 +58,11 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <AllTransactions />,
         },
         {
-          path: ROUTES.EXPLORER.TRANSACTION_DETAILS,
+          path: `${ROUTES.EXPLORER.TRANSACTIONS}/:id`,
           element: <TransactionDetails />,
         },
         {
-          path: ROUTES.EXPLORER.BLOCK_DETAILS,
+          path: `${ROUTES.EXPLORER.BLOCKS}/:id`,
           element: <BlockDetails />,
         },
         {

@@ -163,7 +163,7 @@ export const ExplorerMain = () => (
               <div className="flex flex-col ml-2">
                 <Link
                   className="text-blue hover:text-blue-darker text-base xl:text-lg"
-                  to="#"
+                  to={`${ROUTES.EXPLORER.BLOCKS}/${item}`}
                 >
                   19226333
                 </Link>
@@ -196,7 +196,7 @@ export const ExplorerMain = () => (
         title="Latest Transactions"
         className="w-full min-[1100px]:w-1/2"
         linkText="View all transactions"
-        link="#"
+        link={ROUTES.EXPLORER.TRANSACTIONS}
       >
         {Array.of(1, 2, 3, 4, 5, 6).map(item => (
           <div
@@ -210,7 +210,7 @@ export const ExplorerMain = () => (
               <div className="flex flex-col ml-2 justify-center">
                 <Link
                   className="text-blue hover:text-blue-darker text-base xl:text-lg"
-                  to="#"
+                  to={`${ROUTES.EXPLORER.TRANSACTIONS}/${item}`}
                 >
                   0x2bcb5bd70...
                 </Link>
@@ -220,13 +220,19 @@ export const ExplorerMain = () => (
             <div className="flex flex-col ml-2">
               <span className="text-base xl:text-lg">
                 From{' '}
-                <Link className="text-blue hover:text-blue-darker" to="#">
+                <Link
+                  className="text-blue hover:text-blue-darker"
+                  to={`${ROUTES.EXPLORER.ACCOUNT}/${item}`}
+                >
                   0х90222290...6CC4Af35
                 </Link>
               </span>
               <span className="text-sm text-neutral-1">
                 To{' '}
-                <Link className="text-blue hover:text-blue-darker" to="#">
+                <Link
+                  className="text-blue hover:text-blue-darker"
+                  to={`${ROUTES.EXPLORER.ACCOUNT}/${item}`}
+                >
                   0хF52441A7...ae4dC7786
                 </Link>
               </span>

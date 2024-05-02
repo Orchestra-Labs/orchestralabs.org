@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import { Copy, List, Question } from '@/assets/icons';
+import { ROUTES } from '@/config/routes';
 import {
   Badge,
   Table,
@@ -200,7 +201,7 @@ export const AllTransactions = () => (
               <TableCell>
                 <Link
                   className="text-blue hover:text-blue-darker text-sm"
-                  to="#"
+                  to={`${ROUTES.EXPLORER.TRANSACTIONS}/${item.id}`}
                 >
                   {item.transactionHash}
                 </Link>
@@ -213,7 +214,7 @@ export const AllTransactions = () => (
               <TableCell>
                 <Link
                   className="text-blue hover:text-blue-darker text-sm"
-                  to="#"
+                  to={`${ROUTES.EXPLORER.BLOCKS}/${item.block}`}
                 >
                   {item.block}
                 </Link>
@@ -223,7 +224,7 @@ export const AllTransactions = () => (
                 <div className="flex items-center">
                   <Link
                     className="text-blue hover:text-blue-darker text-sm"
-                    to="#"
+                    to={`${ROUTES.EXPLORER.ACCOUNT}/${item.from}`}
                   >
                     {item.from}
                   </Link>
@@ -251,7 +252,7 @@ export const AllTransactions = () => (
                   <List className="mr-2.5" width={18} height={18} />
                   <Link
                     className="text-blue hover:text-blue-darker text-sm"
-                    to="#"
+                    to={`${ROUTES.EXPLORER.ACCOUNT}/${item.to}`}
                   >
                     {item.to}
                   </Link>

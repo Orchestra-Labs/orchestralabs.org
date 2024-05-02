@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Copy, Question } from '@/assets/icons';
+import { ROUTES } from '@/config/routes';
 import { Badge } from '@/ui-kit';
 
 const TRANSACTION = {
@@ -61,7 +62,10 @@ export const TransactionDetails = () => (
           <p className="text-neutral-1 text-lg">Block</p>
         </div>
         <div className="flex items-center flex-wrap gap-2.5 w-full lg:w-4/6">
-          <Link to="#" className="text-blue hover:text-blue-darker">
+          <Link
+            to={`${ROUTES.EXPLORER.BLOCKS}/${TRANSACTION.block}`}
+            className="text-blue hover:text-blue-darker"
+          >
             {TRANSACTION.block}
           </Link>
           <Badge variant="outlined" className="text-sm px-3 py-2">
@@ -86,7 +90,10 @@ export const TransactionDetails = () => (
         </div>
         <div className="flex items-center flex-wrap gap-1 w-full lg:w-4/6">
           <p className="">{`${TRANSACTION.action.type} ${TRANSACTION.action.value} To`}</p>
-          <Link to="#" className="text-blue hover:text-blue-darker">
+          <Link
+            to={`${ROUTES.EXPLORER.ACCOUNT}/${TRANSACTION.action.to}`}
+            className="text-blue hover:text-blue-darker"
+          >
             {TRANSACTION.action.to}
           </Link>
         </div>
@@ -109,7 +116,7 @@ export const TransactionDetails = () => (
         </div>
         <div className="flex items-center w-full lg:w-4/6">
           <Link
-            to="#"
+            to={`${ROUTES.EXPLORER.ACCOUNT}/${TRANSACTION.from}`}
             className="text-blue hover:text-blue-darker ml-1 truncate"
           >
             {TRANSACTION.from}
@@ -128,7 +135,7 @@ export const TransactionDetails = () => (
         </div>
         <div className="flex items-center w-full lg:w-4/6">
           <Link
-            to="#"
+            to={`${ROUTES.EXPLORER.ACCOUNT}/${TRANSACTION.to}`}
             className="text-blue hover:text-blue-darker ml-1 truncate"
           >
             {TRANSACTION.to}

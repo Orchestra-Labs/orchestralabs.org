@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Copy } from '@/assets/icons';
+import { ROUTES } from '@/config/routes';
 import {
   Progress,
   Table,
@@ -210,7 +211,10 @@ export const AllBlocks = () => (
           {TABLE_DATA.map(item => (
             <TableRow key={item.id}>
               <TableCell>
-                <Link to="#" className="text-blue hover:text-blue-darker">
+                <Link
+                  to={`${ROUTES.EXPLORER.BLOCKS}/${item.id}`}
+                  className="text-blue hover:text-blue-darker"
+                >
                   {item.block}
                 </Link>
               </TableCell>
