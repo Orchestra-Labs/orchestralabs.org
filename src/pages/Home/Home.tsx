@@ -6,6 +6,7 @@ import {
   BlogArticlesSlider,
   HeroSection,
   HowItWorksSection,
+  TrustedCompaniesSection,
 } from '@/sections';
 import { InfoRowsSection } from '@/sections/InfoRowsSection';
 
@@ -81,6 +82,7 @@ export const Home = () => (
       title={FEATURED_SECTION_TITLE}
       rows={FEATURED_LINKS_ROWS}
     />
+    <TrustedCompaniesSection />
     <BlogArticlesSlider />
   </div>
 );
