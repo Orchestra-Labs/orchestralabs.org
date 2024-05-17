@@ -1,97 +1,41 @@
-import styled from '@emotion/styled';
-import { Image, Title as MTitle } from '@mantine/core';
-
 import image1 from '@/assets/images/schema.png';
 import image2 from '@/assets/images/schema2.png';
 import image3 from '@/assets/images/schema3.png';
-import { design } from '@/theme/design';
-
-const Root = styled.section`
-  padding: 60px 0;
-  background: ${design.colors.darkGrey};
-  @media screen and (min-width: 48em) {
-    padding: 70px 24px;
-  }
-  @media screen and (min-width: 75em) {
-    padding: 90px 24px;
-  }
-`;
-
-const Container = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-`;
-
-const RowWrapper = styled.div`
-  padding: 25px 34px;
-  border-bottom: 1px solid #363636;
-  @media screen and (min-width: 48em) {
-    padding: 50px 0;
-  }
-  @media screen and (min-width: 75em) {
-    padding: 70px 0;
-  }
-  &:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-`;
-
-const RowContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media screen and (min-width: 48em) {
-    padding: 0 16.5%;
-  }
-  @media screen and (min-width: 75em) {
-    padding: 0 17%;
-  }
-`;
-
-const Title = styled(MTitle)`
-  color: ${design.colors.showWhite};
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: ${design.headings.size.h4.fontSize};
-  line-height: ${design.headings.size.h4.lineHeight};
-  @media screen and (min-width: 48em) {
-    margin-bottom: 10px;
-    font-size: ${design.headings.size.h2.fontSize};
-    line-height: ${design.headings.size.h2.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    margin-bottom: 20px;
-    font-size: ${design.typography.size.display2.fontSize};
-    line-height: ${design.typography.size.display2.lineHeight};
-  }
-`;
 
 const ROWS = [
   {
     id: 1,
     src: image1,
+    alt: 'Level 1: Arbitrage Rebalancing',
   },
   {
     id: 2,
     src: image2,
+    alt: 'Level 2: Supply-Side Rebalancing',
   },
   {
     id: 3,
     src: image3,
+    alt: 'Level 3: 2:1 Elastic Reserves',
   },
 ];
 
 export const HowItWorksSection = () => (
-  <Root>
-    <Container>
-      <Title>How it works</Title>
+  <section className="py-15 bg-background-dark-grey md:py-[70px] md:px-6 lg:py-[90px]">
+    <div className="max-w-[1280px] mx-auto">
+      <h2 className="text-center font-semibold text-white text-center mb-[15px] text-h4 md:mb-2.5 md:text-h2 xl:mb-5 xl:text-display2">
+        How it works
+      </h2>
       {ROWS.map(row => (
-        <RowWrapper key={row.id}>
-          <RowContent>
-            <Image src={row.src} />
-          </RowContent>
-        </RowWrapper>
+        <div
+          key={row.id}
+          className="py-25px px-[34px] border-b border-grey21 md:py-12.5 md:px-0 xl:py-17.5 last-of-type:border-b-0 last-of-type:pb-0"
+        >
+          <div className="flex flex-col md:px-[16.5%] xl:px-[17%]">
+            <img className="w-full" src={row.src} alt={row.alt} />
+          </div>
+        </div>
       ))}
-    </Container>
-  </Root>
+    </div>
+  </section>
 );

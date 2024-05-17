@@ -1,93 +1,26 @@
-import styled from '@emotion/styled';
-import { Image, ImageProps, rem, Text, Title as MTitle } from '@mantine/core';
-import { TextProps } from '@mantine/core/lib/components/Text/Text';
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { design } from '@/theme/design';
-import { Article } from './Article';
-
-const Root = styled.article`
-  border-radius: 16px;
-  background: rgba(17, 15, 20, 1);
-  display: flex;
-  flex-direction: column;
-  max-width: 280px;
-  cursor: pointer;
-  overflow: hidden;
-  @media screen and (min-width: 48em) {
-    max-width: 348px;
-  }
-  @media screen and (min-width: 75em) {
-    max-width: 424px;
-  }
-`;
-
-const StyledImage = styled(Image)<ImageProps>`
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-`;
-
-const Content = styled.div`
-  padding: 20px;
-  border: 1px solid #27272d;
-  border-top: none;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  @media screen and (min-width: 48em) {
-    padding: 25px;
-  }
-  @media screen and (min-width: 75em) {
-    padding: 30px;
-  }
-`;
-
-const Title = styled(MTitle)`
-  color: ${design.colors.showWhite};
-  font-size: ${design.typography.size.bodyXs.fontSize};
-  line-height: ${design.typography.size.bodyXs.lineHeight};
-  margin-top: ${rem(8)};
-  @media screen and (min-width: 48em) {
-    font-size: ${design.headings.size.h6.fontSize};
-    line-height: ${design.headings.size.h6.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.headings.size.h4.fontSize};
-    line-height: ${design.headings.size.h4.lineHeight};
-  }
-`;
-
-const Date = styled(Text)<PropsWithChildren<TextProps>>`
-  color: ${design.colors.stormGrey};
-  font-weight: 600;
-  font-size: ${rem(8)};
-  line-height: ${rem(14)};
-  margin-top: ${rem(4)};
-  @media screen and (min-width: 48em) {
-    font-size: ${rem(11)};
-    line-height: ${rem(20)};
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${rem(14)};
-    line-height: ${rem(25)};
-  }
-`;
+import { Article } from '@/types';
 
 type ArticleSlideProps = {
   data: Article;
 };
 
 export const ArticleSlide: React.FC<ArticleSlideProps> = ({ data }) => {
-  const handleClick = () => {
-    window.open(data.link, '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <Root onClick={handleClick}>
-      <StyledImage src={data.image} />
-      <Content>
-        <Date>{data.createdAt}</Date>
-        <Title lineClamp={3}>{data.title}</Title>
-      </Content>
-    </Root>
+    <article className="rounded-2xl bg-background-article flex flex-col max-w-[280px] cursor-pointer overflow-hidden md:max-w-[348px] xl:max-w-[424px]">
+      <Link to={data.link} target="_blank" rel="noopener noreferrer">
+        <img className="rounded-t-2xl w-full" src={data.image} alt="Article" />
+        <div className="p-5 border border-[#27272d] border-t-0 rounded-b-2xl md:p-25px xl:p-7.5">
+          <span className="text-storm-grey font-semibold text-[8px]/[14px] pt-1 md:text-[11px]/[20px] xl:text-[14px]/[25px]">
+            {data.createdAt}
+          </span>
+          <h3 className="text-white font-semibold text-body-xs line-clamp-3 mt-2 min-h-15 md:text-lg xl:text-h4 xl:min-h-[102px]">
+            {data.title}
+          </h3>
+        </div>
+      </Link>
+    </article>
   );
 };

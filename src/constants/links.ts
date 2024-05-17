@@ -5,11 +5,9 @@ export const MAIN_LAYOUT_LINKS = [
   {
     id: 1,
     label: 'Whitepaper',
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    url: 'https://docs.google.com/document/d/1t6mzvrnWpbq3wyUlts9HUTcLE97Y6XUol8a_bJJTUlg/edit?usp=sharing',
+    url: ROUTES.WHITEPAPER,
   },
-  { id: 2, label: 'Documentation', url: '#' },
+  { id: 2, label: 'Documentation', url: ROUTES.DOCUMENTATION },
   { id: 3, label: 'Explorer', url: ROUTES.EXPLORER.ROOT },
   {
     id: 4,
@@ -48,7 +46,7 @@ export const EXPLORER_FOOTER_LINKS = [
     id: 2,
     name: 'COMMUNITY',
     links: [
-      { id: 1, name: 'Api Documentation', href: '' },
+      { id: 1, name: 'Api Documentation', href: ROUTES.DOCUMENTATION },
       { id: 2, name: 'Knowledge Base', href: '' },
     ],
   },

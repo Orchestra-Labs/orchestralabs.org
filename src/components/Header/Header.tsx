@@ -1,9 +1,10 @@
 import { useDisclosure } from '@mantine/hooks';
 import React, { MutableRefObject, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { Logo } from '@/assets/icons/Logo';
 import { MobileMenu, SocialLinks } from '@/components';
+import { ROUTES } from '@/config/routes';
 import { MAIN_LAYOUT_LINKS } from '@/constants';
 import { BurgerButton } from '@/ui-kit';
 
@@ -15,24 +16,27 @@ export const Header: React.FC = () => {
   const headerRef = useRef<HTMLDivElement | null>(
     null,
   ) as MutableRefObject<HTMLDivElement>;
+  const { pathname } = useLocation();
 
   const [opened, { toggle }] = useDisclosure();
 
   useEffect(() => {
     const handleBackgroundOnScroll = () => {
-      const opacity = window.scrollY / 200;
+      const opacity = pathname === ROUTES.HOME ? window.scrollY / 200 : 1;
 
       if (headerRef?.current) {
         headerRef.current.style!.backgroundColor = `rgba(10, 9, 13, ${opacity})`;
       }
     };
 
+    handleBackgroundOnScroll();
+
     window.addEventListener('scroll', handleBackgroundOnScroll);
 
     return () => {
       window.removeEventListener('scroll', handleBackgroundOnScroll);
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <header
