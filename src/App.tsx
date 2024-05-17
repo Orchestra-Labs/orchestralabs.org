@@ -1,6 +1,3 @@
-import '@mantine/core/styles.css';
-
-import { Center, Loader } from '@mantine/core';
 import { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
