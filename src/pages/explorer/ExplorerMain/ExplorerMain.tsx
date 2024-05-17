@@ -1,6 +1,6 @@
-import { LineChart } from '@mantine/charts';
 import { Globe, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 import { Blocks, Clock, List, LogoIcon } from '@/assets/icons';
 import { ShortListView } from '@/components';
@@ -130,17 +130,32 @@ export const ExplorerMain = () => (
           <span className="text-lg text-neutral-1">
             TRANSACTION HISTORY IN 14 DAYS
           </span>
-          <LineChart
-            h={96}
-            data={CHART_DATA}
-            className="mt-5 text-neutral-1"
-            dataKey="date"
-            withTooltip={false}
-            series={[{ name: 'value', color: '#A2A2AA' }]}
-            yAxisProps={{ domain: [1040, 1360] }}
-            gridAxis="none"
-            withDots={false}
-          />
+          <ResponsiveContainer width="100%" height={96}>
+            <LineChart
+              className="text-neutral-1 text-xs"
+              data={CHART_DATA}
+              margin={{ top: 20 }}
+            >
+              <XAxis
+                dataKey="date"
+                height={20}
+                axisLine={false}
+                tickLine={false}
+              />
+              <YAxis
+                axisLine={false}
+                tickLine={false}
+                domain={['dataMin', 'dataMax']}
+              />
+              <Line
+                dot={false}
+                type="monotone"
+                dataKey="value"
+                stroke="#A2A2AA"
+                strokeWidth={2}
+              />
+            </LineChart>
+          </ResponsiveContainer>
         </div>
       </div>
     </section>
