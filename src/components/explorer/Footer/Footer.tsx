@@ -30,6 +30,7 @@ export const Footer: React.FC = () => (
               <div className="flex flex-col gap-5">
                 {group.links.map(link => (
                   <Link
+                    key={link.id}
                     className="text-lg text-white hover:underline"
                     to={link.href}
                   >
