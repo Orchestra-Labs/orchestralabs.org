@@ -2,6 +2,8 @@ const EXPLORER_ROOT = '/explorer';
 
 export const ROUTES = {
   HOME: '/',
+  WHITEPAPER: '/whitepaper',
+  DOCUMENTATION: '/documentation',
   EXPLORER: {
     ROOT: EXPLORER_ROOT,
     ACCOUNT: `${EXPLORER_ROOT}/account`,

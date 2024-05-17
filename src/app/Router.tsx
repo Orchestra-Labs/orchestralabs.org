@@ -8,12 +8,14 @@ import {
   AllTokens,
   AllTransactions,
   BlockDetails,
+  Documentation,
   ExplorerMain,
   Home,
   PasswordRecovery,
   SignIn,
   SignUp,
   TransactionDetails,
+  Whitepaper,
 } from '@/pages';
 
 const MainLayout = lazy(() => import('../layouts/MainLayout/MainLayout'));
@@ -30,6 +32,14 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.HOME,
           element: <Home />,
+        },
+        {
+          path: ROUTES.WHITEPAPER,
+          element: <Whitepaper />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION,
+          element: <Documentation />,
         },
       ],
     },
