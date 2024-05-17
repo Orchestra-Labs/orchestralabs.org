@@ -1,100 +1,14 @@
 import '@splidejs/react-splide/css';
 
-import styled from '@emotion/styled';
-import { Title as MTitle } from '@mantine/core';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { useEffect, useState } from 'react';
 
 import { ArrowNext } from '@/assets/icons/ArrowNext';
 import { ArrowPrev } from '@/assets/icons/ArrowPrev';
 import { ArticleSlide } from '@/sections/BlogArticlesSlider/ArticleSlide';
-import { design } from '@/theme/design';
+import { Article, MediumArticle } from '@/types';
 
 import blogArticleDefault from '../../assets/images/blog-article-default.jpeg';
-import { Article } from './Article';
-
-const Root = styled.section`
-  background: ${design.colors.darkGrey};
-  padding: 60px 25px;
-  @media screen and (min-width: 48em) {
-    padding: 70px 24px;
-  }
-  @media screen and (min-width: 75em) {
-    padding: 90px 24px;
-  }
-`;
-
-const Wrapper = styled.div`
-  max-width: 1328px;
-  margin: 0 auto;
-  @media screen and (min-width: 48em) {
-    padding: 0 76px;
-  }
-  @media screen and (min-width: 75em) {
-    padding: 0 125px;
-  }
-`;
-
-const HeaderBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 35px;
-  @media screen and (min-width: 48em) {
-    margin-bottom: 50px;
-  }
-  @media screen and (min-width: 75em) {
-    margin-bottom: 90px;
-  }
-`;
-
-const SectionTitle = styled(MTitle)`
-  color: ${design.colors.showWhite};
-  font-size: ${design.headings.size.h4.fontSize};
-  line-height: ${design.headings.size.h4.lineHeight};
-  @media screen and (min-width: 48em) {
-    font-size: ${design.headings.size.h2.fontSize};
-    line-height: ${design.headings.size.h2.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.typography.size.display2.fontSize};
-    line-height: ${design.typography.size.display2.lineHeight};
-  }
-`;
-
-const StyledArrows = styled.div`
-  display: flex;
-  gap: 14px;
-`;
-
-const ArrowButton = styled.button`
-  position: static;
-  background: rgba(255, 255, 255, 0.06);
-  width: 46px;
-  height: 46px;
-  padding: 4px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  svg {
-    width: unset;
-    height: unset;
-    transform: unset;
-  }
-`;
-
-type MediumArticle = {
-  author: string;
-  categories: string[];
-  content: string;
-  description: string;
-  guid: string;
-  link: string;
-  pubDate: string;
-  thumbnail: string;
-  title: string;
-};
 
 const MEDIUM_ARTICLES_URL =
   'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@orchestra_labs';
@@ -130,8 +44,8 @@ export const BlogArticlesSlider = () => {
   }, []);
 
   return (
-    <Root>
-      <Wrapper>
+    <section className="bg-background-dark-grey py-15 px-25px md:py-17.5 md:px-6 xl:py-22.5">
+      <div className="section-container md:px-19 xl:px-[125px]">
         <Splide
           aria-label="Last posts slider"
           hasTrack={false}
@@ -153,23 +67,27 @@ export const BlogArticlesSlider = () => {
             },
           }}
         >
-          <HeaderBox>
-            <SectionTitle>Last posts</SectionTitle>
-            <StyledArrows className="splide__arrows">
-              <ArrowButton
+          <div className="flex justify-between items-end mb-[35px] md:mb-12.5 xl:mb-22.5">
+            <h2 className="text-white font-semibold text-h4 md:text-h2 xl:text-display2">
+              Last posts
+            </h2>
+            <div className="splide__arrows flex gap-[14px]">
+              <button
+                aria-label="Previous slide"
                 type="button"
-                className="splide__arrow splide__arrow--prev"
+                className="splide__arrow splide__arrow--prev custom-splide-arrow-button"
               >
                 <ArrowPrev />
-              </ArrowButton>
-              <ArrowButton
+              </button>
+              <button
+                aria-label="Next slide"
                 type="button"
-                className="splide__arrow splide__arrow--next"
+                className="splide__arrow splide__arrow--next custom-splide-arrow-button"
               >
                 <ArrowNext />
-              </ArrowButton>
-            </StyledArrows>
-          </HeaderBox>
+              </button>
+            </div>
+          </div>
           <SplideTrack>
             {slides.map(slide => (
               <SplideSlide key={slide.id}>
@@ -178,7 +96,7 @@ export const BlogArticlesSlider = () => {
             ))}
           </SplideTrack>
         </Splide>
-      </Wrapper>
-    </Root>
+      </div>
+    </section>
   );
 };

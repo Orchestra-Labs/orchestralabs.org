@@ -1,111 +1,38 @@
-import styled from '@emotion/styled';
-import {
-  Button,
-  rem,
-  Stack,
-  StackProps,
-  Text,
-  Title as MTitle,
-} from '@mantine/core';
-import { TextProps } from '@mantine/core/lib/components/Text/Text';
-import { PropsWithChildren } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { design } from '@/theme/design';
+import { cn } from '@/helpers';
 
 import waves2 from '../../assets/images/waves-test.svg';
 
-const Root = styled.div`
-  min-height: 100vh;
-  position: relative;
-`;
-
-const WavesBackground = styled.img`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 291px;
-`;
-
-const BlurBackground = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 372px;
-  height: 372px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #61cbf4 0%, #0a090d 100%);
-  filter: blur(180px);
-  transition:
-    width 0.5s,
-    height 0.5s;
-`;
-
-const Content = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: inherit;
-  position: relative;
-  z-index: 1;
-  padding: 0 25px;
-  @media screen and (min-width: 48em) {
-    padding: 0 24px;
-  }
-`;
-
-const StyledStack = styled(Stack)<PropsWithChildren<StackProps>>`
-  margin-top: -50%;
-  @media screen and (min-width: 48em) {
-    margin-top: ${rem(-160)};
-  }
-  @media screen and (min-width: 75em) {
-    margin-top: ${rem(-120)};
-  }
-`;
-
-const Title = styled(MTitle)`
-  color: ${design.colors.showWhite};
-  font-size: ${design.headings.size.h4.fontSize};
-  line-height: ${design.headings.size.h4.lineHeight};
-  @media screen and (min-width: 48em) {
-    font-size: ${design.headings.size.h2.fontSize};
-    line-height: ${design.headings.size.h2.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.typography.size.display2.fontSize};
-    line-height: ${design.typography.size.display2.lineHeight};
-  }
-`;
-
-const Subtitle = styled(Text)<PropsWithChildren<TextProps>>`
-  color: ${design.colors.dustyGrey};
-  font-size: ${design.typography.size.bodyMd.fontSize};
-  line-height: ${design.typography.size.bodyMd.lineHeight};
-  @media screen and (min-width: 48em) {
-    font-size: ${design.typography.size.bodyLg.fontSize};
-    line-height: ${design.typography.size.bodyLg.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.typography.size.bodyXl.fontSize};
-    line-height: ${design.typography.size.bodyXl.lineHeight};
-  }
-`;
-
 export const HeroSection = () => (
-  <Root>
-    <BlurBackground />
-    <Content>
-      <StyledStack gap="md" maw={rem(882)} ta="center" align="center">
-        <Title>Discover a decentralized ecosystem for stablecoins</Title>
-        <Subtitle size="xl">
-          Experience the true potential of decentralized stablecoins with Symphony
-        </Subtitle>
-        <Button w="fit-content" mt={rem(28)}>
+  <div className="min-h-screen relative">
+    <div className="absolute bg-hero-blur-circle blur-[180px] w-[372px] h-[372px] rounded-full top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 transition-size duration-500" />
+    <div className="flex justify-center items-center min-h-[inherit] relative z-[1] px-25px md:px-6">
+      <div className="flex flex-col max-w-[882px] text-center items-center gap-4 mt-[-50%] md:-mt-40 xl:-mt-[120px]">
+        <h1 className="font-semibold text-white text-h4 md:text-h2/[56px] xl:text-display2">
+          Discover a decentralized ecosystem for stablecoins
+        </h1>
+        <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl">
+          Experience the true potential of decentralized stablecoins with
+          Symphony
+        </p>
+        <Link
+          to="#"
+          className={cn(
+            'inline-flex no-underline items-center justify-center mt-7 w-fit px-11 py-4 rounded-full bg-background-dark-grey',
+            'text-grey font-semibold text-base/6 text-center',
+            'hover:bg-background-dark-grey-hover',
+          )}
+        >
           Get Started
-        </Button>
-      </StyledStack>
-    </Content>
-    <WavesBackground src={waves2} />
-  </Root>
+        </Link>
+      </div>
+    </div>
+    <img
+      className="absolute bottom-0 w-full h-[291px]"
+      src={waves2}
+      alt="Waves"
+    />
+  </div>
 );

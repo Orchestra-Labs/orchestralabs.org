@@ -1,96 +1,3 @@
-import styled from '@emotion/styled';
-import { Text, Title as MTitle } from '@mantine/core';
-import { TextProps } from '@mantine/core/lib/components/Text/Text';
-import { PropsWithChildren } from 'react';
-
-import { design } from '@/theme/design';
-
-const Root = styled.section`
-  max-width: 1328px;
-  margin: 0 auto;
-  padding: 60px 25px 30px;
-  @media screen and (min-width: 48em) {
-    padding: 70px 24px 90px;
-  }
-  @media screen and (min-width: 75em) {
-    padding: 90px 24px 150px;
-  }
-`;
-
-const RowWrapper = styled.div`
-  position: relative;
-  margin-bottom: 40px;
-  @media screen and (min-width: 48em) {
-    padding-left: 76px;
-    padding-top: 114px;
-    margin-bottom: 60px;
-  }
-  @media screen and (min-width: 75em) {
-    padding-left: 125px;
-  }
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  @media screen and (min-width: 48em) {
-    align-items: flex-start;
-  }
-  @media screen and (min-width: 75em) {
-    gap: 23px;
-  }
-`;
-
-const Title = styled(MTitle)`
-  font-size: ${design.headings.size.h4.fontSize};
-  line-height: ${design.headings.size.h4.lineHeight};
-  color: ${design.colors.showWhite};
-  @media screen and (min-width: 48em) {
-    font-size: ${design.headings.size.h3.fontSize};
-    line-height: ${design.headings.size.h3.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.headings.size.h1.fontSize};
-    line-height: ${design.headings.size.h1.lineHeight};
-  }
-`;
-
-const Subtitle = styled(Text)<PropsWithChildren<TextProps>>`
-  color: ${design.colors.dustyGrey};
-  font-size: ${design.typography.size.bodyMd.fontSize};
-  line-height: ${design.typography.size.bodyMd.lineHeight};
-  @media screen and (min-width: 48em) {
-    font-size: ${design.typography.size.bodyLg.fontSize};
-    line-height: ${design.typography.size.bodyLg.lineHeight};
-  }
-  @media screen and (min-width: 75em) {
-    font-size: ${design.typography.size.bodyXl.fontSize};
-    line-height: ${design.typography.size.bodyXl.lineHeight};
-  }
-`;
-
-const ShadowText = styled.span`
-  display: none;
-  @media screen and (min-width: 48em) {
-    display: block;
-    position: absolute;
-    top: 0;
-    color: rgba(255, 255, 255, 0.08);
-    font-size: 120px;
-    font-weight: 600;
-    line-height: 168px;
-  }
-  @media screen and (min-width: 75em) {
-    font-size: 150px;
-    line-height: 210px;
-  }
-`;
-
 const ROWS = [
   {
     id: 1,
@@ -113,15 +20,24 @@ const ROWS = [
 ];
 
 export const AdvantagesSection = () => (
-  <Root>
+  <section className="section-container pt-15 px-25px pb-7.5 md:pt-17.5 md:pb-22.5 md:px-6 xl:pt-22.5 xl:pb-[150px]">
     {ROWS.map(row => (
-      <RowWrapper key={row.id}>
-        <Content>
-          <Title>{row.title}</Title>
-          <Subtitle>{row.subtitle}</Subtitle>
-          <ShadowText>{row.shadowText}</ShadowText>
-        </Content>
-      </RowWrapper>
+      <div
+        key={row.id}
+        className="relative mb-10 md:pl-19 md:pt-[114px] md:mb-15 xl:pl-[125px] last-of-type:mb-0"
+      >
+        <div className="flex flex-col items-center gap-4 md:items-start xl:gap-[23px]">
+          <h3 className="font-semibold text-white text-h4 md:text-h3 xl:text-h1">
+            {row.title}
+          </h3>
+          <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl">
+            {row.subtitle}
+          </p>
+          <span className="hidden md:block md:absolute md:top-0 md:text-neutral-shadow md:font-semibold md:text-[100px]/[192px] lg:text-[120px]/[168px] xl:text-[150px]/[210px]">
+            {row.shadowText}
+          </span>
+        </div>
+      </div>
     ))}
-  </Root>
+  </section>
 );

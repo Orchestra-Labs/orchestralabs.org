@@ -29,9 +29,9 @@ export const InfoRowsSection: React.FC<InfoRowsSectionProps> = ({
 }) => (
   <section className="section-container px-25px py-15 md:px-0 md:pt-2.5 md:pb-[35px] lg:px-6">
     {title && (
-      <h1 className="text-center font-semibold max-w-[80%] mx-auto mb-12.5 text-white text-h4 md:mb-7.5 md:text-h2 lg:mb-[90px] xl:text-display1">
+      <h2 className="text-center font-semibold max-w-[80%] mx-auto mb-12.5 text-white text-h4 md:mb-7.5 md:text-h2 lg:mb-[90px] xl:text-display1">
         {title}
-      </h1>
+      </h2>
     )}
     <div className="flex flex-col">
       {rows.map(row => (
