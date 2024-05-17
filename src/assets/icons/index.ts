@@ -12,6 +12,7 @@ export * from './List';
 export * from './Logo';
 export * from './LogoIcon';
 export * from './Question';
+export * from './Spinner';
 export * from './SquareArrowUpRight';
 export * from './Telegram';
 export * from './X';
