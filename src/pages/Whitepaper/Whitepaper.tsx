@@ -195,9 +195,9 @@ export const Whitepaper = () => (
             explanation beneath going over each potential scenario to address:
           </p>
           <img
-            className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 bg-white rounded-lg border border-neutral-1"
-            src="/src/assets/images/light_exchange.png"
-            alt="Light exchange"
+            className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 rounded-lg"
+            src="/src/assets/images/exchange_dark.png"
+            alt="Exchange Diagram"
           />
           <p className="mt-5">
             Assuming consensus over the various queries results in a marked
@@ -314,9 +314,9 @@ export const Whitepaper = () => (
                 processes then proceed as before as seen in the diagram below:
               </p>
               <img
-                className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 bg-white rounded-lg border border-neutral-1"
-                src="/src/assets/images/delayed-tx-process.png"
-                alt="Light exchange"
+                className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 rounded-lg"
+                src="/src/assets/images/delayed_tx_process_dark.png"
+                alt="Delayed Transaction Diagram"
               />
             </li>
           </ul>
