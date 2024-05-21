@@ -91,7 +91,7 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
 export const Whitepaper = () => (
   <div className="mt-[104px] mb-0 bg-background-dark-grey">
     <div className="page-container flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15">
-      <div className="my-0 pt-6 md:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
+      <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
           Symphony Whitepaper
         </h1>
@@ -289,9 +289,9 @@ export const Whitepaper = () => (
               each potential scenario to address:
             </p>
             <img
-              className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 bg-white rounded-lg border border-neutral-1"
-              src="/src/assets/images/light_exchange.png"
-              alt="Light exchange"
+              className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 bg-black rounded-lg border border-neutral-1"
+              src="/src/assets/images/exchange_dark.png"
+              alt="Exchange Diagram"
             />
             <p className="mt-5">
               Assuming consensus over the various queries results in a marked
@@ -409,9 +409,9 @@ export const Whitepaper = () => (
                   processes then proceed as before as seen in the diagram below:
                 </p>
                 <img
-                  className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 bg-white rounded-lg border border-neutral-1"
-                  src="/src/assets/images/delayed-tx-process.png"
-                  alt="Light exchange"
+                  className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 bg-black rounded-lg border border-neutral-1"
+                  src="/src/assets/images/delayed_tx_process_dark.png"
+                  alt="Delayed Transaction Diagram"
                 />
               </li>
             </ul>
