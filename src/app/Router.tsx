@@ -38,7 +38,7 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <Whitepaper />,
         },
         {
-          path: ROUTES.DOCUMENTATION,
+          path: ROUTES.DOCUMENTATION.ROOT,
           element: <Documentation />,
         },
       ],

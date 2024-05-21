@@ -78,6 +78,7 @@ export default {
         7.5: '30px',
         12.5: '50px',
         15: '60px',
+        17: '68px',
         17.5: '70px',
         19: '76px',
         22.5: '90px',
@@ -88,6 +89,20 @@ export default {
       },
       backgroundImage: {
         'hero-blur-circle': 'radial-gradient(circle, #61cbf4 0%, #0a090d 100%)',
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },
