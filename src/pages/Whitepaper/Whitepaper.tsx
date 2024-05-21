@@ -2,6 +2,9 @@ import ScrollSpy from 'react-scrollspy-navigation';
 
 import { cn } from '@/helpers';
 
+import exchangeDiagram from '/src/assets/images/exchange_dark.png';
+import delayedTxDiagram from '/src/assets/images/delayed_tx_process_dark.png';
+
 const HEADINGS = {
   abstract: {
     id: 'abstract',
@@ -290,7 +293,7 @@ export const Whitepaper = () => (
             </p>
             <img
               className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 bg-black rounded-lg border border-neutral-1"
-              src="/src/assets/images/exchange_dark.png"
+              src={exchangeDiagram}
               alt="Exchange Diagram"
             />
             <p className="mt-5">
@@ -410,7 +413,7 @@ export const Whitepaper = () => (
                 </p>
                 <img
                   className="w-full max-w-[882px] mx-auto my-5 p-2 md:p-4 bg-black rounded-lg border border-neutral-1"
-                  src="/src/assets/images/delayed_tx_process_dark.png"
+                  src={delayedTxDiagram}
                   alt="Delayed Transaction Diagram"
                 />
               </li>
