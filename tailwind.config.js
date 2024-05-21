@@ -35,7 +35,7 @@ export default {
       'neutral-2': 'rgba(255, 255, 255, 0.06)',
       'neutral-3': 'rgba(82, 82, 90, 1)',
       'neutral-4': 'rgba(255, 255, 255, 0.09)',
-      'neutral-shadow': 'rgba(255, 255, 255, 0.03)',
+      'neutral-shadow': 'rgba(255, 255, 255, 0.1)',
       black: 'rgba(24, 24, 27, 1)',
       success: '#048A4E',
       'success-dark': '#131F1D',

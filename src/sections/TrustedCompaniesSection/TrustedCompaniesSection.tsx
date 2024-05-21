@@ -2,12 +2,13 @@ import { ClassValue } from 'clsx';
 
 import { cn } from '@/helpers';
 
-import docker from '../../assets/images/docker.png';
+import evacodes from '../../assets/images/evacodes.png';
+import bloxxa from '../../assets/images/bloxxa.png';
 import google from '../../assets/images/google.png';
+import gexabyte from '../../assets/images/gexabyte.png';
 import medium from '../../assets/images/medium.png';
-import netflix from '../../assets/images/netflix.png';
-import vercel from '../../assets/images/vercel.png';
-import youtube from '../../assets/images/youtube.png';
+import suave from '../../assets/images/suave.png';
+import swapacross from '../../assets/images/swapacross.png';
 
 type Company = {
   id: number;
@@ -19,43 +20,51 @@ type Company = {
 const COMPANIES: Company[] = [
   {
     id: 1,
-    name: 'Netflix',
-    src: netflix,
+    name: 'EvaCodes',
+    src: evacodes,
   },
   {
     id: 2,
-    name: 'Google',
-    src: google,
+    name: 'Bloxxa',
+    src: bloxxa,
     logoClass: 'max-h-8',
   },
   {
     id: 3,
-    name: 'Vercel',
-    src: vercel,
-    logoClass: 'max-h-6',
+    name: 'Google',
+    src: google,
+    logoClass: 'max-h-9',
+  },
+  {
+    id: 5,
+    name: 'Gexabyte',
+    src: gexabyte,
+    logoClass: 'max-h-10',
   },
   {
     id: 4,
     name: 'Medium',
     src: medium,
-    logoClass: 'max-h-6',
+    logoClass: 'max-h-7',
   },
   {
     id: 5,
-    name: 'Youtube',
-    src: youtube,
+    name: 'Suave',
+    src: suave,
+    logoClass: 'max-h-8',
   },
   {
     id: 6,
-    name: 'Docker',
-    src: docker,
+    name: 'SwapAcross',
+    src: swapacross,
+    logoClass: 'max-h-9',
   },
 ];
 
 export const TrustedCompaniesSection = () => (
   <section className="section-container pt-5 md:pt-11 pb-15 md:pb-22.5 px-25px lg:px-6">
     <h2 className="text-body-sm uppercase text-blue text-center">
-      Trusted by all of the sizes companies
+      Trusted by the following companies
     </h2>
     <div className="mt-8 md:mt-12.5 xl:mt-10 grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4.5 xl:gap-6">
       {COMPANIES.map(company => (

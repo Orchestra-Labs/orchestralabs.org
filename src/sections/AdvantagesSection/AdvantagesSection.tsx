@@ -13,9 +13,9 @@ const ROWS = [
   },
   {
     id: 3,
-    title: '$0.00001',
-    subtitle: 'Transaction fee in USD',
-    shadowText: '$0.00001',
+    title: '0.00001',
+    subtitle: 'Transaction fee per MLD',
+    shadowText: '0.00001',
   },
 ];
 

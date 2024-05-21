@@ -13,6 +13,7 @@ import { InfoRowsSection } from '@/sections/InfoRowsSection';
 import image1 from '../../assets/images/info-image1.png';
 import image2 from '../../assets/images/info-image2.png';
 import image3 from '../../assets/images/info-image3.png';
+import { ROUTES } from '@/config/routes';
 
 const BENEFITS_ROWS = [
   {
@@ -57,10 +58,10 @@ const FEATURED_LINKS_ROWS = [
   {
     id: 3,
     src: image6,
-    title: 'Link to the documentation',
+    title: 'View the documentation',
     description:
       'Dive into our comprehensive documentation to unlock a wealth of knowledge and resources',
-    link: 'https://docs.osmosis.zone/',
+    link: ROUTES.DOCUMENTATION.ROOT,
     linkLabel: 'Learn More',
   },
 ];
