@@ -1,9 +1,9 @@
 const EXPLORER_ROOT = '/explorer';
+const DOCUMENTATION_ROOT = '/documentation';
 
 export const ROUTES = {
   HOME: '/',
   WHITEPAPER: '/whitepaper',
-  DOCUMENTATION: '/documentation',
   EXPLORER: {
     ROOT: EXPLORER_ROOT,
     ACCOUNT: `${EXPLORER_ROOT}/account`,
@@ -13,5 +13,8 @@ export const ROUTES = {
     SIGN_IN: `${EXPLORER_ROOT}/sign-in`,
     SIGN_UP: `${EXPLORER_ROOT}/sign-up`,
     PASSWORD_RECOVERY: `${EXPLORER_ROOT}/password-recovery`,
+  },
+  DOCUMENTATION: {
+    ROOT: DOCUMENTATION_ROOT,
   },
 };

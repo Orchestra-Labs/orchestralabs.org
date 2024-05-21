@@ -7,7 +7,7 @@ export const MAIN_LAYOUT_LINKS = [
     label: 'Whitepaper',
     url: ROUTES.WHITEPAPER,
   },
-  { id: 2, label: 'Documentation', url: ROUTES.DOCUMENTATION },
+  { id: 2, label: 'Documentation', url: ROUTES.DOCUMENTATION.ROOT },
   { id: 3, label: 'Explorer', url: ROUTES.EXPLORER.ROOT },
   {
     id: 4,
@@ -46,7 +46,7 @@ export const EXPLORER_FOOTER_LINKS = [
     id: 2,
     name: 'COMMUNITY',
     links: [
-      { id: 1, name: 'Api Documentation', href: ROUTES.DOCUMENTATION },
+      { id: 1, name: 'Api Documentation', href: ROUTES.DOCUMENTATION.ROOT },
       { id: 2, name: 'Knowledge Base', href: '' },
     ],
   },

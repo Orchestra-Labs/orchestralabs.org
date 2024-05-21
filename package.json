@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@mantine/hooks": "7.6.1",
+    "@radix-ui/react-accordion": "~1.1.2",
     "@radix-ui/react-progress": "~1.0.3",
     "@radix-ui/react-select": "~2.0.0",
     "@radix-ui/react-slot": "~1.0.2",
@@ -45,6 +46,7 @@
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
     "react-router-dom": "~6.22.3",
+    "react-scrollspy-navigation": "~2.0.4",
     "recharts": "2",
     "recoil": "~0.7.7",
     "tailwind-merge": "~2.3.0",
@@ -52,7 +54,6 @@
     "vite-tsconfig-paths": "~4.3.2"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "~11.11.0",
     "@types/react": "~18.2.65",
     "@types/react-dom": "~18.2.21",
     "@typescript-eslint/eslint-plugin": "~7.2.0",
