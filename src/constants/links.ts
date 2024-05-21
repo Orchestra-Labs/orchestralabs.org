@@ -29,7 +29,7 @@ export const SOCIAL_LINKS = [
   { id: 1, url: 'https://twitter.com/orchestra_labs', Icon: XIcon },
   { id: 2, url: 'https://t.me/+xFieHCYYyx41NGQx', Icon: Telegram },
   { id: 3, url: 'https://github.com/Orchestra-Labs', Icon: GitHub },
-  { id: 4, url: 'https://discord.gg/3fvGM779', Icon: Discord },
+  { id: 4, url: 'https://discord.gg/qEBPwncrSV', Icon: Discord },
 ];
 
 export const EXPLORER_FOOTER_LINKS = [
