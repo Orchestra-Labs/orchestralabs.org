@@ -17,7 +17,7 @@ export const HeroSection = () => (
           Symphony
         </p>
         <Link
-          to="https://waitforit.me/signup/2d33ec9d"
+          to="https://getwaitlist.com/waitlist/17116"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
