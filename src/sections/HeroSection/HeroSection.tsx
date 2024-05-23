@@ -17,14 +17,17 @@ export const HeroSection = () => (
           Symphony
         </p>
         <Link
-          to="#"
+          to="https://waitforit.me/signup/2d33ec9d"
+          target="_blank"
+          rel="noopener noreferrer"
           className={cn(
             'inline-flex no-underline items-center justify-center mt-7 w-fit px-11 py-4 rounded-full bg-background-dark-grey',
             'text-grey font-semibold text-base/6 text-center',
             'hover:bg-background-dark-grey-hover',
           )}
         >
-          Get Started
+          Join our waitlist
+          {/* Get Started */}
         </Link>
       </div>
     </div>

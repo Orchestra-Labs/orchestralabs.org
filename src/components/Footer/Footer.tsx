@@ -15,7 +15,7 @@ export const Footer = () => {
           />
           <SocialLinks linkClassName="text-grey" />
           <p className="text-grey text-sm lg:text-base">
-            © 2024 Symphony, Inc. All rights reserved
+            © 2024 Orchestra Labs, LLC. All rights reserved
           </p>
         </div>
       </div>
