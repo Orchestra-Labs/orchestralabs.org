@@ -9,6 +9,7 @@ import gexabyte from '../../assets/images/gexabyte.png';
 import medium from '../../assets/images/medium.png';
 import suave from '../../assets/images/suave.png';
 import swapacross from '../../assets/images/swapacross.png';
+import waitlist from '../../assets/images/waitlist.png';
 
 type Company = {
   id: number;
@@ -58,6 +59,12 @@ const COMPANIES: Company[] = [
     name: 'SwapAcross',
     src: swapacross,
     logoClass: 'max-h-9',
+  },
+  {
+    id: 7,
+    name: 'Waitlist',
+    src: waitlist,
+    logoClass: 'max-h-8',
   },
 ];
 
