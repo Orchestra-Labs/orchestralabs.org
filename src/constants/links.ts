@@ -1,4 +1,5 @@
 import { Discord, GitHub, Telegram, XIcon } from '@/assets/icons';
+import { LinkTree } from '@/assets/icons/LinkTree';
 import { ROUTES } from '@/config/routes';
 
 export const MAIN_LAYOUT_LINKS = [
@@ -30,6 +31,7 @@ export const SOCIAL_LINKS = [
   { id: 2, url: 'https://t.me/+xFieHCYYyx41NGQx', Icon: Telegram },
   { id: 3, url: 'https://github.com/Orchestra-Labs', Icon: GitHub },
   { id: 4, url: 'https://discord.gg/qEBPwncrSV', Icon: Discord },
+  { id: 5, url: 'https://linktr.ee/OrchestraLabs', Icon: LinkTree },
 ];
 
 export const EXPLORER_FOOTER_LINKS = [
