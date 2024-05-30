@@ -10,6 +10,7 @@ import medium from '../../assets/images/medium.png';
 import suave from '../../assets/images/suave.png';
 import swapacross from '../../assets/images/swapacross.png';
 import waitlist from '../../assets/images/waitlist.png';
+import convo from '../../assets/images/convo.png';
 
 type Company = {
   id: number;
@@ -37,34 +38,40 @@ const COMPANIES: Company[] = [
     logoClass: 'max-h-9',
   },
   {
-    id: 5,
+    id: 4,
     name: 'Gexabyte',
     src: gexabyte,
     logoClass: 'max-h-10',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Medium',
     src: medium,
     logoClass: 'max-h-7',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Suave',
     src: suave,
     logoClass: 'max-h-8',
   },
   {
-    id: 6,
+    id: 7,
     name: 'SwapAcross',
     src: swapacross,
     logoClass: 'max-h-9',
   },
   {
-    id: 7,
+    id: 8,
     name: 'Waitlist',
     src: waitlist,
     logoClass: 'max-h-8',
+  },
+  {
+    id: 9,
+    name: 'Convo',
+    src: convo,
+    logoClass: 'max-h-9',
   },
 ];
 
