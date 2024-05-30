@@ -10,7 +10,7 @@ import medium from '../../assets/images/medium.png';
 import suave from '../../assets/images/suave.png';
 import swapacross from '../../assets/images/swapacross.png';
 import waitlist from '../../assets/images/waitlist.png';
-import convo from '../../assets/images/convo.png';
+import convo_space from '../../assets/images/convo_space.png';
 
 type Company = {
   id: number;
@@ -69,9 +69,9 @@ const COMPANIES: Company[] = [
   },
   {
     id: 9,
-    name: 'Convo',
-    src: convo,
-    logoClass: 'max-h-9',
+    name: 'Convo Space',
+    src: convo_space,
+    logoClass: 'max-h-10',
   },
 ];
 
