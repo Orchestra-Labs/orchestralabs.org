@@ -13,8 +13,7 @@ export const HeroSection = () => (
           Discover a decentralized ecosystem for stablecoins
         </h1>
         <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl">
-          Experience the true potential of decentralized stablecoins with
-          Symphony
+          Releasing soon via IDO
         </p>
         <Link
           to="https://getwaitlist.com/waitlist/17116"

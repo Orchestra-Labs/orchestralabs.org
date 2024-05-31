@@ -7,6 +7,7 @@ import {
   HeroSection,
   HowItWorksSection,
   TrustedCompaniesSection,
+  CallToActionSection,
 } from '@/sections';
 import { InfoRowsSection } from '@/sections/InfoRowsSection';
 
@@ -67,7 +68,7 @@ const FEATURED_LINKS_ROWS = [
 ];
 
 const FEATURED_SECTION_TITLE =
-  'Symphony is the self-balancing solution to the increasing centralization of stablecoins.';
+  'Experience the true potential of stablecoins with Symphony.';
 
 export const Home = () => (
   <div>
@@ -85,5 +86,6 @@ export const Home = () => (
     />
     <TrustedCompaniesSection />
     <BlogArticlesSlider />
+    <CallToActionSection />
   </div>
 );
