@@ -160,7 +160,7 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
   { id: 10, label: HEADINGS[9].label, href: `#${HEADINGS[9].id}` },
 ];
 
-export const Overview = () => (
+export const UserOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <div className="mt-12.5 mx-25px md:m-0 bg-background-dialog-bg py-7.5 px-5 xl:py-10 xl:px-12.5 md:min-w-[256px] md:w-[256px] lg:min-w-[296px] lg:w-[296px] xl:min-w-[336px] xl:w-[336px] md:min-h-[430px] h-fit">
       <div className="flex flex-col gap-5">

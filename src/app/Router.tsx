@@ -12,11 +12,11 @@ import {
   ExplorerMain,
   GettingStarted,
   Home,
-  Overview,
   PasswordRecovery,
   SignIn,
   SignUp,
   TransactionDetails,
+  UserOverview,
   Whitepaper,
 } from '@/pages';
 
@@ -45,7 +45,7 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         },
         {
           path: ROUTES.DOCUMENTATION.USERS.ROOT,
-          element: <Overview />,
+          element: <UserOverview />,
         },
         {
           path: ROUTES.DOCUMENTATION.USERS.GETTING_STARTED,
