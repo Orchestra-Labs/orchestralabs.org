@@ -8,6 +8,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/ui-kit';
+import { SectionNavigator } from '@/components';
+import { NavigationItemProps } from '@/types';
 
 type DocumentationNavigationProps = {
   id: number;
@@ -79,7 +81,86 @@ const DOCUMENTATION_NAVIGATION: DocumentationNavigationProps[] = [
   },
 ];
 
-export const Documentation = () => (
+const HEADINGS = {
+  abstract: {
+    id: 'abstract',
+    label: 'Abstract',
+  },
+  1: {
+    id: 'introduction',
+    label: '1. Introduction',
+  },
+  2: {
+    id: 'stablecoin-policy-and-safeguards',
+    label: '2. Stablecoin Policy and Safeguards',
+  },
+  2.1: {
+    id: 'measuring-the-value-of-external-resources',
+    label: '2.1 Measuring the Value of External Resources',
+  },
+  2.2: {
+    id: 'balancing-and-rebalancing',
+    label: '2.2 Balancing and Rebalancing',
+  },
+  2.3: { id: 'safeguards', label: '2.3 Safeguards' },
+  3: { id: 'monetary-policy', label: '3. Monetary Policy' },
+  4: { id: 'sharding', label: '4. Sharding' },
+  4.1: { id: 'sharding-method', label: '4.1 Sharding Method' },
+  4.2: { id: 'adaptive-sharding', label: '4.2 Adaptive Sharding' },
+  4.3: { id: 'security', label: '4.3 Security' },
+  4.4: { id: 'onboarding', label: '4.4 Onboarding' },
+  5: { id: 'virtual-machine-layer', label: '5. Virtual Machine Layer' },
+  6: { id: 'mining', label: '6. Mining' },
+  7: { id: 'governance', label: '7. Governance' },
+  8: { id: 'rollout', label: '8. Rollout' },
+  9: { id: 'future-work', label: '9. Future Work' },
+};
+
+const NAVIGATION_ITEMS: NavigationItemProps[] = [
+  { id: 1, label: HEADINGS.abstract.label, href: `#${HEADINGS.abstract.id}` },
+  {
+    id: 2,
+    label: HEADINGS[1].label,
+    href: `#${HEADINGS[1].id}`,
+  },
+  {
+    id: 3,
+    label: HEADINGS[2].label,
+    href: `#${HEADINGS[2].id}`,
+    subList: [
+      {
+        id: 1,
+        label: HEADINGS[2.1].label,
+        href: `#${HEADINGS[2.1].id}`,
+      },
+      { id: 2, label: HEADINGS[2.2].label, href: `#${HEADINGS[2.2].id}` },
+      { id: 3, label: HEADINGS[2.3].label, href: `#${HEADINGS[2.3].id}` },
+    ],
+  },
+  {
+    id: 4,
+    label: HEADINGS[3].label,
+    href: `#${HEADINGS[3].id}`,
+  },
+  {
+    id: 5,
+    label: HEADINGS[4].label,
+    href: `#${HEADINGS[4].id}`,
+    subList: [
+      { id: 1, label: HEADINGS[4.1].label, href: `#${HEADINGS[4.1].id}` },
+      { id: 2, label: HEADINGS[4.2].label, href: `#${HEADINGS[4.2].id}` },
+      { id: 3, label: HEADINGS[4.3].label, href: `#${HEADINGS[4.3].id}` },
+      { id: 4, label: HEADINGS[4.4].label, href: `#${HEADINGS[4.4].id}` },
+    ],
+  },
+  { id: 6, label: HEADINGS[5].label, href: `#${HEADINGS[5].id}` },
+  { id: 7, label: HEADINGS[6].label, href: `#${HEADINGS[6].id}` },
+  { id: 8, label: HEADINGS[7].label, href: `#${HEADINGS[7].id}` },
+  { id: 9, label: HEADINGS[8].label, href: `#${HEADINGS[8].id}` },
+  { id: 10, label: HEADINGS[9].label, href: `#${HEADINGS[9].id}` },
+];
+
+export const DocumentationOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <div className="mt-12.5 mx-25px md:m-0 bg-background-dialog-bg py-7.5 px-5 xl:py-10 xl:px-12.5 md:min-w-[256px] md:w-[256px] lg:min-w-[296px] lg:w-[296px] xl:min-w-[336px] xl:w-[336px] md:min-h-[430px] h-fit">
       <div className="flex flex-col gap-5">
@@ -201,5 +282,6 @@ export const Documentation = () => (
         </div>
       </div>
     </div>
+    <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
   </div>
 );
