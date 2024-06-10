@@ -4,82 +4,36 @@ import { PageNavigator, SectionNavigator } from '@/components';
 import { NavigationItemProps } from '@/types';
 
 const HEADINGS = {
-  abstract: {
-    id: 'abstract',
-    label: 'Abstract',
-  },
   1: {
-    id: 'introduction',
-    label: '1. Introduction',
+    id: 'development-modules',
+    label: 'Development Modules',
   },
   2: {
-    id: 'stablecoin-policy-and-safeguards',
-    label: '2. Stablecoin Policy and Safeguards',
+    id: 'foundational-topics',
+    label: 'Foundational Topics',
   },
-  2.1: {
-    id: 'measuring-the-value-of-external-resources',
-    label: '2.1 Measuring the Value of External Resources',
+  3: {
+    id: 'symphony-stack',
+    label: 'Symphony Stack',
   },
-  2.2: {
-    id: 'balancing-and-rebalancing',
-    label: '2.2 Balancing and Rebalancing',
-  },
-  2.3: { id: 'safeguards', label: '2.3 Safeguards' },
-  3: { id: 'monetary-policy', label: '3. Monetary Policy' },
-  4: { id: 'sharding', label: '4. Sharding' },
-  4.1: { id: 'sharding-method', label: '4.1 Sharding Method' },
-  4.2: { id: 'adaptive-sharding', label: '4.2 Adaptive Sharding' },
-  4.3: { id: 'security', label: '4.3 Security' },
-  4.4: { id: 'onboarding', label: '4.4 Onboarding' },
-  5: { id: 'virtual-machine-layer', label: '5. Virtual Machine Layer' },
-  6: { id: 'mining', label: '6. Mining' },
-  7: { id: 'governance', label: '7. Governance' },
-  8: { id: 'rollout', label: '8. Rollout' },
-  9: { id: 'future-work', label: '9. Future Work' },
 };
 
 const NAVIGATION_ITEMS: NavigationItemProps[] = [
-  { id: 1, label: HEADINGS.abstract.label, href: `#${HEADINGS.abstract.id}` },
   {
-    id: 2,
+    id: 1,
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
   },
   {
-    id: 3,
+    id: 2,
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
-    subList: [
-      {
-        id: 1,
-        label: HEADINGS[2.1].label,
-        href: `#${HEADINGS[2.1].id}`,
-      },
-      { id: 2, label: HEADINGS[2.2].label, href: `#${HEADINGS[2.2].id}` },
-      { id: 3, label: HEADINGS[2.3].label, href: `#${HEADINGS[2.3].id}` },
-    ],
   },
   {
-    id: 4,
+    id: 3,
     label: HEADINGS[3].label,
     href: `#${HEADINGS[3].id}`,
   },
-  {
-    id: 5,
-    label: HEADINGS[4].label,
-    href: `#${HEADINGS[4].id}`,
-    subList: [
-      { id: 1, label: HEADINGS[4.1].label, href: `#${HEADINGS[4.1].id}` },
-      { id: 2, label: HEADINGS[4.2].label, href: `#${HEADINGS[4.2].id}` },
-      { id: 3, label: HEADINGS[4.3].label, href: `#${HEADINGS[4.3].id}` },
-      { id: 4, label: HEADINGS[4.4].label, href: `#${HEADINGS[4.4].id}` },
-    ],
-  },
-  { id: 6, label: HEADINGS[5].label, href: `#${HEADINGS[5].id}` },
-  { id: 7, label: HEADINGS[6].label, href: `#${HEADINGS[6].id}` },
-  { id: 8, label: HEADINGS[7].label, href: `#${HEADINGS[7].id}` },
-  { id: 9, label: HEADINGS[8].label, href: `#${HEADINGS[8].id}` },
-  { id: 10, label: HEADINGS[9].label, href: `#${HEADINGS[9].id}` },
 ];
 
 export const DocumentationOverview = () => (
@@ -98,9 +52,9 @@ export const DocumentationOverview = () => (
           topics, add new content, and provide examples wherever you think it
           might be helpful. All documentation can be edited via GitHub.
         </p>
-        <div className="mt-15">
+        <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            Development modules
+            {HEADINGS[1].label}
           </h2>
           <p className="mt-10">
             This documentation is designed to help you build with Symphony. It
@@ -112,9 +66,9 @@ export const DocumentationOverview = () => (
             GitHub.
           </p>
         </div>
-        <div className="mt-15">
+        <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            Foundational topics
+            {HEADINGS[2].label}
           </h2>
           <ul className="mt-10">
             {Array.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).map(item => (
@@ -132,9 +86,9 @@ export const DocumentationOverview = () => (
             ))}
           </ul>
         </div>
-        <div className="mt-15">
+        <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            Symphony stack
+            {HEADINGS[3].label}
           </h2>
           <ul className="mt-10">
             {Array.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).map(item => (

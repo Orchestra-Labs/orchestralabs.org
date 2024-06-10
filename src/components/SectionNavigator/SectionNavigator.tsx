@@ -11,7 +11,7 @@ export const SectionNavigator = ({
   navigationItems,
 }: SectionNavigatorProps) => {
   return (
-    <div className="bg-background-dialog-bg py-5 md:py-0 md:bg-transparent">
+    <div className="bg-background-dialog-bg py-5 md:py-0 md:bg-transparent md:min-w-[232px] md:w-[232px] lg:min-w-[272px] lg:w-[272px] xl:min-w-[312px] xl:w-[312px]">
       <div className="sticky top-[114px] md:mb-12.5 md:before:absolute md:before:h-full md:before:bg-background-dialog-bg md:before:w-0.5 md:before:left-2">
         <h3 className="pl-5 md:pl-10 text-body-md mt-1.5">ON THIS PAGE</h3>
         <ScrollSpy activeClass="text-blue" activeAttr offsetTop={124}>
