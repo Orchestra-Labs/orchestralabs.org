@@ -39,8 +39,8 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
 export const DocumentationOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
-    <div className="w-full">
-      <div className="page-container my-0 pl-25px md:pl-12 xl:pl-17 pt-12.5 md:pt-17.5 xl:pt-25 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
+    <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
+      <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
           Documentation
         </h1>
@@ -107,7 +107,7 @@ export const DocumentationOverview = () => (
           </ul>
         </div>
       </div>
+      <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
     </div>
-    <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
   </div>
 );
