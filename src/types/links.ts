@@ -12,3 +12,14 @@ export type NavigationItemProps = {
   href: string;
   subList?: { id: number; label: string; href: string }[];
 };
+
+export type DocumentationNavigationProps = {
+  id: number;
+  label: string;
+  link: string;
+  subLinks?: {
+    id: number;
+    label: string;
+    link: string;
+  }[];
+};

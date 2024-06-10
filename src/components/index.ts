@@ -3,6 +3,7 @@ export * from './Header';
 export * from './Loader';
 export * from './MobileMenu';
 export * from './NavItems';
+export * from './PageNavigator';
 export * from './ScrollToTop';
 export * from './SectionNavigator';
 export * from './ShortListView';
