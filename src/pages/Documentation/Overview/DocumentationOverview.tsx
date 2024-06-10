@@ -1,67 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import { ROUTES } from '@/config/routes';
 import { PageNavigator, SectionNavigator } from '@/components';
-import { DocumentationNavigationProps, NavigationItemProps } from '@/types';
-
-const DOCUMENTATION_NAVIGATION: DocumentationNavigationProps[] = [
-  {
-    id: 1,
-    label: 'Overview',
-    link: ROUTES.DOCUMENTATION.ROOT,
-  },
-  {
-    id: 2,
-    label: 'Main topic 1',
-    link: `${ROUTES.DOCUMENTATION.ROOT}/#main-1`,
-    subLinks: [
-      {
-        id: 1,
-        label: 'Topic 1',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-1-1`,
-      },
-      {
-        id: 2,
-        label: 'Topic 2',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-1-2`,
-      },
-    ],
-  },
-  {
-    id: 3,
-    label: 'Main topic 2',
-    link: `${ROUTES.DOCUMENTATION.ROOT}/#main-2`,
-    subLinks: [
-      {
-        id: 1,
-        label: 'Topic 1',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-2-1`,
-      },
-      {
-        id: 2,
-        label: 'Topic 2',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-2-2`,
-      },
-    ],
-  },
-  {
-    id: 4,
-    label: 'Main topic 3',
-    link: `${ROUTES.DOCUMENTATION.ROOT}/#main-3`,
-    subLinks: [
-      {
-        id: 1,
-        label: 'Topic 1',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-3-1`,
-      },
-      {
-        id: 2,
-        label: 'Topic 2',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-3-2`,
-      },
-    ],
-  },
-];
+import { NavigationItemProps } from '@/types';
 
 const HEADINGS = {
   abstract: {
@@ -144,7 +84,7 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
 
 export const DocumentationOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
-    <PageNavigator navigationItems={DOCUMENTATION_NAVIGATION} />
+    <PageNavigator />
     <div className="w-full">
       <div className="page-container my-0 pl-25px md:pl-12 xl:pl-17 pt-12.5 md:pt-17.5 xl:pt-25 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
