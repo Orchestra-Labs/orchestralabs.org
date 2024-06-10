@@ -5,3 +5,10 @@ export type NavItem = {
   target?: string;
   rel?: string;
 };
+
+export type NavigationItemProps = {
+  id: number;
+  label: string;
+  href: string;
+  subList?: { id: number; label: string; href: string }[];
+};

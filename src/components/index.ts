@@ -4,5 +4,6 @@ export * from './Loader';
 export * from './MobileMenu';
 export * from './NavItems';
 export * from './ScrollToTop';
+export * from './SectionNavigator';
 export * from './ShortListView';
 export * from './SocialLinks';
