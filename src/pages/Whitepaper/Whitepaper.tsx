@@ -1,7 +1,7 @@
 import exchangeDiagram from '/src/assets/images/exchange_dark.png';
 import delayedTxDiagram from '/src/assets/images/delayed_tx_process_dark.png';
 import { SectionNavigator } from '@/components';
-import { NavigationItemProps } from '@/types';
+import { NavItem } from '@/types';
 
 const HEADINGS = {
   abstract: {
@@ -38,7 +38,7 @@ const HEADINGS = {
   9: { id: 'future-work', label: '9. Future Work' },
 };
 
-const NAVIGATION_ITEMS: NavigationItemProps[] = [
+const NAVIGATION_ITEMS: NavItem[] = [
   { id: 1, label: HEADINGS.abstract.label, href: `#${HEADINGS.abstract.id}` },
   {
     id: 2,

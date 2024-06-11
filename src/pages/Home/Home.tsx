@@ -43,7 +43,7 @@ const FEATURED_LINKS_ROWS = [
     src: image4,
     title: 'Create a Wallet',
     description: 'Get ready to embark on your blockchain journey securely',
-    link: ROUTES.DOCUMENTATION.USERS.GETTING_STARTED,
+    link: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
     linkLabel: 'Get Started',
   },
   {

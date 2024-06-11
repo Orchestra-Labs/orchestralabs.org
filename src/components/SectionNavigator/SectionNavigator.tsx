@@ -1,10 +1,10 @@
 import ScrollSpy from 'react-scrollspy-navigation';
 
 import { cn } from '@/helpers';
-import { NavigationItemProps } from '@/types';
+import { NavItem } from '@/types';
 
 type SectionNavigatorProps = {
-  navigationItems: NavigationItemProps[];
+  navigationItems: NavItem[];
 };
 
 export const SectionNavigator = ({
