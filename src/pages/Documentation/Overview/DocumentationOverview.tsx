@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom';
-
-import { PageNavigator, SectionNavigator } from '@/components';
-import { NavigationItemProps } from '@/types';
+import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
+import { DocumentationNavItem, NavigationItemProps } from '@/types';
 
 const HEADINGS = {
   1: {
@@ -33,6 +31,39 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
     id: 3,
     label: HEADINGS[3].label,
     href: `#${HEADINGS[3].id}`,
+  },
+];
+
+const PLACEHOLDER_LINKS: DocumentationNavItem[] = [
+  {
+    id: 1,
+    title: 'Into the Symphony',
+    description: 'A quick overview of Symphony',
+    link: '#',
+  },
+  {
+    id: 2,
+    title: 'Into the Symphony',
+    description: 'A quick overview of Symphony',
+    link: '#',
+  },
+  {
+    id: 3,
+    title: 'Into the Symphony',
+    description: 'A quick overview of Symphony',
+    link: '#',
+  },
+  {
+    id: 4,
+    title: 'Into the Symphony',
+    description: 'A quick overview of Symphony',
+    link: '#',
+  },
+  {
+    id: 5,
+    title: 'Into the Symphony',
+    description: 'A quick overview of Symphony',
+    link: '#',
   },
 ];
 
@@ -70,41 +101,13 @@ export const DocumentationOverview = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <ul className="mt-10">
-            {Array.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).map(item => (
-              <div key={item} className="flex mb-4 last:mb-0">
-                <p>
-                  <Link
-                    to="#"
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    Into the Symphony
-                  </Link>
-                  - A quick overview of Symphony
-                </p>
-              </div>
-            ))}
-          </ul>
+          <ListLinks listLinks={PLACEHOLDER_LINKS} />
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <ul className="mt-10">
-            {Array.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).map(item => (
-              <div key={item} className="flex mb-4 last:mb-0">
-                <p>
-                  <Link
-                    to="#"
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    Into the Symphony
-                  </Link>
-                  - A quick overview of Symphony
-                </p>
-              </div>
-            ))}
-          </ul>
+          <ListLinks listLinks={PLACEHOLDER_LINKS} />
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

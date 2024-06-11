@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
-
-import { PageNavigator, SectionNavigator } from '@/components';
+import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { DocumentationNavItem, NavigationItemProps } from '@/types';
 
 const HEADINGS = {
@@ -74,55 +72,28 @@ export const CreateWallet = () => (
             All wallets will operate in a similar manner whether as a web
             extension or mobile application. Use the links to the connected
             wallets below to install a wallet to your preferred system.
-            Afterwards, assuming the in-system search will not find Symphony,
-            use the chain search below to find our chain.
+            Afterwards, assuming the in-app search will not find Symphony, use
+            the chain searches below to find our chain and add it to the in-app
+            system.
             <br />
             <br />
-            - Mainnet: Search Symphony, and be sure Symphony-1 is the chain
+            - Mainnet: Search "Symphony", and be sure "symphony-1" is the chain
             added.
-            <br />- Testnet: Search Symphony Testnet, and be sure
-            Symphony-testnet-1 is the chain added.
+            <br />- Testnet: Search "Symphony Testnet", and be sure
+            "symphony-testnet-1" is the chain added.
           </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <ul className="mt-10">
-            {CONNECTED_WALLETS.map(item => (
-              <div key={item.id} className="flex mb-4 last:mb-0">
-                <p>
-                  <Link
-                    to={item.link}
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    {item.title}
-                  </Link>
-                  - {item.description}
-                </p>
-              </div>
-            ))}
-          </ul>
+          <ListLinks listLinks={CONNECTED_WALLETS} />
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <ul className="mt-10">
-            {CHAIN_SEARCHES.map(item => (
-              <div key={item.id} className="flex mb-4 last:mb-0">
-                <p>
-                  <Link
-                    to={item.link}
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    {item.title}
-                  </Link>
-                  - {item.description}
-                </p>
-              </div>
-            ))}
-          </ul>
+          <ListLinks listLinks={CHAIN_SEARCHES} />
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

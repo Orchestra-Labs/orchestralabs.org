@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
-
-import { PageNavigator, SectionNavigator } from '@/components';
+import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { DocumentationNavItem, NavigationItemProps } from '@/types';
 import { ROUTES } from '@/config/routes';
 
@@ -46,6 +44,15 @@ const USER_DOCUMENTATION_LINKS: DocumentationNavItem[] = [
   },
 ];
 
+const ECOSYSTEM: DocumentationNavItem[] = [
+  {
+    id: 1,
+    title: 'Keplr Wallet',
+    description: 'The Seamless Interchain Experience',
+    link: 'https://www.keplr.app/download',
+  },
+];
+
 export const UserOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
@@ -71,41 +78,13 @@ export const UserOverview = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <ul className="mt-10">
-            {USER_DOCUMENTATION_LINKS.map(item => (
-              <div key={item.id} className="flex mb-4 last:mb-0">
-                <p>
-                  <Link
-                    to={item.link}
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    {item.title}
-                  </Link>
-                  - {item.description}
-                </p>
-              </div>
-            ))}
-          </ul>
+          <ListLinks listLinks={USER_DOCUMENTATION_LINKS} />
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <ul className="mt-10">
-            {Array.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).map(item => (
-              <div key={item} className="flex mb-4 last:mb-0">
-                <p>
-                  <Link
-                    to="#"
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    Into the Symphony
-                  </Link>
-                  - A quick overview of Symphony
-                </p>
-              </div>
-            ))}
-          </ul>
+          <ListLinks listLinks={ECOSYSTEM} />
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
