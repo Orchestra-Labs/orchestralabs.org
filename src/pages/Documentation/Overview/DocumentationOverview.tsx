@@ -34,38 +34,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const PLACEHOLDER_LINKS: NavItem[] = [
-  {
-    id: 1,
-    label: 'Into the Symphony',
-    description: 'A quick overview of Symphony',
-    href: '#',
-  },
-  {
-    id: 2,
-    label: 'Into the Symphony',
-    description: 'A quick overview of Symphony',
-    href: '#',
-  },
-  {
-    id: 3,
-    label: 'Into the Symphony',
-    description: 'A quick overview of Symphony',
-    href: '#',
-  },
-  {
-    id: 4,
-    label: 'Into the Symphony',
-    description: 'A quick overview of Symphony',
-    href: '#',
-  },
-  {
-    id: 5,
-    label: 'Into the Symphony',
-    description: 'A quick overview of Symphony',
-    href: '#',
-  },
-];
+const PLACEHOLDER_LINKS: NavItem[] = [];
 
 export const DocumentationOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
@@ -87,15 +56,6 @@ export const DocumentationOverview = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
-          <p className="mt-10">
-            This documentation is designed to help you build with Symphony. It
-            covers Symphony as a concept, explains the Symphony tech stack, and
-            documents advanced topics for more complex applications and use
-            cases. This is an open-source community effort, so feel free to
-            suggest new topics, add new content, and provide examples wherever
-            you think it might be helpful. All documentation can be edited via
-            GitHub.
-          </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

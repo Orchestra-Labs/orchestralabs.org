@@ -17,45 +17,6 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         label: 'Create A Wallet',
         href: `${ROUTES.DOCUMENTATION.USERS.CREATE_WALLET}`,
       },
-      {
-        id: 2,
-        label: 'Topic 2',
-        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-1-2`,
-      },
-    ],
-  },
-  {
-    id: 3,
-    label: 'Main topic 2',
-    href: `${ROUTES.DOCUMENTATION.ROOT}/#main-2`,
-    subList: [
-      {
-        id: 1,
-        label: 'Topic 1',
-        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-2-1`,
-      },
-      {
-        id: 2,
-        label: 'Topic 2',
-        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-2-2`,
-      },
-    ],
-  },
-  {
-    id: 4,
-    label: 'Main topic 3',
-    href: `${ROUTES.DOCUMENTATION.ROOT}/#main-3`,
-    subList: [
-      {
-        id: 1,
-        label: 'Topic 1',
-        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-3-1`,
-      },
-      {
-        id: 2,
-        label: 'Topic 2',
-        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-3-2`,
-      },
     ],
   },
 ];
