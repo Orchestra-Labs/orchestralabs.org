@@ -11,6 +11,7 @@ import suave from '../../assets/images/suave.png';
 import swapacross from '../../assets/images/swapacross.png';
 import waitlist from '../../assets/images/waitlist.png';
 import convo_space from '../../assets/images/convo_space.png';
+import keplr from '../../assets/images/keplr.png';
 
 type Company = {
   id: number;
@@ -71,6 +72,12 @@ const COMPANIES: Company[] = [
     id: 9,
     name: 'Convo Space',
     src: convo_space,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 10,
+    name: 'Keplr',
+    src: keplr,
     logoClass: 'max-h-10',
   },
 ];
