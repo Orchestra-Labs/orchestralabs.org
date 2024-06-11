@@ -5,9 +5,9 @@ export const LinkTree: React.FC<React.SVGProps<SVGSVGElement>> = props => (
     xmlns="http://www.w3.org/2000/svg"
     width="19"
     height="19"
-    shape-rendering="geometricPrecision"
-    text-rendering="geometricPrecision"
-    image-rendering="optimizeQuality"
+    shapeRendering="geometricPrecision"
+    textRendering="geometricPrecision"
+    imageRendering="optimizeQuality"
     viewBox="0 0 400 530"
     {...props}
   >

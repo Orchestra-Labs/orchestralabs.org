@@ -1,5 +1,6 @@
 const EXPLORER_ROOT = '/explorer';
 const DOCUMENTATION_ROOT = '/documentation';
+const USER_EXTENSION = '/users';
 
 export const ROUTES = {
   HOME: '/',
@@ -16,5 +17,9 @@ export const ROUTES = {
   },
   DOCUMENTATION: {
     ROOT: DOCUMENTATION_ROOT,
+    USERS: {
+      ROOT: `${DOCUMENTATION_ROOT}${USER_EXTENSION}`,
+      CREATE_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/create-a-wallet`,
+    },
   },
 };

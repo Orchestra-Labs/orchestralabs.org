@@ -3,7 +3,7 @@ import React from 'react';
 export const Logo: React.FC<React.SVGProps<SVGSVGElement>> = props => (
   <svg
     width="100%"
-    height="auto"
+    height="100%"
     viewBox="0 0 209 44"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

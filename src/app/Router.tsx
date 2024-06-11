@@ -8,13 +8,15 @@ import {
   AllTokens,
   AllTransactions,
   BlockDetails,
-  Documentation,
+  CreateWallet,
+  DocumentationOverview,
   ExplorerMain,
   Home,
   PasswordRecovery,
   SignIn,
   SignUp,
   TransactionDetails,
+  UserOverview,
   Whitepaper,
 } from '@/pages';
 
@@ -39,7 +41,15 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         },
         {
           path: ROUTES.DOCUMENTATION.ROOT,
-          element: <Documentation />,
+          element: <DocumentationOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.USERS.ROOT,
+          element: <UserOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+          element: <CreateWallet />,
         },
       ],
     },

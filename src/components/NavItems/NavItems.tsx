@@ -33,7 +33,7 @@ export const NavItems: React.FC<NavItemProps> = ({
       {items.map(link => (
         <Link
           key={link.id}
-          to={link.url}
+          to={link.href}
           target={link?.target}
           rel={link?.rel}
           onClick={onLinkClick}
