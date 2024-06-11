@@ -94,19 +94,15 @@ export const CreateWallet = () => (
             E.g.:
             <br />
             Chain search:
-            <br />
-            <br />
             <img
-              className="w-1/2 max-w-[211px] mb-10 md:w-[29.2vw] md:max-w-[300px] md:mb-0 lg:w-[39.1vw] lg:max-w-[452px] section-container"
+              className="w-1/2 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-8"
               src={chainSearch}
               alt="Info row"
             />
             <br />
             In-app add-to-wallet search:
-            <br />
-            <br />
             <img
-              className="w-1/2 max-w-[211px] mb-10 md:w-[29.2vw] md:max-w-[300px] md:mb-0 lg:w-[39.1vw] lg:max-w-[452px] section-container"
+              className="w-1/2 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-8"
               src={inAppSearch}
               alt="Info row"
             />
@@ -116,10 +112,8 @@ export const CreateWallet = () => (
             wallet directly, but should you have trouble with the link below,
             use the "Add More Chains" link found in the app directly as seen
             here:
-            <br />
-            <br />
             <img
-              className="w-1/2 max-w-[316px] mb-10 md:h-[43.8vh] md:max-h-[300px] md:mb-0 lg:h-[58.65vh] lg:max-h-[452px] section-container"
+              className="w-1/2 max-w-[316px] mb-10 md:h-[43.8vh] md:max-h-[300px] md:mb-0 lg:h-[58.65vh] lg:max-h-[452px] section-container mt-8"
               src={addMoreChains}
               alt="Info row"
             />
