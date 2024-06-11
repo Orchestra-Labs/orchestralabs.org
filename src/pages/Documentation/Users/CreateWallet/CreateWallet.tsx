@@ -1,5 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { NavigationItemProps } from '@/types';
+import { NavItem } from '@/types';
 
 const HEADINGS = {
   1: {
@@ -16,7 +16,7 @@ const HEADINGS = {
   },
 };
 
-const NAVIGATION_ITEMS: NavigationItemProps[] = [
+const NAVIGATION_ITEMS: NavItem[] = [
   {
     id: 1,
     label: HEADINGS[1].label,
@@ -34,7 +34,7 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
   },
 ];
 
-const CONNECTED_WALLETS: NavigationItemProps[] = [
+const CONNECTED_WALLETS: NavItem[] = [
   {
     id: 1,
     label: 'Keplr Wallet',
@@ -43,7 +43,7 @@ const CONNECTED_WALLETS: NavigationItemProps[] = [
   },
 ];
 
-const CHAIN_SEARCHES: NavigationItemProps[] = [
+const CHAIN_SEARCHES: NavItem[] = [
   {
     id: 1,
     label: 'Keplr Chain Search',

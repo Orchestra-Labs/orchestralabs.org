@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import { NavigationItemProps } from '@/types';
+import { NavItem } from '@/types';
 
-export const ListLinks: React.FC<{ listLinks: NavigationItemProps[] }> = ({
+export const ListLinks: React.FC<{ listLinks: NavItem[] }> = ({
   listLinks,
 }) => (
   <ul className="mt-10">

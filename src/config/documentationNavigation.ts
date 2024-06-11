@@ -1,7 +1,7 @@
-import { NavigationItemProps } from '@/types';
+import { NavItem } from '@/types';
 import { ROUTES } from './routes';
 
-export const DOCUMENTATION_NAVIGATION: NavigationItemProps[] = [
+export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   {
     id: 1,
     label: 'Overview',

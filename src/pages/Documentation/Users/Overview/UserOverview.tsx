@@ -1,5 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { NavigationItemProps } from '@/types';
+import { NavItem } from '@/types';
 import { ROUTES } from '@/config/routes';
 
 const HEADINGS = {
@@ -17,7 +17,7 @@ const HEADINGS = {
   },
 };
 
-const NAVIGATION_ITEMS: NavigationItemProps[] = [
+const NAVIGATION_ITEMS: NavItem[] = [
   {
     id: 1,
     label: HEADINGS[1].label,
@@ -35,7 +35,7 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
   },
 ];
 
-const USER_DOCUMENTATION_LINKS: NavigationItemProps[] = [
+const USER_DOCUMENTATION_LINKS: NavItem[] = [
   {
     id: 1,
     label: 'Create A Wallet',
@@ -44,7 +44,7 @@ const USER_DOCUMENTATION_LINKS: NavigationItemProps[] = [
   },
 ];
 
-const ECOSYSTEM: NavigationItemProps[] = [
+const ECOSYSTEM: NavItem[] = [
   {
     id: 1,
     label: 'Keplr Wallet',
