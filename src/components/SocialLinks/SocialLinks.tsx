@@ -21,7 +21,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
       <NavLink
         key={link.id}
         className={cn('inline-flex', linkClassName as ClassValue)}
-        to={link.url}
+        to={link.href}
         target="_blank"
       >
         <link.Icon />
