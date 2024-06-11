@@ -14,8 +14,8 @@ export const DOCUMENTATION_NAVIGATION: DocumentationNavigationProps[] = [
     subLinks: [
       {
         id: 1,
-        label: 'Getting Started',
-        link: `${ROUTES.DOCUMENTATION.USERS.GETTING_STARTED}`,
+        label: 'Create A Wallet',
+        link: `${ROUTES.DOCUMENTATION.USERS.CREATE_WALLET}`,
       },
       {
         id: 2,

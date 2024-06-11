@@ -19,7 +19,7 @@ export const ROUTES = {
     ROOT: DOCUMENTATION_ROOT,
     USERS: {
       ROOT: `${DOCUMENTATION_ROOT}${USER_EXTENSION}`,
-      GETTING_STARTED: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/getting-started`,
+      CREATE_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/create-a-wallet`,
     },
   },
 };

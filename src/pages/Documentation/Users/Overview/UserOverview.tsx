@@ -40,9 +40,9 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
 const USER_DOCUMENTATION_LINKS: DocumentationNavItem[] = [
   {
     id: 1,
-    title: 'Getting Started',
-    description: 'How to get started with Symphony',
-    link: ROUTES.DOCUMENTATION.USERS.GETTING_STARTED,
+    title: 'Create A Wallet',
+    description: 'Create a wallet to interact with Symphony',
+    link: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
   },
 ];
 
