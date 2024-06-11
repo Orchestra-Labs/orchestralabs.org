@@ -1,6 +1,10 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 
+import chainSearch from '../../../../assets/images/chain-search.png';
+import inAppSearch from '../../../../assets/images/in-app-search.png';
+import addMoreChains from '../../../../assets/images/add-more-chains.png';
+
 const HEADINGS = {
   1: {
     id: 'general-setup',
@@ -38,8 +42,9 @@ const CONNECTED_WALLETS: NavItem[] = [
   {
     id: 1,
     label: 'Keplr Wallet',
-    description: 'The Seamless Interchain Experience',
+    target: '_blank',
     href: 'https://www.keplr.app/download',
+    description: 'The Seamless Interchain Experience',
   },
 ];
 
@@ -47,8 +52,9 @@ const CHAIN_SEARCHES: NavItem[] = [
   {
     id: 1,
     label: 'Keplr Chain Search',
-    description: 'Add Non-Native Chains to Keplr',
+    target: '_blank',
     href: 'https://chains.keplr.app/',
+    description: 'Add Non-Native Chains to Keplr',
   },
 ];
 
@@ -58,7 +64,7 @@ export const CreateWallet = () => (
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Create Wallet
+          Create A Wallet
         </h1>
         <p className="mt-10">
           The first step with any chain is to set up a wallet. A walkthrough for
@@ -70,17 +76,53 @@ export const CreateWallet = () => (
           </h2>
           <p className="mt-10">
             All wallets will operate in a similar manner whether as a web
-            extension or mobile application. Use the links to the connected
-            wallets below to install a wallet to your preferred system.
-            Afterwards, assuming the in-app search will not find Symphony, use
-            the chain searches below to find our chain and add it to the in-app
+            extension or mobile application. Use the "Connected Wallet" links
+            below to install a wallet to your preferred system. Afterwards,
+            assuming the in-app search will not find Symphony, use the "Chain
+            Search" links below to find our chain and add it to the in-app
             system.
             <br />
+            <br />
+            Keep in mind these notes:
             <br />
             - Mainnet: Search "Symphony", and be sure "symphony-1" is the chain
             added.
             <br />- Testnet: Search "Symphony Testnet", and be sure
             "symphony-testnet-1" is the chain added.
+            <br />
+            <br />
+            E.g.:
+            <br />
+            Chain search:
+            <br />
+            <br />
+            <img
+              className="w-1/2 max-w-[211px] mb-10 md:w-[29.2vw] md:max-w-[300px] md:mb-0 lg:w-[39.1vw] lg:max-w-[452px] section-container"
+              src={chainSearch}
+              alt="Info row"
+            />
+            <br />
+            In-app add-to-wallet search:
+            <br />
+            <br />
+            <img
+              className="w-1/2 max-w-[211px] mb-10 md:w-[29.2vw] md:max-w-[300px] md:mb-0 lg:w-[39.1vw] lg:max-w-[452px] section-container"
+              src={inAppSearch}
+              alt="Info row"
+            />
+            <br />
+            <br />
+            Regardless of device used, the chain search should connect to your
+            wallet directly, but should you have trouble with the link below,
+            use the "Add More Chains" link found in the app directly as seen
+            here:
+            <br />
+            <br />
+            <img
+              className="w-1/2 max-w-[316px] mb-10 md:h-[43.8vh] md:max-h-[300px] md:mb-0 lg:h-[58.65vh] lg:max-h-[452px] section-container"
+              src={addMoreChains}
+              alt="Info row"
+            />
           </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">

@@ -48,8 +48,9 @@ const ECOSYSTEM: NavItem[] = [
   {
     id: 1,
     label: 'Keplr Wallet',
-    description: 'The Seamless Interchain Experience',
+    target: '_blank',
     href: 'https://www.keplr.app/download',
+    description: 'The Seamless Interchain Experience',
   },
 ];
 

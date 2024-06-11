@@ -11,6 +11,7 @@ export const ListLinks: React.FC<{ listLinks: NavItem[] }> = ({
         <p>
           <Link
             to={item.href}
+            target={item.target}
             className="text-blue hover:text-blue-darker underline mr-1"
           >
             {item.label}
