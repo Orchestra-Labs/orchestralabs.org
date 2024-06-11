@@ -81,39 +81,40 @@ export const CreateWallet = () => (
             assuming the in-app search will not find Symphony, use the "Chain
             Search" links below to find our chain and add it to the in-app
             system.
-            <br />
-            <br />
-            Keep in mind these notes:
-            <br />
+          </p>
+          <p className="mt-5">Keep in mind these notes:</p>
+          <p>
             - Mainnet: Search "Symphony", and be sure "symphony-1" is the chain
             added.
-            <br />- Testnet: Search "Symphony Testnet", and be sure
+          </p>
+          <p>
+            - Testnet: Search "Symphony Testnet", and be sure
             "symphony-testnet-1" is the chain added.
-            <br />
-            <br />
-            E.g.:
-            <br />
+          </p>
+          <p className="mt-5">E.g.:</p>
+          <p>
             Chain search:
             <img
-              className="w-1/2 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-8"
+              className="w-1/2 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
               src={chainSearch}
               alt="Info row"
             />
-            <br />
+          </p>
+          <p className="mt-6">
             In-app add-to-wallet search:
             <img
-              className="w-1/2 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-8"
+              className="w-1/2 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
               src={inAppSearch}
               alt="Info row"
             />
-            <br />
-            <br />
+          </p>
+          <p className="mt-10">
             Regardless of device used, the chain search should connect to your
             wallet directly, but should you have trouble with the link below,
             use the "Add More Chains" link found in the app directly as seen
             here:
             <img
-              className="w-1/2 max-w-[316px] mb-10 md:h-[43.8vh] md:max-h-[300px] md:mb-0 lg:h-[58.65vh] lg:max-h-[452px] section-container mt-8"
+              className="w-1/2 max-w-[316px] mb-10 md:h-[43.8vh] md:max-h-[300px] md:mb-0 lg:h-[58.65vh] lg:max-h-[452px] section-container mt-4"
               src={addMoreChains}
               alt="Info row"
             />
