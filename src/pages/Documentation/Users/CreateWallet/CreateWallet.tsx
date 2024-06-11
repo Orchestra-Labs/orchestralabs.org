@@ -95,7 +95,7 @@ export const CreateWallet = () => (
           <p>
             Chain search:
             <img
-              className="w-1/2 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
               src={chainSearch}
               alt="Info row"
             />
@@ -103,7 +103,7 @@ export const CreateWallet = () => (
           <p className="mt-6">
             In-app add-to-wallet search:
             <img
-              className="w-1/2 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+              className="w-3/4 max-w-[363px] md:w-[36vw] md:max-w-[375px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
               src={inAppSearch}
               alt="Info row"
             />
