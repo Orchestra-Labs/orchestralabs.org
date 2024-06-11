@@ -1,5 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { DocumentationNavItem, NavigationItemProps } from '@/types';
+import { NavigationItemProps } from '@/types';
 
 const HEADINGS = {
   1: {
@@ -34,36 +34,36 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
   },
 ];
 
-const PLACEHOLDER_LINKS: DocumentationNavItem[] = [
+const PLACEHOLDER_LINKS: NavigationItemProps[] = [
   {
     id: 1,
-    title: 'Into the Symphony',
+    label: 'Into the Symphony',
     description: 'A quick overview of Symphony',
-    link: '#',
+    href: '#',
   },
   {
     id: 2,
-    title: 'Into the Symphony',
+    label: 'Into the Symphony',
     description: 'A quick overview of Symphony',
-    link: '#',
+    href: '#',
   },
   {
     id: 3,
-    title: 'Into the Symphony',
+    label: 'Into the Symphony',
     description: 'A quick overview of Symphony',
-    link: '#',
+    href: '#',
   },
   {
     id: 4,
-    title: 'Into the Symphony',
+    label: 'Into the Symphony',
     description: 'A quick overview of Symphony',
-    link: '#',
+    href: '#',
   },
   {
     id: 5,
-    title: 'Into the Symphony',
+    label: 'Into the Symphony',
     description: 'A quick overview of Symphony',
-    link: '#',
+    href: '#',
   },
 ];
 

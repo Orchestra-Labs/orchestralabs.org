@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import { DocumentationNavItem } from '@/types';
+import { NavigationItemProps } from '@/types';
 
-export const ListLinks: React.FC<{ listLinks: DocumentationNavItem[] }> = ({
+export const ListLinks: React.FC<{ listLinks: NavigationItemProps[] }> = ({
   listLinks,
 }) => (
   <ul className="mt-10">
@@ -10,10 +10,10 @@ export const ListLinks: React.FC<{ listLinks: DocumentationNavItem[] }> = ({
       <div key={item.id} className="flex mb-4 last:mb-0">
         <p>
           <Link
-            to={item.link}
+            to={item.href}
             className="text-blue hover:text-blue-darker underline mr-1"
           >
-            {item.title}
+            {item.label}
           </Link>
           - {item.description}
         </p>

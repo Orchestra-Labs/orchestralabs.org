@@ -1,5 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { DocumentationNavItem, NavigationItemProps } from '@/types';
+import { NavigationItemProps } from '@/types';
 import { ROUTES } from '@/config/routes';
 
 const HEADINGS = {
@@ -35,21 +35,21 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
   },
 ];
 
-const USER_DOCUMENTATION_LINKS: DocumentationNavItem[] = [
+const USER_DOCUMENTATION_LINKS: NavigationItemProps[] = [
   {
     id: 1,
-    title: 'Create A Wallet',
+    label: 'Create A Wallet',
     description: 'Create a wallet to interact with Symphony',
-    link: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
   },
 ];
 
-const ECOSYSTEM: DocumentationNavItem[] = [
+const ECOSYSTEM: NavigationItemProps[] = [
   {
     id: 1,
-    title: 'Keplr Wallet',
+    label: 'Keplr Wallet',
     description: 'The Seamless Interchain Experience',
-    link: 'https://www.keplr.app/download',
+    href: 'https://www.keplr.app/download',
   },
 ];
 

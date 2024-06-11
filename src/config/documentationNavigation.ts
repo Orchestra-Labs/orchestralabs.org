@@ -1,60 +1,60 @@
-import { DocumentationNavigationProps } from '@/types';
+import { NavigationItemProps } from '@/types';
 import { ROUTES } from './routes';
 
-export const DOCUMENTATION_NAVIGATION: DocumentationNavigationProps[] = [
+export const DOCUMENTATION_NAVIGATION: NavigationItemProps[] = [
   {
     id: 1,
     label: 'Overview',
-    link: ROUTES.DOCUMENTATION.ROOT,
+    href: ROUTES.DOCUMENTATION.ROOT,
   },
   {
     id: 2,
     label: 'Users',
-    link: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
-    subLinks: [
+    href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
+    subList: [
       {
         id: 1,
         label: 'Create A Wallet',
-        link: `${ROUTES.DOCUMENTATION.USERS.CREATE_WALLET}`,
+        href: `${ROUTES.DOCUMENTATION.USERS.CREATE_WALLET}`,
       },
       {
         id: 2,
         label: 'Topic 2',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-1-2`,
+        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-1-2`,
       },
     ],
   },
   {
     id: 3,
     label: 'Main topic 2',
-    link: `${ROUTES.DOCUMENTATION.ROOT}/#main-2`,
-    subLinks: [
+    href: `${ROUTES.DOCUMENTATION.ROOT}/#main-2`,
+    subList: [
       {
         id: 1,
         label: 'Topic 1',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-2-1`,
+        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-2-1`,
       },
       {
         id: 2,
         label: 'Topic 2',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-2-2`,
+        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-2-2`,
       },
     ],
   },
   {
     id: 4,
     label: 'Main topic 3',
-    link: `${ROUTES.DOCUMENTATION.ROOT}/#main-3`,
-    subLinks: [
+    href: `${ROUTES.DOCUMENTATION.ROOT}/#main-3`,
+    subList: [
       {
         id: 1,
         label: 'Topic 1',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-3-1`,
+        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-3-1`,
       },
       {
         id: 2,
         label: 'Topic 2',
-        link: `${ROUTES.DOCUMENTATION.ROOT}/#main-3-2`,
+        href: `${ROUTES.DOCUMENTATION.ROOT}/#main-3-2`,
       },
     ],
   },

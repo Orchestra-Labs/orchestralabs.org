@@ -1,5 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { DocumentationNavItem, NavigationItemProps } from '@/types';
+import { NavigationItemProps } from '@/types';
 
 const HEADINGS = {
   1: {
@@ -34,21 +34,21 @@ const NAVIGATION_ITEMS: NavigationItemProps[] = [
   },
 ];
 
-const CONNECTED_WALLETS: DocumentationNavItem[] = [
+const CONNECTED_WALLETS: NavigationItemProps[] = [
   {
     id: 1,
-    title: 'Keplr Wallet',
+    label: 'Keplr Wallet',
     description: 'The Seamless Interchain Experience',
-    link: 'https://www.keplr.app/download',
+    href: 'https://www.keplr.app/download',
   },
 ];
 
-const CHAIN_SEARCHES: DocumentationNavItem[] = [
+const CHAIN_SEARCHES: NavigationItemProps[] = [
   {
     id: 1,
-    title: 'Keplr Chain Search',
+    label: 'Keplr Chain Search',
     description: 'Add Non-Native Chains to Keplr',
-    link: 'https://chains.keplr.app/',
+    href: 'https://chains.keplr.app/',
   },
 ];
 
