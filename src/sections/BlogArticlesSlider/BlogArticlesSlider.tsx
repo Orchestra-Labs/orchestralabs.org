@@ -10,7 +10,8 @@ import { Article, MediumArticle } from '@/types';
 
 import blogArticleDefault from '../../assets/images/blog-article-default.jpeg';
 
-const MEDIUM_ARTICLES_URL = 'https://medium.com/feed/@orchestra_labs';
+const MEDIUM_ARTICLES_URL =
+  'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@orchestra_labs';
 
 const ID_FROM_URL_REGEX = /[^/]+$/;
 const IMAGE_FROM_DESCRIPTION_REGEX = /<img[^>]+src="([^">]+)"/;
