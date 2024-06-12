@@ -68,57 +68,59 @@ export const CreateWallet = () => (
         </h1>
         <p className="mt-10">
           The first step with any chain is to set up a wallet. A walkthrough for
-          this is below.
+          this is below. All wallets will operate in a similar manner whether as
+          a web extension or mobile application. Given Symphony was first
+          connected to Keplr, the screenshots in the instructions will match
+          their systems. Links to the various connected wallets can be found
+          below the walkthrough in the "Connected Wallets" section.
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
-          <p className="mt-10">
-            All wallets will operate in a similar manner whether as a web
-            extension or mobile application. Use the "Connected Wallet" links
-            below to install a wallet to your preferred system. Afterwards,
-            assuming the in-app search will not find Symphony, use the "Chain
-            Search" links below to find our chain and add it to the in-app
-            system.
+          <p className="mt-5">
+            At this time, Symphony is not recognized as a Native Keplr chain, so
+            the in-app search will not find Symphony. Use the "Chain Search"
+            links below to find our chain and add it to the Keplr system.
+            In-app, this can be found through the hamburger icon leading to the
+            "Add More Chains" button.
           </p>
-          <p className="mt-5">Keep in mind these notes:</p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={addMoreChains}
+            alt="Info row"
+          />
+          <p className="mt-5">When searching, keep in mind these notes:</p>
+          <p>- Most users will use the basic search "Symphony"</p>
           <p>
-            - Mainnet: Search "Symphony", and be sure "symphony-1" is the chain
+            - For devs, to access the testnet, search for "Symphony Testnet". If
+            checking for chain ID, be sure "symphony-testnet-1" is the chain
             added.
           </p>
-          <p>
-            - Testnet: Search "Symphony Testnet", and be sure
-            "symphony-testnet-1" is the chain added.
-          </p>
-          <p className="mt-5">E.g.:</p>
-          <p>
-            Chain search:
-            <img
-              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={chainSearch}
-              alt="Info row"
-            />
-          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={chainSearch}
+            alt="Info row"
+          />
           <p className="mt-6">
-            In-app add-to-wallet search:
-            <img
-              className="w-3/4 max-w-[363px] md:w-[36vw] md:max-w-[375px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={inAppSearch}
-              alt="Info row"
-            />
+            After adding the chain to Keplr, return to the home page and again
+            use the hamburger icon, this time selecting "Manage Chain
+            Visibility".
           </p>
-          <p className="mt-10">
-            Regardless of device used, the chain search should connect to your
-            wallet directly, but should you have trouble with the link below,
-            use the "Add More Chains" link found in the app directly as seen
-            here:
-            <img
-              className="w-1/2 max-w-[316px] mb-10 md:h-[43.8vh] md:max-h-[300px] md:mb-0 lg:h-[58.65vh] lg:max-h-[452px] section-container mt-4"
-              src={addMoreChains}
-              alt="Info row"
-            />
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={addMoreChains}
+            alt="Info row"
+          />
+          <p className="mt-6">
+            Search for the Symphony chain, mark it as selected, and press the
+            save button. You will now find it visible in the wallet.
           </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={inAppSearch}
+            alt="Info row"
+          />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
