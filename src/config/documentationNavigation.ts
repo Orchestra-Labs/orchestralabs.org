@@ -17,6 +17,11 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         label: 'Create A Wallet',
         href: `${ROUTES.DOCUMENTATION.USERS.CREATE_WALLET}`,
       },
+      {
+        id: 2,
+        label: 'Add Symphony to A Wallet',
+        href: `${ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}`,
+      },
     ],
   },
 ];

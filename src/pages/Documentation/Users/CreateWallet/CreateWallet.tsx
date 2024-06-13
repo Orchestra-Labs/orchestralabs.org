@@ -1,9 +1,14 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 
-import chainSearch from '../../../../assets/images/chain-search.png';
-import inAppSearch from '../../../../assets/images/in-app-search.png';
-import addMoreChains from '../../../../assets/images/add-more-chains.png';
+import keplrDownload from '../../../../assets/images/keplr-download.png';
+import addPassword from '../../../../assets/images/add-password.png';
+import initialWalletSearch from '../../../../assets/images/initial-wallet-search.png';
+import createNewWallet from '../../../../assets/images/create-new-wallet.png';
+import createWalletOptions from '../../../../assets/images/create-wallet-options.png';
+import playStoreInstallation from '../../../../assets/images/play-store-installation.png';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '@/config/routes';
 
 const HEADINGS = {
   1: {
@@ -14,29 +19,7 @@ const HEADINGS = {
     id: 'connected-wallets',
     label: 'Connected Wallets',
   },
-  3: {
-    id: 'wallet-chain-searches',
-    label: 'Chain Search',
-  },
 };
-
-const NAVIGATION_ITEMS: NavItem[] = [
-  {
-    id: 1,
-    label: HEADINGS[1].label,
-    href: `#${HEADINGS[1].id}`,
-  },
-  {
-    id: 2,
-    label: HEADINGS[2].label,
-    href: `#${HEADINGS[2].id}`,
-  },
-  {
-    id: 3,
-    label: HEADINGS[3].label,
-    href: `#${HEADINGS[3].id}`,
-  },
-];
 
 const CONNECTED_WALLETS: NavItem[] = [
   {
@@ -48,13 +31,17 @@ const CONNECTED_WALLETS: NavItem[] = [
   },
 ];
 
-const CHAIN_SEARCHES: NavItem[] = [
+const NAVIGATION_ITEMS: NavItem[] = [
   {
     id: 1,
-    label: 'Keplr Chain Search',
-    target: '_blank',
-    href: 'https://chains.keplr.app/',
-    description: 'Add Non-Native Chains to Keplr',
+    label: HEADINGS[1].label,
+    href: `#${HEADINGS[1].id}`,
+  },
+  {
+    id: 2,
+    label: HEADINGS[2].label,
+    href: `#${HEADINGS[2].id}`,
+    subList: CONNECTED_WALLETS,
   },
 ];
 
@@ -79,46 +66,81 @@ export const CreateWallet = () => (
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            At this time, Symphony is not recognized as a Native Keplr chain, so
-            the in-app search will not find Symphony. Use the "Chain Search"
-            links below to find our chain and add it to the Keplr system.
-            In-app, this can be found through the hamburger icon leading to the
-            "Add More Chains" button.
+            While the links to all connected wallets and chain searches can be
+            found below, due to Symphony being considered a non-native chain to
+            Keplr, the Keplr Wallet link is also included here:
+            <p>
+              {'- '}
+              <Link
+                to="https://www.keplr.app/download"
+                target="_blank"
+                className="text-blue hover:text-blue-darker underline mr-1"
+              >
+                Keplr Wallet
+              </Link>
+            </p>
+          </p>
+          <p className="mt-5">
+            If you are setting up Keplr for the first time: In the initial
+            pop-up window, choose the install button corresponding to your
+            browser or nobile system.
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={addMoreChains}
+            src={keplrDownload}
             alt="Info row"
           />
-          <p className="mt-5">When searching, keep in mind these notes:</p>
-          <p>- Most users will use the basic search "Symphony"</p>
-          <p>
-            - For devs, to access the testnet, search for "Symphony Testnet". If
-            checking for chain ID, be sure "symphony-testnet-1" is the chain
-            added.
-          </p>
+          <p className="mt-5">Install the wallet.</p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={chainSearch}
+            src={playStoreInstallation}
             alt="Info row"
           />
-          <p className="mt-6">
-            After adding the chain to Keplr, return to the home page and again
-            use the hamburger icon, this time selecting "Manage Chain
-            Visibility".
+          <p className="mt-5">
+            Open the application and select to create a wallet.
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={addMoreChains}
+            src={createNewWallet}
             alt="Info row"
           />
-          <p className="mt-6">
-            Search for the Symphony chain, mark it as selected, and press the
-            save button. You will now find it visible in the wallet.
+          <p className="mt-5">
+            Keplr has options to create a wallet via a recovery phrase or via a
+            social ID registration. Using a recovery phrase is recommended for
+            security. Newer users may opt for connecting via social ID.
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={inAppSearch}
+            src={createWalletOptions}
+            alt="Info row"
+          />
+          <p className="mt-5">
+            Keplr wallets require a name for wallet management, and a password
+            to keep the wallet secure. Enter these values and proceed to the
+            next step.
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={addPassword}
+            alt="Info row"
+          />
+          <p className="mt-5">
+            Initially, Symphony will not show in the search, as it is a
+            non-native chain to Keplr. To add Symphony to this wallet, follow
+            the documentation on how included here:
+            <p>
+              {'- '}
+              <Link
+                to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
+                className="text-blue hover:text-blue-darker underline mr-1"
+              >
+                Add Symphony To A Wallet
+              </Link>
+            </p>
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={initialWalletSearch}
             alt="Info row"
           />
         </div>
@@ -127,12 +149,6 @@ export const CreateWallet = () => (
             {HEADINGS[2].label}
           </h2>
           <ListLinks listLinks={CONNECTED_WALLETS} />
-        </div>
-        <div id={HEADINGS[3].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
-          </h2>
-          <ListLinks listLinks={CHAIN_SEARCHES} />
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

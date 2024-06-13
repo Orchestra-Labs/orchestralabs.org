@@ -4,6 +4,7 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import { ROUTES } from '@/config/routes';
 import {
   AccountDetails,
+  AddSymphonyToWallet,
   AllBlocks,
   AllTokens,
   AllTransactions,
@@ -50,6 +51,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
           element: <CreateWallet />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
+          element: <AddSymphonyToWallet />,
         },
       ],
     },
