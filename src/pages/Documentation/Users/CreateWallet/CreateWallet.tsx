@@ -1,9 +1,11 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 
+import nonNativeChainSearch from '../../../../assets/images/non-native-chain-search.png';
 import chainSearch from '../../../../assets/images/chain-search.png';
-import inAppSearch from '../../../../assets/images/in-app-search.png';
-import addMoreChains from '../../../../assets/images/add-more-chains.png';
+import manageChainVisibility from '../../../../assets/images/manage-chain-visibility.png';
+import symphonyInWallet from '../../../../assets/images/symphony-in-wallet.png';
+import { Link } from 'react-router-dom';
 
 const HEADINGS = {
   1: {
@@ -79,15 +81,39 @@ export const CreateWallet = () => (
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            At this time, Symphony is not recognized as a Native Keplr chain, so
-            the in-app search will not find Symphony. Use the "Chain Search"
-            links below to find our chain and add it to the Keplr system.
-            In-app, this can be found through the hamburger icon leading to the
-            "Add More Chains" button.
+            {
+              'While the links to all connected wallets and chain searches can be \
+            found below, due to Symphony being considered a non-native chain to Keplr, the '
+            }
+            <Link
+              to="https://www.keplr.app/download"
+              target="_blank"
+              className="text-blue hover:text-blue-darker underline mr-1"
+            >
+              Keplr Wallet
+            </Link>
+            {'and '}
+            <Link
+              to="https://chains.keplr.app/"
+              target="_blank"
+              className="text-blue hover:text-blue-darker underline mr-1"
+            >
+              Keplr Chain Search
+            </Link>
+            are also included here.
+          </p>
+          <p className="mt-5">
+            If you've not created a Keplr wallet, use the Keplr wallet link to
+            do so and return for the next step.
+          </p>
+          <p className="mt-5">
+            After logging into your Keplr wallet, use the Keplr chain search
+            link to add the chain to the app. In-app, this can be found through
+            the hamburger icon leading to the "Add More Chains" button.
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={addMoreChains}
+            src={manageChainVisibility}
             alt="Info row"
           />
           <p className="mt-5">When searching, keep in mind these notes:</p>
@@ -99,7 +125,7 @@ export const CreateWallet = () => (
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={chainSearch}
+            src={nonNativeChainSearch}
             alt="Info row"
           />
           <p className="mt-6">
@@ -109,7 +135,7 @@ export const CreateWallet = () => (
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={addMoreChains}
+            src={manageChainVisibility}
             alt="Info row"
           />
           <p className="mt-6">
@@ -118,7 +144,15 @@ export const CreateWallet = () => (
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={inAppSearch}
+            src={chainSearch}
+            alt="Info row"
+          />
+          <p className="mt-6">
+            You will now find the Symphony chain visible in your wallet.
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={symphonyInWallet}
             alt="Info row"
           />
         </div>
