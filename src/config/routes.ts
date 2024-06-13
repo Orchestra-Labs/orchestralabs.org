@@ -19,7 +19,8 @@ export const ROUTES = {
     ROOT: DOCUMENTATION_ROOT,
     USERS: {
       ROOT: `${DOCUMENTATION_ROOT}${USER_EXTENSION}`,
-      CREATE_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/create-a-wallet`,
+      CREATE_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/create-wallet`,
+      ADD_SYMPHONY_TO_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/add-symphony-to-wallet`,
     },
   },
 };
