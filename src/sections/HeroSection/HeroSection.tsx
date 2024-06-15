@@ -10,7 +10,7 @@ export const HeroSection = () => (
     <div className="flex justify-center items-center min-h-[inherit] relative z-[1] px-25px md:px-6">
       <div className="flex flex-col max-w-[882px] text-center items-center gap-4 mt-[-50%] md:-mt-40 xl:-mt-[120px]">
         <h1 className="font-semibold text-white text-h4 md:text-h2/[56px] xl:text-display2">
-          Discover a decentralized ecosystem for stablecoins
+          Discover truly decentralized real-world assets
         </h1>
         <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl">
           Releasing soon via IDO
