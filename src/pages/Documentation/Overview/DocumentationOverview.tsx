@@ -1,16 +1,21 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
+import { ROUTES } from '@/config/routes';
 import { NavItem } from '@/types';
 
 const HEADINGS = {
   1: {
+    id: 'user_documentation',
+    label: 'User Information',
+  },
+  2: {
     id: 'development-modules',
     label: 'Development Modules',
   },
-  2: {
+  3: {
     id: 'foundational-topics',
     label: 'Foundational Topics',
   },
-  3: {
+  4: {
     id: 'symphony-stack',
     label: 'Symphony Stack',
   },
@@ -18,19 +23,39 @@ const HEADINGS = {
 
 const NAVIGATION_ITEMS: NavItem[] = [
   {
-    id: 1,
+    id: '1',
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
   },
   {
-    id: 2,
+    id: '2',
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
   },
   {
-    id: 3,
+    id: '3',
     label: HEADINGS[3].label,
     href: `#${HEADINGS[3].id}`,
+  },
+  {
+    id: '4',
+    label: HEADINGS[4].label,
+    href: `#${HEADINGS[4].id}`,
+  },
+];
+
+const USER_DOCUMENTATION_LINKS: NavItem[] = [
+  {
+    id: '1',
+    label: 'Create A Wallet',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+  {
+    id: '2',
+    label: 'Add Symphony To Wallet',
+    description: 'Add Symphony to non-native wallets',
+    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
   },
 ];
 
@@ -56,16 +81,22 @@ export const DocumentationOverview = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
+          <ListLinks listLinks={USER_DOCUMENTATION_LINKS} />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <ListLinks listLinks={PLACEHOLDER_LINKS} />
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
+          </h2>
+          <ListLinks listLinks={PLACEHOLDER_LINKS} />
+        </div>
+        <div id={HEADINGS[4].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[4].label}
           </h2>
           <ListLinks listLinks={PLACEHOLDER_LINKS} />
         </div>

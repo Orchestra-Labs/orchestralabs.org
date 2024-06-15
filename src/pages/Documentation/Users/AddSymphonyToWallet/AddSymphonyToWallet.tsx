@@ -21,7 +21,7 @@ const HEADINGS = {
 
 const CHAIN_SEARCHES: NavItem[] = [
   {
-    id: 1,
+    id: 'keplr-chain-search',
     label: 'Keplr Chain Search',
     target: '_blank',
     href: 'https://chains.keplr.app/',
@@ -31,15 +31,21 @@ const CHAIN_SEARCHES: NavItem[] = [
 
 const NAVIGATION_ITEMS: NavItem[] = [
   {
-    id: 1,
+    id: '1',
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
   },
   {
-    id: 2,
+    id: '2',
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
-    subList: CHAIN_SEARCHES,
+    subList: [
+      {
+        id: 'keplr-chain-search',
+        label: CHAIN_SEARCHES[0].label,
+        href: `#keplr-chain-search`,
+      },
+    ],
   },
 ];
 
