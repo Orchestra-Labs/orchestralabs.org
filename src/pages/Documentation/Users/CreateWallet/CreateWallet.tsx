@@ -23,7 +23,7 @@ const HEADINGS = {
 
 const CONNECTED_WALLETS: NavItem[] = [
   {
-    id: 1,
+    id: 'keplr-wallet',
     label: 'Keplr Wallet',
     target: '_blank',
     href: 'https://www.keplr.app/download',
@@ -33,15 +33,21 @@ const CONNECTED_WALLETS: NavItem[] = [
 
 const NAVIGATION_ITEMS: NavItem[] = [
   {
-    id: 1,
+    id: '1',
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
   },
   {
-    id: 2,
+    id: '2',
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
-    subList: CONNECTED_WALLETS,
+    subList: [
+      {
+        id: 'keplr-wallet',
+        label: CONNECTED_WALLETS[0].label,
+        href: `#keplr-wallet`,
+      },
+    ],
   },
 ];
 
@@ -69,16 +75,16 @@ export const CreateWallet = () => (
             While the links to all connected wallets and chain searches can be
             found below, due to Symphony being considered a non-native chain to
             Keplr, the Keplr Wallet link is also included here:
-            <p>
-              {'- '}
-              <Link
-                to="https://www.keplr.app/download"
-                target="_blank"
-                className="text-blue hover:text-blue-darker underline mr-1"
-              >
-                Keplr Wallet
-              </Link>
-            </p>
+          </p>
+          <p>
+            {'- '}
+            <Link
+              to="https://www.keplr.app/download"
+              target="_blank"
+              className="text-blue hover:text-blue-darker underline mr-1"
+            >
+              Keplr Wallet
+            </Link>
           </p>
           <p className="mt-5">
             If you are setting up Keplr for the first time: In the initial
@@ -128,15 +134,15 @@ export const CreateWallet = () => (
             Initially, Symphony will not show in the search, as it is a
             non-native chain to Keplr. To add Symphony to this wallet, follow
             the documentation on how included here:
-            <p>
-              {'- '}
-              <Link
-                to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
-                className="text-blue hover:text-blue-darker underline mr-1"
-              >
-                Add Symphony To A Wallet
-              </Link>
-            </p>
+          </p>
+          <p>
+            {'- '}
+            <Link
+              to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
+              className="text-blue hover:text-blue-darker underline mr-1"
+            >
+              Add Symphony To A Wallet
+            </Link>
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"

@@ -7,7 +7,7 @@ export const ListLinks: React.FC<{ listLinks: NavItem[] }> = ({
 }) => (
   <ul className="mt-10">
     {listLinks.map(item => (
-      <div key={item.id} className="flex mb-4 last:mb-0">
+      <div id={item.id} key={item.id} className="flex mb-4 last:mb-0">
         <p>
           <Link
             to={item.href}

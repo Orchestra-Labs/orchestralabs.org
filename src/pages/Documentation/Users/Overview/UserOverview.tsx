@@ -19,17 +19,17 @@ const HEADINGS = {
 
 const NAVIGATION_ITEMS: NavItem[] = [
   {
-    id: 1,
+    id: '1',
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
   },
   {
-    id: 2,
+    id: '2',
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
   },
   {
-    id: 3,
+    id: '3',
     label: HEADINGS[3].label,
     href: `#${HEADINGS[3].id}`,
   },
@@ -37,16 +37,22 @@ const NAVIGATION_ITEMS: NavItem[] = [
 
 const USER_DOCUMENTATION_LINKS: NavItem[] = [
   {
-    id: 1,
+    id: '1',
     label: 'Create A Wallet',
     description: 'Create a wallet to interact with Symphony',
     href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+  {
+    id: '2',
+    label: 'Add Symphony To Wallet',
+    description: 'Add Symphony to non-native wallets',
+    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
   },
 ];
 
 const ECOSYSTEM: NavItem[] = [
   {
-    id: 1,
+    id: '1',
     label: 'Keplr Wallet',
     target: '_blank',
     href: 'https://www.keplr.app/download',
