@@ -19,6 +19,7 @@ import {
   TransactionDetails,
   UserOverview,
   Whitepaper,
+  WhyDecentralizedRWAs,
 } from '@/pages';
 
 const MainLayout = lazy(() => import('../layouts/MainLayout/MainLayout'));
@@ -43,6 +44,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.ROOT,
           element: <DocumentationOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
+          element: <WhyDecentralizedRWAs />,
         },
         {
           path: ROUTES.DOCUMENTATION.USERS.ROOT,

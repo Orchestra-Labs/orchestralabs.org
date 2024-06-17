@@ -39,47 +39,47 @@ const HEADINGS = {
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
-  { id: 1, label: HEADINGS.abstract.label, href: `#${HEADINGS.abstract.id}` },
+  { id: '1', label: HEADINGS.abstract.label, href: `#${HEADINGS.abstract.id}` },
   {
-    id: 2,
+    id: '2',
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
   },
   {
-    id: 3,
+    id: '3',
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
     subList: [
       {
-        id: 1,
+        id: '1',
         label: HEADINGS[2.1].label,
         href: `#${HEADINGS[2.1].id}`,
       },
-      { id: 2, label: HEADINGS[2.2].label, href: `#${HEADINGS[2.2].id}` },
-      { id: 3, label: HEADINGS[2.3].label, href: `#${HEADINGS[2.3].id}` },
+      { id: '2', label: HEADINGS[2.2].label, href: `#${HEADINGS[2.2].id}` },
+      { id: '3', label: HEADINGS[2.3].label, href: `#${HEADINGS[2.3].id}` },
     ],
   },
   {
-    id: 4,
+    id: '4',
     label: HEADINGS[3].label,
     href: `#${HEADINGS[3].id}`,
   },
   {
-    id: 5,
+    id: '5',
     label: HEADINGS[4].label,
     href: `#${HEADINGS[4].id}`,
     subList: [
-      { id: 1, label: HEADINGS[4.1].label, href: `#${HEADINGS[4.1].id}` },
-      { id: 2, label: HEADINGS[4.2].label, href: `#${HEADINGS[4.2].id}` },
-      { id: 3, label: HEADINGS[4.3].label, href: `#${HEADINGS[4.3].id}` },
-      { id: 4, label: HEADINGS[4.4].label, href: `#${HEADINGS[4.4].id}` },
+      { id: '1', label: HEADINGS[4.1].label, href: `#${HEADINGS[4.1].id}` },
+      { id: '2', label: HEADINGS[4.2].label, href: `#${HEADINGS[4.2].id}` },
+      { id: '3', label: HEADINGS[4.3].label, href: `#${HEADINGS[4.3].id}` },
+      { id: '4', label: HEADINGS[4.4].label, href: `#${HEADINGS[4.4].id}` },
     ],
   },
-  { id: 6, label: HEADINGS[5].label, href: `#${HEADINGS[5].id}` },
-  { id: 7, label: HEADINGS[6].label, href: `#${HEADINGS[6].id}` },
-  { id: 8, label: HEADINGS[7].label, href: `#${HEADINGS[7].id}` },
-  { id: 9, label: HEADINGS[8].label, href: `#${HEADINGS[8].id}` },
-  { id: 10, label: HEADINGS[9].label, href: `#${HEADINGS[9].id}` },
+  { id: '6', label: HEADINGS[5].label, href: `#${HEADINGS[5].id}` },
+  { id: '7', label: HEADINGS[6].label, href: `#${HEADINGS[6].id}` },
+  { id: '8', label: HEADINGS[7].label, href: `#${HEADINGS[7].id}` },
+  { id: '9', label: HEADINGS[8].label, href: `#${HEADINGS[8].id}` },
+  { id: '10', label: HEADINGS[9].label, href: `#${HEADINGS[9].id}` },
 ];
 
 export const Whitepaper = () => (
