@@ -3,15 +3,15 @@ import { NavItem } from '@/types';
 
 const HEADINGS = {
   1: {
-    id: 'general-setup',
+    id: 'separating-from-banks',
     label: 'Separating From Banks',
   },
   2: {
-    id: 'general-setup',
+    id: 'providing-yield',
     label: 'Providing Yield',
   },
   3: {
-    id: 'general-setup',
+    id: 'a-reliable-trade-medium',
     label: 'A Reliable Trade Medium',
   },
 };
@@ -48,7 +48,7 @@ export const WhyDecentralizedRWAs = () => (
           shown the world lacks a globally accessible and censorship-resistant
           means of holding capital.
         </p>
-        <p className="mt-10">
+        <p className="mt-5">
           Symphony addresses this need within crypto. DeFi attempts to create a
           parallel financial system, yet stablecoins and other real-world assets
           (RWAs), the most used part of this system, remain reliant on

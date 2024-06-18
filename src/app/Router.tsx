@@ -9,6 +9,7 @@ import {
   AllTokens,
   AllTransactions,
   BlockDetails,
+  CompetingStablecoins,
   CreateWallet,
   DocumentationOverview,
   ExplorerMain,
@@ -48,6 +49,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
           element: <WhyDecentralizedRWAs />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.COMPETING_STABLECOINS,
+          element: <CompetingStablecoins />,
         },
         {
           path: ROUTES.DOCUMENTATION.USERS.ROOT,

@@ -14,6 +14,11 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '3',
+    label: 'Competing Stablecoins',
+    href: ROUTES.DOCUMENTATION.COMPETING_STABLECOINS,
+  },
+  {
+    id: '4',
     label: 'Users',
     href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
     subList: [

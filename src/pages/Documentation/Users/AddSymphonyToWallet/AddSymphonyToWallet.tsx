@@ -106,7 +106,7 @@ export const AddSymphonyToWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={manageChainVisibility}
-            alt="Info row"
+            alt="Chain visibility"
           />
           <p className="mt-5">When searching, keep in mind these notes:</p>
           <p>- Most users will use the basic search "Symphony"</p>
@@ -118,7 +118,7 @@ export const AddSymphonyToWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={nonNativeChainSearch}
-            alt="Info row"
+            alt="Non-native chain search"
           />
           <p className="mt-6">
             After adding the chain to Keplr, return to the home page and again
@@ -128,7 +128,7 @@ export const AddSymphonyToWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={manageChainVisibility}
-            alt="Info row"
+            alt="Chain visibility"
           />
           <p className="mt-6">
             Search for the Symphony chain, mark it as selected, and press the
@@ -137,7 +137,7 @@ export const AddSymphonyToWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={chainSearch}
-            alt="Info row"
+            alt="Chain search"
           />
           <p className="mt-6">
             You will now find the Symphony chain visible in your wallet.
@@ -145,7 +145,7 @@ export const AddSymphonyToWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={symphonyInWallet}
-            alt="Info row"
+            alt="Symphony in wallet"
           />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">

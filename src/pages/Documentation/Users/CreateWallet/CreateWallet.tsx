@@ -94,13 +94,13 @@ export const CreateWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={keplrDownload}
-            alt="Info row"
+            alt="Keplr download"
           />
           <p className="mt-5">Install the wallet.</p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={playStoreInstallation}
-            alt="Info row"
+            alt="Play store installation"
           />
           <p className="mt-5">
             Open the application and select to create a wallet.
@@ -108,7 +108,7 @@ export const CreateWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={createNewWallet}
-            alt="Info row"
+            alt="Create new wallet"
           />
           <p className="mt-5">
             Keplr has options to create a wallet via a recovery phrase or via a
@@ -118,7 +118,7 @@ export const CreateWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={createWalletOptions}
-            alt="Info row"
+            alt="Create wallet options"
           />
           <p className="mt-5">
             Keplr wallets require a name for wallet management, and a password
@@ -128,7 +128,7 @@ export const CreateWallet = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={addPassword}
-            alt="Info row"
+            alt="Add password"
           />
           <p className="mt-5">
             Initially, Symphony will not show in the search, as it is a

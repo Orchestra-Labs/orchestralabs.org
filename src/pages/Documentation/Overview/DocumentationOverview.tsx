@@ -94,7 +94,7 @@ export const DocumentationOverview = () => (
           trade across mediums such as real-estate and gold, as well as easily
           accessed infrastructure to build market systems such as ForEx.
         </p>
-        <p className="mt-10">
+        <p className="mt-5">
           The documentation herein is designed to help you build with Symphony.
           It covers Symphony as a concept, explains the Symphony tech stack, and
           documents advanced topics for more complex applications and use cases.
