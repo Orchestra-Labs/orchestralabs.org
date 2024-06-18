@@ -9,6 +9,16 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '2',
+    label: 'Why Decentralized RWAS',
+    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
+  },
+  {
+    id: '3',
+    label: 'Competing Stablecoins',
+    href: ROUTES.DOCUMENTATION.COMPETING_STABLECOINS,
+  },
+  {
+    id: '4',
     label: 'Users',
     href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
     subList: [
