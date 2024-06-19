@@ -2,10 +2,10 @@ import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
 
-// import stablecoinTrilemma from '../../../assets/images/stablecoin-trilemma.png';
-// import fiatBackedStablecoins from '../../../assets/images/fiat-backed-stablecoins.png';
-// import algorithmicStablecoins from '../../../assets/images/algorithmic-stablecoins.png';
-// import cryptoBackedStablecoins from '../../../assets/images/crypto-backed-stablecoins.png';
+import stablecoinTrilemma from '../../../assets/images/stablecoin-trilemma.png';
+import fiatBackedStablecoins from '../../../assets/images/fiat-backed-stablecoins.png';
+import algorithmicStablecoins from '../../../assets/images/algorithmic-stablecoins.png';
+import cryptoBackedStablecoins from '../../../assets/images/crypto-backed-stablecoins.png';
 
 const HEADINGS = {
   1: {
@@ -84,6 +84,11 @@ export const CompetingStablecoins = () => (
             available to use while all of them just provide the utility of being
             a (relatively) stable cryptocurrency.
           </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[355px] section-container mt-4"
+            src={stablecoinTrilemma}
+            alt="Stablecoin Trilemma"
+          />
           <p className="mt-5">
             Until today, every stablecoin has to balance three main goals. The
             main target and purpose of a stablecoin are to hold a stable value
@@ -116,17 +121,17 @@ export const CompetingStablecoins = () => (
               <li>Decentralization: Operating in a decentralized manner.</li>
             </ul>
             Achieving all three simultaneously has proven difficult.
-            {/* <img
-              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={stablecoinTrilemma}
-              alt="Stablecoin Trilemma"
-            /> */}
           </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={fiatBackedStablecoins}
+            alt="Fiat Backed Stablecoins"
+          />
           <p className="mt-5">
             Centralized stablecoins address the stablecoin trilemma by
             compromising on decentralization. Stablecoins dependent on
@@ -147,11 +152,6 @@ export const CompetingStablecoins = () => (
                 depeg to users.
               </li>
             </ul>
-            {/* <img
-              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={fiatBackedStablecoins}
-              alt="Fiat Backed Stablecoins"
-            /> */}
           </p>
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
@@ -162,29 +162,29 @@ export const CompetingStablecoins = () => (
             Decentralized stablecoins address the trilemma by focusing on
             decentralization, often at the expense of price stability and
             capital efficiency. These stablecoins, which do not rely on
-            traditional banking or financial infrastructure, have faced several
-            issues:
+            traditional banking or financial infrastructure, have faced their
+            own issues:
             <ul className="list-disc pl-5">
-              <li>
-                Overcollateralized stablecoins sacrifice capital efficiency,
-                introducing a high up-front cost to users, which dissuades use.
-                These will often auto-sell users when the price of the
-                collateral drops.
-                {/* <img
-                  className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-                  src={cryptoBackedStablecoins}
-                  alt="Crypto Backed Stablecoins"
-                /> */}
+              <img
+                className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+                src={cryptoBackedStablecoins}
+                alt="Crypto Backed Stablecoins"
+              />
+              <li className="mt-4">
+                Crypto-backed stablecoins, also known as overcollateralized
+                stablecoins, sacrifice capital efficiency, introducing a high
+                up-front cost to users, which dissuades use. These will often
+                auto-sell users when the price of the collateral drops.
               </li>
-              <li>
+              <img
+                className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+                src={algorithmicStablecoins}
+                alt="Algorithmic Stablecoins"
+              />
+              <li className="mt-4">
                 Algorithmic stablecoins encounter challenges with mechanism
                 design, proving to be inherently fragile and unstable. Often
                 these have resulted in runaway inflation.
-                {/* <img
-                  className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-                  src={algorithmicStablecoins}
-                  alt="Algorithmic Stablecoins"
-                /> */}
               </li>
             </ul>
           </p>
