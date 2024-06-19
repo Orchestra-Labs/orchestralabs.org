@@ -16,10 +16,6 @@ const HEADINGS = {
     label: 'Development Modules',
   },
   4: {
-    id: 'foundational-topics',
-    label: 'Foundational Topics',
-  },
-  5: {
     id: 'symphony-stack',
     label: 'Symphony Stack',
   },
@@ -45,11 +41,6 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '4',
     label: HEADINGS[4].label,
     href: `#${HEADINGS[4].id}`,
-  },
-  {
-    id: '5',
-    label: HEADINGS[5].label,
-    href: `#${HEADINGS[5].id}`,
   },
 ];
 
@@ -146,12 +137,6 @@ export const DocumentationOverview = () => (
         <div id={HEADINGS[4].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[4].label}
-          </h2>
-          <ListLinks listLinks={PLACEHOLDER_LINKS} />
-        </div>
-        <div id={HEADINGS[5].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[5].label}
           </h2>
           <ListLinks listLinks={PLACEHOLDER_LINKS} />
         </div>

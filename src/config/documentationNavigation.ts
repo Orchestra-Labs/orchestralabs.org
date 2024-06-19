@@ -34,7 +34,7 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '7',
-    label: 'Users',
+    label: 'User Information',
     href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
     subList: [
       {
