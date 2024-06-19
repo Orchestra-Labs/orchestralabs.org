@@ -19,6 +19,9 @@ export const ROUTES = {
     ROOT: DOCUMENTATION_ROOT,
     WHY_DECENTRALIZED_RWAS: `${DOCUMENTATION_ROOT}/why-decentralized-rwas`,
     THE_STABLECOIN_TRILEMMA: `${DOCUMENTATION_ROOT}/the-stablecoin-trilemma`,
+    THE_SYMPHONY_APPROACH: `${DOCUMENTATION_ROOT}/the-symphony-approach`,
+    SYMPHONY_IMPACT: `${DOCUMENTATION_ROOT}/symphony-impact`,
+    SIZE_OF_OPPORTUNITY: `${DOCUMENTATION_ROOT}/size-of-opportunity`,
     USERS: {
       ROOT: `${DOCUMENTATION_ROOT}${USER_EXTENSION}`,
       CREATE_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/create-wallet`,

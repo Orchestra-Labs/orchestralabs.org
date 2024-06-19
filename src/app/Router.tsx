@@ -16,7 +16,10 @@ import {
   PasswordRecovery,
   SignIn,
   SignUp,
+  SizeOfOpportunity,
+  SymphonyImpact,
   TheStablecoinTrilemma,
+  TheSymphonyApproach,
   TransactionDetails,
   UserOverview,
   Whitepaper,
@@ -65,6 +68,18 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
           element: <AddSymphonyToWallet />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+          element: <TheSymphonyApproach />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.SYMPHONY_IMPACT,
+          element: <SymphonyImpact />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.SIZE_OF_OPPORTUNITY,
+          element: <SizeOfOpportunity />,
         },
       ],
     },

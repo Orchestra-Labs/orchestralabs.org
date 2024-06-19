@@ -19,6 +19,21 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '4',
+    label: "Symphony's Approach",
+    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+  },
+  {
+    id: '5',
+    label: "Symphony's Impact",
+    href: ROUTES.DOCUMENTATION.SYMPHONY_IMPACT,
+  },
+  {
+    id: '6',
+    label: 'Size of the Opportunity',
+    href: ROUTES.DOCUMENTATION.SIZE_OF_OPPORTUNITY,
+  },
+  {
+    id: '7',
     label: 'Users',
     href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
     subList: [
