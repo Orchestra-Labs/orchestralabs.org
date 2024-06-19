@@ -14,8 +14,8 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '3',
-    label: 'Competing Stablecoins',
-    href: ROUTES.DOCUMENTATION.COMPETING_STABLECOINS,
+    label: 'The Stablecoin Trilemma',
+    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
   },
   {
     id: '4',

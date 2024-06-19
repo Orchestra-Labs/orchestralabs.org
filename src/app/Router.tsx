@@ -9,7 +9,6 @@ import {
   AllTokens,
   AllTransactions,
   BlockDetails,
-  CompetingStablecoins,
   CreateWallet,
   DocumentationOverview,
   ExplorerMain,
@@ -17,6 +16,7 @@ import {
   PasswordRecovery,
   SignIn,
   SignUp,
+  TheStablecoinTrilemma,
   TransactionDetails,
   UserOverview,
   Whitepaper,
@@ -51,8 +51,8 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <WhyDecentralizedRWAs />,
         },
         {
-          path: ROUTES.DOCUMENTATION.COMPETING_STABLECOINS,
-          element: <CompetingStablecoins />,
+          path: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+          element: <TheStablecoinTrilemma />,
         },
         {
           path: ROUTES.DOCUMENTATION.USERS.ROOT,

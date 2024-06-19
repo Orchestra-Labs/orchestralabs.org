@@ -60,6 +60,12 @@ const SYMPHONY_INFO_LINKS: NavItem[] = [
     description: 'Why Symphony was made',
     href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
   },
+  {
+    id: '2',
+    label: 'The Stablecoin Trilemma',
+    description: 'The challenges of stablecoin design',
+    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+  },
 ];
 
 const USER_DOCUMENTATION_LINKS: NavItem[] = [

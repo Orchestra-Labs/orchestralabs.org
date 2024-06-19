@@ -9,16 +9,16 @@ import cryptoBackedStablecoins from '../../../assets/images/crypto-backed-stable
 
 const HEADINGS = {
   1: {
-    id: 'the-stablecoin-trilemma',
-    label: 'The Stablecoin Trilemma',
+    id: 'about-the-trilemma',
+    label: 'About the Trilemma',
   },
   2: {
-    id: 'challenges-of-centralization',
-    label: 'Challenges of Centralization',
+    id: 'fragility-of-centralization',
+    label: 'Fragility of Centralization',
   },
   3: {
-    id: 'fragility-of-decentralization',
-    label: 'Fragility of Decentralization',
+    id: 'challenges-of-decentralization',
+    label: 'Challenges of Decentralization',
   },
   4: {
     id: 'the-solution',
@@ -49,13 +49,13 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-export const CompetingStablecoins = () => (
+export const TheStablecoinTrilemma = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Competing Stablecoins
+          The Stablecoin Trilemma
         </h1>
         <p className="mt-10">
           Stablecoins are the single most important instrument in crypto. All
@@ -90,7 +90,7 @@ export const CompetingStablecoins = () => (
             alt="Stablecoin Trilemma"
           />
           <p className="mt-5">
-            Until today, every stablecoin has to balance three main goals. The
+            Until today, every stablecoin had to balance three main goals. The
             main target and purpose of a stablecoin are to hold a stable value
             pegged to the value of another asset, such as a fiat currency. This
             price stability can be achieved through different price-stability
@@ -160,10 +160,9 @@ export const CompetingStablecoins = () => (
           </h2>
           <p className="mt-5">
             Decentralized stablecoins address the trilemma by focusing on
-            decentralization, often at the expense of price stability and
-            capital efficiency. These stablecoins, which do not rely on
-            traditional banking or financial infrastructure, have faced their
-            own issues:
+            decentralization, often at the expense of capital efficiency or
+            price stability. These stablecoins, which do not rely on traditional
+            banking or financial infrastructure, have faced their own issues:
             <ul className="list-disc pl-5">
               <img
                 className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
@@ -183,8 +182,9 @@ export const CompetingStablecoins = () => (
               />
               <li className="mt-4">
                 Algorithmic stablecoins encounter challenges with mechanism
-                design, proving to be inherently fragile and unstable. Often
-                these have resulted in runaway inflation.
+                design, and have previously proven to be fragile and unstable.
+                The common problem in these has been runaway inflation,
+                negatively affecting price stability.
               </li>
             </ul>
           </p>
