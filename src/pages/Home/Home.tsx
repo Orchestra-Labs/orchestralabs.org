@@ -11,9 +11,9 @@ import {
 } from '@/sections';
 import { InfoRowsSection } from '@/sections/InfoRowsSection';
 
-import image1 from '../../assets/images/info-image1.png';
-import image2 from '../../assets/images/info-image2.png';
-import image3 from '../../assets/images/info-image3.png';
+import image1 from '@/assets/images/info-image1.png';
+import image2 from '@/assets/images/info-image2.png';
+import image3 from '@/assets/images/info-image3.png';
 import { ROUTES } from '@/config/routes';
 
 const BENEFITS_ROWS = [
@@ -68,7 +68,7 @@ const FEATURED_LINKS_ROWS = [
 ];
 
 const FEATURED_SECTION_TITLE =
-  'Experience the true potential of stablecoins with Symphony.';
+  'Experience the true potential of tokenization with Symphony.';
 
 export const Home = () => (
   <div>

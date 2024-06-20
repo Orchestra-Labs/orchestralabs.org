@@ -2,23 +2,23 @@ import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
 
-// import stablecoinTrilemma from '../../../assets/images/stablecoin-trilemma.png';
-// import fiatBackedStablecoins from '../../../assets/images/fiat-backed-stablecoins.png';
-// import algorithmicStablecoins from '../../../assets/images/algorithmic-stablecoins.png';
-// import cryptoBackedStablecoins from '../../../assets/images/crypto-backed-stablecoins.png';
+import stablecoinTrilemma from '@/assets/images/stablecoin-trilemma.png';
+import fiatBackedStablecoins from '@/assets/images/fiat-backed-stablecoins.png';
+import algorithmicStablecoins from '@/assets/images/algorithmic-stablecoins.png';
+import cryptoBackedStablecoins from '@/assets/images/crypto-backed-stablecoins.png';
 
 const HEADINGS = {
   1: {
-    id: 'the-stablecoin-trilemma',
-    label: 'The Stablecoin Trilemma',
+    id: 'about-the-trilemma',
+    label: 'About the Trilemma',
   },
   2: {
-    id: 'challenges-of-centralization',
-    label: 'Challenges of Centralization',
+    id: 'fragility-of-centralization',
+    label: 'Fragility of Centralization',
   },
   3: {
-    id: 'fragility-of-decentralization',
-    label: 'Fragility of Decentralization',
+    id: 'challenges-of-decentralization',
+    label: 'Challenges of Decentralization',
   },
   4: {
     id: 'the-solution',
@@ -49,13 +49,13 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-export const CompetingStablecoins = () => (
+export const TheStablecoinTrilemma = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Competing Stablecoins
+          The Stablecoin Trilemma
         </h1>
         <p className="mt-10">
           Stablecoins are the single most important instrument in crypto. All
@@ -84,8 +84,13 @@ export const CompetingStablecoins = () => (
             available to use while all of them just provide the utility of being
             a (relatively) stable cryptocurrency.
           </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[355px] section-container mt-4"
+            src={stablecoinTrilemma}
+            alt="Stablecoin Trilemma"
+          />
           <p className="mt-5">
-            Until today, every stablecoin has to balance three main goals. The
+            Until today, every stablecoin had to balance three main goals. The
             main target and purpose of a stablecoin are to hold a stable value
             pegged to the value of another asset, such as a fiat currency. This
             price stability can be achieved through different price-stability
@@ -94,14 +99,13 @@ export const CompetingStablecoins = () => (
             decentralization of the system or its capital efficiency.
           </p>
           <p className="mt-5">
-            The
             <Link
               to="https://stablecoins.wtf/resources/the-stablecoin-trillema"
               target="_blank"
-              className="text-blue hover:text-blue-darker"
+              className="text-blue hover:text-blue-darker underline"
             >
-              {' stablecoin trilemma '}
-            </Link>
+              The stablecoin trilemma
+            </Link>{' '}
             refers to the challenge of achieving three key properties in a
             single stablecoin:
             <ul className="list-disc pl-5">
@@ -116,17 +120,17 @@ export const CompetingStablecoins = () => (
               <li>Decentralization: Operating in a decentralized manner.</li>
             </ul>
             Achieving all three simultaneously has proven difficult.
-            {/* <img
-              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={stablecoinTrilemma}
-              alt="Stablecoin Trilemma"
-            /> */}
           </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={fiatBackedStablecoins}
+            alt="Fiat Backed Stablecoins"
+          />
           <p className="mt-5">
             Centralized stablecoins address the stablecoin trilemma by
             compromising on decentralization. Stablecoins dependent on
@@ -147,11 +151,6 @@ export const CompetingStablecoins = () => (
                 depeg to users.
               </li>
             </ul>
-            {/* <img
-              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={fiatBackedStablecoins}
-              alt="Fiat Backed Stablecoins"
-            /> */}
           </p>
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
@@ -160,31 +159,32 @@ export const CompetingStablecoins = () => (
           </h2>
           <p className="mt-5">
             Decentralized stablecoins address the trilemma by focusing on
-            decentralization, often at the expense of price stability and
-            capital efficiency. These stablecoins, which do not rely on
-            traditional banking or financial infrastructure, have faced several
-            issues:
+            decentralization, often at the expense of capital efficiency or
+            price stability. These stablecoins, which do not rely on traditional
+            banking or financial infrastructure, have faced their own issues:
             <ul className="list-disc pl-5">
-              <li>
-                Overcollateralized stablecoins sacrifice capital efficiency,
-                introducing a high up-front cost to users, which dissuades use.
-                These will often auto-sell users when the price of the
-                collateral drops.
-                {/* <img
-                  className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-                  src={cryptoBackedStablecoins}
-                  alt="Crypto Backed Stablecoins"
-                /> */}
+              <img
+                className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+                src={cryptoBackedStablecoins}
+                alt="Crypto Backed Stablecoins"
+              />
+              <li className="mt-4">
+                Crypto-backed stablecoins, also known as overcollateralized
+                stablecoins, sacrifice capital efficiency, introducing a high
+                up-front cost to users, which dissuades use. These
+                overcollateralized stablecoins, such as DAI, will often
+                auto-sell users when the price of the collateral drops.
               </li>
-              <li>
-                Algorithmic stablecoins encounter challenges with mechanism
-                design, proving to be inherently fragile and unstable. Often
-                these have resulted in runaway inflation.
-                {/* <img
-                  className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-                  src={algorithmicStablecoins}
-                  alt="Algorithmic Stablecoins"
-                /> */}
+              <img
+                className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+                src={algorithmicStablecoins}
+                alt="Algorithmic Stablecoins"
+              />
+              <li className="mt-4">
+                Algorithmic stablecoins face significant challenges with their
+                mechanism design. The most well-known example, UST, demonstrated
+                how these can be fragile and unstable. A common issue has been
+                runaway inflation, which undermines price stability.
               </li>
             </ul>
           </p>

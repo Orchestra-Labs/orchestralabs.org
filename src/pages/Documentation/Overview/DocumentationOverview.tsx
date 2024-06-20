@@ -16,10 +16,6 @@ const HEADINGS = {
     label: 'Development Modules',
   },
   4: {
-    id: 'foundational-topics',
-    label: 'Foundational Topics',
-  },
-  5: {
     id: 'symphony-stack',
     label: 'Symphony Stack',
   },
@@ -46,11 +42,6 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[4].label,
     href: `#${HEADINGS[4].id}`,
   },
-  {
-    id: '5',
-    label: HEADINGS[5].label,
-    href: `#${HEADINGS[5].id}`,
-  },
 ];
 
 const SYMPHONY_INFO_LINKS: NavItem[] = [
@@ -59,6 +50,30 @@ const SYMPHONY_INFO_LINKS: NavItem[] = [
     label: 'Why Decentralized RWAs',
     description: 'Why Symphony was made',
     href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
+  },
+  {
+    id: '2',
+    label: 'The Stablecoin Trilemma',
+    description: 'The challenges of stablecoin design',
+    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+  },
+  {
+    id: '3',
+    label: "Symphony's Approach",
+    description: 'How Symphony solves the stablecoin trilemma',
+    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+  },
+  {
+    id: '4',
+    label: "Symphony's Impact",
+    description: "How Symphony's introduction affects the market",
+    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+  },
+  {
+    id: '5',
+    label: 'Size of the Opportunity',
+    description: "Market sizes of Symphony's areas of impact",
+    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
   },
 ];
 
@@ -122,12 +137,6 @@ export const DocumentationOverview = () => (
         <div id={HEADINGS[4].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[4].label}
-          </h2>
-          <ListLinks listLinks={PLACEHOLDER_LINKS} />
-        </div>
-        <div id={HEADINGS[5].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[5].label}
           </h2>
           <ListLinks listLinks={PLACEHOLDER_LINKS} />
         </div>

@@ -9,7 +9,6 @@ import {
   AllTokens,
   AllTransactions,
   BlockDetails,
-  CompetingStablecoins,
   CreateWallet,
   DocumentationOverview,
   ExplorerMain,
@@ -17,6 +16,10 @@ import {
   PasswordRecovery,
   SignIn,
   SignUp,
+  SizeOfOpportunity,
+  SymphonyImpact,
+  TheStablecoinTrilemma,
+  TheSymphonyApproach,
   TransactionDetails,
   UserOverview,
   Whitepaper,
@@ -51,8 +54,8 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <WhyDecentralizedRWAs />,
         },
         {
-          path: ROUTES.DOCUMENTATION.COMPETING_STABLECOINS,
-          element: <CompetingStablecoins />,
+          path: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+          element: <TheStablecoinTrilemma />,
         },
         {
           path: ROUTES.DOCUMENTATION.USERS.ROOT,
@@ -65,6 +68,18 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
           element: <AddSymphonyToWallet />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+          element: <TheSymphonyApproach />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.SYMPHONY_IMPACT,
+          element: <SymphonyImpact />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.SIZE_OF_OPPORTUNITY,
+          element: <SizeOfOpportunity />,
         },
       ],
     },

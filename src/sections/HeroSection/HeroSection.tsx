@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { cn } from '@/helpers';
 
-import waves2 from '../../assets/images/waves-test.svg';
+import waves2 from '@/assets/images/waves-test.svg';
 
 export const HeroSection = () => (
   <div className="min-h-screen relative">

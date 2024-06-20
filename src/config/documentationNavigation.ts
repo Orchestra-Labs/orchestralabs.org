@@ -14,12 +14,27 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '3',
-    label: 'Competing Stablecoins',
-    href: ROUTES.DOCUMENTATION.COMPETING_STABLECOINS,
+    label: 'The Stablecoin Trilemma',
+    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
   },
   {
     id: '4',
-    label: 'Users',
+    label: "Symphony's Approach",
+    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+  },
+  {
+    id: '5',
+    label: "Symphony's Impact",
+    href: ROUTES.DOCUMENTATION.SYMPHONY_IMPACT,
+  },
+  {
+    id: '6',
+    label: 'Size of the Opportunity',
+    href: ROUTES.DOCUMENTATION.SIZE_OF_OPPORTUNITY,
+  },
+  {
+    id: '7',
+    label: 'User Information',
     href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
     subList: [
       {
