@@ -99,14 +99,13 @@ export const TheStablecoinTrilemma = () => (
             decentralization of the system or its capital efficiency.
           </p>
           <p className="mt-5">
-            The
             <Link
               to="https://stablecoins.wtf/resources/the-stablecoin-trillema"
               target="_blank"
-              className="text-blue hover:text-blue-darker"
+              className="text-blue hover:text-blue-darker underline"
             >
-              {' stablecoin trilemma '}
-            </Link>
+              The stablecoin trilemma
+            </Link>{' '}
             refers to the challenge of achieving three key properties in a
             single stablecoin:
             <ul className="list-disc pl-5">

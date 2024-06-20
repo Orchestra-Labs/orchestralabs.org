@@ -68,7 +68,7 @@ const FEATURED_LINKS_ROWS = [
 ];
 
 const FEATURED_SECTION_TITLE =
-  'Experience the true potential of stablecoins with Symphony.';
+  'Experience the true potential of tokenization with Symphony.';
 
 export const Home = () => (
   <div>

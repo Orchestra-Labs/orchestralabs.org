@@ -1,18 +1,24 @@
 import { PageNavigator, SectionNavigator } from '@/components';
+import { ROUTES } from '@/config/routes';
 import { NavItem } from '@/types';
+import { Link } from 'react-router-dom';
+
+import arbitrageRebalancing from '@/assets/images/schema.png';
+import supplySideRebalancing from '@/assets/images/schema2.png';
+import elasticReserves from '@/assets/images/schema3.png';
 
 const HEADINGS = {
   1: {
     id: 'separating-from-banks',
-    label: 'Separating From Banks',
+    label: 'Algorithmic and Crypto-Backed',
   },
   2: {
     id: 'providing-yield',
-    label: 'Providing Yield',
+    label: 'The Dual-Elasticity System',
   },
   3: {
     id: 'a-reliable-trade-medium',
-    label: 'A Reliable Trade Medium',
+    label: 'Supply-side, not Price-side',
   },
 };
 
@@ -42,75 +48,70 @@ export const TheSymphonyApproach = () => (
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
           Symphony's Approach
         </h1>
-        <p className="mt-10">
-          Crypto needs to connect to the real world, whether through a base
-          money asset, real estate, or financial markets. Recent sanctions have
-          shown the world lacks a globally accessible and censorship-resistant
-          means of holding capital.
-        </p>
         <p className="mt-5">
-          Symphony addresses this need within crypto. DeFi attempts to create a
-          parallel financial system, yet stablecoins and other real-world assets
-          (RWAs), the most used part of this system, remain reliant on
-          traditional banking infrastructure. Symphony aims to provide an
-          alternative for a truly independent financial system.
+          Much as illustrated in the documentation page on{' '}
+          <Link
+            to={ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA}
+            className="text-blue hover:text-blue-darker underline"
+          >
+            the stablecoin trilemma
+          </Link>
+          {', '}
+          stablecoins of all types have had their issues. Symphony, however,
+          addresses these issues by combining the best aspects of various
+          approaches with multiple safeguards. Its dual-elasticity system is
+          both algorithmic and crypto-backed, while focusing on supply-side
+          solutions rather than price-side patches.
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            A functional and independent financial system at scale requires a
-            stable asset not reliant on legacy banking infrastructure. Without
-            an independent and stable reserve asset, both centralized and
-            decentralized order books are inherently fragile.
+            Symphony's algorithmic nature comes into play with its initial use
+            of arbitrage rebalancing.
+            <img
+              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+              src={arbitrageRebalancing}
+              alt="Arbitrage rebalancing"
+            />
           </p>
           <p className="mt-5">
-            Centralized exchanges urgently need a reliable and transparent asset
-            for their order books. DeFi is at risk due to reliance on RWAs like
-            USDC, which can fail due to their underlying banking infrastructure,
-            as seen with USDC and Silicon Valley Bank. Reducing dependence on
-            the traditional banking system for stablecoin infrastructure is the
-            most critical issue facing crypto today.
+            This algorithmic nature is further utilized with the first of
+            Symphony's safe-guards, the override of peg once arbitrage falls off
+            by the allowable margin.
           </p>
-        </div>
-        <div id={HEADINGS[2].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[2].label}
-          </h2>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={supplySideRebalancing}
+            alt="Supply-side rebalancing"
+          />
           <p className="mt-5">
-            While US citizens have access to a $30 trillion treasury market,
-            many individuals in the rest of the world, including the crypto
-            market, cannot generate yield on a dollar-denominated means of
-            preserving capital.
+            Symphony's crypto-backed nature comes into play with the second of
+            its safeguards, triggering outside another allowable margin, and
+            utilizing the 2:1 elastic reserves. These reserves are kept at 2:1
+            at minimum. When the value of the coin rises, these reserves rise
+            past that minimum quickly and easily, making the system more secure
+            as circulating supply falls.
           </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={elasticReserves}
+            alt="Supply-side rebalancing"
+          />
           <p className="mt-5">
-            User demand for existing stablecoins is already enormous at $150
-            billion+ despite a "return-free" risk profile. A substantially
-            equivalent product that provides permissionless value accrual is the
-            largest market opportunity that crypto can provide globally,
-            surpassing volatile stores of value, fiat, or current RWA-backed
-            stablecoins.
-          </p>
-        </div>
-        <div id={HEADINGS[3].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
-          </h2>
-          <p className="mt-5">
-            The US has shown that US dollar reserves can be weaponized with
-            sanctions, driving countries towards BRICS, a new trading bloc. To
-            ensure a balanced power dynamic, this bloc must use a permissionless
-            service like blockchain for fair and stable trade. Symphony enables
-            this, allowing tokenized RWA trade to start in one currency and end
-            in another, ensuring seamless transactions.
+            The third of Symphony's safeguards is its reserve fee, taken only
+            when the reserve balance falls below a 2:1 backing against assets.
+            This allows Symphony to safeguard its assets in the unlikely case
+            the arbutrage peg falls below 50%.
           </p>
           <p className="mt-5">
-            The end of the petro-dollar will cause US dollars to flow back into
-            the US, leading to economic turmoil and bank failures. Centralized
-            stablecoins will crash, but Symphony, as a decentralized option,
-            will remain secure. Crypto needs a secure alternative, free from
-            centralized control. Crypto needs Symphony.
+            While either of the previous two safeguards would have prevented the
+            UST hyper-inflation crash, further safeguards, such as the delayed
+            transactions and partial transactions, as well as the multi-key
+            reserves, do not yet have infographics, but are also an essential
+            part of ensuring Symphony is able to maintain the reliability of its
+            tokenized assets even down to a 99% loss in value.
           </p>
         </div>
       </div>
