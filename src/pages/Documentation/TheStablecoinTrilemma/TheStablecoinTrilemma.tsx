@@ -172,7 +172,8 @@ export const TheStablecoinTrilemma = () => (
               <li className="mt-4">
                 Crypto-backed stablecoins, also known as overcollateralized
                 stablecoins, sacrifice capital efficiency, introducing a high
-                up-front cost to users, which dissuades use. These will often
+                up-front cost to users, which dissuades use. These
+                overcollateralized stablecoins, such as DAI, will often
                 auto-sell users when the price of the collateral drops.
               </li>
               <img
@@ -181,10 +182,10 @@ export const TheStablecoinTrilemma = () => (
                 alt="Algorithmic Stablecoins"
               />
               <li className="mt-4">
-                Algorithmic stablecoins encounter challenges with mechanism
-                design, and have previously proven to be fragile and unstable.
-                The common problem in these has been runaway inflation,
-                negatively affecting price stability.
+                Algorithmic stablecoins face significant challenges with their
+                mechanism design. The most well-known example, UST, demonstrated
+                how these can be fragile and unstable. A common issue has been
+                runaway inflation, which undermines price stability.
               </li>
             </ul>
           </p>
