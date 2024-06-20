@@ -3,16 +3,12 @@ import { NavItem } from '@/types';
 
 const HEADINGS = {
   1: {
-    id: 'separating-from-banks',
-    label: 'Separating From Banks',
+    id: 'improving-global-trade',
+    label: 'Improving Global Trade',
   },
   2: {
-    id: 'providing-yield',
-    label: 'Providing Yield',
-  },
-  3: {
-    id: 'a-reliable-trade-medium',
-    label: 'A Reliable Trade Medium',
+    id: 'democratizing-yield',
+    label: 'Democratizing Yield',
   },
 };
 
@@ -27,51 +23,52 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
   },
-  {
-    id: '3',
-    label: HEADINGS[3].label,
-    href: `#${HEADINGS[3].id}`,
-  },
 ];
 
+// and failures in government policy can disrupt banks and the underlying held asset.  full decentralization ensures every party always receives their value despite unilateral decisions made by centralized entities
 export const SymphonyImpact = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Symphony's Approach
+          Symphony's Impact
         </h1>
         <p className="mt-10">
-          Crypto needs to connect to the real world, whether through a base
-          money asset, real estate, or financial markets. Recent sanctions have
-          shown the world lacks a globally accessible and censorship-resistant
-          means of holding capital.
+          From the creation of Bitcoin with the financial crisis of 2008,
+          through Circle's delisting from the Silicon Valley Bank crash, to the
+          weaponization of the US dollar and subsequent dropping of that
+          currency as the petro-dollar reserve, centralized systems have proven
+          themselves unreliable.
         </p>
         <p className="mt-5">
-          Symphony addresses this need within crypto. DeFi attempts to create a
-          parallel financial system, yet stablecoins and other real-world assets
-          (RWAs), the most used part of this system, remain reliant on
-          traditional banking infrastructure. Symphony aims to provide an
-          alternative for a truly independent financial system.
+          Failures of centralized bodies to plan properly and ensure a reliable
+          system have caused trade to move away from the G7 and onto a more
+          decentralized system. Governments within BRICS should and are avoiding
+          giving any one foreign currency power over their trade systems. They
+          are moving towards trading in their own currencies, and Symphony
+          supports this.
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            A functional and independent financial system at scale requires a
-            stable asset not reliant on legacy banking infrastructure. Without
-            an independent and stable reserve asset, both centralized and
-            decentralized order books are inherently fragile.
+            Symphony's tokenization system will improve global trade by ensuring
+            secure, transparent, and efficient transactions without relying on
+            legacy banking infrastructure, which can fail due to policy changes
+            or economic instability.
           </p>
           <p className="mt-5">
-            Centralized exchanges urgently need a reliable and transparent asset
-            for their order books. DeFi is at risk due to reliance on RWAs like
-            USDC, which can fail due to their underlying banking infrastructure,
-            as seen with USDC and Silicon Valley Bank. Reducing dependence on
-            the traditional banking system for stablecoin infrastructure is the
-            most critical issue facing crypto today.
+            In the event of hyperinflation, Symphony allows assets to be quickly
+            converted to a more stable currency, preserving the value of goods
+            and protecting trade.
+          </p>
+          <p className="mt-5">
+            Decentralization ensures that all parties receive their value
+            despite unilateral decisions by centralized entities, reducing the
+            risk from government policy failures that can disrupt banks and
+            underlying assets.
           </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
@@ -79,38 +76,17 @@ export const SymphonyImpact = () => (
             {HEADINGS[2].label}
           </h2>
           <p className="mt-5">
-            While US citizens have access to a $30 trillion treasury market,
-            many individuals in the rest of the world, including the crypto
-            market, cannot generate yield on a dollar-denominated means of
-            preserving capital.
+            Symphony allows tokenized assets to be staked, providing yields
+            equivalent to native coins. This enables users in permitted
+            jurisdictions to earn yields on stablecoins similar to government
+            bonds.
           </p>
           <p className="mt-5">
-            User demand for existing stablecoins is already enormous at $150
-            billion+ despite a "return-free" risk profile. A substantially
-            equivalent product that provides permissionless value accrual is the
-            largest market opportunity that crypto can provide globally,
-            surpassing volatile stores of value, fiat, or current RWA-backed
-            stablecoins.
-          </p>
-        </div>
-        <div id={HEADINGS[3].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
-          </h2>
-          <p className="mt-5">
-            The US has shown that US dollar reserves can be weaponized with
-            sanctions, driving countries towards BRICS, a new trading bloc. To
-            ensure a balanced power dynamic, this bloc must use a permissionless
-            service like blockchain for fair and stable trade. Symphony enables
-            this, allowing tokenized RWA trade to start in one currency and end
-            in another, ensuring seamless transactions.
-          </p>
-          <p className="mt-5">
-            The end of the petro-dollar will cause US dollars to flow back into
-            the US, leading to economic turmoil and bank failures. Centralized
-            stablecoins will crash, but Symphony, as a decentralized option,
-            will remain secure. Crypto needs a secure alternative, free from
-            centralized control. Crypto needs Symphony.
+            Symphony's approach combines the stability of stablecoins with the
+            yield generation and security of government bonds. Additionally,
+            blockchain technology democratizes access, expanding the government
+            bond market, increasing revenue for traditional governments, and
+            allowing the masses to access yields.
           </p>
         </div>
       </div>
