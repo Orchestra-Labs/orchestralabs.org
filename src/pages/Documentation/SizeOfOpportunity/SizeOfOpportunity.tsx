@@ -1,7 +1,7 @@
 import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 
-import marketSize from '../../../assets/images/market-size.png';
+import marketSize from '@/assets/images/market-size.png';
 
 const HEADINGS = {
   1: {

@@ -2,10 +2,10 @@ import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
 
-import stablecoinTrilemma from '../../../assets/images/stablecoin-trilemma.png';
-import fiatBackedStablecoins from '../../../assets/images/fiat-backed-stablecoins.png';
-import algorithmicStablecoins from '../../../assets/images/algorithmic-stablecoins.png';
-import cryptoBackedStablecoins from '../../../assets/images/crypto-backed-stablecoins.png';
+import stablecoinTrilemma from '@/assets/images/stablecoin-trilemma.png';
+import fiatBackedStablecoins from '@/assets/images/fiat-backed-stablecoins.png';
+import algorithmicStablecoins from '@/assets/images/algorithmic-stablecoins.png';
+import cryptoBackedStablecoins from '@/assets/images/crypto-backed-stablecoins.png';
 
 const HEADINGS = {
   1: {

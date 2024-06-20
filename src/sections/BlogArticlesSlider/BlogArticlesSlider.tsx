@@ -8,7 +8,7 @@ import { ArrowPrev } from '@/assets/icons/ArrowPrev';
 import { ArticleSlide } from '@/sections/BlogArticlesSlider/ArticleSlide';
 import { Article, MediumArticle } from '@/types';
 
-import blogArticleDefault from '../../assets/images/blog-article-default.png';
+import blogArticleDefault from '@/assets/images/blog-article-default.png';
 
 const MEDIUM_ARTICLES_URL =
   'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@orchestra_labs';

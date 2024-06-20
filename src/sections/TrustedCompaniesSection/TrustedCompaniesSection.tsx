@@ -2,16 +2,16 @@ import { ClassValue } from 'clsx';
 
 import { cn } from '@/helpers';
 
-import evacodes from '../../assets/images/evacodes.png';
-import bloxxa from '../../assets/images/bloxxa.png';
-import google from '../../assets/images/google.png';
-import gexabyte from '../../assets/images/gexabyte.png';
-import medium from '../../assets/images/medium.png';
-import suave from '../../assets/images/suave.png';
-import swapacross from '../../assets/images/swapacross.png';
-import waitlist from '../../assets/images/waitlist.png';
-import convo_space from '../../assets/images/convo_space.png';
-import keplr from '../../assets/images/keplr.png';
+import evacodes from '@/assets/images/evacodes.png';
+import bloxxa from '@/assets/images/bloxxa.png';
+import google from '@/assets/images/google.png';
+import gexabyte from '@/assets/images/gexabyte.png';
+import medium from '@/assets/images/medium.png';
+import suave from '@/assets/images/suave.png';
+import swapacross from '@/assets/images/swapacross.png';
+import waitlist from '@/assets/images/waitlist.png';
+import convo_space from '@/assets/images/convo_space.png';
+import keplr from '@/assets/images/keplr.png';
 
 type Company = {
   id: number;

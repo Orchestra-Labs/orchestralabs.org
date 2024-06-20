@@ -1,10 +1,10 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 
-import nonNativeChainSearch from '../../../../assets/images/non-native-chain-search.png';
-import chainSearch from '../../../../assets/images/chain-search.png';
-import manageChainVisibility from '../../../../assets/images/manage-chain-visibility.png';
-import symphonyInWallet from '../../../../assets/images/symphony-in-wallet.png';
+import nonNativeChainSearch from '@/assets/images/non-native-chain-search.png';
+import chainSearch from '@/assets/images/chain-search.png';
+import manageChainVisibility from '@/assets/images/manage-chain-visibility.png';
+import symphonyInWallet from '@/assets/images/symphony-in-wallet.png';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/config/routes';
 
