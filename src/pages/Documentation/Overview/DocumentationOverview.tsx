@@ -47,15 +47,15 @@ const NAVIGATION_ITEMS: NavItem[] = [
 const SYMPHONY_INFO_LINKS: NavItem[] = [
   {
     id: '1',
-    label: 'Why Decentralized RWAs',
-    description: 'Why Symphony was made',
-    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
-  },
-  {
-    id: '2',
     label: 'The Stablecoin Trilemma',
     description: 'The challenges of stablecoin design',
     href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+  },
+  {
+    id: '2',
+    label: 'Why Decentralized RWAs',
+    description: 'Why Symphony was made',
+    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
   },
   {
     id: '3',

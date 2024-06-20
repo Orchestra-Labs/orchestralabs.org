@@ -9,13 +9,13 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '2',
-    label: 'Why Decentralized RWAS',
-    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
+    label: 'The Stablecoin Trilemma',
+    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
   },
   {
     id: '3',
-    label: 'The Stablecoin Trilemma',
-    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+    label: 'Why Decentralized RWAS',
+    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
   },
   {
     id: '4',
