@@ -1,18 +1,16 @@
 import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 
+import marketSize from '../../../assets/images/market-size.png';
+
 const HEADINGS = {
   1: {
-    id: 'separating-from-banks',
-    label: 'Separating From Banks',
+    id: 'global-bond-market',
+    label: 'Global Bond Market',
   },
   2: {
-    id: 'providing-yield',
-    label: 'Providing Yield',
-  },
-  3: {
-    id: 'a-reliable-trade-medium',
-    label: 'A Reliable Trade Medium',
+    id: 'global-trade-market',
+    label: 'Global Trade Market',
   },
 };
 
@@ -27,11 +25,6 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
   },
-  {
-    id: '3',
-    label: HEADINGS[3].label,
-    href: `#${HEADINGS[3].id}`,
-  },
 ];
 
 export const SizeOfOpportunity = () => (
@@ -40,38 +33,40 @@ export const SizeOfOpportunity = () => (
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Symphony's Approach
+          Size of the Opportunity
         </h1>
         <p className="mt-10">
-          Crypto needs to connect to the real world, whether through a base
-          money asset, real estate, or financial markets. Recent sanctions have
-          shown the world lacks a globally accessible and censorship-resistant
-          means of holding capital.
+          Providing reliable tokenized real-world assets is not only the largest
+          challenge in the space, but the largest opportunity.
         </p>
+        <img
+          className="w-3/4 max-w-[550px] mb-12.5 md:w-[45vw] md:max-w-[450px] md:mb-0 lg:w-[50vw] lg:max-w-[650px] section-container mt-4"
+          src={marketSize}
+          alt="Market Sizes"
+        />
         <p className="mt-5">
-          Symphony addresses this need within crypto. DeFi attempts to create a
-          parallel financial system, yet stablecoins and other real-world assets
-          (RWAs), the most used part of this system, remain reliant on
-          traditional banking infrastructure. Symphony aims to provide an
-          alternative for a truly independent financial system.
+          The stablecoin market is, at present, $180 billion, and stablecoins
+          make up 59% of crypto-currency transaction volume. While this does
+          make up a portion of the larger remittances market, two much larger
+          target markets exist that will also be served by Symphony's
+          introduction: global trade and global bonds.
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            A functional and independent financial system at scale requires a
-            stable asset not reliant on legacy banking infrastructure. Without
-            an independent and stable reserve asset, both centralized and
-            decentralized order books are inherently fragile.
+            Global trade, valued at $32 trillion annually, can benefit immensely
+            from Symphony's technology. Traditional trade relies heavily on
+            centralized institutions, introducing inefficiencies, delays, and
+            biased actions such as weaponization of a currency.
           </p>
           <p className="mt-5">
-            Centralized exchanges urgently need a reliable and transparent asset
-            for their order books. DeFi is at risk due to reliance on RWAs like
-            USDC, which can fail due to their underlying banking infrastructure,
-            as seen with USDC and Silicon Valley Bank. Reducing dependence on
-            the traditional banking system for stablecoin infrastructure is the
-            most critical issue facing crypto today.
+            Symphony enables businesses to send and receive different tokenized
+            assets directly, such as sending the Ruble and the recipient
+            receiving the Yuan. This directly reduces costs and removal of
+            middle-men and biased parties enhances both security and
+            reliability.
           </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
@@ -79,38 +74,16 @@ export const SizeOfOpportunity = () => (
             {HEADINGS[2].label}
           </h2>
           <p className="mt-5">
-            While US citizens have access to a $30 trillion treasury market,
-            many individuals in the rest of the world, including the crypto
-            market, cannot generate yield on a dollar-denominated means of
-            preserving capital.
-          </p>
-          <p className="mt-5">
-            User demand for existing stablecoins is already enormous at $150
-            billion+ despite a "return-free" risk profile. A substantially
-            equivalent product that provides permissionless value accrual is the
-            largest market opportunity that crypto can provide globally,
-            surpassing volatile stores of value, fiat, or current RWA-backed
-            stablecoins.
-          </p>
-        </div>
-        <div id={HEADINGS[3].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
-          </h2>
-          <p className="mt-5">
-            The US has shown that US dollar reserves can be weaponized with
-            sanctions, driving countries towards BRICS, a new trading bloc. To
-            ensure a balanced power dynamic, this bloc must use a permissionless
-            service like blockchain for fair and stable trade. Symphony enables
-            this, allowing tokenized RWA trade to start in one currency and end
-            in another, ensuring seamless transactions.
-          </p>
-          <p className="mt-5">
-            The end of the petro-dollar will cause US dollars to flow back into
-            the US, leading to economic turmoil and bank failures. Centralized
-            stablecoins will crash, but Symphony, as a decentralized option,
-            will remain secure. Crypto needs a secure alternative, free from
-            centralized control. Crypto needs Symphony.
+            The global bond market is one of the largest and most critical
+            financial markets, valued at over $100 trillion. Symphony's ability
+            to both tokenize real-world assets (RWAs) and provide yield on those
+            assets can significantly enhance liquidity and accessibility in the
+            bond market. By reducing reliance on traditional banking, the
+            Symphony chain allows for the seamless exchange of tokenized bonds,
+            improving capital efficiency and reducing settlement times. This
+            innovation can lower costs, increase transparency, and open up the
+            bond market to a broader range of participants, driving growth and
+            stability in the financial system.
           </p>
         </div>
       </div>
