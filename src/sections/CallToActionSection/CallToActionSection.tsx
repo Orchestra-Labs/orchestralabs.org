@@ -10,10 +10,10 @@ export const CallToActionSection = () => (
           Ready to get started?
         </h1>
         <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl">
-          Join our waitlist and be the first to know when we go live!
+          Buy in first through our pre-sale, and get Melody at its lowest price!
         </p>
         <Link
-          to="https://getwaitlist.com/waitlist/17116"
+          to="https://gempad.app/presale/0x2DE9296f70B82cA40BD6a1590D368586f78aC185?network=Ethereum"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
@@ -22,7 +22,7 @@ export const CallToActionSection = () => (
             'hover:bg-background-dark-grey-hover',
           )}
         >
-          Join our waitlist
+          Go to pre-sale
         </Link>
       </div>
     </div>

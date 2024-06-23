@@ -13,10 +13,11 @@ export const HeroSection = () => (
           Discover truly decentralized real-world assets
         </h1>
         <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl">
-          Releasing soon via IDO
+          {/* Releasing soon via IDO */}
+          Pre-sale starting soon
         </p>
         <Link
-          to="https://getwaitlist.com/waitlist/17116"
+          to="https://gempad.app/presale/0x2DE9296f70B82cA40BD6a1590D368586f78aC185?network=Ethereum"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
@@ -25,7 +26,7 @@ export const HeroSection = () => (
             'hover:bg-background-dark-grey-hover',
           )}
         >
-          Join our waitlist
+          Go to pre-sale
           {/* Get Started */}
         </Link>
       </div>
