@@ -2,9 +2,9 @@ import React from 'react';
 
 export const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => (
   <svg
-    width="21"
-    height="19"
-    viewBox="0 0 295 295"
+    width="19"
+    height="18"
+    viewBox="0 0 300 300"
     fill="#F2F2FA"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
