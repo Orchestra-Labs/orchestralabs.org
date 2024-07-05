@@ -9,7 +9,13 @@ export const MAIN_LAYOUT_LINKS = [
     href: ROUTES.WHITEPAPER,
   },
   { id: '2', label: 'Documentation', href: ROUTES.DOCUMENTATION.ROOT },
-  { id: '3', label: 'Explorer', href: ROUTES.EXPLORER.ROOT },
+  {
+    id: '3',
+    label: 'Explorer',
+    target: '_blank',
+    href: 'https://testnet.ping.pub/symphony',
+    // ROUTES.EXPLORER.ROOT
+  },
   {
     id: '4',
     label: 'Blogs',
