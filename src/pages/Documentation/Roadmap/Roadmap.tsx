@@ -1,48 +1,5 @@
 import { PageNavigator, SectionNavigator } from '@/components';
-import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
-
-const HEADINGS = {
-  1: {
-    id: 'about-symphony',
-    label: 'About Symphony',
-  },
-  2: {
-    id: 'user_documentation',
-    label: 'User Information',
-  },
-  3: {
-    id: 'development-modules',
-    label: 'Development Modules',
-  },
-  4: {
-    id: 'symphony-stack',
-    label: 'Symphony Stack',
-  },
-};
-
-const NAVIGATION_ITEMS: NavItem[] = [
-  {
-    id: '1',
-    label: HEADINGS[1].label,
-    href: `#${HEADINGS[1].id}`,
-  },
-  {
-    id: '2',
-    label: HEADINGS[2].label,
-    href: `#${HEADINGS[2].id}`,
-  },
-  {
-    id: '3',
-    label: HEADINGS[3].label,
-    href: `#${HEADINGS[3].id}`,
-  },
-  {
-    id: '4',
-    label: HEADINGS[4].label,
-    href: `#${HEADINGS[4].id}`,
-  },
-];
 
 export const Roadmap = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
