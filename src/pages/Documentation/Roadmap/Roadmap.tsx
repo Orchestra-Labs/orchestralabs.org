@@ -1,5 +1,4 @@
-import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { ROUTES } from '@/config/routes';
+import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
 
@@ -45,54 +44,6 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const SYMPHONY_INFO_LINKS: NavItem[] = [
-  {
-    id: '1',
-    label: 'The Stablecoin Trilemma',
-    description: 'The challenges of stablecoin design',
-    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
-  },
-  {
-    id: '2',
-    label: 'Why Decentralized RWAs',
-    description: 'Why Symphony was made',
-    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
-  },
-  {
-    id: '3',
-    label: "Symphony's Approach",
-    description: 'How Symphony solves the stablecoin trilemma',
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
-  },
-  {
-    id: '4',
-    label: "Symphony's Impact",
-    description: "How Symphony's introduction affects the market",
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
-  },
-  {
-    id: '5',
-    label: 'Size of the Opportunity',
-    description: "Market sizes of Symphony's areas of impact",
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
-  },
-];
-
-const USER_DOCUMENTATION_LINKS: NavItem[] = [
-  {
-    id: '1',
-    label: 'Create A Wallet',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
-  },
-  {
-    id: '2',
-    label: 'Add Symphony To Wallet',
-    description: 'Add Symphony to non-native wallets',
-    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
-  },
-];
-
 export const Roadmap = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
@@ -120,7 +71,7 @@ export const Roadmap = () => (
           </Link>
         </p>
       </div>
-      <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
+      <SectionNavigator navigationItems={[]} />
     </div>
   </div>
 );
