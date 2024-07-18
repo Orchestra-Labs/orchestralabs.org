@@ -22,6 +22,8 @@ export const ROUTES = {
     THE_SYMPHONY_APPROACH: `${DOCUMENTATION_ROOT}/the-symphony-approach`,
     SYMPHONY_IMPACT: `${DOCUMENTATION_ROOT}/symphony-impact`,
     SIZE_OF_OPPORTUNITY: `${DOCUMENTATION_ROOT}/size-of-opportunity`,
+    TOKENOMICS: `${DOCUMENTATION_ROOT}/tokenomics`,
+    ROADMAP: `${DOCUMENTATION_ROOT}/roadmap`,
     USERS: {
       ROOT: `${DOCUMENTATION_ROOT}${USER_EXTENSION}`,
       CREATE_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/create-wallet`,

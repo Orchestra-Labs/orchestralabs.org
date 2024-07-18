@@ -34,6 +34,16 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '7',
+    label: 'Tokenomics',
+    href: ROUTES.DOCUMENTATION.TOKENOMICS,
+  },
+  {
+    id: '8',
+    label: 'Roadmap',
+    href: ROUTES.DOCUMENTATION.ROADMAP,
+  },
+  {
+    id: '9',
     label: 'User Information',
     href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
     subList: [

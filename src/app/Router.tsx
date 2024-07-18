@@ -25,6 +25,8 @@ import {
   Whitepaper,
   WhyDecentralizedRWAs,
 } from '@/pages';
+import { Roadmap } from '@/pages/Documentation/Roadmap';
+import { Tokenomics } from '@/pages/Documentation/Tokenomics';
 
 const MainLayout = lazy(() => import('../layouts/MainLayout/MainLayout'));
 const ExplorerLayout = lazy(
@@ -80,6 +82,14 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.SIZE_OF_OPPORTUNITY,
           element: <SizeOfOpportunity />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.TOKENOMICS,
+          element: <Tokenomics />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.ROADMAP,
+          element: <Roadmap />,
         },
       ],
     },

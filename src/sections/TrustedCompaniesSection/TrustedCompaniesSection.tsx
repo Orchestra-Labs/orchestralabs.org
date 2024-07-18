@@ -83,13 +83,13 @@ const COMPANIES: Company[] = [
     logoClass: 'max-h-10',
   },
   {
-    id: 10,
+    id: 11,
     name: 'Kleomedes',
     src: kleomedes,
     logoClass: 'max-h-10',
   },
   {
-    id: 10,
+    id: 12,
     name: 'PingPub',
     src: pingpub,
     logoClass: 'max-h-10',
