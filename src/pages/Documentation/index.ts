@@ -1,3 +1,4 @@
+export * from './Developers';
 export * from './Overview';
 export * from './Roadmap';
 export * from './SizeOfOpportunity';

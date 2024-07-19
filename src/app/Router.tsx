@@ -10,6 +10,7 @@ import {
   AllTransactions,
   BlockDetails,
   CreateWallet,
+  DeveloperOverview,
   DocumentationOverview,
   ExplorerMain,
   Home,
@@ -60,18 +61,6 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <TheStablecoinTrilemma />,
         },
         {
-          path: ROUTES.DOCUMENTATION.USERS.ROOT,
-          element: <UserOverview />,
-        },
-        {
-          path: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
-          element: <CreateWallet />,
-        },
-        {
-          path: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
-          element: <AddSymphonyToWallet />,
-        },
-        {
           path: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
           element: <TheSymphonyApproach />,
         },
@@ -90,6 +79,22 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.ROADMAP,
           element: <Roadmap />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.USERS.ROOT,
+          element: <UserOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+          element: <CreateWallet />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
+          element: <AddSymphonyToWallet />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
+          element: <DeveloperOverview />,
         },
       ],
     },

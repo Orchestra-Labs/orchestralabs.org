@@ -59,4 +59,10 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
       },
     ],
   },
+  {
+    id: '10',
+    label: 'Developer Information',
+    href: `${ROUTES.DOCUMENTATION.DEVELOPERS.ROOT}`,
+    subList: [],
+  },
 ];

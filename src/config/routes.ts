@@ -1,6 +1,7 @@
 const EXPLORER_ROOT = '/explorer';
 const DOCUMENTATION_ROOT = '/documentation';
 const USER_EXTENSION = '/users';
+const DEVELOPER_EXTENSION = '/developers';
 
 export const ROUTES = {
   HOME: '/',
@@ -28,6 +29,9 @@ export const ROUTES = {
       ROOT: `${DOCUMENTATION_ROOT}${USER_EXTENSION}`,
       CREATE_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/create-wallet`,
       ADD_SYMPHONY_TO_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/add-symphony-to-wallet`,
+    },
+    DEVELOPERS: {
+      ROOT: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}`,
     },
   },
 };
