@@ -37,7 +37,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
 const DOCUMENTATION_NOTES: String[] = [
   "Symphony's prefix is 'symphony', not 'osmo'",
   "Symphony's endpoint information can be found at https://github.com/Orchestra-Labs/chain-registry/blob/master/testnets/symphonytestnet/chain.json",
-  'The liquidity pool information in the Osmosis documentation does not apply to Symphony.  Our focus is neither to support an exchange nor take their place.',
+  "Liquidity pools from the Osmosis documentation are cannot be used on Symphony.  Our focus is to support RWAs.  Osmosis's focus is to use liquidity pools for exchange management.",
 ];
 
 const ECOSYSTEM: NavItem[] = [
