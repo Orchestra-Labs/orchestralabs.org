@@ -15,6 +15,10 @@ const HEADINGS = {
     id: 'developer_documentation',
     label: 'Developer Information',
   },
+  4: {
+    id: 'startup_documentation',
+    label: 'Startup Information',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -32,6 +36,11 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '3',
     label: HEADINGS[3].label,
     href: `#${HEADINGS[3].id}`,
+  },
+  {
+    id: '4',
+    label: HEADINGS[4].label,
+    href: `#${HEADINGS[4].id}`,
   },
 ];
 
@@ -97,6 +106,8 @@ const USER_DOCUMENTATION_LINKS: NavItem[] = [
 
 const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [];
 
+const STARTUP_DOCUMENTATION_LINKS: NavItem[] = [];
+
 export const DocumentationOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
@@ -137,6 +148,12 @@ export const DocumentationOverview = () => (
             {HEADINGS[3].label}
           </h2>
           <ListLinks listLinks={DEVELOPER_DOCUMENTATION_LINKS} />
+        </div>
+        <div id={HEADINGS[4].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[4].label}
+          </h2>
+          <ListLinks listLinks={STARTUP_DOCUMENTATION_LINKS} />
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

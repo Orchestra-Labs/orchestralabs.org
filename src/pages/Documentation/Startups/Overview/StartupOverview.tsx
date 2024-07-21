@@ -1,6 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
-import { ROUTES } from '@/config/routes';
 
 const HEADINGS = {
   1: {
@@ -8,12 +7,12 @@ const HEADINGS = {
     label: 'About',
   },
   2: {
-    id: 'foundational-topics',
-    label: 'Foundational Topics',
+    id: 'notable-points',
+    label: 'Notable Points',
   },
   3: {
-    id: 'ecosystem',
-    label: 'Ecosystem',
+    id: 'notable-points',
+    label: 'Link to Osmosis',
   },
 };
 
@@ -35,47 +34,41 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const USER_DOCUMENTATION_LINKS: NavItem[] = [
-  {
-    id: '1',
-    label: 'Create A Wallet',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
-  },
-  {
-    id: '2',
-    label: 'Add Symphony To Wallet',
-    description: 'Add Symphony to non-native wallets',
-    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
-  },
+const DOCUMENTATION_NOTES: String[] = [
+  "Symphony's prefix is 'symphony', not 'osmo'",
+  "Symphony's endpoint information can be found at https://github.com/Orchestra-Labs/chain-registry/blob/master/testnets/symphonytestnet/chain.json",
+  "Liquidity pools from the Osmosis documentation are cannot be used on Symphony.  Our focus is to support RWAs.  Osmosis's focus is to use liquidity pools for exchange management.",
 ];
 
 const ECOSYSTEM: NavItem[] = [
   {
     id: '1',
-    label: 'Keplr Wallet',
+    label: 'Osmosis Documentation',
     target: '_blank',
-    href: 'https://www.keplr.app/download',
-    description: 'The Seamless Interchain Experience',
+    href: 'https://docs.osmosis.zone/',
+    description: 'Documentation from our parent chain',
   },
 ];
 
-export const UserOverview = () => (
+export const StartupOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          User Documentation
+          Startup Documentation
         </h1>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
           <p className="mt-10">
-            This documentation is designed to help you connect with Symphony. It
-            covers Symphony as a concept, explains the Symphony tech stack, and
-            documents the ecosystem.
+            Symphony, being devoted to improving the financial space both within
+            and without crypto, provides this documentation to help you get your
+            startup off the ground. It covers what you are likely to need to get
+            funding, how to get development started, and how to make sure you
+            are on the right path. All of this information is based off the path
+            we tread to get Symphony started, and is provided at no cost to you.
           </p>
           <p className="mt-4">
             This is an open-source community effort, so feel free to suggest new
@@ -83,11 +76,21 @@ export const UserOverview = () => (
             might be helpful. All documentation can be edited via GitHub.
           </p>
         </div>
+        {/* starting from an idea */}
+        {/* building and testing the proof of concept */}
+        {/* the need for advisors */}
+        {/* getting a user-base in crypto */}
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <ListLinks listLinks={USER_DOCUMENTATION_LINKS} />
+          <ul className="mt-10">
+            {DOCUMENTATION_NOTES.map(item => (
+              <div className="flex mb-4 last:mb-0">
+                <p>- {item}</p>
+              </div>
+            ))}
+          </ul>
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

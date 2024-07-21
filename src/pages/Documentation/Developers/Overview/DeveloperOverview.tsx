@@ -67,6 +67,11 @@ export const DeveloperOverview = () => (
             completes. In the meantime, please use the Osmosis documentation
             link below, as Symphony was built from Osmosis.
           </p>
+          <p className="mt-4">
+            This is an open-source community effort, so feel free to suggest new
+            topics, add new content, and provide examples wherever you think it
+            might be helpful. All documentation can be edited via GitHub.
+          </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

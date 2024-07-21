@@ -65,4 +65,10 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
     href: `${ROUTES.DOCUMENTATION.DEVELOPERS.ROOT}`,
     subList: [],
   },
+  {
+    id: '11',
+    label: 'Startup Information',
+    href: `${ROUTES.DOCUMENTATION.STARTUPS.ROOT}`,
+    subList: [],
+  },
 ];

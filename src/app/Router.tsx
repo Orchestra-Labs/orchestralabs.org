@@ -18,6 +18,7 @@ import {
   SignIn,
   SignUp,
   SizeOfOpportunity,
+  StartupOverview,
   SymphonyImpact,
   TheStablecoinTrilemma,
   TheSymphonyApproach,
@@ -95,6 +96,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
           element: <DeveloperOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.STARTUPS.ROOT,
+          element: <StartupOverview />,
         },
       ],
     },
