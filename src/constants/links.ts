@@ -14,7 +14,6 @@ export const MAIN_LAYOUT_LINKS = [
     label: 'Explorer',
     target: '_blank',
     href: 'https://testnet.ping.pub/symphony',
-    // ROUTES.EXPLORER.ROOT
   },
   {
     id: '4',

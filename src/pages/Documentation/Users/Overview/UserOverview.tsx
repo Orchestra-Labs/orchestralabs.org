@@ -8,8 +8,8 @@ const HEADINGS = {
     label: 'About',
   },
   2: {
-    id: 'foundational-topics',
-    label: 'Foundational Topics',
+    id: 'guides',
+    label: 'Guides',
   },
   3: {
     id: 'ecosystem',

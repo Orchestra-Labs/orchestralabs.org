@@ -1,4 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
+import { ROUTES } from '@/config/routes';
 import { NavItem } from '@/types';
 
 const HEADINGS = {
@@ -7,12 +8,8 @@ const HEADINGS = {
     label: 'About',
   },
   2: {
-    id: 'notable-points',
-    label: 'Notable Points',
-  },
-  3: {
-    id: 'notable-points',
-    label: 'Link to Osmosis',
+    id: 'startup-stage-guides',
+    label: 'Startup Stage Guides',
   },
 };
 
@@ -27,26 +24,14 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
   },
-  {
-    id: '3',
-    label: HEADINGS[3].label,
-    href: `#${HEADINGS[3].id}`,
-  },
 ];
 
-const DOCUMENTATION_NOTES: String[] = [
-  "Symphony's prefix is 'symphony', not 'osmo'",
-  "Symphony's endpoint information can be found at https://github.com/Orchestra-Labs/chain-registry/blob/master/testnets/symphonytestnet/chain.json",
-  "Liquidity pools from the Osmosis documentation are cannot be used on Symphony.  Our focus is to support RWAs.  Osmosis's focus is to use liquidity pools for exchange management.",
-];
-
-const ECOSYSTEM: NavItem[] = [
+const SYMPHONY_INFO_LINKS: NavItem[] = [
   {
     id: '1',
-    label: 'Osmosis Documentation',
-    target: '_blank',
-    href: 'https://docs.osmosis.zone/',
-    description: 'Documentation from our parent chain',
+    label: 'The Idea Stage',
+    description: 'Deciding what business to make',
+    href: ROUTES.DOCUMENTATION.STARTUPS.INCEPTION,
   },
 ];
 
@@ -76,27 +61,11 @@ export const StartupOverview = () => (
             might be helpful. All documentation can be edited via GitHub.
           </p>
         </div>
-        {/* starting from an idea */}
-        {/* building and testing the proof of concept */}
-        {/* the need for advisors */}
-        {/* getting a user-base in crypto */}
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <ul className="mt-10">
-            {DOCUMENTATION_NOTES.map(item => (
-              <div className="flex mb-4 last:mb-0">
-                <p>- {item}</p>
-              </div>
-            ))}
-          </ul>
-        </div>
-        <div id={HEADINGS[3].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
-          </h2>
-          <ListLinks listLinks={ECOSYSTEM} />
+          <ListLinks listLinks={SYMPHONY_INFO_LINKS} />
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

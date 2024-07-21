@@ -29,6 +29,10 @@ import {
 } from '@/pages';
 import { Roadmap } from '@/pages/Documentation/Roadmap';
 import { Tokenomics } from '@/pages/Documentation/Tokenomics';
+import { Inception } from '@/pages/Documentation/Startups/Inception';
+import { Development } from '@/pages/Documentation/Startups/Development';
+import { Expansion } from '@/pages/Documentation/Startups/Expansion';
+import { Stabilization } from '@/pages/Documentation/Startups/Stabilization';
 
 const MainLayout = lazy(() => import('../layouts/MainLayout/MainLayout'));
 const ExplorerLayout = lazy(
@@ -100,6 +104,22 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.STARTUPS.ROOT,
           element: <StartupOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.STARTUPS.INCEPTION,
+          element: <Inception />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.STARTUPS.DEVELOPMENT,
+          element: <Development />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.STARTUPS.EXPANSION,
+          element: <Expansion />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION,
+          element: <Stabilization />,
         },
       ],
     },

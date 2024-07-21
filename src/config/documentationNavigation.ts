@@ -69,6 +69,27 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
     id: '11',
     label: 'Startup Information',
     href: `${ROUTES.DOCUMENTATION.STARTUPS.ROOT}`,
-    subList: [],
+    subList: [
+      {
+        id: '1',
+        label: 'Inception',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.INCEPTION}`,
+      },
+      {
+        id: '2',
+        label: 'Development',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.DEVELOPMENT}`,
+      },
+      {
+        id: '3',
+        label: 'Expansion',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.EXPANSION}`,
+      },
+      {
+        id: '4',
+        label: 'Stabilization',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION}`,
+      },
+    ],
   },
 ];
