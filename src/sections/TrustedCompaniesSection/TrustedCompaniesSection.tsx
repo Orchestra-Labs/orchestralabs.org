@@ -105,7 +105,7 @@ const COMPANIES: Company[] = [
   },
   {
     id: 14,
-    name: 'Interchain Info',
+    name: 'Nodes Hub',
     src: nodeshub,
     logoClass: 'max-h-10',
   },
