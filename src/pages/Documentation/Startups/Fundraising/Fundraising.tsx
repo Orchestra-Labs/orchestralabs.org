@@ -39,21 +39,25 @@ const NAVIGATION_ITEMS: NavItem[] = [
 const fundingLinks = [
   {
     label: 'Signal.nfx',
+    target: '_blank',
     href: 'https://signal.nfx.com',
     description: 'A platform for finding and connecting with investors.',
   },
   {
     label: 'F6S',
+    target: '_blank',
     href: 'https://www.f6s.com',
     description: 'A network of startup programs and investors.',
   },
   {
     label: 'OpenVC',
+    target: '_blank',
     href: 'https://openvc.app',
     description: 'A directory of venture capital firms with open applications.',
   },
   {
     label: 'Buidl.so',
+    target: '_blank',
     href: 'https://buidl.so',
     description: 'A community and resource hub for blockchain startups.',
   },
@@ -98,6 +102,19 @@ export const Fundraising = () => (
               </li>
             </ul>
           </p>
+          <p className="mt-5">
+            <strong>Tip:</strong> Some fundraising sites, like YCombinator,
+            provide example documents for the post-money safe for US and/or
+            Non-US companies. You can find YCombinator's version of these files{' '}
+            <Link
+              to="https://www.ycombinator.com/documents"
+              target="_blank"
+              className="text-blue hover:text-blue-darker underline"
+            >
+              here
+            </Link>
+            .
+          </p>
         </div>
 
         <div id={HEADINGS[2].id} className="mt-15">
@@ -112,6 +129,7 @@ export const Fundraising = () => (
                 <p>
                   <Link
                     to={ROUTES.DOCUMENTATION.STARTUPS.INCEPTION}
+                    target="_blank"
                     className="text-blue hover:text-blue-darker underline"
                   >
                     Inception
@@ -125,6 +143,7 @@ export const Fundraising = () => (
                 <p>
                   <Link
                     to={ROUTES.DOCUMENTATION.STARTUPS.DEVELOPMENT}
+                    target="_blank"
                     className="text-blue hover:text-blue-darker underline"
                   >
                     Development
@@ -138,6 +157,7 @@ export const Fundraising = () => (
                 <p>
                   <Link
                     to={ROUTES.DOCUMENTATION.STARTUPS.EXPANSION}
+                    target="_blank"
                     className="text-blue hover:text-blue-darker underline"
                   >
                     Expansion
@@ -151,6 +171,7 @@ export const Fundraising = () => (
                 <p>
                   <Link
                     to={ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION}
+                    target="_blank"
                     className="text-blue hover:text-blue-darker underline"
                   >
                     Stabilization
@@ -173,7 +194,7 @@ export const Fundraising = () => (
                 <li key={index}>
                   <Link
                     to={item.href}
-                    target="_blank"
+                    target={item.target}
                     className="text-blue hover:text-blue-darker underline"
                   >
                     {item.label}
