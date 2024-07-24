@@ -17,6 +17,7 @@ import kleomedes from '@/assets/images/kleomedes.png';
 import gempad from '@/assets/images/gempad.png';
 import nodeshub from '@/assets/images/nodeshub.png';
 import interchaininfo from '@/assets/images/interchaininfo.png';
+import buidl from '@/assets/images/buidl.png';
 
 type Company = {
   id: number;
@@ -113,6 +114,12 @@ const COMPANIES: Company[] = [
     id: 15,
     name: 'Interchain Info',
     src: interchaininfo,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 16,
+    name: 'Buidl',
+    src: buidl,
     logoClass: 'max-h-10',
   },
 ];
