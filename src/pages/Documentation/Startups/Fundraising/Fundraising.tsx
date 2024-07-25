@@ -13,8 +13,12 @@ const HEADINGS = {
     label: 'Fundraising Stages',
   },
   3: {
-    id: 'funding-links',
-    label: 'Funding Links',
+    id: 'investor-platforms',
+    label: 'Investor Platforms',
+  },
+  4: {
+    id: 'launchpads',
+    label: 'Launchpads',
   },
 };
 
@@ -34,9 +38,14 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[3].label,
     href: `#${HEADINGS[3].id}`,
   },
+  {
+    id: '4',
+    label: HEADINGS[4].label,
+    href: `#${HEADINGS[4].id}`,
+  },
 ];
 
-const fundingLinks = [
+const INVESTOR_PLATFORMS = [
   {
     label: 'Signal.nfx',
     target: '_blank',
@@ -60,6 +69,21 @@ const fundingLinks = [
     target: '_blank',
     href: 'https://buidl.so',
     description: 'A community and resource hub for blockchain startups.',
+  },
+];
+
+const LAUNCHPADS = [
+  {
+    label: 'GemPad',
+    target: '_blank',
+    href: 'https://gempad.app/presale/all',
+    description: 'A multi-chain launchpad & crowdfund platform.',
+  },
+  {
+    label: 'SolSale',
+    target: '_blank',
+    href: 'https://solsale.app/presale/all',
+    description: 'A decentralized Solana launchpad without limits!',
   },
 ];
 
@@ -188,9 +212,34 @@ export const Fundraising = () => (
             {HEADINGS[3].label}
           </h2>
           <p className="mt-5">
-            For those seeking funding, the following sources can be invaluable:
+            The following sources show investors for multiple stages of
+            investment, from angels to later series investments:
             <ul className="list-disc ml-5 mt-2">
-              {fundingLinks.map((item, index) => (
+              {INVESTOR_PLATFORMS.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
+                    target={item.target}
+                    className="text-blue hover:text-blue-darker underline"
+                  >
+                    {item.label}
+                  </Link>{' '}
+                  - {item.description}
+                </li>
+              ))}
+            </ul>
+          </p>
+        </div>
+
+        <div id={HEADINGS[4].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[4].label}
+          </h2>
+          <p className="mt-5">
+            For those with a good userbase already, these launchpads may help
+            with funding:
+            <ul className="list-disc ml-5 mt-2">
+              {LAUNCHPADS.map((item, index) => (
                 <li key={index}>
                   <Link
                     to={item.href}

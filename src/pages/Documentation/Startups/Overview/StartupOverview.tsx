@@ -8,8 +8,12 @@ const HEADINGS = {
     label: 'About',
   },
   2: {
-    id: 'startup-stage-guides',
-    label: 'Startup Stage Guides',
+    id: 'startup-guides-by-stage',
+    label: 'Startup Guides by Stage',
+  },
+  3: {
+    id: 'how-symphony-can-help',
+    label: 'How Symphony can Help',
   },
 };
 
@@ -24,14 +28,49 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
   },
+  {
+    id: '3',
+    label: HEADINGS[3].label,
+    href: `#${HEADINGS[3].id}`,
+  },
 ];
 
 const SYMPHONY_INFO_LINKS: NavItem[] = [
   {
     id: '1',
-    label: 'The Idea Stage',
-    description: 'Deciding what business to make',
+    label: 'Inception',
+    description: 'Forming and validating your idea',
     href: ROUTES.DOCUMENTATION.STARTUPS.INCEPTION,
+  },
+  {
+    id: '2',
+    label: 'Development',
+    description: 'Forming and validating your idea',
+    href: ROUTES.DOCUMENTATION.STARTUPS.INCEPTION,
+  },
+  {
+    id: '3',
+    label: 'Expansion',
+    description: 'Launching and growing your business',
+    href: ROUTES.DOCUMENTATION.STARTUPS.EXPANSION,
+  },
+  {
+    id: '4',
+    label: 'Stabilization',
+    description: 'What to do as an established business after growth',
+    href: ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION,
+  },
+  {
+    id: '5',
+    label: 'Advisors',
+    description: 'Those with knowledge to guide you on your path',
+    href: ROUTES.DOCUMENTATION.STARTUPS.ADVISORS,
+  },
+  {
+    id: '6',
+    label: 'Fundraising',
+    description: 'Sources of investment to accelerate your business',
+    href: ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING,
   },
 ];
 
@@ -66,6 +105,18 @@ export const StartupOverview = () => (
             {HEADINGS[2].label}
           </h2>
           <ListLinks listLinks={SYMPHONY_INFO_LINKS} />
+        </div>
+        <div id={HEADINGS[3].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[3].label}
+          </h2>
+          <p className="mt-4">
+            Currently, all we can offer is information. Process, advisors, and
+            fundraising sources can all be found in the guides linked to the
+            left. In the future, however, Symphony will have grant programs for
+            those building apps on Symphony. Be sure to check us out for that
+            soon after launch!
+          </p>
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

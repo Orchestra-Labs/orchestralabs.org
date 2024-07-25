@@ -1,23 +1,14 @@
 import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 
-import keplrDownload from '@/assets/images/keplr-download.png';
-import addPassword from '@/assets/images/add-password.png';
-import initialWalletSearch from '@/assets/images/initial-wallet-search.png';
-import createNewWallet from '@/assets/images/create-new-wallet.png';
-import createWalletOptions from '@/assets/images/create-wallet-options.png';
-import playStoreInstallation from '@/assets/images/play-store-installation.png';
-import { Link } from 'react-router-dom';
-import { ROUTES } from '@/config/routes';
-
 const HEADINGS = {
   1: {
-    id: 'conceptualization',
-    label: 'Conceptualization',
+    id: 'prototyping',
+    label: 'Prototyping',
   },
   2: {
-    id: 'validation',
-    label: 'Validation',
+    id: 'building',
+    label: 'Building',
   },
 };
 
@@ -40,99 +31,109 @@ export const Development = () => (
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Forming Your Idea
+          Development
         </h1>
         <p className="mt-10">
-          The first step with any startup is forming the idea. A walkthrough for
-          this is below.
+          After forming and validating the idea, the next step is
+          implementation. A guide for this is below, as split into two phases:
+          prototyping and building.
+        </p>
+        {/* TODO: link to fundraising page here */}
+        <p className="mt-5">
+          If you are not a developer, it is at this point you will need funding.
+          This can come from personal funds or friends and family, but if you
+          have a team and advisors, you can try one of the following:
+          <ul className="list-disc ml-5 mt-2">
+            <li>Incubators</li>
+            <li>Accelerators</li>
+            <li>Angel Investors</li>
+          </ul>
+        </p>
+        <p className="mt-5">
+          If you are a developer, then while you may have to learn a new
+          development language or method, you can hold fundraising off until the
+          building stage.
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            While the links to all connected wallets and chain searches can be
-            found below, due to Symphony being considered a non-native chain to
-            Keplr, the Keplr Wallet link is also included here:
-          </p>
-          <p>
-            {'- '}
-            <Link
-              to="https://www.keplr.app/download"
-              target="_blank"
-              className="text-blue hover:text-blue-darker underline mr-1"
-            >
-              Keplr Wallet
-            </Link>
+            Develop a proof of concept (POC) to test core functionalities. The
+            POC should be able to demonstrate the key features and potential of
+            your blockchain solution.
           </p>
           <p className="mt-5">
-            If you are setting up Keplr for the first time: In the initial
-            pop-up window, choose the install button corresponding to your
-            browser or nobile system.
+            <strong>Steps:</strong>
+            <ul className="list-disc ml-5 mt-2">
+              <li>
+                Define the core features and functionalities of your concept.
+              </li>
+              <li>
+                Identify the best language, environment, and/or tools to address
+                these features and functions.
+              </li>
+              <li>
+                Develop the POC with a focus on demonstrability of your
+                solution.
+              </li>
+              <li>Conduct initial testing to identify and fix bugs.</li>
+              <li>
+                Gather user feedback (this can be your own) to refine the POC.
+              </li>
+            </ul>
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={keplrDownload}
-            alt="Keplr download"
-          />
-          <p className="mt-5">Install the wallet.</p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={playStoreInstallation}
-            alt="Play store installation"
-          />
           <p className="mt-5">
-            Open the application and select to create a wallet.
+            A refined POC may or may not be approaching an MVP, but regardless,
+            it will be good to have to be able to demo your solution. Gather
+            test data and make your demo available to others to prove your
+            solution works. This will be useful later when trying to get funding
+            or to gain assistance from others with bringing your product to
+            market.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={createNewWallet}
-            alt="Create new wallet"
-          />
           <p className="mt-5">
-            Keplr has options to create a wallet via a recovery phrase or via a
-            social ID registration. Using a recovery phrase is recommended for
-            security. Newer users may opt for connecting via social ID.
+            <strong>Tip:</strong> Focus on creating a functional POC that
+            addresses the core problem. Ensure that the POC is easy to use and
+            showcases the unique value of your solution.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={createWalletOptions}
-            alt="Create wallet options"
-          />
-          <p className="mt-5">
-            Keplr wallets require a name for wallet management, and a password
-            to keep the wallet secure. Enter these values and proceed to the
-            next step.
-          </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={addPassword}
-            alt="Add password"
-          />
-          <p className="mt-5">
-            Initially, Symphony will not show in the search, as it is a
-            non-native chain to Keplr. To add Symphony to this wallet, follow
-            the documentation on how included here:
-          </p>
-          <p>
-            {'- '}
-            <Link
-              to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
-              className="text-blue hover:text-blue-darker underline mr-1"
-            >
-              Add Symphony To A Wallet
-            </Link>
-          </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={initialWalletSearch}
-            alt="Info row"
-          />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
+          <p className="mt-5">
+            <strong>Description:</strong> Developing the final blockchain
+            product and preparing for deployment. This stage involves scaling up
+            development efforts, enhancing the product based on MVP feedback,
+            and ensuring readiness for a wider launch.
+          </p>
+          <p className="mt-5">
+            <strong>Steps:</strong>
+            <ul className="list-disc ml-5 mt-2">
+              <li>Expand your development team to accelerate progress.</li>
+              <li>
+                Enhance and optimize the blockchain infrastructure for
+                scalability and security.
+              </li>
+              <li>
+                Conduct thorough testing, including security audits and
+                performance benchmarks.
+              </li>
+              <li>Prepare comprehensive documentation and user guides.</li>
+              <li>
+                Plan and execute a marketing strategy for the product launch.
+              </li>
+            </ul>
+          </p>
+          <p className="mt-5">
+            <strong>Funding:</strong> Series A funding to scale product
+            development and expand the team.
+          </p>
+          <p className="mt-5">
+            <strong>Tip:</strong> Establish a robust development team and ensure
+            your blockchain infrastructure is secure and scalable. Pay attention
+            to user experience and support to facilitate smooth adoption.
+          </p>
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
