@@ -215,8 +215,15 @@ export const Fundraising = () => (
             <strong>Tip:</strong> The above is based on theory, and matches what
             you will find from most sources. In practice, all of the above
             require traction, unless you have some connection to the fund or
-            successful entrepreneurs. This is one reason why having advisors may
-            help at those early stages.
+            successful entrepreneurs. This is one reason why having{' '}
+            <Link
+              to={ROUTES.DOCUMENTATION.STARTUPS.ADVISORS}
+              target="_blank"
+              className="text-blue hover:text-blue-darker underline"
+            >
+              advisors
+            </Link>{' '}
+            may help at those early stages.
           </p>
         </div>
 
