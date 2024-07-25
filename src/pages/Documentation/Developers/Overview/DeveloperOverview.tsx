@@ -38,6 +38,7 @@ const DOCUMENTATION_NOTES: String[] = [
   "Symphony's prefix is 'symphony', not 'osmo'",
   "Symphony's endpoint information can be found at https://github.com/Orchestra-Labs/chain-registry/blob/master/testnets/symphonytestnet/chain.json",
   "Liquidity pools from the Osmosis documentation are cannot be used on Symphony.  Our focus is to support RWAs.  Osmosis's focus is to use liquidity pools for exchange management.",
+  'The snapshot and add book are both updated every 3 hours',
 ];
 
 const ECOSYSTEM: NavItem[] = [
@@ -46,7 +47,42 @@ const ECOSYSTEM: NavItem[] = [
     label: 'Osmosis Documentation',
     target: '_blank',
     href: 'https://docs.osmosis.zone/',
-    description: 'Documentation from our parent chain',
+    description: 'Code documentation from our parent chain',
+  },
+  {
+    id: '2',
+    label: 'Validator Installation Guide',
+    target: '_blank',
+    href: 'https://services.nodeshub.online/testnet-networks/symphony',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '3',
+    label: 'NodesHub explorer',
+    target: '_blank',
+    href: 'https://testnet.explorer.nodeshub.online/symphony',
+    description: 'An explorer from one of our supporting validators',
+  },
+  {
+    id: '3',
+    label: 'Ping.pub explorer',
+    target: '_blank',
+    href: 'https://testnet.ping.pub/symphony',
+    description: 'An explorer from one of our supporting validators',
+  },
+  {
+    id: '4',
+    label: 'Snapshot',
+    target: '_blank',
+    href: 'https://files.nodeshub.online/testnet/symphony/snapshot/symphony_snap.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '5',
+    label: 'Genesis, Add Book',
+    target: '_blank',
+    href: 'https://files.nodeshub.online/testnet/symphony/',
+    description: 'The JSON and address book needed to start a node',
   },
 ];
 
@@ -64,8 +100,14 @@ export const DeveloperOverview = () => (
           </h2>
           <p className="mt-10">
             Developer documentation is planned to be built out after fundraising
-            completes. In the meantime, please use the Osmosis documentation
-            link below, as Symphony was built from Osmosis.
+            completes. In the meantime, please use the Osmosis and NodeHub
+            documentation links below, as Symphony was built from Osmosis, and
+            is supported by validators like NodeHub.
+          </p>
+          <p className="mt-4">
+            This is an open-source community effort, so feel free to suggest new
+            topics, add new content, and provide examples wherever you think it
+            might be helpful. All documentation can be edited via GitHub.
           </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">

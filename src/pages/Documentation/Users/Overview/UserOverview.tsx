@@ -8,8 +8,8 @@ const HEADINGS = {
     label: 'About',
   },
   2: {
-    id: 'foundational-topics',
-    label: 'Foundational Topics',
+    id: 'guides',
+    label: 'Guides',
   },
   3: {
     id: 'ecosystem',
@@ -75,10 +75,12 @@ export const UserOverview = () => (
           <p className="mt-10">
             This documentation is designed to help you connect with Symphony. It
             covers Symphony as a concept, explains the Symphony tech stack, and
-            documents the ecosystem. This is an open-source community effort, so
-            feel free to suggest new topics, add new content, and provide
-            examples wherever you think it might be helpful. All documentation
-            can be edited via GitHub.
+            documents the ecosystem.
+          </p>
+          <p className="mt-4">
+            This is an open-source community effort, so feel free to suggest new
+            topics, add new content, and provide examples wherever you think it
+            might be helpful. All documentation can be edited via GitHub.
           </p>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">

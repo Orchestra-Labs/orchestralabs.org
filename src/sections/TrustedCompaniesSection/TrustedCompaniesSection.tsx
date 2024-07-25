@@ -14,6 +14,10 @@ import convo_space from '@/assets/images/convo_space.png';
 import keplr from '@/assets/images/keplr.png';
 import pingpub from '@/assets/images/ping-pub.svg';
 import kleomedes from '@/assets/images/kleomedes.png';
+import gempad from '@/assets/images/gempad.png';
+import nodeshub from '@/assets/images/nodeshub.png';
+import interchaininfo from '@/assets/images/interchaininfo.png';
+import buidl from '@/assets/images/buidl.png';
 
 type Company = {
   id: number;
@@ -90,8 +94,32 @@ const COMPANIES: Company[] = [
   },
   {
     id: 12,
-    name: 'PingPub',
+    name: 'GemPad',
     src: pingpub,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 13,
+    name: 'NodesHub',
+    src: gempad,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 14,
+    name: 'Nodes Hub',
+    src: nodeshub,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 15,
+    name: 'Interchain Info',
+    src: interchaininfo,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 16,
+    name: 'Buidl',
+    src: buidl,
     logoClass: 'max-h-10',
   },
 ];

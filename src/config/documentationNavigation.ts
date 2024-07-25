@@ -54,7 +54,7 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
       },
       {
         id: '2',
-        label: 'Add Symphony to A Wallet',
+        label: 'Add Symphony To A Wallet',
         href: `${ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}`,
       },
     ],
@@ -64,5 +64,42 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
     label: 'Developer Information',
     href: `${ROUTES.DOCUMENTATION.DEVELOPERS.ROOT}`,
     subList: [],
+  },
+  {
+    id: '11',
+    label: 'Startup Information',
+    href: `${ROUTES.DOCUMENTATION.STARTUPS.ROOT}`,
+    subList: [
+      {
+        id: '1',
+        label: 'Inception',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.INCEPTION}`,
+      },
+      {
+        id: '2',
+        label: 'Development',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.DEVELOPMENT}`,
+      },
+      {
+        id: '3',
+        label: 'Expansion',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.EXPANSION}`,
+      },
+      {
+        id: '4',
+        label: 'Stabilization',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION}`,
+      },
+      {
+        id: '5',
+        label: 'Advisors',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.ADVISORS}`,
+      },
+      {
+        id: '6',
+        label: 'Fundraising',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING}`,
+      },
+    ],
   },
 ];

@@ -2,6 +2,7 @@ const EXPLORER_ROOT = '/explorer';
 const DOCUMENTATION_ROOT = '/documentation';
 const USER_EXTENSION = '/users';
 const DEVELOPER_EXTENSION = '/developers';
+const STARTUP_EXTENSION = '/startups';
 
 export const ROUTES = {
   HOME: '/',
@@ -32,6 +33,15 @@ export const ROUTES = {
     },
     DEVELOPERS: {
       ROOT: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}`,
+    },
+    STARTUPS: {
+      ROOT: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}`,
+      INCEPTION: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/inception`,
+      DEVELOPMENT: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/development`,
+      EXPANSION: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/expansion`,
+      STABILIZATION: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/stabilization`,
+      ADVISORS: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/advisors`,
+      FUNDRAISING: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/fundraising`,
     },
   },
 };
