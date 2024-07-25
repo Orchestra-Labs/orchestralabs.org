@@ -5,34 +5,36 @@ import { ROUTES } from '@/config/routes';
 import {
   AccountDetails,
   AddSymphonyToWallet,
+  Advisors,
   AllBlocks,
   AllTokens,
   AllTransactions,
   BlockDetails,
   CreateWallet,
   DeveloperOverview,
+  Development,
   DocumentationOverview,
+  Expansion,
   ExplorerMain,
+  Fundraising,
   Home,
+  Inception,
   PasswordRecovery,
+  Roadmap,
   SignIn,
   SignUp,
   SizeOfOpportunity,
+  Stabilization,
   StartupOverview,
   SymphonyImpact,
   TheStablecoinTrilemma,
   TheSymphonyApproach,
+  Tokenomics,
   TransactionDetails,
   UserOverview,
   Whitepaper,
   WhyDecentralizedRWAs,
 } from '@/pages';
-import { Roadmap } from '@/pages/Documentation/Roadmap';
-import { Tokenomics } from '@/pages/Documentation/Tokenomics';
-import { Inception } from '@/pages/Documentation/Startups/Inception';
-import { Development } from '@/pages/Documentation/Startups/Development';
-import { Expansion } from '@/pages/Documentation/Startups/Expansion';
-import { Stabilization } from '@/pages/Documentation/Startups/Stabilization';
 
 const MainLayout = lazy(() => import('../layouts/MainLayout/MainLayout'));
 const ExplorerLayout = lazy(
@@ -120,6 +122,14 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION,
           element: <Stabilization />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.STARTUPS.ADVISORS,
+          element: <Advisors />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING,
+          element: <Fundraising />,
         },
       ],
     },

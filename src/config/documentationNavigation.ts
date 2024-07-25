@@ -54,7 +54,7 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
       },
       {
         id: '2',
-        label: 'Add Symphony to A Wallet',
+        label: 'Add Symphony To A Wallet',
         href: `${ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}`,
       },
     ],
@@ -89,6 +89,16 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         id: '4',
         label: 'Stabilization',
         href: `${ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION}`,
+      },
+      {
+        id: '5',
+        label: 'Advisors',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.ADVISORS}`,
+      },
+      {
+        id: '6',
+        label: 'Fundraising',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING}`,
       },
     ],
   },
