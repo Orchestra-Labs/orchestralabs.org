@@ -11,8 +11,8 @@ const HEADINGS = {
     label: 'Notable Points',
   },
   3: {
-    id: 'notable-points',
-    label: 'Link to Osmosis',
+    id: 'documentation-and-guides',
+    label: 'Documentation and Guides',
   },
 };
 
@@ -41,7 +41,7 @@ const DOCUMENTATION_NOTES: String[] = [
   'The snapshot and add book are both updated every 3 hours',
 ];
 
-const ECOSYSTEM: NavItem[] = [
+const DOCS_AND_GUIDES: NavItem[] = [
   {
     id: '1',
     label: 'Osmosis Documentation',
@@ -126,7 +126,7 @@ export const DeveloperOverview = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <ListLinks listLinks={ECOSYSTEM} />
+          <ListLinks listLinks={DOCS_AND_GUIDES} />
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
