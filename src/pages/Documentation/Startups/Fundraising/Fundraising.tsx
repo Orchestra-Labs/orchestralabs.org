@@ -85,6 +85,12 @@ const LAUNCHPADS = [
     href: 'https://solsale.app/presale/all',
     description: 'A decentralized Solana launchpad without limits!',
   },
+  {
+    label: 'UNCX',
+    target: '_blank',
+    href: 'https://uncx.network/',
+    description: 'A truly decentralized Launchpad!',
+  },
 ];
 
 export const Fundraising = () => (
@@ -205,6 +211,13 @@ export const Fundraising = () => (
               </li>
             </ul>
           </p>
+          <p className="mt-5">
+            <strong>Tip:</strong> The above is based on theory, and matches what
+            you will find from most sources. In practice, all of the above
+            require traction, unless you have some connection to the fund or
+            successful entrepreneurs. This is one reason why having advisors may
+            help at those early stages.
+          </p>
         </div>
 
         <div id={HEADINGS[3].id} className="mt-15">
@@ -237,7 +250,7 @@ export const Fundraising = () => (
           </h2>
           <p className="mt-5">
             For those with a good userbase already, these launchpads may help
-            with funding:
+            with funding and will not require waiting on an application:
             <ul className="list-disc ml-5 mt-2">
               {LAUNCHPADS.map((item, index) => (
                 <li key={index}>
