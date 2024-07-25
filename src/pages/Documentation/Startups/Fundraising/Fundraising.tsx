@@ -218,7 +218,6 @@ export const Fundraising = () => (
             successful entrepreneurs. This is one reason why having{' '}
             <Link
               to={ROUTES.DOCUMENTATION.STARTUPS.ADVISORS}
-              target="_blank"
               className="text-blue hover:text-blue-darker underline"
             >
               advisors
