@@ -3,14 +3,10 @@ import { NavItem } from '@/types';
 
 const HEADINGS = {
   1: {
-    id: 'about',
-    label: 'About',
-  },
-  2: {
     id: 'notable-points',
     label: 'Notable Points',
   },
-  3: {
+  2: {
     id: 'documentation-and-guides',
     label: 'Documentation and Guides',
   },
@@ -26,11 +22,6 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '2',
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
-  },
-  {
-    id: '3',
-    label: HEADINGS[3].label,
-    href: `#${HEADINGS[3].id}`,
   },
 ];
 
@@ -94,25 +85,20 @@ export const DeveloperOverview = () => (
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
           Developer Documentation
         </h1>
+        <p className="mt-10">
+          Developer documentation is planned to be built out after fundraising
+          completes. In the meantime, please use the Osmosis and NodeHub
+          documentation links below, as Symphony was built from Osmosis, and is
+          supported by validators like NodeHub.
+        </p>
+        <p className="mt-4">
+          This is an open-source community effort, so feel free to suggest new
+          topics, add new content, and provide examples wherever you think it
+          might be helpful. All documentation can be edited via GitHub.
+        </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
-          </h2>
-          <p className="mt-10">
-            Developer documentation is planned to be built out after fundraising
-            completes. In the meantime, please use the Osmosis and NodeHub
-            documentation links below, as Symphony was built from Osmosis, and
-            is supported by validators like NodeHub.
-          </p>
-          <p className="mt-4">
-            This is an open-source community effort, so feel free to suggest new
-            topics, add new content, and provide examples wherever you think it
-            might be helpful. All documentation can be edited via GitHub.
-          </p>
-        </div>
-        <div id={HEADINGS[2].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[2].label}
           </h2>
           <ul className="mt-10">
             {DOCUMENTATION_NOTES.map(item => (
@@ -122,9 +108,9 @@ export const DeveloperOverview = () => (
             ))}
           </ul>
         </div>
-        <div id={HEADINGS[3].id} className="mt-15">
+        <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
+            {HEADINGS[2].label}
           </h2>
           <ListLinks listLinks={DOCS_AND_GUIDES} />
         </div>

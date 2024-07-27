@@ -104,9 +104,59 @@ const USER_DOCUMENTATION_LINKS: NavItem[] = [
   },
 ];
 
-const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [];
+const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [
+  {
+    id: '1',
+    label: 'Explorers',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+  {
+    id: '2',
+    label: 'Validators',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+];
 
-const STARTUP_DOCUMENTATION_LINKS: NavItem[] = [];
+const STARTUP_DOCUMENTATION_LINKS: NavItem[] = [
+  {
+    id: '1',
+    label: 'Inception',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+  {
+    id: '2',
+    label: 'Development',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+  {
+    id: '3',
+    label: 'Expansion',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+  {
+    id: '4',
+    label: 'Stabilization',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+  {
+    id: '5',
+    label: 'Advisors',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+  {
+    id: '6',
+    label: 'Fundraising',
+    description: 'Create a wallet to interact with Symphony',
+    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+  },
+];
 
 export const DocumentationOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
