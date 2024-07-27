@@ -63,7 +63,18 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
     id: '10',
     label: 'Developer Information',
     href: `${ROUTES.DOCUMENTATION.DEVELOPERS.ROOT}`,
-    subList: [],
+    subList: [
+      {
+        id: '1',
+        label: 'Explorers',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.EXPLORERS}`,
+      },
+      {
+        id: '2',
+        label: 'Validators',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS}`,
+      },
+    ],
   },
   {
     id: '11',

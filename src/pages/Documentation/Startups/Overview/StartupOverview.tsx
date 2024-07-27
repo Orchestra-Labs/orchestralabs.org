@@ -4,14 +4,10 @@ import { NavItem } from '@/types';
 
 const HEADINGS = {
   1: {
-    id: 'about',
-    label: 'About',
-  },
-  2: {
     id: 'startup-guides-by-stage',
     label: 'Startup Guides by Stage',
   },
-  3: {
+  2: {
     id: 'how-symphony-can-help',
     label: 'How Symphony can Help',
   },
@@ -27,11 +23,6 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '2',
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
-  },
-  {
-    id: '3',
-    label: HEADINGS[3].label,
-    href: `#${HEADINGS[3].id}`,
   },
 ];
 
@@ -82,33 +73,28 @@ export const StartupOverview = () => (
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
           Startup Documentation
         </h1>
+        <p className="mt-10">
+          Symphony, being devoted to improving the financial space both within
+          and without crypto, provides this documentation to help you get your
+          startup off the ground. It covers what you are likely to need to get
+          funding, how to get development started, and how to make sure you are
+          on the right path. All of this information is based off the path we
+          tread to get Symphony started, and is provided at no cost to you.
+        </p>
+        <p className="mt-4">
+          This is an open-source community effort, so feel free to suggest new
+          topics, add new content, and provide examples wherever you think it
+          might be helpful. All documentation can be edited via GitHub.
+        </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
-          <p className="mt-10">
-            Symphony, being devoted to improving the financial space both within
-            and without crypto, provides this documentation to help you get your
-            startup off the ground. It covers what you are likely to need to get
-            funding, how to get development started, and how to make sure you
-            are on the right path. All of this information is based off the path
-            we tread to get Symphony started, and is provided at no cost to you.
-          </p>
-          <p className="mt-4">
-            This is an open-source community effort, so feel free to suggest new
-            topics, add new content, and provide examples wherever you think it
-            might be helpful. All documentation can be edited via GitHub.
-          </p>
+          <ListLinks listLinks={SYMPHONY_INFO_LINKS} />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
-          </h2>
-          <ListLinks listLinks={SYMPHONY_INFO_LINKS} />
-        </div>
-        <div id={HEADINGS[3].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
           </h2>
           <p className="mt-4">
             Currently, all we can offer is information. Process, advisors, and

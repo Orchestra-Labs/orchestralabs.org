@@ -16,6 +16,7 @@ import {
   DocumentationOverview,
   Expansion,
   ExplorerMain,
+  Explorers,
   Fundraising,
   Home,
   Inception,
@@ -32,6 +33,7 @@ import {
   Tokenomics,
   TransactionDetails,
   UserOverview,
+  Validators,
   Whitepaper,
   WhyDecentralizedRWAs,
 } from '@/pages';
@@ -102,6 +104,14 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
           element: <DeveloperOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.EXPLORERS,
+          element: <Explorers />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS,
+          element: <Validators />,
         },
         {
           path: ROUTES.DOCUMENTATION.STARTUPS.ROOT,

@@ -18,6 +18,10 @@ import gempad from '@/assets/images/gempad.png';
 import nodeshub from '@/assets/images/nodeshub.png';
 import interchaininfo from '@/assets/images/interchaininfo.png';
 import buidl from '@/assets/images/buidl.png';
+import nodeist from '@/assets/images/nodeist.png';
+import nodexemperor from '@/assets/images/nodexemperor.png';
+import polkachu from '@/assets/images/polkachu.png';
+import bueno from '@/assets/images/bueno.png';
 
 type Company = {
   id: number;
@@ -120,6 +124,30 @@ const COMPANIES: Company[] = [
     id: 16,
     name: 'Buidl',
     src: buidl,
+    logoClass: 'max-h-9',
+  },
+  {
+    id: 17,
+    name: 'Nodeist',
+    src: nodeist,
+    logoClass: 'max-h-9',
+  },
+  {
+    id: 18,
+    name: 'NodeX Emperor',
+    src: nodexemperor,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 19,
+    name: 'Polkachu',
+    src: polkachu,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 20,
+    name: 'Bueno',
+    src: bueno,
     logoClass: 'max-h-10',
   },
 ];
