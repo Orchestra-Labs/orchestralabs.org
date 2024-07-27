@@ -97,6 +97,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://nodex.one/',
     description: 'Trusted blockchain validator of 109 blockchain networks',
   },
+  {
+    id: '6',
+    label: 'Panamanian Flower Company',
+    target: '_blank',
+    href: 'https://pfc.zone/',
+    description: 'An industry leader in the web3 space',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [

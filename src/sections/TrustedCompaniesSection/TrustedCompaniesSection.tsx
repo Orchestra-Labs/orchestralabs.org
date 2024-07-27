@@ -22,6 +22,7 @@ import nodeist from '@/assets/images/nodeist.png';
 import nodexemperor from '@/assets/images/nodexemperor.png';
 import polkachu from '@/assets/images/polkachu.png';
 import bueno from '@/assets/images/bueno.png';
+import pfc from '@/assets/images/pfc.png';
 
 type Company = {
   id: number;
@@ -148,6 +149,12 @@ const COMPANIES: Company[] = [
     id: 20,
     name: 'Bueno',
     src: bueno,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 21,
+    name: 'PFC',
+    src: pfc,
     logoClass: 'max-h-10',
   },
 ];
