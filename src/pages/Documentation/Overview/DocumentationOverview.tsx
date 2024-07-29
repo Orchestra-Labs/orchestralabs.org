@@ -108,14 +108,14 @@ const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [
   {
     id: '1',
     label: 'Explorers',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    description: 'View activity in a chain explorer',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.EXPLORERS,
   },
   {
     id: '2',
     label: 'Validators',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    description: 'Start a validator',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS,
   },
 ];
 
@@ -123,38 +123,44 @@ const STARTUP_DOCUMENTATION_LINKS: NavItem[] = [
   {
     id: '1',
     label: 'Inception',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    description: 'Forming and validating your idea',
+    href: ROUTES.DOCUMENTATION.STARTUPS.INCEPTION,
   },
   {
     id: '2',
     label: 'Development',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    description: 'Forming and validating your idea',
+    href: ROUTES.DOCUMENTATION.STARTUPS.INCEPTION,
   },
   {
     id: '3',
     label: 'Expansion',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    description: 'Launching and growing your business',
+    href: ROUTES.DOCUMENTATION.STARTUPS.EXPANSION,
   },
   {
     id: '4',
     label: 'Stabilization',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    description: 'What to do as an established business after growth',
+    href: ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION,
   },
   {
     id: '5',
     label: 'Advisors',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    description: 'Those with knowledge to guide you on your path',
+    href: ROUTES.DOCUMENTATION.STARTUPS.ADVISORS,
   },
   {
     id: '6',
     label: 'Fundraising',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    description: 'Sources of investment to accelerate your business',
+    href: ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING,
+  },
+  {
+    id: '7',
+    label: 'Case Studies',
+    description: 'Examples from others before you',
+    href: ROUTES.DOCUMENTATION.STARTUPS.CASE_STUDIES,
   },
 ];
 

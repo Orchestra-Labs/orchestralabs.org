@@ -63,6 +63,12 @@ const SYMPHONY_INFO_LINKS: NavItem[] = [
     description: 'Sources of investment to accelerate your business',
     href: ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING,
   },
+  {
+    id: '7',
+    label: 'Case Studies',
+    description: 'Examples from others before you',
+    href: ROUTES.DOCUMENTATION.STARTUPS.CASE_STUDIES,
+  },
 ];
 
 export const StartupOverview = () => (
@@ -80,11 +86,6 @@ export const StartupOverview = () => (
           funding, how to get development started, and how to make sure you are
           on the right path. All of this information is based off the path we
           tread to get Symphony started, and is provided at no cost to you.
-        </p>
-        <p className="mt-4">
-          This is an open-source community effort, so feel free to suggest new
-          topics, add new content, and provide examples wherever you think it
-          might be helpful. All documentation can be edited via GitHub.
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

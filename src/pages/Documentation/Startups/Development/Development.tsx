@@ -1,5 +1,7 @@
 import { PageNavigator, SectionNavigator } from '@/components';
+import { ROUTES } from '@/config/routes';
 import { NavItem } from '@/types';
+import { Link } from 'react-router-dom';
 
 const HEADINGS = {
   1: {
@@ -38,10 +40,15 @@ export const Development = () => (
           implementation. A guide for this is below, as split into two phases:
           prototyping and building.
         </p>
-        {/* TODO: link to fundraising page here */}
         <p className="mt-5">
-          If you are not a developer, it is at this point you will need funding.
-          This can come from personal funds or friends and family, but if you
+          If you are not a developer, it is at this point you will need{' '}
+          <Link
+            to={ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING}
+            className="text-blue hover:text-blue-darker underline"
+          >
+            funding
+          </Link>
+          . This can come from personal funds or friends and family, but if you
           have a team and advisors, you can try one of the following:
           <ul className="list-disc ml-5 mt-2">
             <li>Incubators</li>

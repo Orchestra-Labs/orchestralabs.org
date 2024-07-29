@@ -111,6 +111,11 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         label: 'Fundraising',
         href: `${ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING}`,
       },
+      {
+        id: '7',
+        label: 'Case Studies',
+        href: `${ROUTES.DOCUMENTATION.STARTUPS.CASE_STUDIES}`,
+      },
     ],
   },
 ];
