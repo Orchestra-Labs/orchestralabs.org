@@ -1,5 +1,5 @@
-import exchangeDiagram from '/src/assets/images/exchange_dark.png';
-import delayedTxDiagram from '/src/assets/images/delayed_tx_process_dark.png';
+import exchangeDiagram from '/src/assets/images/exchange-dark.png';
+import delayedTxDiagram from '/src/assets/images/delayed-tx-process-dark.png';
 import { SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 

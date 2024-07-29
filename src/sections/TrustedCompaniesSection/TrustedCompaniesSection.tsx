@@ -8,21 +8,22 @@ import google from '@/assets/images/google.png';
 import gexabyte from '@/assets/images/gexabyte.png';
 import medium from '@/assets/images/medium.png';
 import suave from '@/assets/images/suave.png';
-import swapacross from '@/assets/images/swapacross.png';
+import swapAcross from '@/assets/images/swapacross.png';
 import waitlist from '@/assets/images/waitlist.png';
-import convo_space from '@/assets/images/convo_space.png';
+import convoSpace from '@/assets/images/convo-space.png';
 import keplr from '@/assets/images/keplr.png';
-import pingpub from '@/assets/images/ping-pub.svg';
+import pingPub from '@/assets/images/ping-pub.svg';
 import kleomedes from '@/assets/images/kleomedes.png';
 import gempad from '@/assets/images/gempad.png';
-import nodeshub from '@/assets/images/nodeshub.png';
-import interchaininfo from '@/assets/images/interchaininfo.png';
+import nodesHub from '@/assets/images/nodeshub.png';
+import interchainInfo from '@/assets/images/interchaininfo.png';
 import buidl from '@/assets/images/buidl.png';
 import nodeist from '@/assets/images/nodeist.png';
-import nodexemperor from '@/assets/images/nodexemperor.png';
+import nodeXEmperor from '@/assets/images/nodexemperor.png';
 import polkachu from '@/assets/images/polkachu.png';
 import bueno from '@/assets/images/bueno.png';
 import pfc from '@/assets/images/pfc.png';
+import fairStaking from '@/assets/images/fair-staking.png';
 
 type Company = {
   id: number;
@@ -70,7 +71,7 @@ const COMPANIES: Company[] = [
   {
     id: 7,
     name: 'SwapAcross',
-    src: swapacross,
+    src: swapAcross,
     logoClass: 'max-h-9',
   },
   {
@@ -82,7 +83,7 @@ const COMPANIES: Company[] = [
   {
     id: 9,
     name: 'Convo Space',
-    src: convo_space,
+    src: convoSpace,
     logoClass: 'max-h-10',
   },
   {
@@ -100,7 +101,7 @@ const COMPANIES: Company[] = [
   {
     id: 12,
     name: 'GemPad',
-    src: pingpub,
+    src: pingPub,
     logoClass: 'max-h-10',
   },
   {
@@ -112,13 +113,13 @@ const COMPANIES: Company[] = [
   {
     id: 14,
     name: 'Nodes Hub',
-    src: nodeshub,
+    src: nodesHub,
     logoClass: 'max-h-10',
   },
   {
     id: 15,
     name: 'Interchain Info',
-    src: interchaininfo,
+    src: interchainInfo,
     logoClass: 'max-h-10',
   },
   {
@@ -136,7 +137,7 @@ const COMPANIES: Company[] = [
   {
     id: 18,
     name: 'NodeX Emperor',
-    src: nodexemperor,
+    src: nodeXEmperor,
     logoClass: 'max-h-10',
   },
   {
@@ -155,6 +156,12 @@ const COMPANIES: Company[] = [
     id: 21,
     name: 'PFC',
     src: pfc,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 21,
+    name: 'Fair Staking',
+    src: fairStaking,
     logoClass: 'max-h-10',
   },
 ];

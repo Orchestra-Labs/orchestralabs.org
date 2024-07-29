@@ -104,6 +104,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://pfc.zone/',
     description: 'An industry leader in the web3 space',
   },
+  {
+    id: '7',
+    label: 'Fair Staking',
+    target: '_blank',
+    href: 'https://fairstaking.com/',
+    description: 'An industry leader in the web3 space',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
