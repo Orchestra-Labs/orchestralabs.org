@@ -109,7 +109,14 @@ const VALIDATORS: NavItem[] = [
     label: 'Fair Staking',
     target: '_blank',
     href: 'https://fairstaking.com/',
-    description: 'An industry leader in the web3 space',
+    description: 'Trusted blockchain validator',
+  },
+  {
+    id: '8',
+    label: 'Dasamuka',
+    target: '_blank',
+    href: 'https://dasamuka.arweave.net/#/',
+    description: 'An independent node runner',
   },
 ];
 

@@ -24,6 +24,7 @@ import polkachu from '@/assets/images/polkachu.png';
 import bueno from '@/assets/images/bueno.png';
 import pfc from '@/assets/images/pfc.png';
 import fairStaking from '@/assets/images/fair-staking.png';
+import dasamuka from '@/assets/images/dasamuka.png';
 
 type Company = {
   id: number;
@@ -159,9 +160,15 @@ const COMPANIES: Company[] = [
     logoClass: 'max-h-10',
   },
   {
-    id: 21,
+    id: 22,
     name: 'Fair Staking',
     src: fairStaking,
+    logoClass: 'max-h-9',
+  },
+  {
+    id: 23,
+    name: 'Dasamuka',
+    src: dasamuka,
     logoClass: 'max-h-10',
   },
 ];
