@@ -130,7 +130,7 @@ const VALIDATORS: NavItem[] = [
     label: 'Indonode',
     target: '_blank',
     href: 'https://indonode.net/services/testnet/symphony',
-    description: 'Your Trusted Non Custodial PoS Validator',
+    description: 'Your Trusted non-custodial PoS Validator',
   },
   {
     id: '11',
@@ -145,6 +145,13 @@ const VALIDATORS: NavItem[] = [
     label: 'DashNode',
     target: '_blank',
     href: 'https://dashnode.org/',
+    description: 'Ensuring the Reliability and Security of Your Digital Assets',
+  },
+  {
+    id: '13',
+    label: 'Nomad',
+    target: '_blank',
+    href: 'https://www.nomadvalidator.com/',
     description: 'Ensuring the Reliability and Security of Your Digital Assets',
   },
 ];

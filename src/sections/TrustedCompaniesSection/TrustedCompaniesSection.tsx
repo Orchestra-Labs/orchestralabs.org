@@ -29,6 +29,7 @@ import dwentz from '@/assets/images/dwentz.png';
 import indonode from '@/assets/images/indonode.png';
 import citizenWeb3 from '@/assets/images/citizen-web3.jpg';
 import dashNode from '@/assets/images/dashnode.png';
+import nomad from '@/assets/images/nomad.png';
 
 type Company = {
   id: number;
@@ -197,6 +198,12 @@ const COMPANIES: Company[] = [
     id: 27,
     name: 'DashNode',
     src: dashNode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 28,
+    name: 'Nomad',
+    src: nomad,
     logoClass: 'max-h-10',
   },
 ];
