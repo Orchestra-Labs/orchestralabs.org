@@ -68,7 +68,7 @@ const EXPLORERS: NavItem[] = [
   },
   {
     id: '8',
-    label: 'sychonix',
+    label: 'Sychonix',
     target: '_blank',
     href: 'https://explorer.sychonix.com/symphony-testnet',
     description: 'An explorer from one of our supporting validators',
