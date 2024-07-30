@@ -132,6 +132,21 @@ const VALIDATORS: NavItem[] = [
     href: 'https://indonode.net/services/testnet/symphony',
     description: 'Your Trusted Non Custodial PoS Validator',
   },
+  {
+    id: '11',
+    label: 'Citizen Web3',
+    target: '_blank',
+    href: 'https://www.citizenweb3.com/staking',
+    description:
+      'A self-hosted, independent off the grid, baremetal validator.',
+  },
+  {
+    id: '12',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://dashnode.org/',
+    description: 'Ensuring the Reliability and Security of Your Digital Assets',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [

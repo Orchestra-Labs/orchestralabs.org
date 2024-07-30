@@ -27,6 +27,8 @@ import fairStaking from '@/assets/images/fair-staking.png';
 import dasamuka from '@/assets/images/dasamuka.png';
 import dwentz from '@/assets/images/dwentz.png';
 import indonode from '@/assets/images/indonode.png';
+import citizenWeb3 from '@/assets/images/citizen-web3.jpg';
+import dashNode from '@/assets/images/dashnode.png';
 
 type Company = {
   id: number;
@@ -183,6 +185,18 @@ const COMPANIES: Company[] = [
     id: 25,
     name: 'Indonode',
     src: indonode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 26,
+    name: 'Citizen Web3',
+    src: citizenWeb3,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 27,
+    name: 'DashNode',
+    src: dashNode,
     logoClass: 'max-h-10',
   },
 ];
