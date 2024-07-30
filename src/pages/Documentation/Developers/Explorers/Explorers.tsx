@@ -52,6 +52,13 @@ const EXPLORERS: NavItem[] = [
     href: 'https://explorer.nodex.one/symphony/staking/symphonyvaloper13ts3j8q27kcykenfzty7lre6gvgh8w62deuvme',
     description: 'An explorer from one of our supporting validators',
   },
+  {
+    id: '6',
+    label: 'Indonode',
+    target: '_blank',
+    href: 'https://explorer.indonode.net/symphony-testnet',
+    description: 'An explorer from one of our supporting validators',
+  },
 ];
 
 export const Explorers = () => (

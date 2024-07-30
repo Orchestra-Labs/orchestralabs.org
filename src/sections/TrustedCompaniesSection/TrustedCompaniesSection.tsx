@@ -25,6 +25,8 @@ import bueno from '@/assets/images/bueno.png';
 import pfc from '@/assets/images/pfc.png';
 import fairStaking from '@/assets/images/fair-staking.png';
 import dasamuka from '@/assets/images/dasamuka.png';
+import dwentz from '@/assets/images/dwentz.png';
+import indonode from '@/assets/images/indonode.png';
 
 type Company = {
   id: number;
@@ -169,6 +171,18 @@ const COMPANIES: Company[] = [
     id: 23,
     name: 'Dasamuka',
     src: dasamuka,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 24,
+    name: 'Dwentz',
+    src: dwentz,
+    logoClass: 'max-h-9',
+  },
+  {
+    id: 25,
+    name: 'Indonode',
+    src: indonode,
     logoClass: 'max-h-10',
   },
 ];

@@ -118,6 +118,20 @@ const VALIDATORS: NavItem[] = [
     href: 'https://dasamuka.arweave.net/#/',
     description: 'An independent node runner',
   },
+  {
+    id: '9',
+    label: 'Dwentz',
+    target: '_blank',
+    href: 'https://www.dwentz.xyz/',
+    description: 'Dedicated to running reliable and efficient blockchain nodes',
+  },
+  {
+    id: '10',
+    label: 'Indonode',
+    target: '_blank',
+    href: 'https://indonode.net/services/testnet/symphony',
+    description: 'Your Trusted Non Custodial PoS Validator',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -154,6 +168,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     label: 'NodeX Emperor',
     target: '_blank',
     href: 'https://docs.nodex.one/networks/testnet/symphony',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '6',
+    label: 'Indonode',
+    target: '_blank',
+    href: 'https://indonode.net/services/testnet/symphony/installation#setup',
     description: 'Documentation on how to start a validator',
   },
 ];
