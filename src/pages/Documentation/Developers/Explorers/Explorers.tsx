@@ -73,6 +73,13 @@ const EXPLORERS: NavItem[] = [
     href: 'https://explorer.sychonix.com/symphony-testnet',
     description: 'An explorer from one of our supporting validators',
   },
+  {
+    id: '9',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://testnet.cryptonode.id/symphony',
+    description: 'An explorer from one of our supporting validators',
+  }
 ];
 
 export const Explorers = () => (

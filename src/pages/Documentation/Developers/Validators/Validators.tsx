@@ -168,6 +168,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://sychonix.com/',
     description: 'Committed to Secure Networks',
   },
+  {
+    id: '16',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://cryptonode.id/',
+    description: 'Crypto Validator Node Education Channel',
+  }
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -227,6 +234,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://service.sychonix.com/testnet/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '9',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://docs.cryptonode.id/en/testnet/symphony',
+    description: 'Easy setup to start a validator',
+  }
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -279,6 +293,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://service.sychonix.com/testnet/symphony/snapshot',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '8',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://docs.cryptonode.id/en/testnet/symphony/endpoints-and-sync',
+    description: 'Snapshots to speed up validator synchronization',
+  }
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -323,6 +344,13 @@ const GENESIS_FILES: NavItem[] = [
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/genesis',
     description: 'The JSON needed to start a node',
+  },
+  {
+    id: '6',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://snapshot.cryptonode.id/symphony-testnet/genesis.json',
+    description: 'The JSON needed to start a node',
   }
 ];
 
@@ -362,6 +390,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     href: 'https://service.sychonix.com/testnet/symphony/addrbook',
     description: 'The address book needed to start a node',
   },
+  {
+    id: '6',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://snapshot.cryptonode.id/symphony-testnet/addrbook.json',
+    description: 'Collection of quality addresses',
+  }
 ];
 
 export const Validators = () => (

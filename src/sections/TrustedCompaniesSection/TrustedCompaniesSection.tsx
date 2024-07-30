@@ -32,6 +32,7 @@ import dashNode from '@/assets/images/dashnode.png';
 import nomad from '@/assets/images/nomad.png';
 import konsortech from '@/assets/images/konsortech.png';
 import sychonix from '@/assets/images/sychonix.png';
+import cryptonodeid from '@/assets/images/cryptonodeid.png';
 
 type Company = {
   id: number;
@@ -220,6 +221,12 @@ const COMPANIES: Company[] = [
     src: sychonix,
     logoClass: 'max-h-10',
   },
+  {
+    id: 31,
+    name: 'CryptonodeID',
+    src: cryptonodeid,
+    logoClass: 'max-h-10',
+  }
 ];
 
 export const TrustedCompaniesSection = () => (
