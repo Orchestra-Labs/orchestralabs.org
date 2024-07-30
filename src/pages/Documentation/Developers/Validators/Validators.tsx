@@ -161,6 +161,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://konsortech.xyz/',
     description: 'Stake With Us ! Become Professional Stake Provider',
   },
+    {
+    id: '15',
+    label: 'Sychonix',
+    target: '_blank',
+    href: 'https://sychonix.com/',
+    description: 'Committed to Secure Networks',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -213,6 +220,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://konsortech.xyz/testnet/symphony',
     description: 'Documentation on how to start a validator',
   },
+    {
+    id: '8',
+    label: 'Sychonix',
+    target: '_blank',
+    href: 'https://service.sychonix.com/testnet/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -258,6 +272,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snap2.konsortech.xyz/symphony',
     description: 'Snapshots to speed up validator synchronization',
   },
+    {
+    id: '7',
+    label: 'Sychonix',
+    target: '_blank',
+    href: 'https://service.sychonix.com/testnet/symphony/snapshot',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -289,6 +310,20 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snap2.konsortech.xyz/symphony/genesis.json',
     description: 'The JSON needed to start a node',
   },
+    {
+    id: '4',
+    label: 'KonsorTech',
+    target: '_blank',
+    href: 'https://snap2.konsortech.xyz/symphony/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
+    {
+    id: '5',
+    label: 'Sychonix',
+    target: '_blank',
+    href: 'https://service.sychonix.com/testnet/symphony/genesis',
+    description: 'The JSON needed to start a node',
+  }
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -318,6 +353,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'KonsorTech',
     target: '_blank',
     href: 'https://snap2.konsortech.xyz/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '5',
+    label: 'Sychonix',
+    target: '_blank',
+    href: 'https://service.sychonix.com/testnet/symphony/addrbook',
     description: 'The address book needed to start a node',
   },
 ];
