@@ -30,6 +30,7 @@ import indonode from '@/assets/images/indonode.png';
 import citizenWeb3 from '@/assets/images/citizen-web3.jpg';
 import dashNode from '@/assets/images/dashnode.png';
 import nomad from '@/assets/images/nomad.png';
+import konsortech from '@/assets/images/konsortech.png';
 
 type Company = {
   id: number;
@@ -204,6 +205,12 @@ const COMPANIES: Company[] = [
     id: 28,
     name: 'Nomad',
     src: nomad,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 29,
+    name: 'KonsorTech',
+    src: konsortech,
     logoClass: 'max-h-10',
   },
 ];

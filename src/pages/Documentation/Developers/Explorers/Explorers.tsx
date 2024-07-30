@@ -59,6 +59,13 @@ const EXPLORERS: NavItem[] = [
     href: 'https://explorer.indonode.net/symphony-testnet',
     description: 'An explorer from one of our supporting validators',
   },
+  {
+    id: '7',
+    label: 'KonsorTech',
+    target: '_blank',
+    href: 'https://testnet-explorer.konsortech.xyz/symphony',
+    description: 'An explorer from one of our supporting validators',
+  },
 ];
 
 export const Explorers = () => (

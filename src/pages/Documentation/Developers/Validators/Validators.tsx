@@ -154,6 +154,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://www.nomadvalidator.com/',
     description: 'Ensuring the Reliability and Security of Your Digital Assets',
   },
+  {
+    id: '14',
+    label: 'KonsorTech',
+    target: '_blank',
+    href: 'https://konsortech.xyz/',
+    description: 'Stake With Us ! Become Professional Stake Provider',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -199,6 +206,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://indonode.net/services/testnet/symphony/installation#setup',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '7',
+    label: 'KonsorTech',
+    target: '_blank',
+    href: 'https://konsortech.xyz/testnet/symphony',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -237,6 +251,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snap.nodex.one/symphony-testnet/symphony-latest.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '6',
+    label: 'KonsorTech',
+    target: '_blank',
+    href: 'https://snap2.konsortech.xyz/symphony',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -261,6 +282,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://ss-t.symphony.nodestake.org/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '4',
+    label: 'KonsorTech',
+    target: '_blank',
+    href: 'https://snap2.konsortech.xyz/symphony/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -283,6 +311,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'NodeStake',
     target: '_blank',
     href: 'https://ss-t.symphony.nodestake.org/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '4',
+    label: 'KonsorTech',
+    target: '_blank',
+    href: 'https://snap2.konsortech.xyz/symphony/addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
