@@ -163,7 +163,7 @@ const VALIDATORS: NavItem[] = [
   },
     {
     id: '15',
-    label: 'sychonix',
+    label: 'Sychonix',
     target: '_blank',
     href: 'https://sychonix.com/',
     description: 'Committed to Secure Networks',
@@ -222,7 +222,7 @@ const INSTALLATION_GUIDES: NavItem[] = [
   },
     {
     id: '8',
-    label: 'sychonix',
+    label: 'Sychonix',
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/installation',
     description: 'Documentation on how to start a validator',
@@ -274,7 +274,7 @@ const SNAPSHOTS: NavItem[] = [
   },
     {
     id: '7',
-    label: 'sychonix',
+    label: 'Sychonix',
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/snapshot',
     description: 'Snapshots to speed up validator synchronization',
@@ -319,7 +319,7 @@ const GENESIS_FILES: NavItem[] = [
   },
     {
     id: '5',
-    label: 'sychonix',
+    label: 'Sychonix',
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/genesis',
     description: 'The JSON needed to start a node',
@@ -357,7 +357,7 @@ const ADDRESS_BOOKS: NavItem[] = [
   },
   {
     id: '5',
-    label: 'sychonix',
+    label: 'Sychonix',
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/addrbook',
     description: 'The address book needed to start a node',
