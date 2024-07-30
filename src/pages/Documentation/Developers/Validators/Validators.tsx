@@ -161,12 +161,20 @@ const VALIDATORS: NavItem[] = [
     href: 'https://konsortech.xyz/',
     description: 'Stake With Us ! Become Professional Stake Provider',
   },
-    {
+  {
     id: '15',
     label: 'Sychonix',
     target: '_blank',
     href: 'https://sychonix.com/',
     description: 'Committed to Secure Networks',
+  },
+  {
+    id: '16',
+    label: 'SyaNodes',
+    target: '_blank',
+    href: 'https://docs.syanodes.my.id',
+    description:
+      'Committed to keeping abreast of industry advancements and informed, and passionate about using dependable and effective node operation to advance blockchain technology.',
   },
 ];
 
@@ -220,11 +228,18 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://konsortech.xyz/testnet/symphony',
     description: 'Documentation on how to start a validator',
   },
-    {
+  {
     id: '8',
     label: 'Sychonix',
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '9',
+    label: 'SyaNodes',
+    target: '_blank',
+    href: 'https://docs.syanodes.my.id/symphony/node-installation',
     description: 'Documentation on how to start a validator',
   },
 ];
@@ -272,11 +287,18 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snap2.konsortech.xyz/symphony',
     description: 'Snapshots to speed up validator synchronization',
   },
-    {
+  {
     id: '7',
     label: 'Sychonix',
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/snapshot',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '8',
+    label: 'SyaNodes',
+    target: '_blank',
+    href: 'https://ss.syanodes.my.id/symphony/ss-symphony.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
 ];
@@ -310,20 +332,27 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snap2.konsortech.xyz/symphony/genesis.json',
     description: 'The JSON needed to start a node',
   },
-    {
+  {
     id: '4',
     label: 'KonsorTech',
     target: '_blank',
     href: 'https://snap2.konsortech.xyz/symphony/genesis.json',
     description: 'The JSON needed to start a node',
   },
-    {
+  {
     id: '5',
     label: 'Sychonix',
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/genesis',
     description: 'The JSON needed to start a node',
-  }
+  },
+  {
+    id: '6',
+    label: 'SyaNodes',
+    target: '_blank',
+    href: 'https://testnet-files.syanodes.my.id/symphony-genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -360,6 +389,20 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'Sychonix',
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/addrbook',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '5',
+    label: 'Sychonix',
+    target: '_blank',
+    href: 'https://service.sychonix.com/testnet/symphony/addrbook',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '6',
+    label: 'SyaNodes',
+    target: '_blank',
+    href: 'https://testnet-files.syanodes.my.id/symphony-addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
