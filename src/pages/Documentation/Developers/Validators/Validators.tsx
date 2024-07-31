@@ -176,6 +176,13 @@ const VALIDATORS: NavItem[] = [
     description:
       'Committed to keeping abreast of industry advancements and informed, and passionate about using dependable and effective node operation to advance blockchain technology.',
   },
+  {
+    id: '17',
+    label: 'Jhonswg',
+    target: '_blank',
+    href: 'https://jhonswg.com/',
+    description: 'Stake and Earn with us',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
