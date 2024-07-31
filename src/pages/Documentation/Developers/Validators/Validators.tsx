@@ -168,6 +168,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://sychonix.com/',
     description: 'Committed to Secure Networks',
   },
+    {
+    id: '16',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/',
+    description: 'Validator Service & IBC Relayer',    
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -227,6 +234,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://service.sychonix.com/testnet/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '9',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony',
+    description: 'Documentation on how to start a validator',    
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -279,6 +293,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://service.sychonix.com/testnet/symphony/snapshot',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '8',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/snapshot',
+    description: 'Snapshots to speed up validator synchronization',    
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -323,6 +344,13 @@ const GENESIS_FILES: NavItem[] = [
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/genesis',
     description: 'The JSON needed to start a node',
+  },
+  {
+    id: '6',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/genesis',
+    description: 'The JSON needed to start a node',    
   }
 ];
 
@@ -361,6 +389,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/addrbook',
     description: 'The address book needed to start a node',
+  },
+  {
+    id: '6',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/addrbook',
+    description: 'The address book needed to start a node',  
   },
 ];
 
