@@ -161,12 +161,19 @@ const VALIDATORS: NavItem[] = [
     href: 'https://konsortech.xyz/',
     description: 'Stake With Us ! Become Professional Stake Provider',
   },
-    {
+  {
     id: '15',
     label: 'Sychonix',
     target: '_blank',
     href: 'https://sychonix.com/',
     description: 'Committed to Secure Networks',
+  },
+  {
+    id: '16',
+    label: 'Jhonswg',
+    target: '_blank',
+    href: 'https://jhonswg.com/',
+    description: 'Stake and Earn with us',
   },
 ];
 
