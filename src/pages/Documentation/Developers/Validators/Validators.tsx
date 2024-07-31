@@ -270,6 +270,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://docs.cryptonode.id/en/testnet/symphony',
     description: 'Easy setup to start a validator',
   },
+  {
+    id: '11',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -336,6 +343,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://docs.cryptonode.id/en/testnet/symphony/endpoints-and-sync',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '10',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://snapshot.dashnode.org/symphony-testnet/',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -395,6 +409,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snapshot.cryptonode.id/symphony-testnet/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '8',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://snapshot.dashnode.org/symphony-testnet/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -434,13 +455,6 @@ const ADDRESS_BOOKS: NavItem[] = [
     description: 'The address book needed to start a node',
   },
   {
-    id: '5',
-    label: 'Sychonix',
-    target: '_blank',
-    href: 'https://service.sychonix.com/testnet/symphony/addrbook',
-    description: 'The address book needed to start a node',
-  },
-  {
     id: '6',
     label: 'SyaNodes',
     target: '_blank',
@@ -453,6 +467,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     target: '_blank',
     href: 'https://snapshot.cryptonode.id/symphony-testnet/addrbook.json',
     description: 'Collection of quality addresses',
+  },
+  {
+    id: '8',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://snapshot.dashnode.org/symphony-testnet/addrbook.json',
+    description: 'The address book needed to start a node',
   },
 ];
 
