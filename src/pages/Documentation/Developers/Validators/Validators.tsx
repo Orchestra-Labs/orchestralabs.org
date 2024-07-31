@@ -183,6 +183,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://jhonswg.com/',
     description: 'Stake and Earn with us',
   },
+  {
+    id: '18',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/',
+    description: 'Validator Service & IBC Relayer',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
