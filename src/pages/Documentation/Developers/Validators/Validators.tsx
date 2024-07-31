@@ -227,6 +227,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://service.sychonix.com/testnet/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '9',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -279,6 +286,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://service.sychonix.com/testnet/symphony/snapshot',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '8',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://snapshot.dashnode.org/symphony-testnet/',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -323,6 +337,13 @@ const GENESIS_FILES: NavItem[] = [
     target: '_blank',
     href: 'https://service.sychonix.com/testnet/symphony/genesis',
     description: 'The JSON needed to start a node',
+  },
+  {
+    id: '6',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://snapshot.dashnode.org/symphony-testnet/genesis.json',
+    description: 'The JSON needed to start a node',
   }
 ];
 
@@ -359,7 +380,14 @@ const ADDRESS_BOOKS: NavItem[] = [
     id: '5',
     label: 'Sychonix',
     target: '_blank',
-    href: 'https://service.sychonix.com/testnet/symphony/addrbook',
+    href: 'https://snapshot.dashnode.org/symphony-testnet/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '6',
+    label: 'DashNode',
+    target: '_blank',
+    href: 'https://snapshot.dashnode.org/symphony-testnet/addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
