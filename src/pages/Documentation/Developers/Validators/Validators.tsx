@@ -161,6 +161,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://konsortech.xyz/',
     description: 'Stake With Us ! Become Professional Stake Provider',
   },
+  {
+    id: '15',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/',
+    description: 'Validator Service & IBC Relayer',  
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -213,6 +220,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://konsortech.xyz/testnet/symphony',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '8',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony',
+    description: 'Documentation on how to start a validator',  
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -257,6 +271,13 @@ const SNAPSHOTS: NavItem[] = [
     target: '_blank',
     href: 'https://snap2.konsortech.xyz/symphony',
     description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '7',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/snapshot',
+    description: 'Snapshots to speed up validator synchronization',  
   },
 ];
 
