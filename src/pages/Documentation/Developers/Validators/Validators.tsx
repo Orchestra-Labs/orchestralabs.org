@@ -190,6 +190,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://service.vinjan.xyz/',
     description: 'Validator Service & IBC Relayer',
   },
+  {
+    id: '19',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://cryptonode.id/',
+    description: 'Crypto Validator Node Education Channel',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -256,6 +263,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://docs.syanodes.my.id/symphony/node-installation',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '10',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://docs.cryptonode.id/en/testnet/symphony',
+    description: 'Easy setup to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -315,6 +329,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://ss.syanodes.my.id/symphony/ss-symphony.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '9',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://docs.cryptonode.id/en/testnet/symphony/endpoints-and-sync',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -365,6 +386,13 @@ const GENESIS_FILES: NavItem[] = [
     label: 'SyaNodes',
     target: '_blank',
     href: 'https://testnet-files.syanodes.my.id/symphony-genesis.json',
+    description: 'The JSON needed to start a node',
+  },
+  {
+    id: '7',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://snapshot.cryptonode.id/symphony-testnet/genesis.json',
     description: 'The JSON needed to start a node',
   },
 ];
@@ -418,6 +446,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     target: '_blank',
     href: 'https://testnet-files.syanodes.my.id/symphony-addrbook.json',
     description: 'The address book needed to start a node',
+  },
+  {
+    id: '7',
+    label: 'CryptoNodeID',
+    target: '_blank',
+    href: 'https://snapshot.cryptonode.id/symphony-testnet/addrbook.json',
+    description: 'Collection of quality addresses',
   },
 ];
 
