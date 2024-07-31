@@ -32,6 +32,7 @@ import dashNode from '@/assets/images/dashnode.png';
 import nomad from '@/assets/images/nomad.png';
 import konsortech from '@/assets/images/konsortech.png';
 import sychonix from '@/assets/images/sychonix.png';
+import nodestake from '@/assets/images/nodestake.png';
 
 type Company = {
   id: number;
