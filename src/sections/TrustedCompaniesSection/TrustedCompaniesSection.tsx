@@ -220,6 +220,12 @@ const COMPANIES: Company[] = [
     src: sychonix,
     logoClass: 'max-h-10',
   },
+  {
+    id: 31,
+    name: 'Vinjan.Inc',
+    src: Vinjan.Inc,
+    logoClass: 'max-h-10',  
+  },
 ];
 
 export const TrustedCompaniesSection = () => (
