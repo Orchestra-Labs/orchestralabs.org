@@ -380,7 +380,7 @@ const ADDRESS_BOOKS: NavItem[] = [
     id: '5',
     label: 'Sychonix',
     target: '_blank',
-    href: 'https://snapshot.dashnode.org/symphony-testnet/addrbook.json',
+    href: 'https://service.sychonix.com/testnet/symphony/addrbook.json',
     description: 'The address book needed to start a node',
   },
   {
