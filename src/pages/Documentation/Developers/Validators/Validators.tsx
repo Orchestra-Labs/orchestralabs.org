@@ -168,6 +168,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://sychonix.com/',
     description: 'Committed to Secure Networks',
   },
+  {
+    id: '15',
+    label: 'Busurnode',
+    target: '_blank',
+    href: 'https://busurnode.com',
+    description: 'Secure and Reliable Node Operator',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [

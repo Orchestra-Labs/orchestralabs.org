@@ -32,6 +32,7 @@ import dashNode from '@/assets/images/dashnode.png';
 import nomad from '@/assets/images/nomad.png';
 import konsortech from '@/assets/images/konsortech.png';
 import sychonix from '@/assets/images/sychonix.png';
+import busurnode from '@/assets/images/busurnode.png';
 
 type Company = {
   id: number;
@@ -218,6 +219,12 @@ const COMPANIES: Company[] = [
     id: 30,
     name: 'Sychonix',
     src: sychonix,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 31,
+    name: 'Busurnode',
+    src: busurnode,
     logoClass: 'max-h-10',
   },
 ];
