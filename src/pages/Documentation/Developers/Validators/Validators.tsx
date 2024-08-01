@@ -284,6 +284,7 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+  {
     id: '13',
     label: 'CroutonDigital',
     target: '_blank',
@@ -363,6 +364,7 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
     id: '12',
     label: 'CroutonDigital',
     target: '_blank',
