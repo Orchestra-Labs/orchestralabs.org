@@ -197,6 +197,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://cryptonode.id/',
     description: 'Crypto Validator Node Education Channel',
   },
+  {
+id: '20',
+label: 'StringLabs',
+target: '_blank',
+href: 'https://stringlabs.xyz/',
+description: 'Independent and Reliable Validator',
+},
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
