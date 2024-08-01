@@ -197,6 +197,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://cryptonode.id/',
     description: 'Crypto Validator Node Education Channel',
   },
+  {
+    id: '20',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://www.ravenode.xyz/',
+    description: 'Independent & Your Trusted Node Validator',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -277,6 +284,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '12',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://docs.ravenode.xyz/testnet/symphony',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -350,6 +364,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '11',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://snapshot.ravenode.xyz/symphony/symphony-latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -416,6 +437,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '9',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://snapshot.ravenode.xyz/symphony/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -473,6 +501,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'DashNode',
     target: '_blank',
     href: 'https://snapshot.dashnode.org/symphony-testnet/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '9',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://snapshot.ravenode.xyz/symphony/addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
