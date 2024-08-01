@@ -277,6 +277,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+{
+    id: '20',
+    label: 'xxcode',
+    target: '_blank',
+    href: 'https://xc.xxcode.xyz/testnet/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
