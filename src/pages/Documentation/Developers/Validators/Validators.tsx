@@ -197,6 +197,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://cryptonode.id/',
     description: 'Crypto Validator Node Education Channel',
   },
+  {
+    id: '21',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://crouton.digital',
+    description: 'Your everyday crypto partner',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -277,6 +284,12 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+    id: '13',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://crouton.digital/services/testnets/symphony',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -350,6 +363,12 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/',
     description: 'Snapshots to speed up validator synchronization',
   },
+    id: '12',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://storage.crouton.digital/testnet/symphony/snapshots/symphony_latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -416,6 +435,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '10',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://storage.crouton.digital/testnet/symphony/files/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -473,6 +499,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'DashNode',
     target: '_blank',
     href: 'https://snapshot.dashnode.org/symphony-testnet/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '10',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://storage.crouton.digital/testnet/symphony/files/addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
