@@ -32,6 +32,10 @@ import dashNode from '@/assets/images/dashnode.png';
 import nomad from '@/assets/images/nomad.png';
 import konsortech from '@/assets/images/konsortech.png';
 import sychonix from '@/assets/images/sychonix.png';
+import syanodes from '@/assets/images/syanodes.png';
+import jhonswg from '@/assets/images/jhonswg.png';
+import cryptonodeid from '@/assets/images/cryptonodeid.png';
+import nodestake from '@/assets/images/nodestake.png';
 
 type Company = {
   id: number;
@@ -218,6 +222,30 @@ const COMPANIES: Company[] = [
     id: 30,
     name: 'Sychonix',
     src: sychonix,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 30,
+    name: 'SyaNodes',
+    src: syanodes,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 31,
+    name: 'Jhonswg',
+    src: jhonswg,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 32,
+    name: 'CryptonodeID',
+    src: cryptonodeid,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 33,
+    name: 'NodeStake',
+    src: nodestake,
     logoClass: 'max-h-10',
   },
 ];
