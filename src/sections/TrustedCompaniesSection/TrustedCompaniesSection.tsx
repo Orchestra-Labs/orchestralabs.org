@@ -213,6 +213,12 @@ const COMPANIES: Company[] = [
     src: konsortech,
     logoClass: 'max-h-10',
   },
+  {
+    id: 30,
+    name: 'Vinjan.Inc',
+    src: Vinjan.Inc,
+    logoClass: 'max-h-10',  
+  },
 ];
 
 export const TrustedCompaniesSection = () => (
