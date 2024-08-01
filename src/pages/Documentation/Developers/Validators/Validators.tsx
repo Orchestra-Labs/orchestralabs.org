@@ -197,6 +197,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://cryptonode.id/',
     description: 'Crypto Validator Node Education Channel',
   },
+  {
+    id: '20',
+    label: 'ComunityNode',
+    target: '_blank',
+    href: 'https://comunitynode.my.id',
+    description: 'Comunity Of Node Runner, Developer, echosystem Builder',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -275,6 +282,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     label: 'DashNode',
     target: '_blank',
     href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '12',
+    label: 'ComunityNode',
+    target: '_blank',
+    href: 'https://comunity-node.gitbook.io/validator-tools',
     description: 'Documentation on how to start a validator',
   },
 ];
