@@ -36,6 +36,7 @@ import syanodes from '@/assets/images/syanodes.png';
 import jhonswg from '@/assets/images/jhonswg.png';
 import cryptonodeid from '@/assets/images/cryptonodeid.png';
 import nodestake from '@/assets/images/nodestake.png';
+import dnsarz from '@/assets/images/dnsarz.png';
 
 type Company = {
   id: number;
@@ -248,6 +249,12 @@ const COMPANIES: Company[] = [
     src: nodestake,
     logoClass: 'max-h-10',
   },
+ {
+    id: 34,
+    name: 'Dnsarz',
+    src: dnsarz,
+    logoClass: 'max-h-10',
+  }, 
 ];
 
 export const TrustedCompaniesSection = () => (
