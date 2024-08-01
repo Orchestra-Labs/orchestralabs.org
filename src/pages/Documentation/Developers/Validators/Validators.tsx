@@ -197,6 +197,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://cryptonode.id/',
     description: 'Crypto Validator Node Education Channel',
   },
+{
+    id: '25',
+    label: 'iamatomic',
+    target: '_blank',
+    href: 'https://iamatomic.id/',
+    description: 'Crypto Validator Node Education Channel',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
