@@ -99,7 +99,7 @@ const EXPLORERS: NavItem[] = [
     label: 'NodeSync',
     target: '_blank',
     href: 'https://explorer.nodesync.top/Symphony',
-    description: 'NodeSync.Top is Trusted PoS Validator - Node Provider',
+    description: 'An explorer from one of our supporting validators',
   },
 ];
 
