@@ -310,6 +310,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snap2.konsortech.xyz/symphony/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '5',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/genesis',
+    description: 'The JSON needed to start a node',  
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -340,6 +347,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     target: '_blank',
     href: 'https://snap2.konsortech.xyz/symphony/addrbook.json',
     description: 'The address book needed to start a node',
+  },
+  {
+    id: '5',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/addrbook',
+    description: 'The address book needed to start a node',  
   },
 ];
 
