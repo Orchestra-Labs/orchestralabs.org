@@ -44,7 +44,7 @@ import ravenode from '@/assets/images/ravenode.jpg';
 import vinjanInc from '@/assets/images/vinjan-inc.png';
 import busurnode from '@/assets/images/busurnode.png';
 import croutondigital from '@/assets/images/croutondigital.png';
-import node39 from '@/assets/images/Logo-Node39.jpg';
+import node39 from '@/assets/images/node39.jpg';
 import dnsarz from '@/assets/images/dnsarz.png';
 import communitynode from '@/assets/images/ComunityNode.png';
 import winnode from '@/assets/images/winnode.png';
