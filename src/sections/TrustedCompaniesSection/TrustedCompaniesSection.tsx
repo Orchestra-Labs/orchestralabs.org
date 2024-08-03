@@ -46,6 +46,7 @@ import busurnode from '@/assets/images/busurnode.png';
 import croutondigital from '@/assets/images/croutondigital.png';
 import node39 from '@/assets/images/Logo-Node39.jpg';
 import dnsarz from '@/assets/images/dnsarz.png';
+import communitynode from '@/assets/images/ComunityNode.png';
 
 type Company = {
   id: number;
@@ -316,6 +317,12 @@ const COMPANIES: Company[] = [
     id: 43,
     name: 'Dnsarz',
     src: dnsarz,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 44,
+    name: 'CommunityNode',
+    src: communitynode,
     logoClass: 'max-h-10',
   },
 ];
