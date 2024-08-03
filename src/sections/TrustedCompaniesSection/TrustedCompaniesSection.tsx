@@ -43,6 +43,7 @@ import revonode from '@/assets/images/revonode.png';
 import ravenode from '@/assets/images/ravenode.jpg';
 import vinjanInc from '@/assets/images/vinjan-inc.png';
 import busurnode from '@/assets/images/busurnode.png';
+import croutondigital from '@/assets/images/croutondigital.png';
 
 type Company = {
   id: number;
@@ -295,6 +296,12 @@ const COMPANIES: Company[] = [
     id: 40,
     name: 'Busurnode',
     src: busurnode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 41,
+    name: 'CroutonDigital',
+    src: croutondigital,
     logoClass: 'max-h-10',
   },
 ];
