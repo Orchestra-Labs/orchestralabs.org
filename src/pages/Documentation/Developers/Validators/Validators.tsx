@@ -281,6 +281,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://winnode.site/',
     description: 'Validator Node Service and Promotion',
   },
+ {
+    id: '37',
+    label: 'Blacktokyo',
+    target: '_blank',
+    href: 'https://github.com/blacktokyo96',
+    description: 'Passion for blockchain technology and ensuring the integrity of decentralized networks',
+  }, 
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
