@@ -38,6 +38,9 @@ import cryptonodeid from '@/assets/images/cryptonodeid.png';
 import nodestake from '@/assets/images/nodestake.png';
 import iAmAtomic from '@/assets/images/i-am-atomic.png';
 import nodesync from '@/assets/images/nodesync.png';
+import xxcode from '@/assets/images/xxcode.png';
+import revonode from '@/assets/images/revonode.png';
+import ravenode from '@/assets/images/ravenode.jpg';
 
 type Company = {
   id: number;
@@ -260,6 +263,24 @@ const COMPANIES: Company[] = [
     id: 35,
     name: 'NodeSync',
     src: nodesync,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 36,
+    name: 'xxcode',
+    src: xxcode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 37,
+    name: 'revonode',
+    src: revonode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 38,
+    name: 'Ravenode',
+    src: ravenode,
     logoClass: 'max-h-10',
   },
 ];
