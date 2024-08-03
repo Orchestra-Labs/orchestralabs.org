@@ -197,6 +197,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://cryptonode.id/',
     description: 'Crypto Validator Node Education Channel',
   },
+  {
+    id: '20',
+    label: 'Blacktokyo',
+    target: '_blank',
+    href: 'https://github.com/blacktokyo96/',
+    description: 'Dedicated validator for blockchain technology and ensuring the integrity of decentralized networks',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
