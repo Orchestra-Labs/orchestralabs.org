@@ -274,6 +274,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://comunitynode.my.id',
     description: 'Comunity Of Node Runner, Developer, echosystem Builder',
   },
+  {
+    id: '36',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://winnode.site/',
+    description: 'Validator Node Service and Promotion',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -402,6 +409,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     target: '_blank',
     href: 'https://comunity-node.gitbook.io/validator-tools',
     description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '19',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://docs.winnode.site/tesnet/symphony/install',
+    description: 'Guide Instalation a validator',
   },
 ];
 

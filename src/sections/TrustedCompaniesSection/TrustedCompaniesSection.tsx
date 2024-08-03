@@ -47,6 +47,7 @@ import croutondigital from '@/assets/images/croutondigital.png';
 import node39 from '@/assets/images/Logo-Node39.jpg';
 import dnsarz from '@/assets/images/dnsarz.png';
 import communitynode from '@/assets/images/ComunityNode.png';
+import winnode from '@/assets/images/winnode.png';
 
 type Company = {
   id: number;
@@ -323,6 +324,12 @@ const COMPANIES: Company[] = [
     id: 44,
     name: 'CommunityNode',
     src: communitynode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 45,
+    name: 'Winnode',
+    src: winnode,
     logoClass: 'max-h-10',
   },
 ];
