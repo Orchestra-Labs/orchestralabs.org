@@ -239,6 +239,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://service.vinjan.xyz/',
     description: 'Validator Service & IBC Relayer',
   },
+  {
+    id: '31',
+    label: 'Busurnode',
+    target: '_blank',
+    href: 'https://busurnode.com',
+    description: 'Secure and Reliable Node Operator',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [

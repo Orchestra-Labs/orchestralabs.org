@@ -42,6 +42,7 @@ import xxcode from '@/assets/images/xxcode.png';
 import revonode from '@/assets/images/revonode.png';
 import ravenode from '@/assets/images/ravenode.jpg';
 import vinjanInc from '@/assets/images/vinjan-inc.png';
+import busurnode from '@/assets/images/busurnode.png';
 
 type Company = {
   id: number;
@@ -288,6 +289,12 @@ const COMPANIES: Company[] = [
     id: 39,
     name: 'Vinjan.Inc',
     src: vinjanInc,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 40,
+    name: 'Busurnode',
+    src: busurnode,
     logoClass: 'max-h-10',
   },
 ];
