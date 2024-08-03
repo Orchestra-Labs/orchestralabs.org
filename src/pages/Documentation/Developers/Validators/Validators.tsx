@@ -253,6 +253,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://crouton.digital',
     description: 'Your everyday crypto partner',
   },
+  {
+    id: '33',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://node39.top',
+    description: 'POS Node & Validator',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -361,6 +368,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://crouton.digital/services/testnets/symphony',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '16',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://services.node39.top/index.html/cosmos/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -462,6 +476,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://storage.crouton.digital/testnet/symphony/snapshots/symphony_latest.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '15',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://services.node39.top/index.html/cosmos/symphony/sync',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -556,6 +577,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://storage.crouton.digital/testnet/symphony/files/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '13',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://node39.top/testnet/symphony/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -641,6 +669,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'CroutonDigital',
     target: '_blank',
     href: 'https://storage.crouton.digital/testnet/symphony/files/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '13',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://node39.top/testnet/symphony/addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
