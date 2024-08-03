@@ -36,6 +36,8 @@ import syanodes from '@/assets/images/syanodes.png';
 import jhonswg from '@/assets/images/jhonswg.png';
 import cryptonodeid from '@/assets/images/cryptonodeid.png';
 import nodestake from '@/assets/images/nodestake.png';
+import iAmAtomic from '@/assets/images/i-am-atomic.png';
+import nodesync from '@/assets/images/nodesync.png';
 
 type Company = {
   id: number;
@@ -246,6 +248,18 @@ const COMPANIES: Company[] = [
     id: 33,
     name: 'NodeStake',
     src: nodestake,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 34,
+    name: 'IAmAtomic',
+    src: iAmAtomic,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 35,
+    name: 'NodeSync',
+    src: nodesync,
     logoClass: 'max-h-10',
   },
 ];

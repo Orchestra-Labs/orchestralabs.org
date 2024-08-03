@@ -197,12 +197,19 @@ const VALIDATORS: NavItem[] = [
     href: 'https://cryptonode.id/',
     description: 'Crypto Validator Node Education Channel',
   },
-{
+  {
     id: '25',
     label: 'iamatomic',
     target: '_blank',
     href: 'https://iamatomic.id/',
     description: 'Crypto Validator Node Education Channel',
+  },
+  {
+    id: '26',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://nodesync.top/',
+    description: 'Trusted PoS ValidatorNode Provider',
   },
 ];
 
@@ -284,6 +291,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '12',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://services.nodesync.top/cosmos-testnet/symphony',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -357,6 +371,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '11',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://files.nodesync.top/Symphony/',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -423,6 +444,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '9',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://files.nodesync.top/Symphony/symphony-genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -480,6 +508,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'DashNode',
     target: '_blank',
     href: 'https://snapshot.dashnode.org/symphony-testnet/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '9',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://files.nodesync.top/Symphony/symphony-addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
