@@ -101,6 +101,13 @@ const EXPLORERS: NavItem[] = [
     href: 'https://explorer.nodesync.top/Symphony',
     description: 'An explorer from one of our supporting validators',
   },
+  {
+    id: '13',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://explorer.vinjan.xyz/symphony-testnet',
+    description: 'An explorer from one of our supporting validators',
+  },
 ];
 
 export const Explorers = () => (

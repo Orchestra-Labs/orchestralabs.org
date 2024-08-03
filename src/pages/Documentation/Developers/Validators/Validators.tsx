@@ -232,6 +232,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://www.ravenode.xyz/',
     description: 'Independent & Your Trusted Node Validator',
   },
+  {
+    id: '30',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/',
+    description: 'Validator Service & IBC Relayer',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -326,6 +333,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://docs.ravenode.xyz/testnet/symphony',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '14',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony',
+    description: 'Documentation on how to start a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -413,6 +427,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot.ravenode.xyz/symphony/symphony-latest.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '13',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/snapshot',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -493,6 +514,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snapshot.ravenode.xyz/symphony/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '11',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/genesis',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -564,6 +592,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'Ravenode',
     target: '_blank',
     href: 'https://snapshot.ravenode.xyz/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '11',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/addrbook',
     description: 'The address book needed to start a node',
   },
 ];
