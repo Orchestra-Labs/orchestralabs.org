@@ -115,6 +115,13 @@ const EXPLORERS: NavItem[] = [
     href: 'https://explorer.node39.top/symphony',
     description: 'An explorer from one of our supporting validators',
   },
+  {
+    id: '15',
+    label: 'Dnsarz',
+    target: '_blank',
+    href: 'https://ping.dnsarz.xyz/symphony-testnet',
+    description: 'An explorer from one of our supporting validators',
+  },
 ];
 
 export const Explorers = () => (

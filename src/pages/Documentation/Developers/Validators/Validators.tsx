@@ -260,6 +260,13 @@ const VALIDATORS: NavItem[] = [
     href: 'https://node39.top',
     description: 'POS Node & Validator',
   },
+  {
+    id: '34',
+    label: 'Dnsarz',
+    target: '_blank',
+    href: 'https://dnsarz.xyz/',
+    description: 'an Independent Blockchain Validator',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -373,6 +380,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     label: 'Node39.TOP',
     target: '_blank',
     href: 'https://services.node39.top/index.html/cosmos/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '17',
+    label: 'Dnsarz',
+    target: '_blank',
+    href: 'https://dnsarz.xyz/services/testnet/symphony/installation/',
     description: 'Documentation on how to start a validator',
   },
 ];

@@ -45,6 +45,7 @@ import vinjanInc from '@/assets/images/vinjan-inc.png';
 import busurnode from '@/assets/images/busurnode.png';
 import croutondigital from '@/assets/images/croutondigital.png';
 import node39 from '@/assets/images/Logo-Node39.jpg';
+import dnsarz from '@/assets/images/dnsarz.png';
 
 type Company = {
   id: number;
@@ -309,6 +310,12 @@ const COMPANIES: Company[] = [
     id: 42,
     name: 'Node39.TOP',
     src: node39,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 43,
+    name: 'Dnsarz',
+    src: dnsarz,
     logoClass: 'max-h-10',
   },
 ];
