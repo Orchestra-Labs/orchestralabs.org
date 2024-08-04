@@ -57,6 +57,16 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         label: 'Add Symphony To A Wallet',
         href: `${ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}`,
       },
+      {
+        id: '3',
+        label: 'The Incentivized Testnet',
+        href: `${ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET}`,
+      },
+      {
+        id: '4',
+        label: 'Qualifying For Airdrops',
+        href: `${ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS}`,
+      },
     ],
   },
   {
@@ -73,6 +83,11 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         id: '2',
         label: 'Validators',
         href: `${ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS}`,
+      },
+      {
+        id: '3',
+        label: 'Genesis Delegation',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION}`,
       },
     ],
   },

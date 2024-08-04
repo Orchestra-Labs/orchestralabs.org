@@ -1,5 +1,7 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
+import { ROUTES } from '@/config/routes';
 import { NavItem } from '@/types';
+import { Link } from 'react-router-dom';
 
 const HEADINGS = {
   1: {
@@ -281,13 +283,14 @@ const VALIDATORS: NavItem[] = [
     href: 'https://winnode.site/',
     description: 'Validator Node Service and Promotion',
   },
- {
+  {
     id: '37',
     label: 'Blacktokyo',
     target: '_blank',
     href: 'https://github.com/blacktokyo96',
-    description: 'Passion for blockchain technology and ensuring the integrity of decentralized networks',
-  }, 
+    description:
+      'Passion for blockchain technology and ensuring the integrity of decentralized networks',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -738,8 +741,17 @@ export const Validators = () => (
           Validators
         </h1>
         <p className="mt-10">
-          A list of validators and relevant information required for starting up
-          a new validator are below:
+          For interested validators, you can find information on our genesis
+          delegation criteria{' '}
+          <Link
+            to={ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION}
+            className="text-blue hover:text-blue-darker underline"
+          >
+            here
+          </Link>
+          . For those starting out or recovering, a list of validators and
+          relevant information required for starting up a new validator are
+          below:
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
