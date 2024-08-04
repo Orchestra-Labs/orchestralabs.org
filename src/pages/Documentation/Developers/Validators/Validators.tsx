@@ -532,6 +532,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://services.node39.top/index.html/cosmos/symphony/sync',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '16',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://data.winnode.xyz/file/uploads/symphony_snapshot_latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -633,6 +640,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://node39.top/testnet/symphony/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '14',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://data.winnode.xyz/file/uploads/symphony_genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -725,6 +739,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     label: 'Node39.TOP',
     target: '_blank',
     href: 'https://node39.top/testnet/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '14',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://data.winnode.xyz/file/uploads/symphony_addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
