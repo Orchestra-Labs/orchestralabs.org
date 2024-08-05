@@ -28,6 +28,10 @@ const HEADINGS = {
     id: 'archies',
     label: 'Archies',
   },
+  3.4: {
+    id: 'snails',
+    label: 'Snails',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -57,6 +61,11 @@ const NAVIGATION_ITEMS: NavItem[] = [
         label: HEADINGS[3.3].label,
         href: `#${HEADINGS[3.3].id}`,
       },
+      {
+        id: HEADINGS[3.4].id,
+        label: HEADINGS[3.4].label,
+        href: `#${HEADINGS[3.4].id}`,
+      },
     ],
   },
 ];
@@ -76,6 +85,12 @@ const QUALIFYING_NFTS: NavItem[] = [
     label: HEADINGS[3.3].label,
     target: '_blank',
     href: `https://t.co/RBHlAsPps6`,
+  },
+  {
+    id: HEADINGS[3.4].id,
+    label: HEADINGS[3.4].label,
+    target: '_blank',
+    href: `https://snails.network/home`,
   },
 ];
 
