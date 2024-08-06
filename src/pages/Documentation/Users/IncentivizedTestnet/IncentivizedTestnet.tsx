@@ -48,24 +48,6 @@ const TASK_LIST = [
   'The user with the lowest MLD balance at the end of the week wins.',
 ];
 
-const QUALIFYING_TOKENS = ['OSMO', 'ATOM', 'ARCH', 'KUJI'];
-
-const QUALIFYING_NFTS: NavItem[] = [
-  { id: '1', label: 'Symphony Soundwave', target: '', href: `#` },
-  {
-    id: '2',
-    label: 'Geckies',
-    target: '_blank',
-    href: `https://t.co/5VNZEw1uZv`,
-  },
-  {
-    id: '3',
-    label: 'Archies',
-    target: '_blank',
-    href: `https://t.co/RBHlAsPps6`,
-  },
-];
-
 export const IncentivizedTestnet = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
     <PageNavigator />
@@ -157,64 +139,14 @@ export const IncentivizedTestnet = () => (
           <p className="mt-5">
             Orchestra Labs has allocated 10% of the genesis supply of Melody
             (MLD), as airdrops for the incentivized testnet. To qualify for
-            these airdropped testnet rewards, meet one of the criteria below
-            when the snapshot is taken:
-          </p>
-          <p className="mt-5">
-            - Stakers of {'>100'} USD of select Cosmos ecosystem tokens:
-          </p>
-          <ul className="mt-5">
-            {QUALIFYING_TOKENS.map(item => (
-              <div className="flex mb-4 last:mb-0">
-                <p className="ml-5">- {item}</p>
-              </div>
-            ))}
-          </ul>
-          <p className="mt-5">
-            - Participants in the Symphony pre-sale rounds.
-          </p>
-          <p className="mt-5">- Holders of Symphony Soundwave NFTs.</p>
-          <p className="mt-5">- Holders of select Cosmos ecosystem NFTs:</p>
-          <ul className="mt-5">
-            {QUALIFYING_NFTS.map(item => (
-              <div className="flex mb-4 last:mb-0">
-                <p className="ml-5">
-                  -{' '}
-                  <Link
-                    to={item.href}
-                    target={item.target}
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    {item.label}
-                  </Link>
-                </p>{' '}
-              </div>
-            ))}
-          </ul>
-          <p className="mt-5">
-            <strong>Note:</strong> Active participation in targeted activities
-            can also earn Symphony NFTs. For the most current information on
-            testnet tasks, visit the Symphony Blockchain Leaderboard on Zealy.
-          </p>
-        </div>
-
-        <div className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            Next Steps
-          </h2>
-          <p className="mt-5">
-            Follow Orchestra Labs on X or join the Discord and Telegram for
-            updates.
-          </p>
-          <p className="mt-5">
-            Look out for opportunities to earn Symphony Soundwave NFTs.
-          </p>
-          <p className="mt-5">
-            Share the testnet news for a chance to win Symphony Soundwave NFTs.
-          </p>
-          <p className="mt-5">
-            Join us in this exciting journey to experience the future of
-            stablecoins and RWAs with Symphony!
+            these airdropped testnet rewards, meet one of the criteria listed{' '}
+            <Link
+              to={ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS}
+              className="text-blue hover:text-blue-darker underline"
+            >
+              here
+            </Link>
+            .
           </p>
         </div>
       </div>
