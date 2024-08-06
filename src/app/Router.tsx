@@ -10,7 +10,6 @@ import {
   AllTokens,
   AllTransactions,
   BlockDetails,
-  CaseStudies,
   CreateWallet,
   DeveloperOverview,
   Development,
@@ -156,10 +155,6 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING,
           element: <Fundraising />,
-        },
-        {
-          path: ROUTES.DOCUMENTATION.STARTUPS.CASE_STUDIES,
-          element: <CaseStudies />,
         },
       ],
     },
