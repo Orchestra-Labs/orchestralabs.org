@@ -292,7 +292,7 @@ const VALIDATORS: NavItem[] = [
     description:
       'Passion for blockchain technology and ensuring the integrity of decentralized networks',
   },
- main
+
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
