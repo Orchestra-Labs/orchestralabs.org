@@ -94,6 +94,41 @@ const EXPLORERS: NavItem[] = [
     href: 'https://testnet.cryptonode.id/symphony',
     description: 'An explorer from one of our supporting validators',
   },
+  {
+    id: '12',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://explorer.nodesync.top/Symphony',
+    description: 'An explorer from one of our supporting validators',
+  },
+  {
+    id: '13',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://explorer.vinjan.xyz/symphony-testnet',
+    description: 'An explorer from one of our supporting validators',
+  },
+  {
+    id: '14',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://explorer.node39.top/symphony',
+    description: 'An explorer from one of our supporting validators',
+  },
+  {
+    id: '15',
+    label: 'Dnsarz',
+    target: '_blank',
+    href: 'https://ping.dnsarz.xyz/symphony-testnet',
+    description: 'An explorer from one of our supporting validators',
+  },
+  {
+    id: '16',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://www.explorer.winnode.site/symphony',
+    description: 'An explorer from one of our supporting validators',
+  },  
 ];
 
 export const Explorers = () => (

@@ -1,5 +1,7 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
+import { ROUTES } from '@/config/routes';
 import { NavItem } from '@/types';
+import { Link } from 'react-router-dom';
 
 const HEADINGS = {
   1: {
@@ -204,6 +206,93 @@ const VALIDATORS: NavItem[] = [
     href: 'https://GowtherNode.id/',
     description: 'Crypto Validator Node Education Channel',
   },
+
+  {
+    id: '25',
+    label: 'iamatomic',
+    target: '_blank',
+    href: 'https://iamatomic.id/',
+    description: 'Crypto Validator Node Education Channel',
+  },
+  {
+    id: '26',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://nodesync.top/',
+    description: 'Trusted PoS ValidatorNode Provider',
+  },
+  {
+    id: '27',
+    label: 'StringLabs',
+    target: '_blank',
+    href: 'https://stringlabs.xyz/',
+    description: 'Independent and Reliable Validator',
+  },
+  {
+    id: '28',
+    label: 'xxcode',
+    target: '_blank',
+    href: 'https://xc.xxcode.xyz/testnet/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '29',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://www.ravenode.xyz/',
+    description: 'Independent & Your Trusted Node Validator',
+  },
+  {
+    id: '30',
+    label: 'Busurnode',
+    target: '_blank',
+    href: 'https://busurnode.com',
+    description: 'Secure and Reliable Node Operator',
+  },
+  {
+    id: '31',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://crouton.digital',
+    description: 'Your everyday crypto partner',
+  },
+  {
+    id: '32',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://node39.top',
+    description: 'POS Node & Validator',
+  },
+  {
+    id: '33',
+    label: 'Dnsarz',
+    target: '_blank',
+    href: 'https://dnsarz.xyz/',
+    description: 'an Independent Blockchain Validator',
+  },
+  {
+    id: '34',
+    label: 'CommunityNode',
+    target: '_blank',
+    href: 'https://comunitynode.my.id',
+    description: 'Comunity Of Node Runner, Developer, echosystem Builder',
+  },
+  {
+    id: '35',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://winnode.site/',
+    description: 'Validator Node Service and Promotion',
+  },
+  {
+    id: '36',
+    label: 'Blacktokyo',
+    target: '_blank',
+    href: 'https://github.com/blacktokyo96',
+    description:
+      'Passion for blockchain technology and ensuring the integrity of decentralized networks',
+  },
+ main
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
@@ -284,6 +373,62 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://services.dashnode.org/network/cosmos/symphony/installation',
     description: 'Documentation on how to start a validator',
   },
+  {
+    id: '12',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://services.nodesync.top/cosmos-testnet/symphony',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '13',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://docs.ravenode.xyz/testnet/symphony',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '14',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '15',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://crouton.digital/services/testnets/symphony',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '16',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://services.node39.top/index.html/cosmos/symphony/installation',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '17',
+    label: 'Dnsarz',
+    target: '_blank',
+    href: 'https://dnsarz.xyz/services/testnet/symphony/installation/',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '18',
+    label: 'CommunityNode',
+    target: '_blank',
+    href: 'https://comunity-node.gitbook.io/validator-tools',
+    description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '19',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://docs.winnode.site/tesnet/symphony/install',
+    description: 'Guide Instalation a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -357,6 +502,48 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '11',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://files.nodesync.top/Symphony/',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '12',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://snapshot.ravenode.xyz/symphony/symphony-latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '13',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/snapshot',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '14',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://storage.crouton.digital/testnet/symphony/snapshots/symphony_latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '15',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://services.node39.top/index.html/cosmos/symphony/sync',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '16',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://data.winnode.xyz/file/uploads/symphony_snapshot_latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -423,6 +610,48 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '9',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://files.nodesync.top/Symphony/symphony-genesis.json',
+    description: 'The JSON needed to start a node',
+  },
+  {
+    id: '10',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://snapshot.ravenode.xyz/symphony/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
+  {
+    id: '11',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/genesis',
+    description: 'The JSON needed to start a node',
+  },
+  {
+    id: '12',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://storage.crouton.digital/testnet/symphony/files/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
+  {
+    id: '13',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://node39.top/testnet/symphony/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
+  {
+    id: '14',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://data.winnode.xyz/file/uploads/symphony_genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -482,6 +711,48 @@ const ADDRESS_BOOKS: NavItem[] = [
     href: 'https://snapshot.dashnode.org/symphony-testnet/addrbook.json',
     description: 'The address book needed to start a node',
   },
+  {
+    id: '9',
+    label: 'NodeSync',
+    target: '_blank',
+    href: 'https://files.nodesync.top/Symphony/symphony-addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '10',
+    label: 'Ravenode',
+    target: '_blank',
+    href: 'https://snapshot.ravenode.xyz/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '11',
+    label: 'Vinjan.Inc',
+    target: '_blank',
+    href: 'https://service.vinjan.xyz/testnet/symphony/addrbook',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '12',
+    label: 'CroutonDigital',
+    target: '_blank',
+    href: 'https://storage.crouton.digital/testnet/symphony/files/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '13',
+    label: 'Node39.TOP',
+    target: '_blank',
+    href: 'https://node39.top/testnet/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '14',
+    label: 'Winnode',
+    target: '_blank',
+    href: 'https://data.winnode.xyz/file/uploads/symphony_addrbook.json',
+    description: 'The address book needed to start a node',
+  },
 ];
 
 export const Validators = () => (
@@ -493,8 +764,17 @@ export const Validators = () => (
           Validators
         </h1>
         <p className="mt-10">
-          A list of validators and relevant information required for starting up
-          a new validator are below:
+          For interested validators, you can find information on our genesis
+          delegation criteria{' '}
+          <Link
+            to={ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION}
+            className="text-blue hover:text-blue-darker underline"
+          >
+            here
+          </Link>
+          . For those starting out or recovering, a list of validators and
+          relevant information required for starting up a new validator are
+          below:
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

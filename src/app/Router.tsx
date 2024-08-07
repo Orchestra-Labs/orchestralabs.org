@@ -10,7 +10,6 @@ import {
   AllTokens,
   AllTransactions,
   BlockDetails,
-  CaseStudies,
   CreateWallet,
   DeveloperOverview,
   Development,
@@ -19,9 +18,12 @@ import {
   ExplorerMain,
   Explorers,
   Fundraising,
+  GenesisDelegation,
   Home,
+  IncentivizedTestnet,
   Inception,
   PasswordRecovery,
+  QualifyingUsers,
   Roadmap,
   SignIn,
   SignUp,
@@ -103,6 +105,14 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <AddSymphonyToWallet />,
         },
         {
+          path: ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET,
+          element: <IncentivizedTestnet />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS,
+          element: <QualifyingUsers />,
+        },
+        {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
           element: <DeveloperOverview />,
         },
@@ -113,6 +123,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS,
           element: <Validators />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
+          element: <GenesisDelegation />,
         },
         {
           path: ROUTES.DOCUMENTATION.STARTUPS.ROOT,
@@ -141,10 +155,6 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING,
           element: <Fundraising />,
-        },
-        {
-          path: ROUTES.DOCUMENTATION.STARTUPS.CASE_STUDIES,
-          element: <CaseStudies />,
         },
       ],
     },

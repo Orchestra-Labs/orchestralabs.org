@@ -39,6 +39,19 @@ const USER_DOCUMENTATION_LINKS: NavItem[] = [
     description: 'Add Symphony to non-native wallets',
     href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
   },
+  {
+    id: '3',
+    label: 'The Incentivized Testnet',
+    description: 'Test Symphony before the launch',
+    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
+  },
+  {
+    id: '4',
+    label: 'Qualifying For Airdrops',
+    description:
+      "How to qualify for airdrops with Symphony's incentivized testnet",
+    href: ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS,
+  },
 ];
 
 const ECOSYSTEM: NavItem[] = [

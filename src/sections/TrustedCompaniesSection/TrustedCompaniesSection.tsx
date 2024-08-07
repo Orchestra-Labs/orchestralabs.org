@@ -36,6 +36,19 @@ import syanodes from '@/assets/images/syanodes.png';
 import jhonswg from '@/assets/images/jhonswg.png';
 import cryptonodeid from '@/assets/images/cryptonodeid.png';
 import nodestake from '@/assets/images/nodestake.png';
+import iAmAtomic from '@/assets/images/i-am-atomic.png';
+import nodesync from '@/assets/images/nodesync.png';
+import xxcode from '@/assets/images/xxcode.png';
+import revonode from '@/assets/images/revonode.png';
+import ravenode from '@/assets/images/ravenode.jpg';
+import vinjanInc from '@/assets/images/vinjan-inc.png';
+import busurnode from '@/assets/images/busurnode.png';
+import croutondigital from '@/assets/images/croutondigital.png';
+import node39 from '@/assets/images/node39.jpg';
+import dnsarz from '@/assets/images/dnsarz.png';
+import communitynode from '@/assets/images/ComunityNode.png';
+import winnode from '@/assets/images/winnode.png';
+import coinCodex from '@/assets/images/coincodex.png';
 
 type Company = {
   id: number;
@@ -225,28 +238,106 @@ const COMPANIES: Company[] = [
     logoClass: 'max-h-10',
   },
   {
-    id: 30,
+    id: 31,
     name: 'SyaNodes',
     src: syanodes,
     logoClass: 'max-h-10',
   },
   {
-    id: 31,
+    id: 32,
     name: 'Jhonswg',
     src: jhonswg,
     logoClass: 'max-h-10',
   },
   {
-    id: 32,
+    id: 33,
     name: 'CryptonodeID',
     src: cryptonodeid,
     logoClass: 'max-h-10',
   },
   {
-    id: 33,
+    id: 34,
     name: 'NodeStake',
     src: nodestake,
     logoClass: 'max-h-10',
+  },
+  {
+    id: 35,
+    name: 'IAmAtomic',
+    src: iAmAtomic,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 36,
+    name: 'NodeSync',
+    src: nodesync,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 37,
+    name: 'xxcode',
+    src: xxcode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 38,
+    name: 'revonode',
+    src: revonode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 39,
+    name: 'Ravenode',
+    src: ravenode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 40,
+    name: 'Vinjan.Inc',
+    src: vinjanInc,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 41,
+    name: 'Busurnode',
+    src: busurnode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 42,
+    name: 'CroutonDigital',
+    src: croutondigital,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 43,
+    name: 'Node39.TOP',
+    src: node39,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 44,
+    name: 'Dnsarz',
+    src: dnsarz,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 45,
+    name: 'CommunityNode',
+    src: communitynode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 46,
+    name: 'Winnode',
+    src: winnode,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 47,
+    name: 'Winnode',
+    src: coinCodex,
+    logoClass: 'max-h-9',
   },
 ];
 

@@ -1,6 +1,5 @@
 export * from './Advisors';
 export * from './Development';
-export * from './CaseStudies';
 export * from './Expansion';
 export * from './Fundraising';
 export * from './Inception';

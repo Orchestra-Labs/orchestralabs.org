@@ -156,12 +156,6 @@ const STARTUP_DOCUMENTATION_LINKS: NavItem[] = [
     description: 'Sources of investment to accelerate your business',
     href: ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING,
   },
-  {
-    id: '7',
-    label: 'Case Studies',
-    description: 'Examples from others before you',
-    href: ROUTES.DOCUMENTATION.STARTUPS.CASE_STUDIES,
-  },
 ];
 
 export const DocumentationOverview = () => (
