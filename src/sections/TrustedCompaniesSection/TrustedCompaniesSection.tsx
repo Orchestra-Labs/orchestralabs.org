@@ -49,6 +49,7 @@ import dnsarz from '@/assets/images/dnsarz.png';
 import communitynode from '@/assets/images/ComunityNode.png';
 import winnode from '@/assets/images/winnode.png';
 import coinCodex from '@/assets/images/coincodex.png';
+import gowtherNdoe from '@/assets/images/gowthernode.png';
 
 type Company = {
   id: number;
@@ -337,6 +338,12 @@ const COMPANIES: Company[] = [
     id: 47,
     name: 'Winnode',
     src: coinCodex,
+    logoClass: 'max-h-9',
+  },
+  {
+    id: 48,
+    name: 'GowtherNode',
+    src: gowtherNdoe,
     logoClass: 'max-h-9',
   },
 ];

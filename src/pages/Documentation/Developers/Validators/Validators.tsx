@@ -284,6 +284,13 @@ const VALIDATORS: NavItem[] = [
     description:
       'Passion for blockchain technology and ensuring the integrity of decentralized networks',
   },
+  {
+    id: '37',
+    label: 'GowtherNode',
+    target: '_blank',
+    href: 'https://GowtherNode.id/',
+    description: 'Crypto Validator Node Education Channel',
+  },
 ];
 
 const INSTALLATION_GUIDES: NavItem[] = [
