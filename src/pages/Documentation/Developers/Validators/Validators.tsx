@@ -5,22 +5,18 @@ import { Link } from 'react-router-dom';
 
 const HEADINGS = {
   1: {
-    id: 'validators',
-    label: 'Validators',
-  },
-  2: {
     id: 'installation-guides',
     label: 'Installation Guides',
   },
-  3: {
+  2: {
     id: 'snapshots',
     label: 'Snapshots',
   },
-  4: {
+  3: {
     id: 'genesis-files',
     label: 'Genesis Files',
   },
-  5: {
+  4: {
     id: 'address-books',
     label: 'Address Books',
   },
@@ -46,250 +42,6 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '4',
     label: HEADINGS[4].label,
     href: `#${HEADINGS[4].id}`,
-  },
-  {
-    id: '5',
-    label: HEADINGS[5].label,
-    href: `#${HEADINGS[5].id}`,
-  },
-];
-
-const VALIDATORS: NavItem[] = [
-  {
-    id: '1',
-    label: 'Kleomedes',
-    target: '_blank',
-    href: 'https://kleomed.es/',
-    description:
-      'A decentralized enterprise focused on building real-world businesses',
-  },
-  {
-    id: '2',
-    label: 'NodesHub',
-    target: '_blank',
-    href: 'https://nodeshub.online/',
-    description: 'Your friendly crypto validator',
-  },
-  {
-    id: '3',
-    label: 'Polkachu',
-    target: '_blank',
-    href: 'https://www.polkachu.com/',
-    description: 'Trusted blockchain validator of 109 blockchain networks',
-  },
-  {
-    id: '4',
-    label: 'NodeStake',
-    target: '_blank',
-    href: 'https://explorer.nodestake.org/symphony-testnet',
-    description:
-      'A professional validator, infrastructure provider and IBC relayer.',
-  },
-  {
-    id: '5',
-    label: 'Nodeist',
-    target: '_blank',
-    href: 'https://nodeist.net/',
-    description: 'Trusted blockchain validator of 109 blockchain networks',
-  },
-  {
-    id: '6',
-    label: 'NodeX Emperor',
-    target: '_blank',
-    href: 'https://nodex.one/',
-    description: 'Trusted blockchain validator of 109 blockchain networks',
-  },
-  {
-    id: '6',
-    label: 'Panamanian Flower Company',
-    target: '_blank',
-    href: 'https://pfc.zone/',
-    description: 'An industry leader in the web3 space',
-  },
-  {
-    id: '7',
-    label: 'Fair Staking',
-    target: '_blank',
-    href: 'https://fairstaking.com/',
-    description: 'Trusted blockchain validator',
-  },
-  {
-    id: '8',
-    label: 'Dasamuka',
-    target: '_blank',
-    href: 'https://dasamuka.arweave.net/#/',
-    description: 'An independent node runner',
-  },
-  {
-    id: '9',
-    label: 'Dwentz',
-    target: '_blank',
-    href: 'https://www.dwentz.xyz/',
-    description: 'Dedicated to running reliable and efficient blockchain nodes',
-  },
-  {
-    id: '10',
-    label: 'Indonode',
-    target: '_blank',
-    href: 'https://indonode.net/services/testnet/symphony',
-    description: 'Your Trusted non-custodial PoS Validator',
-  },
-  {
-    id: '11',
-    label: 'Citizen Web3',
-    target: '_blank',
-    href: 'https://www.citizenweb3.com/staking',
-    description:
-      'A self-hosted, independent off the grid, baremetal validator.',
-  },
-  {
-    id: '12',
-    label: 'DashNode',
-    target: '_blank',
-    href: 'https://dashnode.org/',
-    description: 'Ensuring the Reliability and Security of Your Digital Assets',
-  },
-  {
-    id: '13',
-    label: 'Nomad',
-    target: '_blank',
-    href: 'https://www.nomadvalidator.com/',
-    description: 'Ensuring the Reliability and Security of Your Digital Assets',
-  },
-  {
-    id: '14',
-    label: 'KonsorTech',
-    target: '_blank',
-    href: 'https://konsortech.xyz/',
-    description: 'Stake With Us ! Become Professional Stake Provider',
-  },
-  {
-    id: '15',
-    label: 'Sychonix',
-    target: '_blank',
-    href: 'https://sychonix.com/',
-    description: 'Committed to Secure Networks',
-  },
-  {
-    id: '16',
-    label: 'SyaNodes',
-    target: '_blank',
-    href: 'https://docs.syanodes.my.id',
-    description:
-      'Committed to keeping abreast of industry advancements and informed, and passionate about using dependable and effective node operation to advance blockchain technology.',
-  },
-  {
-    id: '17',
-    label: 'Jhonswg',
-    target: '_blank',
-    href: 'https://jhonswg.com/',
-    description: 'Stake and Earn with us',
-  },
-  {
-    id: '18',
-    label: 'Vinjan.Inc',
-    target: '_blank',
-    href: 'https://service.vinjan.xyz/',
-    description: 'Validator Service & IBC Relayer',
-  },
-  {
-    id: '19',
-    label: 'CryptoNodeID',
-    target: '_blank',
-    href: 'https://cryptonode.id/',
-    description: 'Crypto Validator Node Education Channel',
-  },
-  {
-    id: '25',
-    label: 'iamatomic',
-    target: '_blank',
-    href: 'https://iamatomic.id/',
-    description: 'Crypto Validator Node Education Channel',
-  },
-  {
-    id: '26',
-    label: 'NodeSync',
-    target: '_blank',
-    href: 'https://nodesync.top/',
-    description: 'Trusted PoS ValidatorNode Provider',
-  },
-  {
-    id: '27',
-    label: 'StringLabs',
-    target: '_blank',
-    href: 'https://stringlabs.xyz/',
-    description: 'Independent and Reliable Validator',
-  },
-  {
-    id: '28',
-    label: 'xxcode',
-    target: '_blank',
-    href: 'https://xc.xxcode.xyz/testnet/symphony/installation',
-    description: 'Documentation on how to start a validator',
-  },
-  {
-    id: '29',
-    label: 'Ravenode',
-    target: '_blank',
-    href: 'https://www.ravenode.xyz/',
-    description: 'Independent & Your Trusted Node Validator',
-  },
-  {
-    id: '30',
-    label: 'Busurnode',
-    target: '_blank',
-    href: 'https://busurnode.com',
-    description: 'Secure and Reliable Node Operator',
-  },
-  {
-    id: '31',
-    label: 'CroutonDigital',
-    target: '_blank',
-    href: 'https://crouton.digital',
-    description: 'Your everyday crypto partner',
-  },
-  {
-    id: '32',
-    label: 'Node39.TOP',
-    target: '_blank',
-    href: 'https://node39.top',
-    description: 'POS Node & Validator',
-  },
-  {
-    id: '33',
-    label: 'Dnsarz',
-    target: '_blank',
-    href: 'https://dnsarz.xyz/',
-    description: 'an Independent Blockchain Validator',
-  },
-  {
-    id: '34',
-    label: 'CommunityNode',
-    target: '_blank',
-    href: 'https://comunitynode.my.id',
-    description: 'Comunity Of Node Runner, Developer, echosystem Builder',
-  },
-  {
-    id: '35',
-    label: 'Winnode',
-    target: '_blank',
-    href: 'https://winnode.site/',
-    description: 'Validator Node Service and Promotion',
-  },
-  {
-    id: '36',
-    label: 'Blacktokyo',
-    target: '_blank',
-    href: 'https://github.com/blacktokyo96',
-    description:
-      'Passion for blockchain technology and ensuring the integrity of decentralized networks',
-  },
-  {
-    id: '37',
-    label: 'GowtherNode',
-    target: '_blank',
-    href: 'https://GowtherNode.id/',
-    description: 'Crypto Validator Node Education Channel',
   },
 ];
 
@@ -770,37 +522,45 @@ export const Validators = () => (
           >
             here
           </Link>
-          . For those starting out or recovering, a list of validators and
-          relevant information required for starting up a new validator are
-          below:
+          . If you are starting out or recovering, a list of installation guides
+          and other relevant information required for starting up a new
+          validator are below.
+        </p>
+        <p className="mt-5">
+          For those interested in validators, a full list of our active and
+          inactive validators can be found at the{' '}
+          <Link
+            to="https://testnet.cosmos.directory/symphonytestnet/validators"
+            target="_blank"
+            className="text-blue hover:text-blue-darker underline"
+          >
+            Cosmos Directory
+          </Link>
+          . This list includes information such as commission rate, rank,
+          whether or not the validator has a security contract, and a link to
+          their site!
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
-          <ListLinks listLinks={VALIDATORS} />
+          <ListLinks listLinks={INSTALLATION_GUIDES} />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <ListLinks listLinks={INSTALLATION_GUIDES} />
+          <ListLinks listLinks={SNAPSHOTS} />
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <ListLinks listLinks={SNAPSHOTS} />
+          <ListLinks listLinks={GENESIS_FILES} />
         </div>
         <div id={HEADINGS[4].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[4].label}
-          </h2>
-          <ListLinks listLinks={GENESIS_FILES} />
-        </div>
-        <div id={HEADINGS[5].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[5].label}
           </h2>
           <ListLinks listLinks={ADDRESS_BOOKS} />
         </div>
