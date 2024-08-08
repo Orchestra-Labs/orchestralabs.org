@@ -332,7 +332,7 @@ const COMPANIES: Company[] = [
     id: 46,
     name: 'Winnode',
     src: winnode,
-    logoClass: 'max-h-10',
+    logoClass: 'max-h-9',
   },
   {
     id: 47,

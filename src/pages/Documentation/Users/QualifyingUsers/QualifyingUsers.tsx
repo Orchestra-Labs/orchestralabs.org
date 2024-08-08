@@ -17,8 +17,8 @@ const HEADINGS = {
     label: 'NFTs',
   },
   3.1: {
-    id: 'symphony-soundwave',
-    label: 'Symphony Soundwave',
+    id: 'soundwave',
+    label: 'Soundwave',
   },
   3.2: {
     id: 'geckies',
@@ -31,6 +31,10 @@ const HEADINGS = {
   3.4: {
     id: 'snails',
     label: 'SNAILS',
+  },
+  3.5: {
+    id: 'defi-geeks',
+    label: 'Defi Geeks',
   },
 };
 
@@ -66,6 +70,11 @@ const NAVIGATION_ITEMS: NavItem[] = [
         label: HEADINGS[3.4].label,
         href: `#${HEADINGS[3.4].id}`,
       },
+      {
+        id: HEADINGS[3.5].id,
+        label: HEADINGS[3.5].label,
+        href: `#${HEADINGS[3.5].id}`,
+      },
     ],
   },
 ];
@@ -78,19 +87,25 @@ const QUALIFYING_NFTS: NavItem[] = [
     id: HEADINGS[3.2].id,
     label: HEADINGS[3.2].label,
     target: '_blank',
-    href: `https://t.co/5VNZEw1uZv`,
+    href: `https://atlasdao.zone/Geckies`,
   },
   {
     id: HEADINGS[3.3].id,
     label: HEADINGS[3.3].label,
     target: '_blank',
-    href: `https://t.co/RBHlAsPps6`,
+    href: `https://hub.xyz/archies`,
   },
   {
     id: HEADINGS[3.4].id,
     label: HEADINGS[3.4].label,
     target: '_blank',
     href: `https://snails.network/home`,
+  },
+  {
+    id: HEADINGS[3.5].id,
+    label: HEADINGS[3.5].label,
+    target: '_blank',
+    href: `https://x.com/DeFiGeeksNFT`,
   },
 ];
 
