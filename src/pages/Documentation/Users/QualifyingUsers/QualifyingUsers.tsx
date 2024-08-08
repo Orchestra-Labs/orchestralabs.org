@@ -82,7 +82,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
 const QUALIFYING_TOKENS = ['OSMO', 'ATOM', 'ARCH', 'KUJI'];
 
 const QUALIFYING_NFTS: NavItem[] = [
-  { id: HEADINGS[3.1].id, label: HEADINGS[3.1].label, target: '', href: `#` },
+  { id: HEADINGS[3.1].id, label: HEADINGS[3.1].label, target: '', href: `` },
   {
     id: HEADINGS[3.2].id,
     label: HEADINGS[3.2].label,
@@ -160,13 +160,17 @@ export const QualifyingUsers = () => (
               <div id={item.id} className="flex mb-4 last:mb-0">
                 <p className="ml-5">
                   -{' '}
-                  <Link
-                    to={item.href}
-                    target={item.target}
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    {item.label}
-                  </Link>
+                  {item.href == '' ? (
+                    item.label + ' (promotions only)'
+                  ) : (
+                    <Link
+                      to={item.href}
+                      target={item.target}
+                      className="text-blue hover:text-blue-darker underline mr-1"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </p>{' '}
               </div>
             ))}
