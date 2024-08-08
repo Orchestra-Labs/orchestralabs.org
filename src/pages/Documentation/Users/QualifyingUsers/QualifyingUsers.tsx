@@ -30,7 +30,7 @@ const HEADINGS = {
   },
   3.4: {
     id: 'snails',
-    label: 'Snails',
+    label: 'SNAILS',
   },
 };
 
