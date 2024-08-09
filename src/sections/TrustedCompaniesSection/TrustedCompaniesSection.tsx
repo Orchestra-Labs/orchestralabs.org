@@ -346,6 +346,12 @@ const COMPANIES: Company[] = [
     src: gowtherNdoe,
     logoClass: 'max-h-9',
   },
+  {
+    id: 49,
+    name: 'DANGGIA',
+    src: danggia,
+    logoClass: 'max-h-10',
+  },
 ];
 
 export const TrustedCompaniesSection = () => (
