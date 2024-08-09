@@ -142,7 +142,7 @@ const EXPLORERS: NavItem[] = [
     target: '_blank',
     href: 'https://explorer.kzvn.xyz/symphony-testnet',
     description: 'An explorer from one of our supporting validators',
-  },
+  }
 ];
 
 export const Explorers = () => (

@@ -185,7 +185,7 @@ const INSTALLATION_GUIDES: NavItem[] = [
     target: '_blank',
     href: 'https://docs.kzvn.xyz/cosmos/symphony',
     description: 'Guide Instalation a validator',
-  },
+  }
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -300,7 +300,7 @@ const SNAPSHOTS: NavItem[] = [
     target: '_blank',
     href: 'https://data.winnode.xyz/file/uploads/symphony_snapshot_latest.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
-  },
+  }
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -408,7 +408,7 @@ const GENESIS_FILES: NavItem[] = [
     target: '_blank',
     href: 'https://data.winnode.xyz/file/uploads/symphony_genesis.json',
     description: 'The JSON needed to start a node',
-  },
+  }
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -509,7 +509,7 @@ const ADDRESS_BOOKS: NavItem[] = [
     target: '_blank',
     href: 'https://data.winnode.xyz/file/uploads/symphony_addrbook.json',
     description: 'The address book needed to start a node',
-  },
+  }
 ];
 
 export const Validators = () => (
