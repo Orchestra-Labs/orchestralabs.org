@@ -179,6 +179,13 @@ const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://docs.winnode.site/tesnet/symphony/install',
     description: 'Guide Instalation a validator',
   },
+  {
+    id: '20',
+    label: 'KenZ|DragonVN',
+    target: '_blank',
+    href: 'https://docs.kzvn.xyz/cosmos/symphony',
+    description: 'Guide Instalation a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
