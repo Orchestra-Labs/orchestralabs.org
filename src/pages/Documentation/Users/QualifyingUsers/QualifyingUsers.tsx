@@ -36,6 +36,14 @@ const HEADINGS = {
     id: 'defi-geeks',
     label: 'Defi Geeks',
   },
+  3.6: {
+    id: 'metahuahua',
+    label: 'MetaHuahuas',
+  },
+  3.7: {
+    id: 'creepy-companions',
+    label: 'Creepy Companions',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -75,6 +83,16 @@ const NAVIGATION_ITEMS: NavItem[] = [
         label: HEADINGS[3.5].label,
         href: `#${HEADINGS[3.5].id}`,
       },
+      {
+        id: HEADINGS[3.6].id,
+        label: HEADINGS[3.6].label,
+        href: `#${HEADINGS[3.6].id}`,
+      },
+      {
+        id: HEADINGS[3.7].id,
+        label: HEADINGS[3.7].label,
+        href: `#${HEADINGS[3.7].id}`,
+      },
     ],
   },
 ];
@@ -111,6 +129,18 @@ const QUALIFYING_NFTS: NavItem[] = [
     label: HEADINGS[3.5].label,
     target: '_blank',
     href: `https://x.com/DeFiGeeksNFT`,
+  },
+  {
+    id: HEADINGS[3.6].id,
+    label: HEADINGS[3.6].label,
+    target: '_blank',
+    href: `https://x.com/AAAMetaHuahua`,
+  },
+  {
+    id: HEADINGS[3.7].id,
+    label: HEADINGS[3.7].label,
+    target: '_blank',
+    href: `https://x.com/Cyberhuahua`,
   },
 ];
 
