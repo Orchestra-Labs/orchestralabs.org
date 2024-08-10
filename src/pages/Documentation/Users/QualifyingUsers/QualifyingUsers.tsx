@@ -37,10 +37,14 @@ const HEADINGS = {
     label: 'Defi Geeks',
   },
   3.6: {
+    id: 'defi-geeks-members',
+    label: 'Defi Geeks Members',
+  },
+  3.7: {
     id: 'metahuahua',
     label: 'MetaHuahuas',
   },
-  3.7: {
+  3.8: {
     id: 'creepy-companions',
     label: 'Creepy Companions',
   },
@@ -52,7 +56,11 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
   },
-  { id: '2', label: HEADINGS[2].label, href: `#${HEADINGS[2].id}` },
+  {
+    id: '2',
+    label: HEADINGS[2].label,
+    href: `#${HEADINGS[2].id}`,
+  },
   {
     id: '3',
     label: HEADINGS[3].label,
@@ -62,36 +70,57 @@ const NAVIGATION_ITEMS: NavItem[] = [
         id: HEADINGS[3.1].id,
         label: HEADINGS[3.1].label,
         href: `#${HEADINGS[3.1].id}`,
+        description:
+          'stars1z5qcmx9frn2y92cjy3k62gzylkezkphdwrx3675mvug3fd9l26fshdd85t',
       },
       {
         id: HEADINGS[3.2].id,
         label: HEADINGS[3.2].label,
         href: `#${HEADINGS[3.2].id}`,
+        description:
+          'stars166kqwcu8789xh7nk07fcrdzek54205u8gzas684lnas2kzalksqsg5xhqf',
       },
       {
         id: HEADINGS[3.3].id,
         label: HEADINGS[3.3].label,
         href: `#${HEADINGS[3.3].id}`,
+        description:
+          'archway1r9qqfl2ptc96frn3tx4k2n967xc64uwxg2j9xn2rvsm882fu04kq3hutsv',
       },
       {
         id: HEADINGS[3.4].id,
         label: HEADINGS[3.4].label,
         href: `#${HEADINGS[3.4].id}`,
+        description:
+          'stars1qur5x273yhdn2lgz49e62lfp6tsthyku6jjw953gl3r7df2azmcshfq8gt',
       },
       {
         id: HEADINGS[3.5].id,
         label: HEADINGS[3.5].label,
         href: `#${HEADINGS[3.5].id}`,
+        description:
+          'stars1mg2hg6gppf78svvntya2065tvpuhfx6qf6zmv2z0n8hclpap7ycszq8v22',
       },
       {
         id: HEADINGS[3.6].id,
         label: HEADINGS[3.6].label,
         href: `#${HEADINGS[3.6].id}`,
+        description:
+          'stars1k6gdkepvwhhhdt6tk0auvkvansd3muqy0p98yedgwwarvcycxh8sex8dsf',
       },
       {
         id: HEADINGS[3.7].id,
         label: HEADINGS[3.7].label,
         href: `#${HEADINGS[3.7].id}`,
+        description:
+          'pasg1y6hjq8yvqzk6al4yrjl7yjkt87ujvhaq32c0qvt7627sk0j63d2q4dhzyw',
+      },
+      {
+        id: HEADINGS[3.8].id,
+        label: HEADINGS[3.8].label,
+        href: `#${HEADINGS[3.8].id}`,
+        description:
+          'stars1h7pefpv3xqn7zr9a9x28zjtq9h0k5zc0dq8g0hp2q8xzzn6ry52sjpke38',
       },
     ],
   },
@@ -110,37 +139,43 @@ const QUALIFYING_NFTS: NavItem[] = [
     id: HEADINGS[3.2].id,
     label: HEADINGS[3.2].label,
     target: '_blank',
-    href: `https://atlasdao.zone/Geckies`,
+    href: `https://www.stargaze.zone/m/geckies/tokens`,
   },
   {
     id: HEADINGS[3.3].id,
     label: HEADINGS[3.3].label,
     target: '_blank',
-    href: `https://hub.xyz/archies`,
+    href: `https://ambur.xyz/`,
   },
   {
     id: HEADINGS[3.4].id,
     label: HEADINGS[3.4].label,
     target: '_blank',
-    href: `https://snails.network/home`,
+    href: `https://www.stargaze.zone/l/stars1qur5x273yhdn2lgz49e62lfp6tsthyku6jjw953gl3r7df2azmcshfq8gt`,
   },
   {
     id: HEADINGS[3.5].id,
     label: HEADINGS[3.5].label,
     target: '_blank',
-    href: `https://x.com/DeFiGeeksNFT`,
+    href: `https://www.stargaze.zone/m/stars1mg2hg6gppf78svvntya2065tvpuhfx6qf6zmv2z0n8hclpap7ycszq8v22/tokens`,
   },
   {
     id: HEADINGS[3.6].id,
     label: HEADINGS[3.6].label,
     target: '_blank',
-    href: `https://x.com/AAAMetaHuahua`,
+    href: `https://www.stargaze.zone/p/defigeekscollection/tokens`,
   },
   {
     id: HEADINGS[3.7].id,
     label: HEADINGS[3.7].label,
     target: '_blank',
-    href: `https://x.com/Cyberhuahua`,
+    href: `https://app.aaa-metahuahua.com/metahuahua/first/collection`,
+  },
+  {
+    id: HEADINGS[3.8].id,
+    label: HEADINGS[3.8].label,
+    target: '_blank',
+    href: `https://app.aaa-metahuahua.com/creepy/creepycompanions/collection`,
   },
 ];
 
