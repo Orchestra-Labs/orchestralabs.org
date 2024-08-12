@@ -178,7 +178,16 @@ const INSTALLATION_GUIDES: NavItem[] = [
     target: '_blank',
     href: 'https://docs.winnode.site/tesnet/symphony/install',
     description: 'Guide Instalation a validator',
+    
   },
+  {
+    id: '20',
+    label: 'Bang Pateng',
+    target: '_blank',
+    href: 'https://bangpateng.xyz/docs/symphony/install',
+    description: 'Empowering Decentralization: Web3 Developer Indonesian Validator Node',
+    
+  }
 ];
 
 const SNAPSHOTS: NavItem[] = [
@@ -294,6 +303,13 @@ const SNAPSHOTS: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_snapshot_latest.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '17',
+    label: 'Bang Pateng',
+    target: '_blank',
+    href: 'http://filex.bangpateng.xyz/snapshot/symphony/symphony-latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  }
 ];
 
 const GENESIS_FILES: NavItem[] = [
@@ -402,6 +418,13 @@ const GENESIS_FILES: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '15',
+    label: 'Bang Pateng',
+    target: '_blank',
+    href: 'http://filex.bangpateng.xyz/snapshot/symphony/genesis.json',
+    description: 'The JSON needed to start a node',
+  }
 ];
 
 const ADDRESS_BOOKS: NavItem[] = [
@@ -503,6 +526,13 @@ const ADDRESS_BOOKS: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_addrbook.json',
     description: 'The address book needed to start a node',
   },
+  {
+    id: '15',
+    label: 'Bang Pateng',
+    target: '_blank',
+    href: 'http://filex.bangpateng.xyz/snapshot/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  }
 ];
 
 export const Validators = () => (
