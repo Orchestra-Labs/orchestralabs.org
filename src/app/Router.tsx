@@ -29,6 +29,7 @@ import {
   SignIn,
   SignUp,
   SizeOfOpportunity,
+  SoundwaveNFT,
   Stabilization,
   StartupOverview,
   SymphonyImpact,
@@ -65,6 +66,7 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           path: ROUTES.DOCUMENTATION.ROOT,
           element: <DocumentationOverview />,
         },
+        // About Pages
         {
           path: ROUTES.DOCUMENTATION.ABOUT.ROOT,
           element: <AboutSymphonyOverview />,
@@ -97,6 +99,7 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           path: ROUTES.DOCUMENTATION.ABOUT.ROADMAP,
           element: <Roadmap />,
         },
+        // User Pages
         {
           path: ROUTES.DOCUMENTATION.USERS.ROOT,
           element: <UserOverview />,
@@ -118,6 +121,11 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <QualifyingUsers />,
         },
         {
+          path: ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT,
+          element: <SoundwaveNFT />,
+        },
+        // Developer Pages
+        {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
           element: <DeveloperOverview />,
         },
@@ -133,6 +141,7 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           path: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
           element: <GenesisDelegation />,
         },
+        // Startup Pages
         {
           path: ROUTES.DOCUMENTATION.STARTUPS.ROOT,
           element: <StartupOverview />,

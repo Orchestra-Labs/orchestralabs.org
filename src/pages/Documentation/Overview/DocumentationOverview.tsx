@@ -102,6 +102,24 @@ const USER_DOCUMENTATION_LINKS: NavItem[] = [
     description: 'Add Symphony to non-native wallets',
     href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
   },
+  {
+    id: '3',
+    label: 'The Incentivized Tesnet',
+    description: 'Structure of our incentivized testnet',
+    href: ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET,
+  },
+  {
+    id: '4',
+    label: 'Qualifying For Airdrops',
+    description: 'How to become a qualified Beta Tester for the testnet',
+    href: ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS,
+  },
+  {
+    id: '5',
+    label: 'The Symphony Soundwave NFT',
+    description: 'The Soundwave NFT and what it does',
+    href: ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT,
+  },
 ];
 
 const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [
@@ -116,6 +134,12 @@ const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [
     label: 'Validators',
     description: 'Start a validator',
     href: ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS,
+  },
+  {
+    id: '3',
+    label: 'Genesis Delegation',
+    description: 'How to get the Genesis Delegation',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
   },
 ];
 

@@ -51,7 +51,7 @@ export const TheSymphonyApproach = () => (
         <p className="mt-5">
           Much as illustrated in the documentation page on{' '}
           <Link
-            to={ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA}
+            to={ROUTES.DOCUMENTATION.ABOUT.THE_STABLECOIN_TRILEMMA}
             className="text-blue hover:text-blue-darker underline"
           >
             the stablecoin trilemma

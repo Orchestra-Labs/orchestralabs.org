@@ -74,6 +74,11 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         label: 'Qualifying For Airdrops',
         href: `${ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS}`,
       },
+      {
+        id: '5',
+        label: "Symphony's Soundwave",
+        href: `${ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT}`,
+      },
     ],
   },
   {
