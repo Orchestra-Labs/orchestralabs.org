@@ -3,6 +3,7 @@ import { Navigate, useRoutes } from 'react-router-dom';
 
 import { ROUTES } from '@/config/routes';
 import {
+  AboutSymphonyOverview,
   AccountDetails,
   AddSymphonyToWallet,
   Advisors,
@@ -65,31 +66,35 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <DocumentationOverview />,
         },
         {
-          path: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
+          path: ROUTES.DOCUMENTATION.ABOUT.ROOT,
+          element: <AboutSymphonyOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.ABOUT.WHY_DECENTRALIZED_RWAS,
           element: <WhyDecentralizedRWAs />,
         },
         {
-          path: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+          path: ROUTES.DOCUMENTATION.ABOUT.THE_STABLECOIN_TRILEMMA,
           element: <TheStablecoinTrilemma />,
         },
         {
-          path: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+          path: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
           element: <TheSymphonyApproach />,
         },
         {
-          path: ROUTES.DOCUMENTATION.SYMPHONY_IMPACT,
+          path: ROUTES.DOCUMENTATION.ABOUT.SYMPHONY_IMPACT,
           element: <SymphonyImpact />,
         },
         {
-          path: ROUTES.DOCUMENTATION.SIZE_OF_OPPORTUNITY,
+          path: ROUTES.DOCUMENTATION.ABOUT.SIZE_OF_OPPORTUNITY,
           element: <SizeOfOpportunity />,
         },
         {
-          path: ROUTES.DOCUMENTATION.TOKENOMICS,
+          path: ROUTES.DOCUMENTATION.ABOUT.TOKENOMICS,
           element: <Tokenomics />,
         },
         {
-          path: ROUTES.DOCUMENTATION.ROADMAP,
+          path: ROUTES.DOCUMENTATION.ABOUT.ROADMAP,
           element: <Roadmap />,
         },
         {
