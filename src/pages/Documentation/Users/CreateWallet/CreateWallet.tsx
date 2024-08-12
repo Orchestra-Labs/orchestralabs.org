@@ -27,7 +27,14 @@ const CONNECTED_WALLETS: NavItem[] = [
     label: 'Keplr Wallet',
     target: '_blank',
     href: 'https://www.keplr.app/download',
-    description: 'The Seamless Interchain Experience',
+    description: 'Your interchain gateway',
+  },
+  {
+    id: 'leap-wallet',
+    label: 'Leap Wallet',
+    target: '_blank',
+    href: 'https://www.leapwallet.io/#download',
+    description: "The interchain experience you've been waiting for",
   },
 ];
 
@@ -43,9 +50,14 @@ const NAVIGATION_ITEMS: NavItem[] = [
     href: `#${HEADINGS[2].id}`,
     subList: [
       {
-        id: 'keplr-wallet',
+        id: CONNECTED_WALLETS[0].id,
         label: CONNECTED_WALLETS[0].label,
-        href: `#keplr-wallet`,
+        href: `#${CONNECTED_WALLETS[0].id}`,
+      },
+      {
+        id: CONNECTED_WALLETS[1].id,
+        label: CONNECTED_WALLETS[1].label,
+        href: `#${CONNECTED_WALLETS[1].id}`,
       },
     ],
   },
@@ -73,8 +85,9 @@ export const CreateWallet = () => (
           </h2>
           <p className="mt-5">
             While the links to all connected wallets and chain searches can be
-            found below, due to Symphony being considered a non-native chain to
-            Keplr, the Keplr Wallet link is also included here:
+            found below, due to Symphony's more difficult non-native
+            installation on Keplr, the Keplr Wallet link and instructions are
+            also included here:
           </p>
           <p>
             {'- '}

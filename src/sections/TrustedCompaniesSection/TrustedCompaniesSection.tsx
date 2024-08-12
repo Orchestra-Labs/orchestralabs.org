@@ -50,6 +50,7 @@ import communitynode from '@/assets/images/ComunityNode.png';
 import winnode from '@/assets/images/winnode.png';
 import coinCodex from '@/assets/images/coincodex.png';
 import gowtherNdoe from '@/assets/images/gowthernode.png';
+import leapWallet from '@/assets/images/leap-wallet.png';
 
 type Company = {
   id: number;
@@ -345,6 +346,12 @@ const COMPANIES: Company[] = [
     name: 'GowtherNode',
     src: gowtherNdoe,
     logoClass: 'max-h-9',
+  },
+  {
+    id: 49,
+    name: 'LeapWallet',
+    src: leapWallet,
+    logoClass: 'max-h-10',
   },
 ];
 
