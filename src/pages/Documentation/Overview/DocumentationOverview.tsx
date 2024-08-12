@@ -44,48 +44,48 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const SYMPHONY_INFO_LINKS: NavItem[] = [
+const ABOUT_SYMPHONY_LINKS: NavItem[] = [
   {
     id: '1',
     label: 'The Stablecoin Trilemma',
     description: 'The challenges of stablecoin design',
-    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+    href: ROUTES.DOCUMENTATION.ABOUT.THE_STABLECOIN_TRILEMMA,
   },
   {
     id: '2',
     label: 'Why Decentralized RWAs',
     description: 'Why Symphony was made',
-    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
+    href: ROUTES.DOCUMENTATION.ABOUT.WHY_DECENTRALIZED_RWAS,
   },
   {
     id: '3',
     label: "Symphony's Approach",
     description: 'How Symphony solves the stablecoin trilemma',
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
   },
   {
     id: '4',
     label: "Symphony's Impact",
     description: "How Symphony's introduction affects the market",
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
   },
   {
     id: '5',
     label: 'Size of the Opportunity',
     description: "Market sizes of Symphony's areas of impact",
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
   },
   {
     id: '6',
     label: 'Tokenomics',
     description: 'Initial distribution of Melody coins on Symphony',
-    href: ROUTES.DOCUMENTATION.TOKENOMICS,
+    href: ROUTES.DOCUMENTATION.ABOUT.TOKENOMICS,
   },
   {
     id: '7',
     label: 'Roadmap',
     description: 'Current and upcoming projects for Symphony developers',
-    href: ROUTES.DOCUMENTATION.ROADMAP,
+    href: ROUTES.DOCUMENTATION.ABOUT.ROADMAP,
   },
 ];
 
@@ -185,7 +185,7 @@ export const DocumentationOverview = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
-          <ListLinks listLinks={SYMPHONY_INFO_LINKS} />
+          <ListLinks listLinks={ABOUT_SYMPHONY_LINKS} />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
