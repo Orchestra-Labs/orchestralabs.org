@@ -180,7 +180,7 @@ const INSTALLATION_GUIDES: NavItem[] = [
     description: 'Guide Instalation a validator',
   },
   {
-    id: '20',
+    id: '21',
     label: 'DANGGIA',
     target: '_blank',
     href: 'https://danggia.gitbook.io/guide/guide/symphony',
