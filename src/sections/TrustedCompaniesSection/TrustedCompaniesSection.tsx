@@ -50,7 +50,7 @@ import communitynode from '@/assets/images/ComunityNode.png';
 import winnode from '@/assets/images/winnode.png';
 import coinCodex from '@/assets/images/coincodex.png';
 import gowtherNdoe from '@/assets/images/gowthernode.png';
-
+import DANGGIA from '@/assets/images/DANGGIA.png';
 type Company = {
   id: number;
   name: string;
@@ -347,7 +347,7 @@ const COMPANIES: Company[] = [
     logoClass: 'max-h-9',
   },
   {
-    id: 49,
+    id: 51,
     name: 'DANGGIA',
     src: danggia,
     logoClass: 'max-h-10',
