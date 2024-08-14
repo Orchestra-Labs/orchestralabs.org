@@ -50,6 +50,7 @@ import communitynode from '@/assets/images/ComunityNode.png';
 import winnode from '@/assets/images/winnode.png';
 import coinCodex from '@/assets/images/coincodex.png';
 import gowtherNdoe from '@/assets/images/gowthernode.png';
+import danggia from '@/assets/images/DANGGIA.png';
 import dragonvn from '@/assets/images/dragonvn.png';
 import leapWallet from '@/assets/images/leap-wallet.png';
 
@@ -360,6 +361,12 @@ const COMPANIES: Company[] = [
     src: leapWallet,
     logoClass: 'max-h-10',
   },
+    {
+    id: 51,
+    name: 'danggia',
+    src: danggia,
+    logoClass: 'max-h-10',
+  }
 ];
 
 export const TrustedCompaniesSection = () => (

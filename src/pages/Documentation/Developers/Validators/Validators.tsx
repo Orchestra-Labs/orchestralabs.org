@@ -185,7 +185,14 @@ const INSTALLATION_GUIDES: NavItem[] = [
     target: '_blank',
     href: 'https://docs.kzvn.xyz/cosmos/symphony',
     description: 'Guide Instalation a validator',
-  }
+  },
+  {
+    id: '21',
+    label: 'DANGGIA',
+    target: '_blank',
+    href: 'https://danggia.gitbook.io/guide/guide/symphony',
+    description: 'Guide Instalation a validator',
+  },
 ];
 
 const SNAPSHOTS: NavItem[] = [
