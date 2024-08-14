@@ -104,18 +104,24 @@ const USER_DOCUMENTATION_LINKS: NavItem[] = [
   },
   {
     id: '3',
+    label: 'Using IBC',
+    description: 'How to use IBC to connect to other Cosmos chains',
+    href: ROUTES.DOCUMENTATION.USERS.USING_IBC,
+  },
+  {
+    id: '4',
     label: 'The Incentivized Tesnet',
     description: 'Structure of our incentivized testnet',
     href: ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET,
   },
   {
-    id: '4',
+    id: '5',
     label: 'Qualifying For Airdrops',
     description: 'How to become a qualified Beta Tester for the testnet',
     href: ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS,
   },
   {
-    id: '5',
+    id: '6',
     label: 'The Symphony Soundwave NFT',
     description: 'The Soundwave NFT and what it does',
     href: ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT,

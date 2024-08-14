@@ -66,16 +66,21 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
       },
       {
         id: '3',
+        label: 'Using IBC',
+        href: ROUTES.DOCUMENTATION.USERS.USING_IBC,
+      },
+      {
+        id: '4',
         label: 'The Incentivized Testnet',
         href: `${ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET}`,
       },
       {
-        id: '4',
+        id: '5',
         label: 'Qualifying For Airdrops',
         href: `${ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS}`,
       },
       {
-        id: '5',
+        id: '6',
         label: "Symphony's Soundwave",
         href: `${ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT}`,
       },

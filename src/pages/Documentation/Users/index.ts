@@ -1,4 +1,5 @@
 export * from './AddSymphonyToWallet';
+export * from './UsingIBC';
 export * from './CreateWallet';
 export * from './IncentivizedTestnet';
 export * from './Overview';

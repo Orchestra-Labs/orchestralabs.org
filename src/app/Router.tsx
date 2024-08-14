@@ -6,6 +6,7 @@ import {
   AboutSymphonyOverview,
   AccountDetails,
   AddSymphonyToWallet,
+  AdvancedIBC,
   Advisors,
   AllBlocks,
   AllTokens,
@@ -111,6 +112,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
           element: <AddSymphonyToWallet />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.USERS.USING_IBC,
+          element: <AdvancedIBC />,
         },
         {
           path: ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET,
