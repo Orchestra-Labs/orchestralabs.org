@@ -112,9 +112,18 @@ export const IncentivizedTestnet = () => (
             translates to rewards from the incentivized testnet, allowing us to
             track rewards, even if the testnet needs to apply changes to
             Genesis. The tasks are designed to be fast, engaging, and fun,
-            promoting genuine interaction rather than grinding.
+            promoting genuine interaction rather than grinding. Get in, try it
+            out, and move on with your day or join our community! You can find a
+            link to the Zealy sprint for our testnet{' '}
+            <Link
+              to="https://zealy.io/cw/symphonyblockchain/leaderboard/e6760946-d01c-4d7f-9664-568f7af8e631"
+              className="text-blue hover:text-blue-darker underline"
+            >
+              here
+            </Link>
           </p>
         </div>
+        {/*  */}
 
         <div id={HEADINGS[4].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
