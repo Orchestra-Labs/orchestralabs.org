@@ -72,8 +72,8 @@ export const AddSymphonyToWallet = () => (
           </h2>
           <p className="mt-5">
             While the links to all chain searches can be found below, due to
-            Symphony being considered a non-native chain to Keplr, the Keplr
-            Chain Search link is also included here:
+            Symphony's more difficult non-native installation on Keplr, the
+            Keplr Chain Search link and instructions are also included here:
             <p>
               {'- '}
               <Link

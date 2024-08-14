@@ -5,5 +5,5 @@ export type NavItem = {
   rel?: string;
   href: string;
   description?: string;
-  subList?: { id: string; label: string; href: string }[];
+  subList?: { id: string; label: string; href: string; description?: string }[];
 };

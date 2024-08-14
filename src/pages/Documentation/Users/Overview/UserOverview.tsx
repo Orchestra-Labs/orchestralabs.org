@@ -74,8 +74,8 @@ export const UserOverview = () => (
         </h1>
         <p className="mt-10">
           This documentation is designed to help you connect with Symphony. It
-          covers Symphony as a concept, explains the Symphony tech stack, and
-          documents the ecosystem.
+          covers how to connect to the chain, events we're running, and how to
+          qualify for those events.
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

@@ -44,48 +44,48 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const SYMPHONY_INFO_LINKS: NavItem[] = [
+const ABOUT_SYMPHONY_LINKS: NavItem[] = [
   {
     id: '1',
     label: 'The Stablecoin Trilemma',
     description: 'The challenges of stablecoin design',
-    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
+    href: ROUTES.DOCUMENTATION.ABOUT.THE_STABLECOIN_TRILEMMA,
   },
   {
     id: '2',
     label: 'Why Decentralized RWAs',
     description: 'Why Symphony was made',
-    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
+    href: ROUTES.DOCUMENTATION.ABOUT.WHY_DECENTRALIZED_RWAS,
   },
   {
     id: '3',
     label: "Symphony's Approach",
     description: 'How Symphony solves the stablecoin trilemma',
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
   },
   {
     id: '4',
     label: "Symphony's Impact",
     description: "How Symphony's introduction affects the market",
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
   },
   {
     id: '5',
     label: 'Size of the Opportunity',
     description: "Market sizes of Symphony's areas of impact",
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
+    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
   },
   {
     id: '6',
     label: 'Tokenomics',
     description: 'Initial distribution of Melody coins on Symphony',
-    href: ROUTES.DOCUMENTATION.TOKENOMICS,
+    href: ROUTES.DOCUMENTATION.ABOUT.TOKENOMICS,
   },
   {
     id: '7',
     label: 'Roadmap',
     description: 'Current and upcoming projects for Symphony developers',
-    href: ROUTES.DOCUMENTATION.ROADMAP,
+    href: ROUTES.DOCUMENTATION.ABOUT.ROADMAP,
   },
 ];
 
@@ -102,6 +102,24 @@ const USER_DOCUMENTATION_LINKS: NavItem[] = [
     description: 'Add Symphony to non-native wallets',
     href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
   },
+  {
+    id: '3',
+    label: 'The Incentivized Tesnet',
+    description: 'Structure of our incentivized testnet',
+    href: ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET,
+  },
+  {
+    id: '4',
+    label: 'Qualifying For Airdrops',
+    description: 'How to become a qualified Beta Tester for the testnet',
+    href: ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS,
+  },
+  {
+    id: '5',
+    label: 'The Symphony Soundwave NFT',
+    description: 'The Soundwave NFT and what it does',
+    href: ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT,
+  },
 ];
 
 const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [
@@ -116,6 +134,12 @@ const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [
     label: 'Validators',
     description: 'Start a validator',
     href: ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS,
+  },
+  {
+    id: '3',
+    label: 'Genesis Delegation',
+    description: 'How to get the Genesis Delegation',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
   },
 ];
 
@@ -185,7 +209,7 @@ export const DocumentationOverview = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
-          <ListLinks listLinks={SYMPHONY_INFO_LINKS} />
+          <ListLinks listLinks={ABOUT_SYMPHONY_LINKS} />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

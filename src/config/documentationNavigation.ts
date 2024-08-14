@@ -9,38 +9,45 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '2',
-    label: 'The Stablecoin Trilemma',
-    href: ROUTES.DOCUMENTATION.THE_STABLECOIN_TRILEMMA,
-  },
-  {
-    id: '3',
-    label: 'Why Decentralized RWAS',
-    href: ROUTES.DOCUMENTATION.WHY_DECENTRALIZED_RWAS,
-  },
-  {
-    id: '4',
-    label: "Symphony's Approach",
-    href: ROUTES.DOCUMENTATION.THE_SYMPHONY_APPROACH,
-  },
-  {
-    id: '5',
-    label: "Symphony's Impact",
-    href: ROUTES.DOCUMENTATION.SYMPHONY_IMPACT,
-  },
-  {
-    id: '6',
-    label: 'Size of the Opportunity',
-    href: ROUTES.DOCUMENTATION.SIZE_OF_OPPORTUNITY,
-  },
-  {
-    id: '7',
-    label: 'Tokenomics',
-    href: ROUTES.DOCUMENTATION.TOKENOMICS,
-  },
-  {
-    id: '8',
-    label: 'Roadmap',
-    href: ROUTES.DOCUMENTATION.ROADMAP,
+    label: 'About Symphony',
+    href: `${ROUTES.DOCUMENTATION.ABOUT.ROOT}`,
+    subList: [
+      {
+        id: '1',
+        label: 'The Stablecoin Trilemma',
+        href: ROUTES.DOCUMENTATION.ABOUT.THE_STABLECOIN_TRILEMMA,
+      },
+      {
+        id: '2',
+        label: 'Why Decentralized RWAS',
+        href: ROUTES.DOCUMENTATION.ABOUT.WHY_DECENTRALIZED_RWAS,
+      },
+      {
+        id: '3',
+        label: "Symphony's Approach",
+        href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
+      },
+      {
+        id: '4',
+        label: "Symphony's Impact",
+        href: ROUTES.DOCUMENTATION.ABOUT.SYMPHONY_IMPACT,
+      },
+      {
+        id: '5',
+        label: 'Size of the Opportunity',
+        href: ROUTES.DOCUMENTATION.ABOUT.SIZE_OF_OPPORTUNITY,
+      },
+      {
+        id: '6',
+        label: 'Tokenomics',
+        href: ROUTES.DOCUMENTATION.ABOUT.TOKENOMICS,
+      },
+      {
+        id: '7',
+        label: 'Roadmap',
+        href: ROUTES.DOCUMENTATION.ABOUT.ROADMAP,
+      },
+    ],
   },
   {
     id: '9',
@@ -66,6 +73,11 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         id: '4',
         label: 'Qualifying For Airdrops',
         href: `${ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS}`,
+      },
+      {
+        id: '5',
+        label: "Symphony's Soundwave",
+        href: `${ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT}`,
       },
     ],
   },
