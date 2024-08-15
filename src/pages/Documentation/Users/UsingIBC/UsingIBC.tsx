@@ -164,6 +164,17 @@ export const AdvancedIBC = () => (
               className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
               style={{ border: '2px solid white', borderCollapse: 'collapse' }}
             >
+              <caption
+                style={{
+                  captionSide: 'top',
+                  textAlign: 'left',
+                  fontWeight: 'bold',
+                  padding: '8px',
+                  color: 'white',
+                }}
+              >
+                Symphony Testnet Connections:
+              </caption>
               <tr>
                 <th
                   style={{
