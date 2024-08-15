@@ -199,7 +199,7 @@ export const DocumentationOverview = () => (
         <p className="mt-10">
           Symphony is a chain built on Cosmos that provides a crypto-native
           solution for real-world assets not reliant on traditional banking
-          infrastructure. It can peg to any assets, allowing global access to
+          infrastructure. It can peg to any asset, allowing global access to
           trade across mediums such as real-estate and gold, as well as easily
           accessed infrastructure to build market systems such as ForEx.
         </p>
