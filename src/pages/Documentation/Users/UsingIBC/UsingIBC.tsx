@@ -16,6 +16,10 @@ const HEADINGS = {
     id: 'advanced-ibc',
     label: 'Advanced IBC',
   },
+  2: {
+    id: 'current-ibc-channels',
+    label: 'Current IBC Channels',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -23,6 +27,11 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '1',
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
+  },
+  {
+    id: '2',
+    label: HEADINGS[2].label,
+    href: `#${HEADINGS[2].id}`,
   },
 ];
 
@@ -43,6 +52,7 @@ export const AdvancedIBC = () => (
           for non-native chains. Symphony, being a non-native chain to Keplr,
           has the steps for this listed below.
         </p>
+
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
@@ -142,6 +152,80 @@ export const AdvancedIBC = () => (
             faster than the browser wallet. If your wallet balances have not
             updated in good time, consider chacking your wallet through the
             mobile app rather than the web extension.
+          </p>
+        </div>
+
+        <div id={HEADINGS[2].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[2].label}
+          </h2>
+          <p className="mt-5">
+            <table
+              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+              style={{ border: '2px solid white', borderCollapse: 'collapse' }}
+            >
+              <tr>
+                <th
+                  style={{
+                    borderBottom: '3px solid white',
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  External Chain
+                </th>
+                <th
+                  style={{
+                    borderBottom: '3px solid white',
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Symphony Channel
+                </th>
+                <th
+                  style={{
+                    borderBottom: '3px solid white',
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  External Channel
+                </th>
+              </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  osmosistestnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-0
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-8686
+                </td>
+              </tr>
+            </table>
           </p>
         </div>
       </div>
