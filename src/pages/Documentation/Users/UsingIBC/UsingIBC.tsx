@@ -169,7 +169,7 @@ export const AdvancedIBC = () => (
                   captionSide: 'top',
                   textAlign: 'left',
                   fontWeight: 'bold',
-                  padding: '8px',
+                  padding: '4px',
                   color: 'white',
                 }}
               >
@@ -178,8 +178,7 @@ export const AdvancedIBC = () => (
               <tr>
                 <th
                   style={{
-                    borderBottom: '3px solid white',
-                    border: '1px solid white',
+                    border: '2px solid white',
                     textAlign: 'left',
                     padding: '8px',
                   }}
@@ -188,8 +187,7 @@ export const AdvancedIBC = () => (
                 </th>
                 <th
                   style={{
-                    borderBottom: '3px solid white',
-                    border: '1px solid white',
+                    border: '2px solid white',
                     textAlign: 'left',
                     padding: '8px',
                   }}
@@ -198,8 +196,7 @@ export const AdvancedIBC = () => (
                 </th>
                 <th
                   style={{
-                    borderBottom: '3px solid white',
-                    border: '1px solid white',
+                    border: '2px solid white',
                     textAlign: 'left',
                     padding: '8px',
                   }}
