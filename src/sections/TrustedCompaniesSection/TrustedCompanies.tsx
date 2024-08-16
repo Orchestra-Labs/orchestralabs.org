@@ -54,6 +54,7 @@ import leapWallet from '@/assets/images/leap-wallet.png';
 import zonkoekLogo from '@/assets/images/zonkoek.png';
 import cogwheelLogo from '@/assets/images/cogwheel.png';
 import x1node from '@/assets/images/x1node.png';
+import shazoe from '@/assets/images/shazoe.jpg';
 
 type Company = {
   id: number;
@@ -384,6 +385,12 @@ export const COMPANIES: Company[] = [
     id: 54,
     name: 'X1NODE',
     src: x1node,
+    logoClass: 'max-h-10',
+  },
+    {
+    id: 55,
+    name: 'SHAZOE',
+    src: shazoe,
     logoClass: 'max-h-10',
   },
 ];
