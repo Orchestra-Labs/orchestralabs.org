@@ -52,6 +52,7 @@ import danggia from '@/assets/images/DANGGIA.png';
 import dragonvn from '@/assets/images/dragonvn.png';
 import leapWallet from '@/assets/images/leap-wallet.png';
 import zonkoekLogo from '@/assets/images/zonkoek.png';
+import cogwheelLogo from '@/assets/images/cogwheel.png';
 
 type Company = {
   id: number;
@@ -371,5 +372,11 @@ export const COMPANIES: Company[] = [
     name: 'ZONKOEK',
     src: zonkoekLogo,
     logoClass: 'max-h-10',
+  },
+  {
+    id: 53,
+    name: 'Cogwheel ⚙️',
+    src: cogwheelLogo,
+    logoClass: 'max-h-8',
   },
 ];

@@ -148,4 +148,11 @@ export const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://danggia.gitbook.io/guide/guide/symphony',
     description: 'Guide Instalation a validator',
   },
+  {
+    id: '22',
+    label: 'Cogwheel ⚙️',
+    target: '_blank',
+    href: 'https://docs.cogwheel.zone/testnet/symphony-testnet/install-node',
+    description: 'Guide to install node and set up the validator.',
+  },
 ];
