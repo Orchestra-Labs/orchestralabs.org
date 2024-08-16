@@ -99,4 +99,11 @@ export const ADDRESS_BOOKS: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_addrbook.json',
     description: 'The address book needed to start a node',
   },
+    {
+    id: '14',
+    label: 'Shazoe',
+    target: '_blank',
+    href: 'https://files.shazoe.xyz/testnets/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
 ];
