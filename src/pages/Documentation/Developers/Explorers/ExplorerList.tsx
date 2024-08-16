@@ -141,4 +141,11 @@ export const EXPLORERS: NavItem[] = [
     href: 'https://explorer.cogwheel.zone/symphony',
     description: 'An explorer from one of our supporting validators.',
   },
+  {
+    id: '21',
+    label: 'X1NODE Explorer',
+    target: '_blank',
+    href: 'https://explorer-testnet.x1node.xyz',
+    description: 'An explorer from one of our supporting validators.',
+  },
 ];

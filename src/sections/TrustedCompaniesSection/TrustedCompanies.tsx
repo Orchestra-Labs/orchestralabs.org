@@ -53,6 +53,7 @@ import dragonvn from '@/assets/images/dragonvn.png';
 import leapWallet from '@/assets/images/leap-wallet.png';
 import zonkoekLogo from '@/assets/images/zonkoek.png';
 import cogwheelLogo from '@/assets/images/cogwheel.png';
+import x1node from '@/assets/images/x1node.png';
 
 type Company = {
   id: number;
@@ -378,5 +379,11 @@ export const COMPANIES: Company[] = [
     name: 'Cogwheel ⚙️',
     src: cogwheelLogo,
     logoClass: 'max-h-8',
+  },
+  {
+    id: 54,
+    name: 'X1NODE',
+    src: x1node,
+    logoClass: 'max-h-10',
   },
 ];
