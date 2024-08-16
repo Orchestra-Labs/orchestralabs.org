@@ -35,7 +35,7 @@ export const SOCIAL_LINKS = [
   { id: '1', href: 'https://twitter.com/orchestra_labs', Icon: XIcon },
   { id: '2', href: 'https://t.me/+xFieHCYYyx41NGQx', Icon: Telegram },
   { id: '3', href: 'https://github.com/Orchestra-Labs', Icon: GitHub },
-  { id: '4', href: 'https://discord.gg/qEBPwncrSV', Icon: Discord },
+  { id: '4', href: 'https://discord.gg/rnf2FSerwE', Icon: Discord },
   { id: '5', href: 'https://linktr.ee/OrchestraLabs', Icon: LinkTree },
 ];
 
