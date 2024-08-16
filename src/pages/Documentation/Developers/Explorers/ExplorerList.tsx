@@ -134,4 +134,11 @@ export const EXPLORERS: NavItem[] = [
     href: 'https://explorer-testnet.zonkoek.xyz',
     description: 'Explore the ZONKOEK testnet blockchain with up-to-date data.',
   },
+  {
+    id: '20',
+    label: 'Cogwheel Explorer',
+    target: '_blank',
+    href: 'https://explorer.cogwheel.zone/symphony',
+    description: 'An explorer from one of our supporting validators.',
+  },
 ];
