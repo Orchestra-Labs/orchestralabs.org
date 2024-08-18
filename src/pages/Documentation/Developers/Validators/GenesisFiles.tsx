@@ -106,4 +106,11 @@ export const GENESIS_FILES: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_genesis.json',
     description: 'The JSON needed to start a node',
   },
+    {
+    id: '15',
+    label: 'Unity Nodes',
+    target: '_blank',
+    href: 'https://snapshots-testnet.unitynodes.com/symphony-testnet/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
