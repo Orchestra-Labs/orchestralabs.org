@@ -99,4 +99,11 @@ export const ADDRESS_BOOKS: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_addrbook.json',
     description: 'The address book needed to start a node',
   },
+  {
+    id: '15',
+    label: 'Unity Nodes',
+    target: '_blank',
+    href: 'https://snapshots-testnet.unitynodes.com/symphony-testnet/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
 ];
