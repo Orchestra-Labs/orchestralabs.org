@@ -230,7 +230,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channnel-8686
+                  channnel-8743
                 </td>
               </tr>
             </table>
