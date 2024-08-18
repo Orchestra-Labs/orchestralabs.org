@@ -10,6 +10,7 @@ import enterWalletAddress from '@/assets/images/enter-wallet-address.png';
 import enterAmount from '@/assets/images/enter-amount.png';
 import confirmIBCTransaction from '@/assets/images/confirm-ibc-transaction.png';
 import verifyResults from '@/assets/images/initial-location-advanced-ibc.png';
+import devMode from '@/assets/images/dev-mode.png';
 
 const HEADINGS = {
   1: {
@@ -59,6 +60,17 @@ export const AdvancedIBC = () => (
           </h2>
 
           <p className="mt-5">
+            First step is to turn on dev mode. This is a web wallet exclusive
+            feature, so be sure you're on that. Go to settings and enter the
+            Advanced tab. Turn on Developer Mode.
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={devMode}
+            alt="Turn on Dev Mode"
+          />
+
+          <p className="mt-5">
             You can find the advanced IBC option in the bottom of the Keplr web
             wallet. Scroll down to find it, and be sure to grab the address of
             the wallet you want to send to along the way.
@@ -66,7 +78,7 @@ export const AdvancedIBC = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={locationAdvancedIBC}
-            alt="Where to Find Advanced IBC"
+            alt="Where to find Advanced IBC"
           />
 
           <p className="mt-5">
@@ -79,7 +91,7 @@ export const AdvancedIBC = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={selectAsset}
-            alt="Select Asset for Transfer"
+            alt="Select asset for transfer"
           />
 
           <p className="mt-5">
@@ -99,7 +111,7 @@ export const AdvancedIBC = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={selectDestinationChain}
-            alt="Keplr download"
+            alt="Select destination Chain"
           />
 
           <p className="mt-5">
@@ -111,7 +123,7 @@ export const AdvancedIBC = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={sourceChannelID}
-            alt="Create wallet options"
+            alt="Enter source channel ID"
           />
 
           <p className="mt-5">
@@ -121,14 +133,14 @@ export const AdvancedIBC = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={enterWalletAddress}
-            alt="Create wallet options"
+            alt="Enter wallet address"
           />
 
           <p className="mt-5">Enter the amount to send.</p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={enterAmount}
-            alt="Create wallet options"
+            alt="Enter amount to send"
           />
 
           <p className="mt-5">
@@ -137,14 +149,14 @@ export const AdvancedIBC = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={confirmIBCTransaction}
-            alt="Create wallet options"
+            alt="Confirm transaction"
           />
 
           <p className="mt-5">Verify the results from your account balances.</p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={verifyResults}
-            alt="Create wallet options"
+            alt="Verify results"
           />
 
           <p className="mt-5">
