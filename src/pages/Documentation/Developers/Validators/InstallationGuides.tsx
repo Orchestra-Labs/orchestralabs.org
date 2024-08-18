@@ -155,4 +155,11 @@ export const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://docs.cogwheel.zone/testnet/symphony-testnet/install-node',
     description: 'Guide to install node and set up the validator.',
   },
+    {
+    id: '23',
+    label: 'Unity Nodes',
+    target: '_blank',
+    href: 'https://services.unitynodes.com/testnet-network/symphony-blockchain/installation',
+    description: 'Guide to install node and set up the validator.',
+  },
 ];
