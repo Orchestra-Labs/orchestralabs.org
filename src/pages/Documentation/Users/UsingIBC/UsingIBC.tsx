@@ -128,7 +128,9 @@ export const AdvancedIBC = () => (
 
           <p className="mt-5">
             From this point, IBC operates in the same manner as ordinary
-            transactions. Enter the destination wallet address.
+            transactions. Enter the destination wallet address. If you are
+            sending to the Osmosis testnet, this should be an Osmosis address.
+            Symphony testnet requires a Symphony address.
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
