@@ -113,8 +113,8 @@ export const SNAPSHOTS: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_snapshot_latest.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
-    {
-    id: '16',
+  {
+    id: '17',
     label: 'Shazoe',
     target: '_blank',
     href: 'https://snapshot1.shazoe.xyz/testnet/snapshot1-symphony.tar.lz4',

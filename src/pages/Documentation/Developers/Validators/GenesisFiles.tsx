@@ -106,8 +106,8 @@ export const GENESIS_FILES: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_genesis.json',
     description: 'The JSON needed to start a node',
   },
-    {
-    id: '14',
+  {
+    id: '15',
     label: 'Shazoe',
     target: '_blank',
     href: 'https://files.shazoe.xyz/testnets/symphony/genesis.json',
