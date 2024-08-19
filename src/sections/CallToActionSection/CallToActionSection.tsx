@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { cn } from '@/helpers';
+import { ROUTES } from '@/config/routes';
 
 export const CallToActionSection = () => (
   <section className="section-container py-15 px-25px md:py-17.5 md:px-6 xl:py-22.5">
@@ -13,8 +14,8 @@ export const CallToActionSection = () => (
           Join our testnet!
         </p>
         <Link
-          to="https://medium.com/@orchestra_labs/how-to-join-the-symphony-incentivized-testnet-and-earn-airdrops-7ecd07084665"
-          target="_blank"
+          to={ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET}
+          // target="_blank"
           rel="noopener noreferrer"
           className={cn(
             'inline-flex no-underline items-center justify-center mt-7 w-fit px-11 py-4 rounded-full bg-background-dark-grey',
