@@ -157,13 +157,20 @@ export const INSTALLATION_GUIDES: NavItem[] = [
   },
   {
     id: '23',
+    label: 'Unity Nodes',
+    target: '_blank',
+    href: 'https://services.unitynodes.com/testnet-network/symphony-blockchain/installation',
+    description: 'Guide to install node and set up the validator.',
+  },
+  {
+    id: '24',
     label: 'Bang Pateng',
     target: '_blank',
     href: 'https://bangpateng.xyz/docs/Testnet/Symphony/install',
     description: 'Guide to install node and set up the validator.',
   },
   {
-    id: '24',
+    id: '25',
     label: 'Shazoe',
     target: '_blank',
     href: 'https://services.shazoe.xyz/testnets/symphony/node-installation',
