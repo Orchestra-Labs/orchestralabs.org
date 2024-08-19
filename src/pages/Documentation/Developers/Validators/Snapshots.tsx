@@ -113,11 +113,25 @@ export const SNAPSHOTS: NavItem[] = [
     href: 'https://data.winnode.xyz/file/uploads/symphony_snapshot_latest.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
-    {
+  {
     id: '17',
     label: 'Unity Nodes',
     target: '_blank',
     href: 'https://services.unitynodes.com/testnet-network/symphony-blockchain/sync/snapshots',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '18',
+    label: 'Bang Pateng',
+    target: '_blank',
+    href: 'https://filex.bangpateng.xyz/snapshot/symphony/symphony-latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '19',
+    label: 'Shazoe',
+    target: '_blank',
+    href: 'https://snapshot1.shazoe.xyz/testnet/snapshot1-symphony.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
 ];
