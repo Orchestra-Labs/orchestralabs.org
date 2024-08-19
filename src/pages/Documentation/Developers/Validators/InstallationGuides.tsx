@@ -176,4 +176,11 @@ export const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://services.shazoe.xyz/testnets/symphony/node-installation',
     description: 'Guide to install node and set up the validator.',
   },
+  {
+    id: '26',
+    label: 'X1Nodes',
+    target: '_blank',
+    href: 'https://docs.x1node.xyz',
+    description: 'Guide to install node and set up the validator.',
+  },
 ];

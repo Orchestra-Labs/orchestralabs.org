@@ -134,4 +134,11 @@ export const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot1.shazoe.xyz/testnet/snapshot1-symphony.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
+  {
+    id: '20',
+    label: 'X1Nodes',
+    target: '_blank',
+    href: 'https://docs.x1node.xyz/snapshots',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];

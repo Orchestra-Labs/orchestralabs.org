@@ -127,4 +127,11 @@ export const GENESIS_FILES: NavItem[] = [
     href: 'https://files.shazoe.xyz/testnets/symphony/genesis.json',
     description: 'The JSON needed to start a node',
   },
+  {
+    id: '18',
+    label: 'X1Nodes',
+    target: '_blank',
+    href: 'https://docs.x1node.xyz/genesis-files',
+    description: 'The JSON needed to start a node',
+  },
 ];
