@@ -155,11 +155,18 @@ export const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://docs.cogwheel.zone/testnet/symphony-testnet/install-node',
     description: 'Guide to install node and set up the validator.',
   },
-    {
+  {
     id: '23',
     label: 'Bang Pateng',
     target: '_blank',
     href: 'https://bangpateng.xyz/docs/Testnet/Symphony/install',
+    description: 'Guide to install node and set up the validator.',
+  },
+  {
+    id: '24',
+    label: 'Shazoe',
+    target: '_blank',
+    href: 'https://services.shazoe.xyz/testnets/symphony/node-installation',
     description: 'Guide to install node and set up the validator.',
   },
 ];
