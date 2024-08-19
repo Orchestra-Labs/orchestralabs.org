@@ -148,4 +148,11 @@ export const EXPLORERS: NavItem[] = [
     href: 'https://explorer-testnet.x1node.xyz',
     description: 'An explorer from one of our supporting validators.',
   },
+    {
+    id: '22',
+    label: 'Shazoe Explorer',
+    target: '_blank',
+    href: 'https://explorer.shazoe.xyz/symphony-testnet',
+    description: 'An explorer from one of our supporting validators.',
+  },
 ];

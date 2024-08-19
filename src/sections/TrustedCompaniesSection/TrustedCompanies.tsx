@@ -44,7 +44,7 @@ import busurnode from '@/assets/images/busurnode.png';
 import croutondigital from '@/assets/images/croutondigital.png';
 import node39 from '@/assets/images/node39.jpg';
 import dnsarz from '@/assets/images/dnsarz.png';
-import communitynode from '@/assets/images/ComunityNode.png';
+import communitynode from '@/assets/images/communitynode.png';
 import winnode from '@/assets/images/winnode.png';
 import coinCodex from '@/assets/images/coincodex.png';
 import gowtherNdoe from '@/assets/images/gowthernode.png';
@@ -54,6 +54,7 @@ import leapWallet from '@/assets/images/leap-wallet.png';
 import zonkoekLogo from '@/assets/images/zonkoek.png';
 import cogwheelLogo from '@/assets/images/cogwheel.png';
 import x1node from '@/assets/images/x1node.png';
+import shazoe from '@/assets/images/shazoe.jpg';
 
 type Company = {
   id: number;
@@ -384,6 +385,12 @@ export const COMPANIES: Company[] = [
     id: 54,
     name: 'X1NODE',
     src: x1node,
+    logoClass: 'max-h-10',
+  },
+    {
+    id: 55,
+    name: 'SHAZOE',
+    src: shazoe,
     logoClass: 'max-h-10',
   },
 ];

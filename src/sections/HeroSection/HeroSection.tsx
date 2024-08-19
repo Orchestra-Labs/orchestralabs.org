@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { cn } from '@/helpers';
 
 import waves2 from '@/assets/images/waves-test.svg';
+import { ROUTES } from '@/config/routes';
 
 export const HeroSection = () => (
   <div className="min-h-screen relative">
@@ -17,8 +18,8 @@ export const HeroSection = () => (
           Testnet now live!
         </p>
         <Link
-          to="https://medium.com/@orchestra_labs/how-to-join-the-symphony-incentivized-testnet-and-earn-airdrops-7ecd07084665"
-          target="_blank"
+          to={ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET}
+          // target="_blank"
           rel="noopener noreferrer"
           className={cn(
             'inline-flex no-underline items-center justify-center mt-7 w-fit px-11 py-4 rounded-full bg-background-dark-grey',
