@@ -48,7 +48,7 @@ import communitynode from '@/assets/images/communitynode.png';
 import winnode from '@/assets/images/winnode.png';
 import coinCodex from '@/assets/images/coincodex.png';
 import gowtherNdoe from '@/assets/images/gowthernode.png';
-import danggia from '@/assets/images/danggia.png';
+import danggia from '@/assets/images/DANGGIA.png';
 import dragonvn from '@/assets/images/dragonvn.png';
 import leapWallet from '@/assets/images/leap-wallet.png';
 import zonkoekLogo from '@/assets/images/zonkoek.png';
