@@ -11,6 +11,8 @@ import enterAmount from '@/assets/images/enter-amount.png';
 import confirmIBCTransaction from '@/assets/images/confirm-ibc-transaction.png';
 import verifyResults from '@/assets/images/initial-location-advanced-ibc.png';
 import devMode from '@/assets/images/dev-mode.png';
+import { ROUTES } from '@/config/routes';
+import { Link } from 'react-router-dom';
 
 const HEADINGS = {
   1: {
@@ -60,9 +62,24 @@ export const AdvancedIBC = () => (
           </h2>
 
           <p className="mt-5">
-            First step is to turn on dev mode. This is a web wallet exclusive
-            feature, so be sure you're on that. Go to settings and enter the
-            Advanced tab. Turn on Developer Mode.
+            First step is to make sure the chain you want to transfer to is
+            visible in your wallet. If it is native to the wallet, you should be
+            able to find it with a simple search. If not, follow the
+            instructions{' '}
+            <Link
+              to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
+              className="text-blue hover:text-blue-darker underline"
+            >
+              here
+            </Link>
+            .
+          </p>
+
+          <p className="mt-5">
+            After the chain you want to transfer to is visible in your wallet,
+            turn on dev mode. This is a web wallet exclusive feature, so be sure
+            you're on that. Go to settings and enter the Advanced tab. Turn on
+            Developer Mode.
           </p>
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
