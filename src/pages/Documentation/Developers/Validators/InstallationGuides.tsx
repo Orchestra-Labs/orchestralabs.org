@@ -183,4 +183,11 @@ export const INSTALLATION_GUIDES: NavItem[] = [
     href: 'https://docs.x1node.xyz',
     description: 'Guide to install node and set up the validator.',
   },
+    {
+    id: '27',
+    label: 'Shamura',
+    target: '_blank',
+    href: 'https://service.shamura.one/testnets/symphony/installation',
+    description: 'Guide to install node and set up the validator.',
+  },
 ];
