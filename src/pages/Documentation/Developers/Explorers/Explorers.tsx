@@ -25,7 +25,11 @@ export const Explorers = () => (
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
           Explorers
         </h1>
-        <p className="mt-10">A list of explorers is included below:</p>
+        <p className="mt-10">
+          A list of explorers is included below. Keep in mind we are now on
+          version 0.3 on our testnet. Any explorer chosen must reflect this
+          version number.:
+        </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}

@@ -68,7 +68,9 @@ export const Validators = () => (
           </Link>
           . If you are starting out or recovering, a list of installation guides
           and other relevant information required for starting up a new
-          validator are below.
+          validator are below. Keep in mind we are now on version 0.3 on our
+          testnet. Any guide chosen to sync to our testnet must reflect this
+          version number.
         </p>
         <p className="mt-5">
           For those interested in validators, a full list of our active and
