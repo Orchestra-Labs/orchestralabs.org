@@ -1,4 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
+import { ROUTES } from '@/config/routes';
 import { NavItem } from '@/types';
 
 const HEADINGS = {
@@ -42,38 +43,9 @@ const DOCS_AND_GUIDES: NavItem[] = [
   },
   {
     id: '2',
-    label: 'Validator Installation Guide',
-    target: '_blank',
-    href: 'https://services.nodeshub.online/testnet-networks/symphony',
+    label: 'Validator Guides',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS,
     description: 'Documentation on how to start a validator',
-  },
-  {
-    id: '3',
-    label: 'NodesHub explorer',
-    target: '_blank',
-    href: 'https://testnet.explorer.nodeshub.online/symphony',
-    description: 'An explorer from one of our supporting validators',
-  },
-  {
-    id: '3',
-    label: 'Ping.pub explorer',
-    target: '_blank',
-    href: 'https://testnet.ping.pub/symphony',
-    description: 'An explorer from one of our supporting validators',
-  },
-  {
-    id: '4',
-    label: 'Snapshot',
-    target: '_blank',
-    href: 'https://files.nodeshub.online/testnet/symphony/snapshot/symphony_snap.tar.lz4',
-    description: 'Snapshots to speed up validator synchronization',
-  },
-  {
-    id: '5',
-    label: 'Genesis, Add Book',
-    target: '_blank',
-    href: 'https://files.nodeshub.online/testnet/symphony/',
-    description: 'The JSON and address book needed to start a node',
   },
 ];
 
@@ -87,7 +59,7 @@ export const DeveloperOverview = () => (
         </h1>
         <p className="mt-10">
           Developer documentation is planned to be built out after fundraising
-          completes. In the meantime, please use the Osmosis and NodeHub
+          completes. In the meantime, please use the Osmosis and validator
           documentation links below, as Symphony was built from Osmosis, and is
           supported by validators like NodeHub.
         </p>
