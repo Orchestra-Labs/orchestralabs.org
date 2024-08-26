@@ -181,7 +181,7 @@ export const AdvancedIBC = () => (
           <p className="mt-5">
             <strong>Note:</strong> Keplr Mobile updates account balances much
             faster than the browser wallet. If your wallet balances have not
-            updated in good time, consider chacking your wallet through the
+            updated in good time, consider checking your wallet through the
             mobile app rather than the web extension.
           </p>
         </div>
