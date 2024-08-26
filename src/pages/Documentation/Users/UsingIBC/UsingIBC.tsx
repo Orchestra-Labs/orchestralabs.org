@@ -293,6 +293,35 @@ export const AdvancedIBC = () => (
                   channnel-998
                 </td>
               </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Cosmos Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-7
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-4300
+                </td>
+              </tr>
             </table>
           </p>
         </div>
