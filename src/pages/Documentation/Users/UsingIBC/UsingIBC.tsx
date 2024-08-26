@@ -243,7 +243,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  osmosistestnet
+                  Osmosis Testnet
                 </td>
                 <td
                   style={{
@@ -262,6 +262,35 @@ export const AdvancedIBC = () => (
                   }}
                 >
                   channnel-8743
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Stargaze Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-4
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-998
                 </td>
               </tr>
             </table>
