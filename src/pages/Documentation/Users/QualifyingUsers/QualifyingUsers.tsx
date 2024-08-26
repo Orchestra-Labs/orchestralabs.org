@@ -126,7 +126,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const QUALIFYING_TOKENS = ['OSMO', 'ATOM', 'ARCH', 'KUJI'];
+const QUALIFYING_COINS = ['OSMO', 'ATOM', 'ARCH', 'KUJI'];
 
 const QUALIFYING_NFTS: NavItem[] = [
   {
@@ -199,10 +199,10 @@ export const QualifyingUsers = () => (
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            Stakers of {'>100'} USD of select Cosmos ecosystem tokens:
+            Stakers of {'>100'} USD of select Cosmos ecosystem coins:
           </p>
           <ul className="mt-5">
-            {QUALIFYING_TOKENS.map(item => (
+            {QUALIFYING_COINS.map(item => (
               <div className="flex mb-4 last:mb-0">
                 <p className="ml-5">- {item}</p>
               </div>
