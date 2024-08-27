@@ -52,6 +52,7 @@ import zonkoekLogo from '@/assets/images/zonkoek.png';
 import cogwheelLogo from '@/assets/images/cogwheel.png';
 import x1node from '@/assets/images/x1node.png';
 import shazoe from '@/assets/images/shazoe.jpg';
+import shamura from '@/assets/images/shamura.png';
 
 type Company = {
   id: number;
@@ -370,6 +371,12 @@ export const COMPANIES: Company[] = [
     id: 52,
     name: 'SHAZOE',
     src: shazoe,
+    logoClass: 'max-h-10',
+  },
+    {
+    id: 52,
+    name: 'SHAMURA',
+    src: shamura,
     logoClass: 'max-h-10',
   },
 ];
