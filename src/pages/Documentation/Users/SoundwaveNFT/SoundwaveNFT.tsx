@@ -11,8 +11,8 @@ const HEADINGS = {
     label: 'NFT Benefits',
   },
   2: {
-    id: 'airdrop-policy',
-    label: 'Qualifying for Airdrops',
+    id: 'soundwave-nft',
+    label: 'The Soundwave',
   },
 };
 
