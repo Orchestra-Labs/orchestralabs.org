@@ -48,6 +48,10 @@ const HEADINGS = {
     id: 'creepy-companions',
     label: 'Creepy Companions',
   },
+  3.9: {
+    id: 'necropolis',
+    label: 'Necropolis',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -122,6 +126,13 @@ const NAVIGATION_ITEMS: NavItem[] = [
         description:
           'stars1h7pefpv3xqn7zr9a9x28zjtq9h0k5zc0dq8g0hp2q8xzzn6ry52sjpke38',
       },
+      {
+        id: HEADINGS[3.9].id,
+        label: HEADINGS[3.9].label,
+        href: `#${HEADINGS[3.9].id}`,
+        description:
+          'stars1gfzln3v6z0g3h2dl4waj6u7vlrjta4hszwpqwc5s55c63fgrt8ksaq89t8',
+      },
     ],
   },
 ];
@@ -176,6 +187,12 @@ const QUALIFYING_NFTS: NavItem[] = [
     label: HEADINGS[3.8].label,
     target: '_blank',
     href: `https://app.aaa-metahuahua.com/creepy/creepycompanions/collection`,
+  },
+  {
+    id: HEADINGS[3.9].id,
+    label: HEADINGS[3.9].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/p/necropolis-vault/tokens`,
   },
 ];
 
