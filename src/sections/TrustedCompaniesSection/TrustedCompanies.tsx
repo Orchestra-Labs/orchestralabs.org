@@ -1,58 +1,65 @@
 import { ClassValue } from 'clsx';
 
-import evacodes from '@/assets/images/evacodes.png';
-import bloxxa from '@/assets/images/bloxxa.png';
-import google from '@/assets/images/google.png';
-import gexabyte from '@/assets/images/gexabyte.png';
-import medium from '@/assets/images/medium.png';
-import suave from '@/assets/images/suave.png';
-import swapAcross from '@/assets/images/swapacross.png';
-import waitlist from '@/assets/images/waitlist.png';
-import convoSpace from '@/assets/images/convo-space.png';
-import keplr from '@/assets/images/keplr.png';
-import pingPub from '@/assets/images/ping-pub.svg';
-import kleomedes from '@/assets/images/kleomedes.png';
-import gempad from '@/assets/images/gempad.png';
-import nodesHub from '@/assets/images/nodeshub.png';
-import interchainInfo from '@/assets/images/interchaininfo.png';
-import buidl from '@/assets/images/buidl.png';
-import nodeXEmperor from '@/assets/images/nodexemperor.png';
-import polkachu from '@/assets/images/polkachu.png';
-import bueno from '@/assets/images/bueno.png';
-import pfc from '@/assets/images/pfc.png';
-import fairStaking from '@/assets/images/fair-staking.png';
-import dasamuka from '@/assets/images/dasamuka.png';
-import dwentz from '@/assets/images/dwentz.png';
-import indonode from '@/assets/images/indonode.png';
-import citizenWeb3 from '@/assets/images/citizen-web3.jpg';
-import dashNode from '@/assets/images/dashnode.png';
-import nomad from '@/assets/images/nomad.png';
-import konsortech from '@/assets/images/konsortech.png';
-import sychonix from '@/assets/images/sychonix.png';
-import syanodes from '@/assets/images/syanodes.png';
-import jhonswg from '@/assets/images/jhonswg.png';
-import cryptonodeid from '@/assets/images/cryptonodeid.png';
-import nodestake from '@/assets/images/nodestake.png';
-import iAmAtomic from '@/assets/images/i-am-atomic.png';
-import xxcode from '@/assets/images/xxcode.png';
-import revonode from '@/assets/images/revonode.png';
-import ravenode from '@/assets/images/ravenode.jpg';
-import vinjanInc from '@/assets/images/vinjan-inc.png';
-import busurnode from '@/assets/images/busurnode.png';
-import croutondigital from '@/assets/images/croutondigital.png';
-import dnsarz from '@/assets/images/dnsarz.png';
-import communitynode from '@/assets/images/communitynode.png';
-import winnode from '@/assets/images/winnode.png';
-import coinCodex from '@/assets/images/coincodex.png';
-import gowtherNdoe from '@/assets/images/gowthernode.png';
-import danggia from '@/assets/images/DANGGIA.png';
-import dragonvn from '@/assets/images/dragonvn.png';
-import leapWallet from '@/assets/images/leap-wallet.png';
-import zonkoekLogo from '@/assets/images/zonkoek.png';
-import cogwheelLogo from '@/assets/images/cogwheel.png';
-import x1node from '@/assets/images/x1node.png';
-import shazoe from '@/assets/images/shazoe.jpg';
-import shamura from '@/assets/images/shamura.png';
+import evacodes from '@/assets/images/external/evacodes.png';
+import bloxxa from '@/assets/images/external/bloxxa.png';
+import google from '@/assets/images/external/google.png';
+import gexabyte from '@/assets/images/external/gexabyte.png';
+import medium from '@/assets/images/external/medium.png';
+import suave from '@/assets/images/external/suave.png';
+import swapAcross from '@/assets/images/external/swapacross.png';
+import waitlist from '@/assets/images/external/waitlist.png';
+import convoSpace from '@/assets/images/external/convo-space.png';
+import keplr from '@/assets/images/external/keplr.png';
+import pingPub from '@/assets/images/external/ping-pub.svg';
+import kleomedes from '@/assets/images/external/kleomedes.png';
+import gempad from '@/assets/images/external/gempad.png';
+import nodesHub from '@/assets/images/external/nodeshub.png';
+import interchainInfo from '@/assets/images/external/interchaininfo.png';
+import buidl from '@/assets/images/external/buidl.png';
+import nodeXEmperor from '@/assets/images/external/nodexemperor.png';
+import polkachu from '@/assets/images/external/polkachu.png';
+import bueno from '@/assets/images/external/bueno.png';
+import pfc from '@/assets/images/external/pfc.png';
+import fairStaking from '@/assets/images/external/fair-staking.png';
+import dasamuka from '@/assets/images/external/dasamuka.png';
+import dwentz from '@/assets/images/external/dwentz.png';
+import indonode from '@/assets/images/external/indonode.png';
+import citizenWeb3 from '@/assets/images/external/citizen-web3.jpg';
+import dashNode from '@/assets/images/external/dashnode.png';
+import nomad from '@/assets/images/external/nomad.png';
+import konsortech from '@/assets/images/external/konsortech.png';
+import sychonix from '@/assets/images/external/sychonix.png';
+import syanodes from '@/assets/images/external/syanodes.png';
+import jhonswg from '@/assets/images/external/jhonswg.png';
+import cryptonodeid from '@/assets/images/external/cryptonodeid.png';
+import nodestake from '@/assets/images/external/nodestake.png';
+import iAmAtomic from '@/assets/images/external/i-am-atomic.png';
+import xxcode from '@/assets/images/external/xxcode.png';
+import revonode from '@/assets/images/external/revonode.png';
+import ravenode from '@/assets/images/external/ravenode.jpg';
+import vinjanInc from '@/assets/images/external/vinjan-inc.png';
+import busurnode from '@/assets/images/external/busurnode.png';
+import croutondigital from '@/assets/images/external/croutondigital.png';
+import dnsarz from '@/assets/images/external/dnsarz.png';
+import communitynode from '@/assets/images/external/communitynode.png';
+import winnode from '@/assets/images/external/winnode.png';
+import coinCodex from '@/assets/images/external/coincodex.png';
+import gowtherNdoe from '@/assets/images/external/gowthernode.png';
+import danggia from '@/assets/images/external/DANGGIA.png';
+import dragonvn from '@/assets/images/external/dragonvn.png';
+import leapWallet from '@/assets/images/external/leap-wallet.png';
+import zonkoekLogo from '@/assets/images/external/zonkoek.png';
+import cogwheelLogo from '@/assets/images/external/cogwheel.png';
+import x1node from '@/assets/images/external/x1node.png';
+import shazoe from '@/assets/images/external/shazoe.jpg';
+import shamura from '@/assets/images/external/shamura.png';
+import icoHolder from '@/assets/images/external/icoholder.jpg';
+import citadelOne from '@/assets/images/external/citadel_one.png';
+import digitalJournal from '@/assets/images/external/digital-journal.jpg';
+import tradingView from '@/assets/images/external/trading-view.png';
+import monday from '@/assets/images/external/monday.png';
+import marketWatch from '@/assets/images/external/marketwatch.jpg';
+import businessInsider from '@/assets/images/external/business-insider.png';
 
 type Company = {
   id: number;
@@ -373,10 +380,52 @@ export const COMPANIES: Company[] = [
     src: shazoe,
     logoClass: 'max-h-10',
   },
-    {
-    id: 52,
+  {
+    id: 53,
     name: 'SHAMURA',
     src: shamura,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 54,
+    name: 'ICOHolder',
+    src: icoHolder,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 55,
+    name: 'Citadel.one',
+    src: citadelOne,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 56,
+    name: 'Digital Journal',
+    src: digitalJournal,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 57,
+    name: 'tradingView',
+    src: tradingView,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 58,
+    name: 'Monday',
+    src: monday,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 59,
+    name: 'MarketWatch',
+    src: marketWatch,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 60,
+    name: 'Business Insider',
+    src: businessInsider,
     logoClass: 'max-h-10',
   },
 ];
