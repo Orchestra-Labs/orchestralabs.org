@@ -322,6 +322,64 @@ export const AdvancedIBC = () => (
                   channnel-4300
                 </td>
               </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Juno Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-9
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-942
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Archway Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-10
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-495
+                </td>
+              </tr>
             </table>
           </p>
         </div>
