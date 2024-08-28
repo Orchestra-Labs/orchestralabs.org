@@ -113,4 +113,11 @@ export const GENESIS_FILES: NavItem[] = [
     href: 'https://files.shamura.one/testnets/symphony/genesis.json',
     description: 'The JSON needed to start a node',
   },
+      {
+    id: '17',
+    label: 'Buster',
+    target: '_blank',
+    href: 'https://snapshot.busternode.xyz/testnets/symphony/genesis.json',
+    description: 'The JSON needed to start a node',
+  },
 ];
