@@ -293,9 +293,9 @@ export const QualifyingUsers = () => (
             ))}
           </ul>
           <p className="mt-5">
-            <strong>Note:</strong> Active participation in targeted activities
-            can also earn Symphony NFTs. For the most current information on
-            testnet tasks, visit the Symphony Blockchain Leaderboard on Zealy.
+            <strong>Note:</strong> Soundwave NFTs are not sold, but rather
+            earned through community building efforts as are announced
+            regularly.
           </p>
         </div>
       </div>
