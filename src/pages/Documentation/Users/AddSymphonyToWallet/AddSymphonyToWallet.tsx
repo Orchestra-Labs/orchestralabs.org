@@ -111,7 +111,7 @@ export const AddSymphonyToWallet = () => (
             connect your wallet. A wallet connection page for Symphony can be
             found through{' '}
             <Link
-              to="https://testnet.ping.pub/symphony"
+              to="https://testnet.ping.pub/wallet/suggest"
               className="text-blue hover:text-blue-darker underline"
             >
               Ping.pub
