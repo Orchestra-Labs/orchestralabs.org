@@ -52,6 +52,14 @@ const HEADINGS = {
     id: 'necropolis',
     label: 'Necropolis',
   },
+  3.11: {
+    id: 'pixel-wizards',
+    label: 'Pixel Wizards',
+  },
+  3.12: {
+    id: 'pixel-witches',
+    label: 'Pixel Witches',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -133,6 +141,20 @@ const NAVIGATION_ITEMS: NavItem[] = [
         description:
           'stars1gfzln3v6z0g3h2dl4waj6u7vlrjta4hszwpqwc5s55c63fgrt8ksaq89t8',
       },
+      {
+        id: HEADINGS[3.11].id,
+        label: HEADINGS[3.11].label,
+        href: `#${HEADINGS[3.11].id}`,
+        description:
+          'stars18d7ver7mmjdt06mz6x0pz09862060kupju75kpka5j0r7huearcsq0gyg0',
+      },
+      {
+        id: HEADINGS[3.12].id,
+        label: HEADINGS[3.12].label,
+        href: `#${HEADINGS[3.12].id}`,
+        description:
+          'stars1mvnqhskpmwy8tjkuftwvnl56x5kumlgnqffaqpcscpnrnw3mep4s9z2s9m',
+      },
     ],
   },
 ];
@@ -193,6 +215,18 @@ const QUALIFYING_NFTS: NavItem[] = [
     label: HEADINGS[3.9].label,
     target: '_blank',
     href: `https://www.stargaze.zone/p/necropolis-vault/tokens`,
+  },
+  {
+    id: HEADINGS[3.11].id,
+    label: HEADINGS[3.11].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/m/pixelwizards/tokens`,
+  },
+  {
+    id: HEADINGS[3.12].id,
+    label: HEADINGS[3.12].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/m/pixelwitches/tokens`,
   },
 ];
 
