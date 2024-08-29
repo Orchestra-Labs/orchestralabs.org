@@ -5,15 +5,25 @@ import nonNativeChainSearch from '@/assets/images/non-native-chain-search.png';
 import chainSearch from '@/assets/images/chain-search.png';
 import manageChainVisibility from '@/assets/images/manage-chain-visibility.png';
 import symphonyInWallet from '@/assets/images/symphony-in-wallet.png';
+
+import connectWallet from '@/assets/images/connect-wallet.png';
+import selectWalletToConnect from '@/assets/images/select-wallet-to-connect.png';
+import approveConnection from '@/assets/images/approve-connection.png';
+import selectAddChain from '@/assets/images/select-and-add-chain.png';
+
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/config/routes';
 
 const HEADINGS = {
   1: {
-    id: 'general-setup',
-    label: 'General Wallet Setup',
+    id: 'adding-non-native-chains',
+    label: 'Adding Non-native Chains',
   },
   2: {
+    id: 'enable-chain-visibility',
+    label: 'Enable Chain Visibility',
+  },
+  3: {
     id: 'wallet-chain-searches',
     label: 'Chain Searches',
   },
@@ -39,6 +49,11 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '2',
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
+  },
+  {
+    id: '3',
+    label: HEADINGS[3].label,
+    href: `#${HEADINGS[3].id}`,
     subList: [
       {
         id: 'keplr-chain-search',
@@ -71,22 +86,15 @@ export const AddSymphonyToWallet = () => (
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            While the links to all chain searches can be found below, due to
-            Symphony's more difficult non-native installation on Keplr, the
-            Keplr Chain Search link and instructions are also included here:
-            <p>
-              {'- '}
-              <Link
-                to="https://chains.keplr.app/"
-                target="_blank"
-                className="text-blue hover:text-blue-darker underline mr-1"
-              >
-                Keplr Chain Search
-              </Link>
-            </p>
+            If the chain you're searching for is not native to the wallet, you
+            will first need to add it to the wallet. This is easily done by
+            connecting your wallet to a service and pressing a button to add the
+            chain. Should you find difficulty or prefer a more manual method,
+            links to chain searches can be found below, each having instructions
+            from their native sources.
           </p>
           <p className="mt-5">
-            If you've not created a Keplr wallet, use the create wallet
+            Alternatively, if you've not created a wallet, use the create wallet
             documentation included here:
             <p>
               {'- '}
@@ -97,6 +105,64 @@ export const AddSymphonyToWallet = () => (
                 Create A Wallet
               </Link>
             </p>
+          </p>
+          <p className="mt-5">
+            After logging in to your wallet, navigate to a trusted source and
+            connect your wallet. A wallet connection page for Symphony can be
+            found through{' '}
+            <Link
+              to="https://testnet.ping.pub/symphony"
+              className="text-blue hover:text-blue-darker underline"
+            >
+              Ping.pub
+            </Link>
+            .
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={connectWallet}
+            alt="Chain visibility"
+          />
+          <p className="mt-5">
+            Select the wallet to connect to the service. Most of our testnet
+            documentation examples use Keplr.
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={selectWalletToConnect}
+            alt="Non-native chain search"
+          />
+          <p className="mt-6">Pick a chain and select to add it.</p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={selectAddChain}
+            alt="Chain visibility"
+          />
+          <p className="mt-6">
+            Approve the connection and the chain will now be searchable to
+            enable visibility in your wallet.
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={approveConnection}
+            alt="Chain search"
+          />
+          <p className="mt-6">
+            You will now find the Symphony chain visible in your wallet.
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={symphonyInWallet}
+            alt="Symphony in wallet"
+          />
+        </div>
+        <div id={HEADINGS[2].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[2].label}
+          </h2>
+          <p className="mt-5">
+            If the chain you're searching for is native to the wallet or has
+            been added before, all you need to do is enable visibiility.
           </p>
           <p className="mt-5">
             After logging in to your Keplr wallet, use the Keplr chain search
@@ -148,9 +214,9 @@ export const AddSymphonyToWallet = () => (
             alt="Symphony in wallet"
           />
         </div>
-        <div id={HEADINGS[2].id} className="mt-15">
+        <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[2].label}
+            {HEADINGS[3].label}
           </h2>
           <ListLinks listLinks={CHAIN_SEARCHES} />
         </div>
