@@ -60,6 +60,10 @@ const HEADINGS = {
     id: 'pixel-witches',
     label: 'Pixel Witches',
   },
+  3.13: {
+    id: 'cewts',
+    label: 'CEWTs',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -155,6 +159,13 @@ const NAVIGATION_ITEMS: NavItem[] = [
         description:
           'stars1mvnqhskpmwy8tjkuftwvnl56x5kumlgnqffaqpcscpnrnw3mep4s9z2s9m',
       },
+      {
+        id: HEADINGS[3.13].id,
+        label: HEADINGS[3.13].label,
+        href: `#${HEADINGS[3.13].id}`,
+        description:
+          'stars1wjq8m7n2wjfmfhrx7cdt04u3tkmf544d3clmedm7pjh8fs9qzteqfve4e0',
+      },
     ],
   },
 ];
@@ -227,6 +238,12 @@ const QUALIFYING_NFTS: NavItem[] = [
     label: HEADINGS[3.12].label,
     target: '_blank',
     href: `https://www.stargaze.zone/m/pixelwitches/tokens`,
+  },
+  {
+    id: HEADINGS[3.13].id,
+    label: HEADINGS[3.13].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/m/stars1wjq8m7n2wjfmfhrx7cdt04u3tkmf544d3clmedm7pjh8fs9qzteqfve4e0/tokens`,
   },
 ];
 
