@@ -120,4 +120,11 @@ export const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot.shamura.one/testnets/snapshot-symphony.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
+    {
+    id: '18',
+    label: 'Sr20de',
+    target: '_blank',
+    href: 'https://sr20de.xyz/services/symphony-testnet/',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];

@@ -113,4 +113,11 @@ export const ADDRESS_BOOKS: NavItem[] = [
     href: 'https://files.shamura.one/testnets/symphony/addrbook.json',
     description: 'The address book needed to start a node',
   },
+    {
+    id: '17',
+    label: 'Sr20de',
+    target: '_blank',
+    href: 'https://snapshots3.sr20de.xyz/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
 ];
