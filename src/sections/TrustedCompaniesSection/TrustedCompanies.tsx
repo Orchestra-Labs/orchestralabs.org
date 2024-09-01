@@ -16,7 +16,6 @@ import gempad from '@/assets/images/external/gempad.png';
 import nodesHub from '@/assets/images/external/nodeshub.png';
 import interchainInfo from '@/assets/images/external/interchaininfo.png';
 import buidl from '@/assets/images/external/buidl.png';
-import nodeXEmperor from '@/assets/images/external/nodexemperor.png';
 import polkachu from '@/assets/images/external/polkachu.png';
 import bueno from '@/assets/images/external/bueno.png';
 import pfc from '@/assets/images/external/pfc.png';
@@ -27,8 +26,6 @@ import indonode from '@/assets/images/external/indonode.png';
 import citizenWeb3 from '@/assets/images/external/citizen-web3.jpg';
 import dashNode from '@/assets/images/external/dashnode.png';
 import nomad from '@/assets/images/external/nomad.png';
-import konsortech from '@/assets/images/external/konsortech.png';
-import sychonix from '@/assets/images/external/sychonix.png';
 import syanodes from '@/assets/images/external/syanodes.png';
 import jhonswg from '@/assets/images/external/jhonswg.png';
 import cryptonodeid from '@/assets/images/external/cryptonodeid.png';
@@ -41,18 +38,10 @@ import vinjanInc from '@/assets/images/external/vinjan-inc.png';
 import busurnode from '@/assets/images/external/busurnode.png';
 import croutondigital from '@/assets/images/external/croutondigital.png';
 import dnsarz from '@/assets/images/external/dnsarz.png';
-import communitynode from '@/assets/images/external/communitynode.png';
-import winnode from '@/assets/images/external/winnode.png';
 import coinCodex from '@/assets/images/external/coincodex.png';
 import gowtherNdoe from '@/assets/images/external/gowthernode.png';
-import danggia from '@/assets/images/external/DANGGIA.png';
-import dragonvn from '@/assets/images/external/dragonvn.png';
 import leapWallet from '@/assets/images/external/leap-wallet.png';
-import zonkoekLogo from '@/assets/images/external/zonkoek.png';
 import cogwheelLogo from '@/assets/images/external/cogwheel.png';
-import x1node from '@/assets/images/external/x1node.png';
-import shazoe from '@/assets/images/external/shazoe.jpg';
-import shamura from '@/assets/images/external/shamura.png';
 import icoHolder from '@/assets/images/external/icoholder.jpg';
 import citadelOne from '@/assets/images/external/citadel_one.png';
 import digitalJournal from '@/assets/images/external/digital-journal.jpg';
@@ -166,264 +155,198 @@ export const COMPANIES: Company[] = [
   },
   {
     id: 17,
-    name: 'NodeX Emperor',
-    src: nodeXEmperor,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 18,
     name: 'Polkachu',
     src: polkachu,
     logoClass: 'max-h-10',
   },
   {
-    id: 19,
+    id: 18,
     name: 'Bueno',
     src: bueno,
     logoClass: 'max-h-10',
   },
   {
-    id: 20,
+    id: 19,
     name: 'PFC',
     src: pfc,
     logoClass: 'max-h-10',
   },
   {
-    id: 21,
+    id: 20,
     name: 'Fair Staking',
     src: fairStaking,
     logoClass: 'max-h-9',
   },
   {
-    id: 22,
+    id: 21,
     name: 'Dasamuka',
     src: dasamuka,
     logoClass: 'max-h-10',
   },
   {
-    id: 23,
+    id: 22,
     name: 'Dwentz',
     src: dwentz,
     logoClass: 'max-h-9',
   },
   {
-    id: 24,
+    id: 23,
     name: 'Indonode',
     src: indonode,
     logoClass: 'max-h-10',
   },
   {
-    id: 25,
+    id: 24,
     name: 'Citizen Web3',
     src: citizenWeb3,
     logoClass: 'max-h-10',
   },
   {
-    id: 26,
+    id: 25,
     name: 'DashNode',
     src: dashNode,
     logoClass: 'max-h-10',
   },
   {
-    id: 27,
+    id: 26,
     name: 'Nomad',
     src: nomad,
     logoClass: 'max-h-10',
   },
   {
-    id: 28,
-    name: 'KonsorTech',
-    src: konsortech,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 29,
-    name: 'Sychonix',
-    src: sychonix,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 30,
+    id: 27,
     name: 'SyaNodes',
     src: syanodes,
     logoClass: 'max-h-10',
   },
   {
-    id: 31,
+    id: 28,
     name: 'Jhonswg',
     src: jhonswg,
     logoClass: 'max-h-10',
   },
   {
-    id: 32,
+    id: 29,
     name: 'CryptonodeID',
     src: cryptonodeid,
     logoClass: 'max-h-10',
   },
   {
-    id: 33,
+    id: 30,
     name: 'NodeStake',
     src: nodestake,
     logoClass: 'max-h-10',
   },
   {
-    id: 34,
+    id: 31,
     name: 'IAmAtomic',
     src: iAmAtomic,
     logoClass: 'max-h-10',
   },
   {
-    id: 35,
+    id: 32,
     name: 'xxcode',
     src: xxcode,
     logoClass: 'max-h-10',
   },
   {
-    id: 36,
+    id: 33,
     name: 'revonode',
     src: revonode,
     logoClass: 'max-h-10',
   },
   {
-    id: 37,
+    id: 34,
     name: 'Ravenode',
     src: ravenode,
     logoClass: 'max-h-10',
   },
   {
-    id: 38,
+    id: 35,
     name: 'Vinjan.Inc',
     src: vinjanInc,
     logoClass: 'max-h-10',
   },
   {
-    id: 39,
+    id: 36,
     name: 'Busurnode',
     src: busurnode,
     logoClass: 'max-h-10',
   },
   {
-    id: 40,
+    id: 37,
     name: 'CroutonDigital',
     src: croutondigital,
     logoClass: 'max-h-10',
   },
   {
-    id: 41,
+    id: 38,
     name: 'Dnsarz',
     src: dnsarz,
     logoClass: 'max-h-10',
   },
   {
-    id: 42,
-    name: 'CommunityNode',
-    src: communitynode,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 43,
-    name: 'Winnode',
-    src: winnode,
-    logoClass: 'max-h-9',
-  },
-  {
-    id: 44,
-    name: 'Winnode',
+    id: 39,
+    name: 'Coin Codex',
     src: coinCodex,
     logoClass: 'max-h-9',
   },
   {
-    id: 45,
+    id: 40,
     name: 'GowtherNode',
     src: gowtherNdoe,
     logoClass: 'max-h-9',
   },
   {
-    id: 46,
-    name: 'KenZ|DragonVN',
-    src: dragonvn,
-    logoClass: 'max-h-9',
-  },
-  {
-    id: 47,
+    id: 41,
     name: 'LeapWallet',
     src: leapWallet,
     logoClass: 'max-h-10',
   },
   {
-    id: 48,
-    name: 'DANGGIA',
-    src: danggia,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 49,
-    name: 'ZONKOEK',
-    src: zonkoekLogo,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 50,
+    id: 42,
     name: 'Cogwheel ⚙️',
     src: cogwheelLogo,
     logoClass: 'max-h-8',
   },
   {
-    id: 51,
-    name: 'X1NODE',
-    src: x1node,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 52,
-    name: 'SHAZOE',
-    src: shazoe,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 53,
-    name: 'SHAMURA',
-    src: shamura,
-    logoClass: 'max-h-10',
-  },
-  {
-    id: 54,
+    id: 43,
     name: 'ICOHolder',
     src: icoHolder,
     logoClass: 'max-h-10',
   },
   {
-    id: 55,
+    id: 44,
     name: 'Citadel.one',
     src: citadelOne,
     logoClass: 'max-h-10',
   },
   {
-    id: 56,
+    id: 45,
     name: 'Digital Journal',
     src: digitalJournal,
     logoClass: 'max-h-10',
   },
   {
-    id: 57,
+    id: 46,
     name: 'tradingView',
     src: tradingView,
     logoClass: 'max-h-10',
   },
   {
-    id: 58,
+    id: 47,
     name: 'Monday',
     src: monday,
     logoClass: 'max-h-10',
   },
   {
-    id: 59,
+    id: 48,
     name: 'MarketWatch',
     src: marketWatch,
     logoClass: 'max-h-10',
   },
   {
-    id: 60,
+    id: 49,
     name: 'Business Insider',
     src: businessInsider,
     logoClass: 'max-h-10',
