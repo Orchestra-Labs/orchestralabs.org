@@ -352,7 +352,7 @@ export const COMPANIES: Company[] = [
     src: businessInsider,
     logoClass: 'max-h-10',
   },
-    {
+  {
     id: 50,
     name: 'Shazoe',
     src: shazoe,
