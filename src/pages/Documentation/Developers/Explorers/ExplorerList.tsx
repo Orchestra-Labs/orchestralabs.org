@@ -71,4 +71,11 @@ export const EXPLORERS: NavItem[] = [
     href: 'https://explorer.cogwheel.zone/symphony',
     description: 'An explorer from one of our supporting validators.',
   },
+    {
+    id: '11',
+    label: 'Shazoe Explorer',
+    target: '_blank',
+    href: 'https://explorer.shazoe.xyz/symphony-testnet',
+    description: 'An explorer from one of our supporting validators.',
+  },
 ];
