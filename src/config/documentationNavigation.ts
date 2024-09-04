@@ -88,6 +88,38 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
   },
   {
     id: '10',
+    label: 'Ambassador Program',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.ROOT,
+    subList: [
+      {
+        id: '1',
+        label: 'Basic Details',
+        href: `${ROUTES.DOCUMENTATION.AMBASSADORS.BASIC_DETAILS}`,
+      },
+      {
+        id: '2',
+        label: 'Example Tasks',
+        href: `${ROUTES.DOCUMENTATION.AMBASSADORS.EXAMPLE_TASKS}`,
+      },
+      {
+        id: '3',
+        label: 'Level Benefits',
+        href: `${ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_BENEFITS}`,
+      },
+      {
+        id: '4',
+        label: 'Level Progression',
+        href: `${ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_PROGRESSION}`,
+      },
+      {
+        id: '5',
+        label: 'Additional Roles',
+        href: `${ROUTES.DOCUMENTATION.AMBASSADORS.ADDITIONAL_ROLES}`,
+      },
+    ],
+  },
+  {
+    id: '11',
     label: 'Developer Information',
     href: `${ROUTES.DOCUMENTATION.DEVELOPERS.ROOT}`,
     subList: [
@@ -109,7 +141,7 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
     ],
   },
   {
-    id: '11',
+    id: '12',
     label: 'Startup Information',
     href: `${ROUTES.DOCUMENTATION.STARTUPS.ROOT}`,
     subList: [

@@ -5,17 +5,21 @@ import { ROUTES } from '@/config/routes';
 import {
   AboutSymphonyOverview,
   AccountDetails,
+  AdditionaRoles,
   AddSymphonyToWallet,
   AdvancedIBC,
   Advisors,
   AllBlocks,
   AllTokens,
   AllTransactions,
+  AmbassadorOverview,
+  BasicDetails,
   BlockDetails,
   CreateWallet,
   DeveloperOverview,
   Development,
   DocumentationOverview,
+  ExampleTasks,
   Expansion,
   ExplorerMain,
   Explorers,
@@ -24,6 +28,8 @@ import {
   Home,
   IncentivizedTestnet,
   Inception,
+  LevelBenefits,
+  LevelProgression,
   PasswordRecovery,
   QualifyingUsers,
   Roadmap,
@@ -128,6 +134,31 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT,
           element: <SoundwaveNFT />,
+        },
+        // Ambassador Pages
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.ROOT,
+          element: <AmbassadorOverview />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.BASIC_DETAILS,
+          element: <BasicDetails />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.EXAMPLE_TASKS,
+          element: <ExampleTasks />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_BENEFITS,
+          element: <LevelBenefits />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_PROGRESSION,
+          element: <LevelProgression />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.ADDITIONAL_ROLES,
+          element: <AdditionaRoles />,
         },
         // Developer Pages
         {

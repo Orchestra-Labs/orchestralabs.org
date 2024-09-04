@@ -68,9 +68,9 @@ export const DeveloperOverview = () => (
           </h2>
           <ul className="mt-10">
             {DOCUMENTATION_NOTES.map(item => (
-              <div className="flex mb-4 last:mb-0">
+              <li className="mb-4">
                 <p>- {item}</p>
-              </div>
+              </li>
             ))}
           </ul>
         </div>
