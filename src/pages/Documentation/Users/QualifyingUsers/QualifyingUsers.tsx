@@ -271,9 +271,9 @@ export const QualifyingUsers = () => (
           </p>
           <ul className="mt-5">
             {QUALIFYING_COINS.map(item => (
-              <div className="flex mb-4 last:mb-0">
+              <li className="mb-4">
                 <p className="ml-5">- {item}</p>
-              </div>
+              </li>
             ))}
           </ul>
         </div>
@@ -295,7 +295,7 @@ export const QualifyingUsers = () => (
           <p className="mt-5">- Holders of select Cosmos ecosystem NFTs:</p>
           <ul className="mt-5">
             {QUALIFYING_NFTS.map(item => (
-              <div id={item.id} className="flex mb-4 last:mb-0">
+              <li id={item.id} className="mb-4">
                 <p className="ml-5">
                   -{' '}
                   <Link
@@ -306,7 +306,7 @@ export const QualifyingUsers = () => (
                     {item.label}
                   </Link>
                 </p>{' '}
-              </div>
+              </li>
             ))}
           </ul>
           <p className="mt-5">

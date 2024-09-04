@@ -134,9 +134,9 @@ export const IncentivizedTestnet = () => (
           </p>
           <ul className="mt-5">
             {TASK_LIST.map(item => (
-              <div className="flex mb-4 last:mb-0">
+              <li className="mb-4">
                 <p>- {item}</p>
-              </div>
+              </li>
             ))}
           </ul>
         </div>
