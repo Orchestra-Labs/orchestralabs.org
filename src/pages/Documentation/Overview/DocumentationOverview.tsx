@@ -8,15 +8,19 @@ const HEADINGS = {
     label: 'About Symphony',
   },
   2: {
-    id: 'user_documentation',
+    id: 'user-documentation',
     label: 'User Information',
   },
   3: {
-    id: 'developer_documentation',
-    label: 'Developer Information',
+    id: 'ambassador-program',
+    label: 'Ambassador Program',
   },
   4: {
-    id: 'startup_documentation',
+    id: 'developer-documentation',
+    label: 'Developer Information',
+  },
+  5: {
+    id: 'startup-documentation',
     label: 'Startup Information',
   },
 };
@@ -41,6 +45,11 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '4',
     label: HEADINGS[4].label,
     href: `#${HEADINGS[4].id}`,
+  },
+  {
+    id: '5',
+    label: HEADINGS[5].label,
+    href: `#${HEADINGS[5].id}`,
   },
 ];
 
@@ -86,6 +95,39 @@ const ABOUT_SYMPHONY_LINKS: NavItem[] = [
     label: 'Roadmap',
     description: 'Current and upcoming projects for Symphony developers',
     href: ROUTES.DOCUMENTATION.ABOUT.ROADMAP,
+  },
+];
+
+const AMBASSADOR_PROGRAM_LINKS: NavItem[] = [
+  {
+    id: '1',
+    label: 'Basic Details',
+    description: 'Basic details about the ambassador program',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.BASIC_DETAILS,
+  },
+  {
+    id: '2',
+    label: 'Example Tasks',
+    description: 'Example tasks for what can be done to progress',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.EXAMPLE_TASKS,
+  },
+  {
+    id: '3',
+    label: 'Level Benefits',
+    description: 'Benefits of reaching each level',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_BENEFITS,
+  },
+  {
+    id: '4',
+    label: 'Level Progression',
+    description: 'Requirements and responsibilities for each level',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_PROGRESSION,
+  },
+  {
+    id: '5',
+    label: 'Additional Roles',
+    description: 'Additional roles outside the ambassador program',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.ADDITIONAL_ROLES,
   },
 ];
 
@@ -227,11 +269,17 @@ export const DocumentationOverview = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <ListLinks listLinks={DEVELOPER_DOCUMENTATION_LINKS} />
+          <ListLinks listLinks={AMBASSADOR_PROGRAM_LINKS} />
         </div>
         <div id={HEADINGS[4].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[4].label}
+          </h2>
+          <ListLinks listLinks={DEVELOPER_DOCUMENTATION_LINKS} />
+        </div>
+        <div id={HEADINGS[5].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[5].label}
           </h2>
           <ListLinks listLinks={STARTUP_DOCUMENTATION_LINKS} />
         </div>

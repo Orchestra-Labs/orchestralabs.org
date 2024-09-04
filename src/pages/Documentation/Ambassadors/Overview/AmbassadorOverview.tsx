@@ -20,28 +20,33 @@ const NAVIGATION_ITEMS: NavItem[] = [
 const AMBASSADOR_DOCUMENTATION_LINKS: NavItem[] = [
   {
     id: '1',
-    label: 'Create A Wallet',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    label: 'Basic Details',
+    description: 'Basic details about the ambassador program',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.BASIC_DETAILS,
   },
   {
     id: '2',
-    label: 'Add Symphony To Wallet',
-    description: 'Add Symphony to non-native wallets',
-    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
+    label: 'Example Tasks',
+    description: 'Example tasks for what can be done to progress',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.EXAMPLE_TASKS,
   },
   {
     id: '3',
-    label: 'The Incentivized Testnet',
-    description: 'Test Symphony before the launch',
-    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
+    label: 'Level Benefits',
+    description: 'Benefits of reaching each level',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_BENEFITS,
   },
   {
     id: '4',
-    label: 'Qualifying For Airdrops',
-    description:
-      "How to qualify for airdrops with Symphony's incentivized testnet",
-    href: ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS,
+    label: 'Level Progression',
+    description: 'Requirements and responsibilities for each level',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_PROGRESSION,
+  },
+  {
+    id: '5',
+    label: 'Additional Roles',
+    description: 'Additional roles outside the ambassador program',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.ADDITIONAL_ROLES,
   },
 ];
 
