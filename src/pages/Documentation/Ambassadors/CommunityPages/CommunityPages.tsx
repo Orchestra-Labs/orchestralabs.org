@@ -95,6 +95,12 @@ export const CommunityPages = () => (
                 >
                   Telegram
                 </th>
+                <th
+                  className="p-3 border border-gray-500 text-left"
+                  style={{ maxWidth: '150px' }}
+                >
+                  Reddit
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -149,6 +155,23 @@ export const CommunityPages = () => (
                         className="text-blue hover:text-blue-darker underline"
                       >
                         Telegram
+                      </a>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                  <td
+                    className="p-3 border border-gray-500"
+                    style={{ maxWidth: '150px', wordWrap: 'break-word' }}
+                  >
+                    {community.reddit ? (
+                      <a
+                        href={community.reddit}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue hover:text-blue-darker underline"
+                      >
+                        Reddit
                       </a>
                     ) : (
                       ''
