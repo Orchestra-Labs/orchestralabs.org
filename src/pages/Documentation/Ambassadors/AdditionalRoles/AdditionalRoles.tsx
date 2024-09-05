@@ -28,7 +28,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
 ];
 
 const SOCIALITE_HOW_TO_GET = [
-  'Engagement in quality discussions in the community',
+  'Engagement in quality discussions in the community, with the community (not the admin)',
   'Participation in community events (calls, spaces, games, etc)',
   'Helping the newcomers',
 ];
