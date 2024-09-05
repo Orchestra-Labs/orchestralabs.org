@@ -128,7 +128,9 @@ export const LevelProgression = () => (
           </h2>
 
           <p id={LEVEL_DETAILS.reach.amplifier.id} className="mt-5">
-            <strong>{LEVEL_DETAILS.reach.amplifier.label}:</strong>
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.reach.amplifier.label}:
+            </h3>
             <ul className="list-disc pl-5">
               {AMPLIFIER_TASKS.map(task => (
                 <p className="mb-4">- {task}</p>
@@ -137,7 +139,9 @@ export const LevelProgression = () => (
           </p>
 
           <p id={LEVEL_DETAILS.reach.instrumentalist.id} className="mt-5">
-            <strong>{LEVEL_DETAILS.reach.instrumentalist.label}:</strong>
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.reach.instrumentalist.label}:
+            </h3>
             <ul className="list-disc pl-5">
               {INSTRUMENTALIST_TASKS.map(task => (
                 <p className="mb-4">- {task}</p>
@@ -146,7 +150,9 @@ export const LevelProgression = () => (
           </p>
 
           <p id={LEVEL_DETAILS.reach.firstChair.id} className="mt-5">
-            <strong>{LEVEL_DETAILS.reach.firstChair.label}:</strong>
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.reach.firstChair.label}:
+            </h3>
             <ul className="list-disc pl-5">
               {FIRST_CHAIR_TASKS.map(task => (
                 <p className="mb-4">- {task}</p>
@@ -155,7 +161,9 @@ export const LevelProgression = () => (
           </p>
 
           <p id={LEVEL_DETAILS.reach.concertmaster.id} className="mt-5">
-            <strong>{LEVEL_DETAILS.reach.concertmaster.label}:</strong>
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.reach.concertmaster.label}:
+            </h3>
             <ul className="list-disc pl-5">
               {CONCERTMASTER_TASKS.map(task => (
                 <p className="mb-4">- {task}</p>
@@ -164,7 +172,9 @@ export const LevelProgression = () => (
           </p>
 
           <p id={LEVEL_DETAILS.reach.soloist.id} className="mt-5">
-            <strong>{LEVEL_DETAILS.reach.soloist.label}:</strong>
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.reach.soloist.label}:
+            </h3>
             <ul className="list-disc pl-5">
               {SOLOIST_TASKS.map(task => (
                 <p className="mb-4">- {task}</p>
@@ -189,7 +199,9 @@ export const LevelProgression = () => (
           </h2>
 
           <p id={LEVEL_DETAILS.responsibilities.amplifier.id} className="mt-5">
-            <strong>{LEVEL_DETAILS.responsibilities.amplifier.label}:</strong>
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.responsibilities.amplifier.label}:
+            </h3>
             <ul className="list-disc pl-5">
               {AMPLIFIER_RESPONSIBILITIES.map(responsibility => (
                 <p className="mb-4">- {responsibility}</p>
@@ -201,9 +213,9 @@ export const LevelProgression = () => (
             id={LEVEL_DETAILS.responsibilities.instrumentalist.id}
             className="mt-5"
           >
-            <strong>
+            <h3 className="text-h5 font-semibold text-blue">
               {LEVEL_DETAILS.responsibilities.instrumentalist.label}:
-            </strong>
+            </h3>
             <ul className="list-disc pl-5">
               {INSTRUMENTALIST_RESPONSIBILITIES.map(responsibility => (
                 <p className="mb-4">- {responsibility}</p>
@@ -212,7 +224,9 @@ export const LevelProgression = () => (
           </p>
 
           <p id={LEVEL_DETAILS.responsibilities.firstChair.id} className="mt-5">
-            <strong>{LEVEL_DETAILS.responsibilities.firstChair.label}:</strong>
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.responsibilities.firstChair.label}:
+            </h3>
             <ul className="list-disc pl-5">
               {FIRST_CHAIR_RESPONSIBILITIES.map(responsibility => (
                 <p className="mb-4">- {responsibility}</p>
@@ -224,9 +238,9 @@ export const LevelProgression = () => (
             id={LEVEL_DETAILS.responsibilities.concertmaster.id}
             className="mt-5"
           >
-            <strong>
+            <h3 className="text-h5 font-semibold text-blue">
               {LEVEL_DETAILS.responsibilities.concertmaster.label}:
-            </strong>
+            </h3>
             <ul className="list-disc pl-5">
               {CONCERTMASTER_RESPONSIBILITIES.map(responsibility => (
                 <p className="mb-4">- {responsibility}</p>
@@ -235,7 +249,9 @@ export const LevelProgression = () => (
           </p>
 
           <p id={LEVEL_DETAILS.responsibilities.soloist.id} className="mt-5">
-            <strong>{LEVEL_DETAILS.responsibilities.soloist.label}:</strong>
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.responsibilities.soloist.label}:
+            </h3>
             <ul className="list-disc pl-5">
               {SOLOIST_RESPONSIBILITIES.map(responsibility => (
                 <p className="mb-4">- {responsibility}</p>
