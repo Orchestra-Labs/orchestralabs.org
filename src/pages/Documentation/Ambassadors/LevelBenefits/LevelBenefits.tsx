@@ -1,6 +1,7 @@
 import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import { BENEFITS_MAP, LEVELS_MAP, LEVELS } from './benefitsMap';
+import { Check } from '@/assets/icons';
 
 const HEADINGS = {
   1: {
@@ -34,7 +35,7 @@ export const LevelBenefits = () => (
             {HEADINGS[1].label}
           </h2>
           <table
-            className="w-full max-w-[90%] mb-12.5 mt-10"
+            className="w-full max-w-[90%] mb-12.5 mt-5 border-collapse"
             style={{ border: '2px solid white', borderCollapse: 'collapse' }}
           >
             <thead>
@@ -80,14 +81,11 @@ export const LevelBenefits = () => (
                   {LEVELS.map(level => (
                     <td
                       key={level}
-                      style={{
-                        border: '1px solid white',
-                        textAlign: 'center',
-                        padding: '8px',
-                        color: 'white',
-                      }}
+                      className="border border-white text-center align-middle p-2 text-blue"
                     >
-                      {LEVELS_MAP[level][parseInt(benefitId)] ? '✅' : ''}
+                      {LEVELS_MAP[level][parseInt(benefitId)] ? (
+                        <Check style={{ margin: 'auto' }} />
+                      ) : null}
                     </td>
                   ))}
                 </tr>

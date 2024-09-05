@@ -15,6 +15,7 @@ import {
   AmbassadorOverview,
   BasicDetails,
   BlockDetails,
+  CommunityPages,
   CreateWallet,
   DeveloperOverview,
   Development,
@@ -30,6 +31,7 @@ import {
   Inception,
   LevelBenefits,
   LevelProgression,
+  MemeGuide,
   PasswordRecovery,
   QualifyingUsers,
   Roadmap,
@@ -44,6 +46,7 @@ import {
   TheSymphonyApproach,
   Tokenomics,
   TransactionDetails,
+  TweetGuide,
   UserOverview,
   Validators,
   Whitepaper,
@@ -159,6 +162,18 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.AMBASSADORS.ADDITIONAL_ROLES,
           element: <AdditionaRoles />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.TWEET_GUIDE,
+          element: <TweetGuide />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.MEME_GUIDE,
+          element: <MemeGuide />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.AMBASSADORS.COMMUNITY_PAGES,
+          element: <CommunityPages />,
         },
         // Developer Pages
         {
