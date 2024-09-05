@@ -48,7 +48,7 @@ const WHAT_CAN_YOU_EARN = [
 ];
 
 const CODE_OF_CONDUCT = [
-  'Be original: Plagiarized or copied content will lead to automatic demotions or removal from the ambassador program.',
+  'Be original: Plagiarized or copied content (AI use is allowed) will lead to automatic demotions or removal from the ambassador program.',
   'Don’t spam: If you wish to contribute, focus on quality and avoid spamming. While your enthusiasm is appreciated, rewards will only be given for quality input.',
 ];
 
@@ -73,9 +73,12 @@ export const BasicDetails = () => (
             >
               Soundwave NFT
             </Link>{' '}
-            can join, but one can be earned through the program, at which point
-            all earned rewards become applied. Writers, designers, developers,
-            traders, memers, and more are welcome to join!
+            can join. Writers, designers, developers, traders, memers, and more
+            are welcome to join!
+          </p>
+          <p className="mt-5">
+            <strong>Note: </strong>A Soundwave NFT can be earned easily through
+            bringing one or more new people to the Discord.
           </p>
         </div>
 

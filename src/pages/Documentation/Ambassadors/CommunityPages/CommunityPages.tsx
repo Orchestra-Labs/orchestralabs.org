@@ -25,12 +25,12 @@ const COMMUNITY_DATA = [
     ],
     discord: 'https://discord.gg/symphonyblockchain',
     telegram: 'https://t.me/+xFieHCYYyx41NGQx',
+    reddit: 'https://www.reddit.com/r/OrchestraLabs/',
   },
   {
     country: 'Turkish',
     manager: ['@Obsidian', '@CmanAUS', '@Testnetnodes'],
     discord: 'https://discord.gg/symphonyblockchain',
-    telegram: null, // No Telegram link available
   },
   {
     country: 'Russian',
@@ -41,7 +41,6 @@ const COMMUNITY_DATA = [
     country: 'Indonesian',
     manager: ['@Obsidian', '@CmanAUS', '@Raven', '@Rawakinode'],
     discord: 'https://discord.gg/symphonyblockchain',
-    telegram: 'https://t.me/+xFieHCYYyx41NGQx',
   },
 ];
 
