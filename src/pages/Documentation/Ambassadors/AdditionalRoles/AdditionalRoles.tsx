@@ -51,21 +51,21 @@ const SOCIALITE_BENEFIT = [
 
 const ARTIST_BENEFIT = [
   'Addition to featured list on Twitter (improved chances of retweets)',
-  'Extra points per image after reaching First Chair',
+  'Extra Discord XP per image after reaching First Chair',
   'Increased likelihood of promotion via community leaders',
   'New role',
 ];
 
 const SATIRIST_BENEFIT = [
   'Addition to featured list on Twitter (improved chances of retweets)',
-  'Extra points per meme after reaching First Chair',
+  'Extra Discord XP per meme after reaching First Chair',
   'Increased likelihood of promotion via community leaders',
   'New role',
 ];
 
 const PROMOTER_BENEFIT = [
   'Addition to featured list on Twitter (improved chances of retweets)',
-  'Extra points per tweet after reaching First Chair',
+  'Extra Discord XP per tweet after reaching First Chair',
   'Increased likelihood of promotion via community leaders',
   'New role',
 ];
