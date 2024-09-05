@@ -292,7 +292,7 @@ export const QualifyingUsers = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <p className="mt-5">- Holders of select Cosmos ecosystem NFTs:</p>
+          <p className="mt-5">Holders of select Cosmos ecosystem NFTs:</p>
           <ul className="mt-5">
             {QUALIFYING_NFTS.map(item => (
               <li id={item.id} className="mb-4">

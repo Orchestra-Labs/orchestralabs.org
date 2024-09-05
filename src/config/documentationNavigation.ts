@@ -116,6 +116,21 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         label: 'Additional Roles',
         href: `${ROUTES.DOCUMENTATION.AMBASSADORS.ADDITIONAL_ROLES}`,
       },
+      {
+        id: '6',
+        label: 'Tweet Guide',
+        href: `${ROUTES.DOCUMENTATION.AMBASSADORS.TWEET_GUIDE}`,
+      },
+      {
+        id: '7',
+        label: 'Meme Guide',
+        href: `${ROUTES.DOCUMENTATION.AMBASSADORS.MEME_GUIDE}`,
+      },
+      {
+        id: '8',
+        label: 'Community Pages',
+        href: `${ROUTES.DOCUMENTATION.AMBASSADORS.COMMUNITY_PAGES}`,
+      },
     ],
   },
   {

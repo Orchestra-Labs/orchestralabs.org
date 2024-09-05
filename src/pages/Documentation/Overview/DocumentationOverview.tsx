@@ -129,6 +129,24 @@ const AMBASSADOR_PROGRAM_LINKS: NavItem[] = [
     description: 'Additional roles outside the ambassador program',
     href: ROUTES.DOCUMENTATION.AMBASSADORS.ADDITIONAL_ROLES,
   },
+  {
+    id: '6',
+    label: 'Tweet Guide',
+    description: 'A guide to tweet creation for aspiring ambassadors',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.TWEET_GUIDE,
+  },
+  {
+    id: '7',
+    label: 'Meme Guide',
+    description: 'A guide to meme creation for aspiring ambassadors',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.MEME_GUIDE,
+  },
+  {
+    id: '8',
+    label: 'Community Pages',
+    description: 'Community pages to find and meet other players in Symphony',
+    href: ROUTES.DOCUMENTATION.AMBASSADORS.COMMUNITY_PAGES,
+  },
 ];
 
 const USER_DOCUMENTATION_LINKS: NavItem[] = [

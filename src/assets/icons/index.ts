@@ -1,6 +1,7 @@
 export * from './ArrowNext';
 export * from './ArrowPrev';
 export * from './Blocks';
+export * from './Check';
 export * from './Clock';
 export * from './Copy';
 export * from './Discord';
