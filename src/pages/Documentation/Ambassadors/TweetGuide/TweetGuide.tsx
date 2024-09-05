@@ -3,8 +3,8 @@ import { NavItem } from '@/types';
 
 const HEADINGS = {
   1: {
-    id: 'tweet-guide',
-    label: 'Tweet Guide',
+    id: 'how-to',
+    label: 'How To',
   },
 };
 
@@ -67,7 +67,7 @@ export const TweetGuide = () => (
             {HEADINGS[1].label}
           </h2>
           {TWEET_GUIDE.map((section, index) => (
-            <div key={index} className="mt-10">
+            <div key={index} className="mt-5">
               <h3 className="text-h5 font-semibold text-blue">
                 {section.title}
               </h3>
