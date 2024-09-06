@@ -130,8 +130,15 @@ export const BasicDetails = () => (
             >
               Discord
             </Link>
-            , engage with the community, and fill out an application form
-            (details to be provided).
+            , engage with the community, and fill out the{' '}
+            <Link
+              to="https://forms.gle/toCtHcBW9s8QNEqP8"
+              target="_blank"
+              className="text-blue hover:text-blue-darker underline"
+            >
+              Ambassador Application
+            </Link>
+            .
           </p>
         </div>
 
