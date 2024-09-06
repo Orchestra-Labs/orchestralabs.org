@@ -89,8 +89,8 @@ export const BasicDetails = () => (
           <p className="mt-5">
             Develop and execute new ways to amplify news about Symphony. Launch
             a diverse array of growth initiatives. Contribute through content
-            creation, social media engagement, technical development, meme
-            creation, blog writing, community management, and more.
+            creation, social media engagement, meme creation, blog writing,
+            community management, and more.
           </p>
         </div>
 

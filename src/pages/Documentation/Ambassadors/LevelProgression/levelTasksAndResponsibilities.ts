@@ -15,8 +15,8 @@ export const INSTRUMENTALIST_TASKS = [
 export const FIRST_CHAIR_TASKS = [
   'Reach level 7 on Discord.',
   'Complete (and pass) an application.',
-  'Be in the Discord for at least 2 weeks (waived for KOLs).',
-  'Provide a list of completed tasks and at least 3 transaction hashes on a dApp.',
+  'Be in the Discord for at least 2 weeks.',
+  'Provide a list of completed tasks and at least 3 transaction hashes from the Symphony testnet.',
 ];
 
 export const CONCERTMASTER_TASKS = [

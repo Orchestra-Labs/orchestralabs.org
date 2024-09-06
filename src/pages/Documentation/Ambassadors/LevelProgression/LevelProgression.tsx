@@ -183,8 +183,9 @@ export const LevelProgression = () => (
           </p>
 
           <p className="mt-5">
-            <strong>Note:</strong> To qualify as a KOL Ambassador, you must meet
-            the following criteria:
+            <strong>Note:</strong> Level and time requirements may be waived for
+            KOLs. To qualify as a KOL Ambassador, you must meet the following
+            criteria:
           </p>
           <ul className="list-disc pl-5">
             {KOL_CRITERIA.map(criteria => (
