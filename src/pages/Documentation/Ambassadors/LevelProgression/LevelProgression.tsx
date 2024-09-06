@@ -120,7 +120,9 @@ export const LevelProgression = () => (
         </h1>
         <p className="mt-10">
           Below you will find a list of requirements-for and responsibilities-of
-          each level within the ambassador program:
+          each level within the ambassador program. Note both requirements and
+          responsibilities of each level are subject to change as circumstances
+          require.
         </p>
 
         <div id={HEADINGS[1].id} className="mt-15">
