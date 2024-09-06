@@ -2,7 +2,6 @@ export const AMPLIFIER_TASKS = [
   'Follow Orchestra Labs on Twitter.',
   'Join conversations on Discord.',
   'Reach level 1 on Discord.',
-  'Invite at least one user to the Discord or complete an event task that rewards the Soundwave NFT.',
   'Earn XP on Zealy.',
 ];
 
@@ -10,12 +9,13 @@ export const INSTRUMENTALIST_TASKS = [
   'Reach level 5 on Discord.',
   "Engage actively with Orchestra Labs' content on Twitter (like, retweet, and share).",
   'Add your favorite instrument next to your Discord nickname or status.',
+  'Invite at least one user to the Discord or complete an event task that rewards the Soundwave NFT.',
 ];
 
 export const FIRST_CHAIR_TASKS = [
   'Reach level 7 on Discord.',
   'Be in the Discord for at least 2 weeks.',
-  'Provide a list of completed tasks and at least 3 transaction hashes from the Symphony testnet.',
+  'Provide a list of your ambassador contributions and at least 3 transaction hashes from the Symphony testnet.',
 ];
 
 export const CONCERTMASTER_TASKS = [

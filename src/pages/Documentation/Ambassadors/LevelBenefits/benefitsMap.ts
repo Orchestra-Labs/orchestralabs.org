@@ -30,7 +30,7 @@ export const LEVELS_MAP: Record<string, Record<number, boolean>> = {
   Amplifier: {
     1: true,
     2: true,
-    3: true,
+    3: false,
     4: false,
     5: false,
     6: false,
