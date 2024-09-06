@@ -9,7 +9,7 @@ export const AMPLIFIER_TASKS = [
 export const INSTRUMENTALIST_TASKS = [
   'Reach level 5 on Discord.',
   "Engage actively with Orchestra Labs' content on Twitter (like, retweet, and share).",
-  'Add your favorite instrument next to your Discord Nickname.',
+  'Add your favorite instrument next to your Discord nickname or status.',
 ];
 
 export const FIRST_CHAIR_TASKS = [
