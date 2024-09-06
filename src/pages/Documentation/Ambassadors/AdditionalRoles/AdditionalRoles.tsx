@@ -86,18 +86,18 @@ export const AdditionaRoles = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
-          <p className="mt-5">
+          <p className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">How to get:</h3>
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-5">
             {SOCIALITE_HOW_TO_GET.map(task => (
               <p className="mb-4">- {task}</p>
             ))}
           </ul>
-          <p className="mt-5">
+          <p className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">Benefit:</h3>
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-5">
             {SOCIALITE_BENEFIT.map(benefit => (
               <p className="mb-4">- {benefit}</p>
             ))}
@@ -108,18 +108,18 @@ export const AdditionaRoles = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <p className="mt-5">
+          <p className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">How to get:</h3>
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-5">
             {ARTIST_HOW_TO_GET.map(task => (
               <p className="mb-4">- {task}</p>
             ))}
           </ul>
-          <p className="mt-5">
+          <p className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">Benefit:</h3>
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-5">
             {ARTIST_BENEFIT.map(benefit => (
               <p className="mb-4">- {benefit}</p>
             ))}
@@ -130,18 +130,18 @@ export const AdditionaRoles = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <p className="mt-5">
+          <p className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">How to get:</h3>
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-5">
             {SATIRIST_HOW_TO_GET.map(task => (
               <p className="mb-4">- {task}</p>
             ))}
           </ul>
-          <p className="mt-5">
+          <p className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">Benefit:</h3>
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-5">
             {SATIRIST_BENEFIT.map(benefit => (
               <p className="mb-4">- {benefit}</p>
             ))}
@@ -152,18 +152,18 @@ export const AdditionaRoles = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[4].label}
           </h2>
-          <p className="mt-5">
+          <p className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">How to get:</h3>
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-5">
             {PROMOTER_HOW_TO_GET.map(task => (
               <p className="mb-4">- {task}</p>
             ))}
           </ul>
-          <p className="mt-5">
+          <p className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">Benefit:</h3>
           </p>
-          <ul className="list-disc pl-5">
+          <ul className="list-disc pl-5 mt-5">
             {PROMOTER_BENEFIT.map(benefit => (
               <p className="mb-4">- {benefit}</p>
             ))}

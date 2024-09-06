@@ -1,18 +1,18 @@
-export const AMPLIFIER_TASKS = [
+export const ATTENDEE_TASKS = [
   'Follow Orchestra Labs on Twitter.',
   'Join conversations on Discord.',
   'Reach level 1 on Discord.',
   'Earn XP on Zealy.',
 ];
 
-export const INSTRUMENTALIST_TASKS = [
+export const AMPLIFIER_TASKS = [
   'Reach level 5 on Discord.',
   "Engage actively with Orchestra Labs' content on Twitter (like, retweet, and share).",
   'Add your favorite instrument next to your Discord nickname or status.',
   'Invite at least one user to the Discord or complete an event task that rewards the Soundwave NFT.',
 ];
 
-export const FIRST_CHAIR_TASKS = [
+export const INSTRUMENTALIST_TASKS = [
   'Reach level 7 on Discord.',
   'Be in the Discord for at least 2 weeks.',
   'Provide a list of your ambassador contributions and at least 3 transaction hashes from the Symphony testnet.',
@@ -37,16 +37,16 @@ export const KOL_CRITERIA = [
   'Own a group with 1K+ real members',
 ];
 
-export const AMPLIFIER_RESPONSIBILITIES = [
+export const ATTENDEE_RESPONSIBILITIES = [
   'Engage broadly and actively in community activities.',
 ];
 
-export const INSTRUMENTALIST_RESPONSIBILITIES = [
+export const AMPLIFIER_RESPONSIBILITIES = [
   'Participate regularly in community discussions and encourage others to join.',
   'Track and participate in the Referral Program.',
 ];
 
-export const FIRST_CHAIR_RESPONSIBILITIES = [
+export const INSTRUMENTALIST_RESPONSIBILITIES = [
   'Lead community discussions.',
   'Foster and grow a group of musicians (regional community).',
   'Help operate dedicated channels (regional, Telegram, etc.).',

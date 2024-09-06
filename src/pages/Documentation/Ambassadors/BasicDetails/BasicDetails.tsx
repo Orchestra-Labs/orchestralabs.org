@@ -66,19 +66,8 @@ export const BasicDetails = () => (
             {HEADINGS[1].label}
           </h2>
           <p className="mt-5">
-            Anyone with a{' '}
-            <Link
-              to={ROUTES.DOCUMENTATION.USERS.SOUNDWAVE_NFT}
-              className="text-blue hover:text-blue-darker underline"
-            >
-              Soundwave NFT
-            </Link>{' '}
-            can join. Writers, designers, developers, traders, memers, and more
-            are welcome to join!
-          </p>
-          <p className="mt-5">
-            <strong>Note: </strong>A Soundwave NFT can be earned easily through
-            bringing one or more new people to the Discord.
+            Anyone can join. Writers, designers, developers, traders, memers,
+            and more are welcome to join!
           </p>
         </div>
 
@@ -130,15 +119,16 @@ export const BasicDetails = () => (
             >
               Discord
             </Link>
-            , engage with the community, and fill out the{' '}
+            , engage with the community, and after completing the requirement,
+            fill out the{' '}
             <Link
               to="https://forms.gle/toCtHcBW9s8QNEqP8"
               target="_blank"
               className="text-blue hover:text-blue-darker underline"
             >
-              Ambassador Application
+              Amplifier Application
             </Link>
-            .
+            . To prove you've earned Amplifier status.
           </p>
         </div>
 

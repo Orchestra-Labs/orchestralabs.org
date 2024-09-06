@@ -1,17 +1,17 @@
 import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import {
-  AMPLIFIER_RESPONSIBILITIES,
+  ATTENDEE_RESPONSIBILITIES,
   AMPLIFIER_TASKS,
   CONCERTMASTER_RESPONSIBILITIES,
   CONCERTMASTER_TASKS,
-  FIRST_CHAIR_RESPONSIBILITIES,
-  FIRST_CHAIR_TASKS,
   INSTRUMENTALIST_RESPONSIBILITIES,
+  AMPLIFIER_RESPONSIBILITIES,
   INSTRUMENTALIST_TASKS,
   KOL_CRITERIA,
   SOLOIST_RESPONSIBILITIES,
   SOLOIST_TASKS,
+  ATTENDEE_TASKS,
 } from './levelTasksAndResponsibilities';
 import { Link } from 'react-router-dom';
 
@@ -28,6 +28,11 @@ const HEADINGS = {
 
 const LEVEL_DETAILS = {
   reach: {
+    attendee: {
+      id: 'reaching-attendee',
+      label: 'Attendee',
+      href: '#reaching-attendee',
+    },
     amplifier: {
       id: 'reaching-amplifier',
       label: 'Amplifier',
@@ -37,11 +42,6 @@ const LEVEL_DETAILS = {
       id: 'reaching-instrumentalist',
       label: 'Instrumentalist',
       href: '#reaching-instrumentalist',
-    },
-    firstChair: {
-      id: 'reaching-first-chair',
-      label: 'First Chair',
-      href: '#reaching-first-chair',
     },
     concertmaster: {
       id: 'reaching-concertmaster',
@@ -55,6 +55,11 @@ const LEVEL_DETAILS = {
     },
   },
   responsibilities: {
+    attendee: {
+      id: 'attendee-responsibilities',
+      label: 'Attendee',
+      href: '#attendee-responsibilities',
+    },
     amplifier: {
       id: 'amplifier-responsibilities',
       label: 'Amplifier',
@@ -64,11 +69,6 @@ const LEVEL_DETAILS = {
       id: 'instrumentalist-responsibilities',
       label: 'Instrumentalist',
       href: '#instrumentalist-responsibilities',
-    },
-    firstChair: {
-      id: 'first-chair-responsibilities',
-      label: 'First Chair',
-      href: '#first-chair-responsibilities',
     },
     concertmaster: {
       id: 'concertmaster-responsibilities',
@@ -89,9 +89,9 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
     subList: [
+      LEVEL_DETAILS.reach.attendee,
       LEVEL_DETAILS.reach.amplifier,
       LEVEL_DETAILS.reach.instrumentalist,
-      LEVEL_DETAILS.reach.firstChair,
       LEVEL_DETAILS.reach.concertmaster,
       LEVEL_DETAILS.reach.soloist,
     ],
@@ -101,9 +101,9 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
     subList: [
+      LEVEL_DETAILS.responsibilities.attendee,
       LEVEL_DETAILS.responsibilities.amplifier,
       LEVEL_DETAILS.responsibilities.instrumentalist,
-      LEVEL_DETAILS.responsibilities.firstChair,
       LEVEL_DETAILS.responsibilities.concertmaster,
       LEVEL_DETAILS.responsibilities.soloist,
     ],
@@ -128,6 +128,17 @@ export const LevelProgression = () => (
             {HEADINGS[1].label}
           </h2>
 
+          <p id={LEVEL_DETAILS.reach.attendee.id} className="mt-8">
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.reach.attendee.label}:
+            </h3>
+            <ul className="list-disc pl-5 mt-4">
+              {ATTENDEE_TASKS.map(task => (
+                <p className="mb-4">- {task}</p>
+              ))}
+            </ul>
+          </p>
+
           <p id={LEVEL_DETAILS.reach.amplifier.id} className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">
               {LEVEL_DETAILS.reach.amplifier.label}:
@@ -143,9 +154,9 @@ export const LevelProgression = () => (
                   target="_blank"
                   className="text-blue hover:text-blue-darker underline"
                 >
-                  Ambassador Application
-                </Link>{' '}
-                and be approved.
+                  Verified Amplifier Application
+                </Link>
+                . and have your submissions approved.
               </p>
             </ul>
           </p>
@@ -156,17 +167,6 @@ export const LevelProgression = () => (
             </h3>
             <ul className="list-disc pl-5 mt-4">
               {INSTRUMENTALIST_TASKS.map(task => (
-                <p className="mb-4">- {task}</p>
-              ))}
-            </ul>
-          </p>
-
-          <p id={LEVEL_DETAILS.reach.firstChair.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.reach.firstChair.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {FIRST_CHAIR_TASKS.map(task => (
                 <p className="mb-4">- {task}</p>
               ))}
               <p className="mb-4">
@@ -222,6 +222,17 @@ export const LevelProgression = () => (
             {HEADINGS[2].label}
           </h2>
 
+          <p id={LEVEL_DETAILS.responsibilities.attendee.id} className="mt-8">
+            <h3 className="text-h5 font-semibold text-blue">
+              {LEVEL_DETAILS.responsibilities.attendee.label}:
+            </h3>
+            <ul className="list-disc pl-5 mt-4">
+              {ATTENDEE_RESPONSIBILITIES.map(responsibility => (
+                <p className="mb-4">- {responsibility}</p>
+              ))}
+            </ul>
+          </p>
+
           <p id={LEVEL_DETAILS.responsibilities.amplifier.id} className="mt-8">
             <h3 className="text-h5 font-semibold text-blue">
               {LEVEL_DETAILS.responsibilities.amplifier.label}:
@@ -242,17 +253,6 @@ export const LevelProgression = () => (
             </h3>
             <ul className="list-disc pl-5 mt-4">
               {INSTRUMENTALIST_RESPONSIBILITIES.map(responsibility => (
-                <p className="mb-4">- {responsibility}</p>
-              ))}
-            </ul>
-          </p>
-
-          <p id={LEVEL_DETAILS.responsibilities.firstChair.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.responsibilities.firstChair.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {FIRST_CHAIR_RESPONSIBILITIES.map(responsibility => (
                 <p className="mb-4">- {responsibility}</p>
               ))}
             </ul>

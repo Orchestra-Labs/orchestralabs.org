@@ -1,10 +1,10 @@
 export const LEVELS = [
+  'Attendee',
   'Amplifier',
   'Instrumentalist',
-  'First Chair',
   'Concertmaster',
   'Soloist',
-] as const;
+] as string[];
 
 export const BENEFITS_MAP: Record<number, string> = {
   1: 'New Discord Role',
@@ -27,9 +27,9 @@ export const BENEFITS_MAP: Record<number, string> = {
 };
 
 export const LEVELS_MAP: Record<string, Record<number, boolean>> = {
-  Amplifier: {
+  Attendee: {
     1: true,
-    2: true,
+    2: false,
     3: false,
     4: false,
     5: false,
@@ -45,7 +45,7 @@ export const LEVELS_MAP: Record<string, Record<number, boolean>> = {
     15: false,
     16: false,
   },
-  Instrumentalist: {
+  Amplifier: {
     1: true,
     2: true,
     3: true,
@@ -63,7 +63,7 @@ export const LEVELS_MAP: Record<string, Record<number, boolean>> = {
     15: false,
     16: false,
   },
-  'First Chair': {
+  Instrumentalist: {
     1: true,
     2: true,
     3: true,

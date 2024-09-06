@@ -22,10 +22,6 @@ const HEADINGS = {
     id: 'translation',
     label: 'Translation',
   },
-  6: {
-    id: 'software-development',
-    label: 'Software Development',
-  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -34,7 +30,6 @@ const NAVIGATION_ITEMS: NavItem[] = [
   { id: '3', label: HEADINGS[3].label, href: `#${HEADINGS[3].id}` },
   { id: '4', label: HEADINGS[4].label, href: `#${HEADINGS[4].id}` },
   { id: '5', label: HEADINGS[5].label, href: `#${HEADINGS[5].id}` },
-  { id: '6', label: HEADINGS[6].label, href: `#${HEADINGS[6].id}` },
 ];
 
 const SOCIAL_MEDIA_ENGAGEMENT_EXAMPLES = [
@@ -113,15 +108,6 @@ export const ExampleTasks = () => (
           <p className="mt-5">
             Translate official news into your local language and share it with
             communities.
-          </p>
-        </div>
-
-        <div id={HEADINGS[6].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[6].label}
-          </h2>
-          <p className="mt-5">
-            Develop dApps, designs, or help with Symphony's roadmap.
           </p>
         </div>
       </div>
