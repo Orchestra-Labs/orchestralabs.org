@@ -154,7 +154,7 @@ export const LevelProgression = () => (
                   target="_blank"
                   className="text-blue hover:text-blue-darker underline"
                 >
-                  Verified Amplifier Application
+                  Amplifier Application
                 </Link>
                 . and have your submissions approved.
               </p>
