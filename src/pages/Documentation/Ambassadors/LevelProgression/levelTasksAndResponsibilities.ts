@@ -6,27 +6,27 @@ export const ATTENDEE_TASKS = [
 ];
 
 export const AMPLIFIER_TASKS = [
-  'Reach level 5 on Discord.',
-  "Engage actively with Orchestra Labs' content on Twitter (like, retweet, and share).",
+  'Participate in Discord conversations and reach Level 7 on Discord.',
+  'Engage actively on social media and create content on Twitter (like, retweet and share).',
   'Add your favorite instrument next to your Discord nickname or status.',
   'Invite at least one user to the Discord or complete an event task that rewards the Soundwave NFT.',
 ];
 
 export const INSTRUMENTALIST_TASKS = [
-  'Reach level 7 on Discord.',
+  'Reach level 10 on Discord.',
   'Be in the Discord for at least 2 weeks.',
   'Provide a list of your ambassador contributions and at least 3 transaction hashes from the Symphony testnet.',
 ];
 
 export const CONCERTMASTER_TASKS = [
-  'Reach level 10 on Discord.',
+  'Reach level 12 on Discord.',
   'Demonstrate leadership in organizing new initiatives.',
   'Pass vote of others (concertmasters, soloists, and Orchestra Labs).',
   'Votes occur every 6 months.',
 ];
 
 export const SOLOIST_TASKS = [
-  'Reach level 12 on Discord.',
+  'Reach level 15 on Discord.',
   'Showcase a track record of recruiting new ambassadors.',
   'Be in the top 3 candidate concertmasters, and receive the highest votes from current leaders.',
 ];
