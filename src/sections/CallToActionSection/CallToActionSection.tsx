@@ -10,7 +10,7 @@ export const CallToActionSection = () => (
         <h1 className="font-semibold text-white text-h4 md:text-h2/[56px] xl:text-display2">
           Ready to get started?
         </h1>
-        <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl">
+        <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl mt-5">
           Join our testnet!
         </p>
         <Link

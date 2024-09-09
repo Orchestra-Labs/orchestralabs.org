@@ -9,18 +9,23 @@ export const MAIN_LAYOUT_LINKS = [
     href: ROUTES.WHITEPAPER,
   },
   { id: '2', label: 'Documentation', href: ROUTES.DOCUMENTATION.ROOT },
+  // {
+  //   id: '3',
+  //   label: 'Explorer',
+  //   target: '_blank',
+  //   href: 'https://testnet.ping.pub/symphony',
+  // },
   {
     id: '3',
-    label: 'Explorer',
-    target: '_blank',
-    href: 'https://testnet.ping.pub/symphony',
-  },
-  {
-    id: '4',
     label: 'Blogs',
     target: '_blank',
     rel: 'noopener noreferrer',
     href: 'https://medium.com/@orchestra_labs',
+  },
+  {
+    id: '4',
+    label: 'Swap',
+    href: 'https://swap.orchestralabs.org/',
   },
 ];
 
