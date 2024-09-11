@@ -50,4 +50,11 @@ export const SNAPSHOTS: NavItem[] = [
     href: 'https://snapshot1.shazoe.xyz/testnets/snapshot1-symphony.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
+    {
+    id: '8',
+    label: 'Unity Nodes',
+    target: '_blank',
+    href: 'https://snapshots-testnet.unitynodes.com/symphony-testnet/symphony-testnet-latest.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
 ];
