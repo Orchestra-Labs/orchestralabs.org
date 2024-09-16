@@ -6,19 +6,24 @@ import { Link } from 'react-router-dom';
 import arbitrageRebalancing from '@/assets/images/schema.png';
 import supplySideRebalancing from '@/assets/images/schema2.png';
 import elasticReserves from '@/assets/images/schema3.png';
+import devNetDropTest from '@/assets/images/dev-net-drop-test-data.png';
 
 const HEADINGS = {
   1: {
-    id: 'separating-from-banks',
+    id: 'algorithmic-and-crypto-backed',
     label: 'Algorithmic and Crypto-Backed',
   },
   2: {
-    id: 'providing-yield',
+    id: 'the-dual-elasticity-system',
     label: 'The Dual-Elasticity System',
   },
   3: {
-    id: 'a-reliable-trade-medium',
-    label: 'Supply-side, not Price-side',
+    id: 'other-safeguards',
+    label: 'Other Safeguards',
+  },
+  4: {
+    id: 'proof-it-works',
+    label: 'Proof it Works',
   },
 };
 
@@ -37,6 +42,11 @@ const NAVIGATION_ITEMS: NavItem[] = [
     id: '3',
     label: HEADINGS[3].label,
     href: `#${HEADINGS[3].id}`,
+  },
+  {
+    id: '4',
+    label: HEADINGS[4].label,
+    href: `#${HEADINGS[4].id}`,
   },
 ];
 
@@ -63,6 +73,7 @@ export const TheSymphonyApproach = () => (
           both algorithmic and crypto-backed, while focusing on supply-side
           solutions rather than price-side patches.
         </p>
+
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
@@ -86,6 +97,12 @@ export const TheSymphonyApproach = () => (
             src={supplySideRebalancing}
             alt="Supply-side rebalancing"
           />
+        </div>
+
+        <div id={HEADINGS[2].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[2].label}
+          </h2>
           <p className="mt-5">
             Symphony's crypto-backed nature comes into play with the second of
             its safeguards, triggering outside another allowable margin, and
@@ -97,14 +114,20 @@ export const TheSymphonyApproach = () => (
           <img
             className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
             src={elasticReserves}
-            alt="Supply-side rebalancing"
+            alt="Elastic reserves"
           />
           <p className="mt-5">
             The third of Symphony's safeguards is its reserve fee, taken only
             when the reserve balance falls below a 2:1 backing against assets.
             This allows Symphony to safeguard its assets in the unlikely case
             the arbutrage peg falls below 50%.
-          </p>
+          </p>{' '}
+        </div>
+
+        <div id={HEADINGS[3].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[3].label}
+          </h2>
           <p className="mt-5">
             While either of the previous two safeguards would have prevented the
             UST hyper-inflation crash, further safeguards, such as the delayed
@@ -113,6 +136,22 @@ export const TheSymphonyApproach = () => (
             part of ensuring Symphony is able to maintain the reliability of its
             tokenized assets even down to a 99% loss in value.
           </p>
+        </div>
+
+        <div id={HEADINGS[4].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[4].label}
+          </h2>
+          <p className="mt-5">
+            At Orchestra Labs, unlike other stablecoins, we don't ask you to
+            blindly trust our word and tell you it works, we want to show you it
+            works. As such, below is the data on this run from our dev-net.
+          </p>
+          <img
+            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+            src={devNetDropTest}
+            alt="Dev-net drop-test"
+          />
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

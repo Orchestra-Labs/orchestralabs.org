@@ -1,5 +1,6 @@
 import { PageNavigator, SectionNavigator } from '@/components';
-import { Link } from 'react-router-dom';
+
+import roadmap from '@/assets/images/symphony-roadmap.png';
 
 export const Roadmap = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
@@ -12,21 +13,14 @@ export const Roadmap = () => (
         <p className="mt-10">
           Symphony's roadmap is planned out through the next few years, with new
           projects spanning from the completion of the stablecoin exchange, all
-          the way to payments and banking integrations. To view this roadmap,
-          check out the link below!
+          the way to payments and banking integrations. Check it out in the
+          image below!
         </p>
-        <p className="mt-5">
-          {'See roadmap on '}
-          <Link
-            to={
-              'https://view.monday.com/6706378739-5f04a16a2ca7adf36478df8ec7a87edc?r=use1'
-            }
-            target="_blank"
-            className="text-blue hover:text-blue-darker underline mr-1"
-          >
-            Monday.com
-          </Link>
-        </p>
+        <img
+          className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+          src={roadmap}
+          alt="Roadmap"
+        />
       </div>
       <SectionNavigator navigationItems={[]} />
     </div>
