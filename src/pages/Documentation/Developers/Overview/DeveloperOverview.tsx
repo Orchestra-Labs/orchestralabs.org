@@ -42,9 +42,27 @@ const DOCS_AND_GUIDES: NavItem[] = [
   },
   {
     id: '2',
+    label: 'Explorers',
+    description: 'View activity in a chain explorer',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.EXPLORERS,
+  },
+  {
+    id: '3',
     label: 'Validator Guides',
     href: ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS,
     description: 'Documentation on how to start a validator',
+  },
+  {
+    id: '4',
+    label: 'Genesis Delegation',
+    description: 'How to get the Genesis Delegation',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
+  },
+  {
+    id: '5',
+    label: 'CICD Guide',
+    description: 'Getting CICD up and running',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE,
   },
 ];
 

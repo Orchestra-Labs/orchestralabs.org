@@ -207,6 +207,12 @@ const DEVELOPER_DOCUMENTATION_LINKS: NavItem[] = [
     description: 'How to get the Genesis Delegation',
     href: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
   },
+  {
+    id: '4',
+    label: 'CICD Guide',
+    description: 'Getting CICD up and running',
+    href: ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE,
+  },
 ];
 
 const STARTUP_DOCUMENTATION_LINKS: NavItem[] = [

@@ -15,17 +15,22 @@ export const MAIN_LAYOUT_LINKS = [
   //   target: '_blank',
   //   href: 'https://testnet.ping.pub/symphony',
   // },
+  // {
+  //   id: '3',
+  //   label: 'Blogs',
+  //   target: '_blank',
+  //   rel: 'noopener noreferrer',
+  //   href: 'https://medium.com/@orchestra_labs',
+  // },
   {
     id: '3',
-    label: 'Blogs',
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    href: 'https://medium.com/@orchestra_labs',
+    label: 'Swap dApp',
+    href: 'https://swap.orchestralabs.org/',
   },
   {
     id: '4',
-    label: 'Swap',
-    href: 'https://swap.orchestralabs.org/',
+    label: 'Brand Kit',
+    href: 'https://www.figma.com/design/RMidyza0EkEnExu0YRw9iJ/Symphony-Brand-Kit?node-id=0-1&t=VJW7ckSbrgKCK5O5-1',
   },
 ];
 

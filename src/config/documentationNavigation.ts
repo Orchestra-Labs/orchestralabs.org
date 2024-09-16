@@ -153,6 +153,11 @@ export const DOCUMENTATION_NAVIGATION: NavItem[] = [
         label: 'Genesis Delegation',
         href: `${ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION}`,
       },
+      {
+        id: '4',
+        label: 'CICD Guide',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE}`,
+      },
     ],
   },
   {

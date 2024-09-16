@@ -15,6 +15,7 @@ import {
   AmbassadorOverview,
   BasicDetails,
   BlockDetails,
+  CICD_Guide,
   CommunityPages,
   CreateWallet,
   DeveloperOverview,
@@ -191,6 +192,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
           element: <GenesisDelegation />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE,
+          element: <CICD_Guide />,
         },
         // Startup Pages
         {

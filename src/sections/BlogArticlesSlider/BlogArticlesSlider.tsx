@@ -67,11 +67,11 @@ export const BlogArticlesSlider = () => {
             },
           }}
         >
-          <div className="flex justify-between items-end mb-[35px] md:mb-12.5 xl:mb-22.5">
+          <div className="flex justify-between items-center mb-[35px] md:mb-12.5 xl:mb-22.5 relative">
             <h2 className="text-white font-semibold text-h4 md:text-h2 xl:text-display2">
               Last posts
             </h2>
-            <div className="splide__arrows flex gap-[14px]">
+            <div className="splide__arrows flex gap-[14px] absolute right-0 bottom-[-20px]">
               <button
                 aria-label="Previous slide"
                 type="button"
