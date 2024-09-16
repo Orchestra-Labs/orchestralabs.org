@@ -1,4 +1,5 @@
 import { PageNavigator, SectionNavigator } from '@/components';
+import { SOCIAL_LINKS } from '@/constants';
 import { NavItem } from '@/types';
 
 const HEADINGS = {
@@ -23,24 +24,24 @@ const COMMUNITY_DATA = [
       '@Rawakinode',
       '@Testnetnodes',
     ],
-    discord: 'https://discord.gg/symphonyblockchain',
-    telegram: 'https://t.me/+xFieHCYYyx41NGQx',
+    discord: SOCIAL_LINKS[3].href,
+    telegram: SOCIAL_LINKS[1].href,
     reddit: 'https://www.reddit.com/r/OrchestraLabs/',
   },
   {
     country: 'Turkish',
     manager: ['@Obsidian', '@CmanAUS', '@Testnetnodes'],
-    discord: 'https://discord.gg/symphonyblockchain',
+    discord: SOCIAL_LINKS[3].href,
   },
   {
     country: 'Russian',
     manager: ['@Obsidian', '@CmanAUS', '@DuNock'],
-    discord: 'https://discord.gg/symphonyblockchain',
+    discord: SOCIAL_LINKS[3].href,
   },
   {
     country: 'Indonesian',
     manager: ['@Obsidian', '@CmanAUS', '@Raven', '@Rawakinode'],
-    discord: 'https://discord.gg/symphonyblockchain',
+    discord: SOCIAL_LINKS[3].href,
   },
 ];
 
