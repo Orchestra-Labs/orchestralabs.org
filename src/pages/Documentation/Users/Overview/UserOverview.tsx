@@ -1,6 +1,6 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
-import { ROUTES } from '@/config/routes';
+import { DOCUMENTATION_NAVIGATION } from '@/config/documentationNavigation';
 
 const HEADINGS = {
   1: {
@@ -26,33 +26,8 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const USER_DOCUMENTATION_LINKS: NavItem[] = [
-  {
-    id: '1',
-    label: 'Create A Wallet',
-    description: 'Create a wallet to interact with Symphony',
-    href: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
-  },
-  {
-    id: '2',
-    label: 'Add Symphony To Wallet',
-    description: 'Add Symphony to non-native wallets',
-    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
-  },
-  {
-    id: '3',
-    label: 'The Incentivized Testnet',
-    description: 'Test Symphony before the launch',
-    href: ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET,
-  },
-  {
-    id: '4',
-    label: 'Qualifying For Airdrops',
-    description:
-      "How to qualify for airdrops with Symphony's incentivized testnet",
-    href: ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS,
-  },
-];
+const USER_DOCUMENTATION_LINKS =
+  DOCUMENTATION_NAVIGATION.USER_INFORMATION.subList || [];
 
 const ECOSYSTEM: NavItem[] = [
   {

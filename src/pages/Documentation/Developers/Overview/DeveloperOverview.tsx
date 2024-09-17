@@ -1,5 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { ROUTES } from '@/config/routes';
+import { DOCUMENTATION_NAVIGATION } from '@/config/documentationNavigation';
 import { NavItem } from '@/types';
 
 const HEADINGS = {
@@ -32,7 +32,7 @@ const DOCUMENTATION_NOTES: String[] = [
   "Liquidity pools from the Osmosis documentation cannot be used on Symphony.  Our focus is to support RWAs.  Osmosis's focus is to use liquidity pools for exchange management.",
 ];
 
-const DOCS_AND_GUIDES: NavItem[] = [
+const DOCS_AND_GUIDES = [
   {
     id: '1',
     label: 'Osmosis Documentation',
@@ -40,30 +40,7 @@ const DOCS_AND_GUIDES: NavItem[] = [
     href: 'https://docs.osmosis.zone/',
     description: 'Code documentation from our parent chain',
   },
-  {
-    id: '2',
-    label: 'Explorers',
-    description: 'View activity in a chain explorer',
-    href: ROUTES.DOCUMENTATION.DEVELOPERS.EXPLORERS,
-  },
-  {
-    id: '3',
-    label: 'Validator Guides',
-    href: ROUTES.DOCUMENTATION.DEVELOPERS.VALIDATORS,
-    description: 'Documentation on how to start a validator',
-  },
-  {
-    id: '4',
-    label: 'Genesis Delegation',
-    description: 'How to get the Genesis Delegation',
-    href: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
-  },
-  {
-    id: '5',
-    label: 'CICD Guide',
-    description: 'Getting CICD up and running',
-    href: ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE,
-  },
+  ...(DOCUMENTATION_NAVIGATION.DEVELOPER_INFORMATION.subList || []),
 ];
 
 export const DeveloperOverview = () => (
