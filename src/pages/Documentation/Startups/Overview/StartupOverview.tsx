@@ -1,5 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { ROUTES } from '@/config/routes';
+import { DOCUMENTATION_NAVIGATION } from '@/config/documentationNavigation';
 import { NavItem } from '@/types';
 
 const HEADINGS = {
@@ -26,44 +26,8 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const SYMPHONY_INFO_LINKS: NavItem[] = [
-  {
-    id: '1',
-    label: 'Inception',
-    description: 'Forming and validating your idea',
-    href: ROUTES.DOCUMENTATION.STARTUPS.INCEPTION,
-  },
-  {
-    id: '2',
-    label: 'Development',
-    description: 'Forming and validating your idea',
-    href: ROUTES.DOCUMENTATION.STARTUPS.INCEPTION,
-  },
-  {
-    id: '3',
-    label: 'Expansion',
-    description: 'Launching and growing your business',
-    href: ROUTES.DOCUMENTATION.STARTUPS.EXPANSION,
-  },
-  {
-    id: '4',
-    label: 'Stabilization',
-    description: 'What to do as an established business after growth',
-    href: ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION,
-  },
-  {
-    id: '5',
-    label: 'Advisors',
-    description: 'Those with knowledge to guide you on your path',
-    href: ROUTES.DOCUMENTATION.STARTUPS.ADVISORS,
-  },
-  {
-    id: '6',
-    label: 'Fundraising',
-    description: 'Sources of investment to accelerate your business',
-    href: ROUTES.DOCUMENTATION.STARTUPS.FUNDRAISING,
-  },
-];
+const SYMPHONY_INFO_LINKS =
+  DOCUMENTATION_NAVIGATION.STARTUP_INFORMATION.subList || [];
 
 export const StartupOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">

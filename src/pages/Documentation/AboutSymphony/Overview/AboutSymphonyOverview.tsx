@@ -1,6 +1,6 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
-import { ROUTES } from '@/config/routes';
+import { DOCUMENTATION_NAVIGATION } from '@/config/documentationNavigation';
 
 const HEADINGS = {
   1: {
@@ -17,50 +17,8 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const ABOUT_SYMPHONY_LINKS: NavItem[] = [
-  {
-    id: '1',
-    label: 'The Stablecoin Trilemma',
-    description: 'The challenges of stablecoin design',
-    href: ROUTES.DOCUMENTATION.ABOUT.THE_STABLECOIN_TRILEMMA,
-  },
-  {
-    id: '2',
-    label: 'Why Decentralized RWAs',
-    description: 'Why Symphony was made',
-    href: ROUTES.DOCUMENTATION.ABOUT.WHY_DECENTRALIZED_RWAS,
-  },
-  {
-    id: '3',
-    label: "Symphony's Approach",
-    description: 'How Symphony solves the stablecoin trilemma',
-    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
-  },
-  {
-    id: '4',
-    label: "Symphony's Impact",
-    description: "How Symphony's introduction affects the market",
-    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
-  },
-  {
-    id: '5',
-    label: 'Size of the Opportunity',
-    description: "Market sizes of Symphony's areas of impact",
-    href: ROUTES.DOCUMENTATION.ABOUT.THE_SYMPHONY_APPROACH,
-  },
-  {
-    id: '6',
-    label: 'Tokenomics',
-    description: 'Initial distribution of Melody coins on Symphony',
-    href: ROUTES.DOCUMENTATION.ABOUT.TOKENOMICS,
-  },
-  {
-    id: '7',
-    label: 'Roadmap',
-    description: 'Current and upcoming projects for Symphony developers',
-    href: ROUTES.DOCUMENTATION.ABOUT.ROADMAP,
-  },
-];
+const ABOUT_SYMPHONY_LINKS =
+  DOCUMENTATION_NAVIGATION.ABOUT_SYMPHONY.subList || [];
 
 export const AboutSymphonyOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">

@@ -1,6 +1,6 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
-import { ROUTES } from '@/config/routes';
+import { DOCUMENTATION_NAVIGATION } from '@/config/documentationNavigation';
 
 const HEADINGS = {
   1: {
@@ -17,38 +17,8 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const AMBASSADOR_DOCUMENTATION_LINKS: NavItem[] = [
-  {
-    id: '1',
-    label: 'Basic Details',
-    description: 'Basic details about the ambassador program',
-    href: ROUTES.DOCUMENTATION.AMBASSADORS.BASIC_DETAILS,
-  },
-  {
-    id: '2',
-    label: 'Example Tasks',
-    description: 'Example tasks for what can be done to progress',
-    href: ROUTES.DOCUMENTATION.AMBASSADORS.EXAMPLE_TASKS,
-  },
-  {
-    id: '3',
-    label: 'Level Benefits',
-    description: 'Benefits of reaching each level',
-    href: ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_BENEFITS,
-  },
-  {
-    id: '4',
-    label: 'Level Progression',
-    description: 'Requirements and responsibilities for each level',
-    href: ROUTES.DOCUMENTATION.AMBASSADORS.LEVEL_PROGRESSION,
-  },
-  {
-    id: '5',
-    label: 'Additional Roles',
-    description: 'Additional roles outside the ambassador program',
-    href: ROUTES.DOCUMENTATION.AMBASSADORS.ADDITIONAL_ROLES,
-  },
-];
+const AMBASSADOR_DOCUMENTATION_LINKS =
+  DOCUMENTATION_NAVIGATION.AMBASSADOR_PROGRAM.subList || [];
 
 export const AmbassadorOverview = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
