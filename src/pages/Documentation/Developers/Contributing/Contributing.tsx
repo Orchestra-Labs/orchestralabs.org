@@ -61,8 +61,13 @@ export const Contributing = () => (
         <p className="mt-5">
           When contributing to the site, if you're adding a page, add a
           directory for it under the appropriate category, as shown in the image
-          below. If your addition would be more appropriate under a new
-          category, add that instead.
+          below. Be sure to update the index.ts files both in that directory and
+          in the directory immediately above it, as those files make reference
+          imports easier.
+        </p>
+        <p className="mt-5">
+          <strong>Note: </strong>If your addition would be more appropriate
+          under a new category, add that instead.
         </p>
         <img
           className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[355px] section-container mt-4"
@@ -71,11 +76,16 @@ export const Contributing = () => (
         />
 
         <p className="mt-5">
-          When contributing to the site, if you're adding a page, add a
-          directory for it under the appropriate category, as shown in the image
-          below. If your addition would be more appropriate under a new
-          category, add that instead.
+          Be sure to add your new page to the three navigation pages we have:
         </p>
+        <ul className="list-disc pl-5">
+          <p>- routes.ts: Includes routing information for the browser</p>
+          <p>- Router.tsx: Connects a path to the component.</p>
+          <p className="mb-5">
+            - documentationNavigation.ts: Includes all the link information for
+            the documentation pages.
+          </p>
+        </ul>
         <img
           className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[355px] section-container mt-4"
           src={addToNavigationPages}
