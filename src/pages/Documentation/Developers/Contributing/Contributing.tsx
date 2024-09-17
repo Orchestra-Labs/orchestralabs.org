@@ -83,7 +83,14 @@ export const Contributing = () => (
 
         <p className="mt-5">
           When ready with your contributions to the site's code, make a pull
-          request.
+          request. Be sure to follow the{' '}
+          <Link
+            className="text-blue hover:text-blue-darker"
+            to="https://www.conventionalcommits.org/en/v1.0.0-beta.2/"
+          >
+            conventional commits
+          </Link>{' '}
+          style, as it helps with the squash merge commit descriptions.
         </p>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
