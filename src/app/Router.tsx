@@ -17,6 +17,7 @@ import {
   BlockDetails,
   CICD_Guide,
   CommunityPages,
+  Contributing,
   CreateWallet,
   DeveloperOverview,
   Development,
@@ -196,6 +197,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE,
           element: <CICD_Guide />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.CONTRIBUTING,
+          element: <Contributing />,
         },
         // Startup Pages
         {

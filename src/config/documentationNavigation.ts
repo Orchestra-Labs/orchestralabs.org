@@ -57,7 +57,7 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
     ],
   },
   USER_INFORMATION: {
-    id: '9',
+    id: '3',
     label: 'User Information',
     href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
     subList: [
@@ -101,7 +101,7 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
     ],
   },
   AMBASSADOR_PROGRAM: {
-    id: '10',
+    id: '4',
     label: 'Ambassador Program',
     href: ROUTES.DOCUMENTATION.AMBASSADORS.ROOT,
     subList: [
@@ -157,7 +157,7 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
     ],
   },
   DEVELOPER_INFORMATION: {
-    id: '11',
+    id: '5',
     label: 'Developer Information',
     href: `${ROUTES.DOCUMENTATION.DEVELOPERS.ROOT}`,
     subList: [
@@ -185,10 +185,16 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
         description: 'Getting CICD up and running',
         href: `${ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE}`,
       },
+      {
+        id: '5',
+        label: 'Contributing',
+        description: 'How to contribute as a developer',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.CONTRIBUTING}`,
+      },
     ],
   },
   STARTUP_INFORMATION: {
-    id: '12',
+    id: '5',
     label: 'Startup Information',
     href: `${ROUTES.DOCUMENTATION.STARTUPS.ROOT}`,
     subList: [
