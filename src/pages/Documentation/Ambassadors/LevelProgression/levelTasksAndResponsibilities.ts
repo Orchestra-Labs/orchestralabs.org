@@ -1,11 +1,7 @@
-export const ATTENDEE_TASKS = [
-  'Follow Orchestra Labs on Twitter.',
-  'Join conversations on Discord.',
-  'Reach level 1 on Discord.',
-  'Earn XP on Zealy.',
-];
+export const ATTENDEE_TASKS = ['Join us on Discord.'];
 
 export const AMPLIFIER_TASKS = [
+  'Follow Orchestra Labs on Twitter.',
   'Participate in Discord conversations and reach Level 7 on Discord.',
   'Engage actively on social media and create content on Twitter (like, retweet and share).',
   'Add your favorite instrument next to your Discord nickname or status.',
