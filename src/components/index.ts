@@ -9,3 +9,4 @@ export * from './ScrollToTop';
 export * from './SectionNavigator';
 export * from './ShortListView';
 export * from './SocialLinks';
+export * from './Toast';

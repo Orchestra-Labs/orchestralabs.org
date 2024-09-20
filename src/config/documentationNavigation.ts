@@ -194,7 +194,7 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
     ],
   },
   STARTUP_INFORMATION: {
-    id: '5',
+    id: '6',
     label: 'Startup Information',
     href: `${ROUTES.DOCUMENTATION.STARTUPS.ROOT}`,
     subList: [

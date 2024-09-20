@@ -53,22 +53,31 @@ export const SOCIAL_LINKS = [
   { id: '5', href: 'https://linktr.ee/OrchestraLabs', Icon: LinkTree },
 ];
 
-export const EXPLORER_FOOTER_LINKS = [
+export const FOOTER_LINKS = [
   {
     id: '1',
     name: 'COMPANY',
     links: [
-      { id: '1', name: 'About Us', href: '#' },
-      { id: '2', name: 'Contact Us', href: '#' },
-      { id: '3', name: 'Terms & Privacy', href: '#' },
+      { id: '1', name: 'About Us', href: ROUTES.DOCUMENTATION.ABOUT.ROOT },
+      { id: '2', name: 'Contact Us', href: 'dblackstone@orchestralabs.org' },
+      // { id: '3', name: 'Terms & Privacy', href: '#' },
     ],
   },
   {
     id: '2',
     name: 'COMMUNITY',
     links: [
-      { id: '1', name: 'Api Documentation', href: ROUTES.DOCUMENTATION.ROOT },
-      { id: '2', name: 'Knowledge Base', href: '' },
+      {
+        id: '1',
+        name: 'Ambassador Program',
+        href: ROUTES.DOCUMENTATION.AMBASSADORS.ROOT,
+      },
+      {
+        id: '2',
+        name: 'Developer Documentation',
+        href: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
+      },
+      { id: '3', name: 'Knowledge Base', href: ROUTES.DOCUMENTATION.ROOT },
     ],
   },
 ];
