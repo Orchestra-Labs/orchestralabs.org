@@ -51,7 +51,7 @@ export const SoundwaveNFT = () => (
           </h2>
           <ul className="mt-5">
             {NFT_BENEFITS.map(item => (
-              <li className="mb-4">
+              <li key={String(item)} className="mb-4">
                 <p>- {item}</p>
               </li>
             ))}

@@ -90,15 +90,15 @@ export const IncentivizedTestnet = () => (
           <p className="mt-5">
             Next, add the Symphony testnet to your wallet. Detailed instructions
             can be found here:
-            <p>
-              {'- '}
-              <Link
-                to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
-                className="text-blue hover:text-blue-darker underline"
-              >
-                Add Symphony Testnet
-              </Link>
-            </p>
+          </p>
+          <p>
+            {'- '}
+            <Link
+              to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
+              className="text-blue hover:text-blue-darker underline"
+            >
+              Add Symphony Testnet
+            </Link>
           </p>
         </div>
 
@@ -134,7 +134,7 @@ export const IncentivizedTestnet = () => (
           </p>
           <ul className="mt-5">
             {TASK_LIST.map(item => (
-              <li className="mb-4">
+              <li key={String(item)} className="mb-4">
                 <p>- {item}</p>
               </li>
             ))}

@@ -108,17 +108,19 @@ export const TheStablecoinTrilemma = () => (
             </Link>{' '}
             refers to the challenge of achieving three key properties in a
             single stablecoin:
-            <ul className="list-disc pl-5">
-              <li>
-                Price Stability: The ability to maintain a stable value compared
-                to the base asset.
-              </li>
-              <li>
-                Capital Efficiency: The value needed to create one unit of the
-                stablecoin.
-              </li>
-              <li>Decentralization: Operating in a decentralized manner.</li>
-            </ul>
+          </p>
+          <ul className="list-disc pl-5">
+            <li>
+              Price Stability: The ability to maintain a stable value compared
+              to the base asset.
+            </li>
+            <li>
+              Capital Efficiency: The value needed to create one unit of the
+              stablecoin.
+            </li>
+            <li>Decentralization: Operating in a decentralized manner.</li>
+          </ul>
+          <p className="mt-5">
             Achieving all three simultaneously has proven difficult.
           </p>
         </div>
@@ -136,22 +138,22 @@ export const TheStablecoinTrilemma = () => (
             compromising on decentralization. Stablecoins dependent on
             traditional financial infrastructure, such as USDC or USDT, provide
             price stability and capital efficiency but introduce:
-            <ul className="list-disc pl-5">
-              <li>
-                Unhedgeable custodial risk with bond collateral in regulated
-                bank accounts prone to censorship.
-              </li>
-              <li>
-                Critical reliance on existing banking infrastructure and
-                country-specific evolving regulations.
-              </li>
-              <li>
-                "Return-free" risk for the user, as the issuer internalizes
-                yield generated using backing assets while exporting the risk of
-                depeg to users.
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc pl-5">
+            <li>
+              Unhedgeable custodial risk with bond collateral in regulated bank
+              accounts prone to censorship.
+            </li>
+            <li>
+              Critical reliance on existing banking infrastructure and
+              country-specific evolving regulations.
+            </li>
+            <li>
+              "Return-free" risk for the user, as the issuer internalizes yield
+              generated using backing assets while exporting the risk of depeg
+              to users.
+            </li>
+          </ul>
         </div>
         <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
@@ -162,32 +164,32 @@ export const TheStablecoinTrilemma = () => (
             decentralization, often at the expense of capital efficiency or
             price stability. These stablecoins, which do not rely on traditional
             banking or financial infrastructure, have faced their own issues:
-            <ul className="list-disc pl-5">
-              <img
-                className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-                src={cryptoBackedStablecoins}
-                alt="Crypto Backed Stablecoins"
-              />
-              <li className="mt-4">
-                Crypto-backed stablecoins, also known as overcollateralized
-                stablecoins, sacrifice capital efficiency, introducing a high
-                up-front cost to users, which dissuades use. These
-                overcollateralized stablecoins, such as DAI, will often
-                auto-sell users when the price of the collateral drops.
-              </li>
-              <img
-                className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-                src={algorithmicStablecoins}
-                alt="Algorithmic Stablecoins"
-              />
-              <li className="mt-4">
-                Algorithmic stablecoins face significant challenges with their
-                mechanism design. The most well-known example, UST, demonstrated
-                how these can be fragile and unstable. A common issue has been
-                runaway inflation, which undermines price stability.
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc pl-5">
+            <img
+              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+              src={cryptoBackedStablecoins}
+              alt="Crypto Backed Stablecoins"
+            />
+            <li className="mt-4">
+              Crypto-backed stablecoins, also known as overcollateralized
+              stablecoins, sacrifice capital efficiency, introducing a high
+              up-front cost to users, which dissuades use. These
+              overcollateralized stablecoins, such as DAI, will often auto-sell
+              users when the price of the collateral drops.
+            </li>
+            <img
+              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
+              src={algorithmicStablecoins}
+              alt="Algorithmic Stablecoins"
+            />
+            <li className="mt-4">
+              Algorithmic stablecoins face significant challenges with their
+              mechanism design. The most well-known example, UST, demonstrated
+              how these can be fragile and unstable. A common issue has been
+              runaway inflation, which undermines price stability.
+            </li>
+          </ul>
         </div>
         <div id={HEADINGS[4].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

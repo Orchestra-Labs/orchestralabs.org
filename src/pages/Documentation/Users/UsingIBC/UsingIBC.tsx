@@ -205,180 +205,184 @@ export const AdvancedIBC = () => (
             >
               Symphony Testnet Connections:
             </caption>
-            <tr>
-              <th
-                style={{
-                  border: '2px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                External Chain
-              </th>
-              <th
-                style={{
-                  border: '2px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                Symphony Channel
-              </th>
-              <th
-                style={{
-                  border: '2px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                External Channel
-              </th>
-            </tr>
-            <tr>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                Osmosis Testnet
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channel-0
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channnel-8743
-              </td>
-            </tr>
-            <tr>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                Stargaze Testnet
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channel-4
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channnel-998
-              </td>
-            </tr>
-            <tr>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                Cosmos Testnet
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channel-7
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channnel-4300
-              </td>
-            </tr>
-            <tr>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                Juno Testnet
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channel-11
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channnel-943
-              </td>
-            </tr>
-            <tr>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                Archway Testnet
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channel-10
-              </td>
-              <td
-                style={{
-                  border: '1px solid white',
-                  textAlign: 'left',
-                  padding: '8px',
-                }}
-              >
-                channnel-495
-              </td>
-            </tr>
+            <thead>
+              <tr>
+                <th
+                  style={{
+                    border: '2px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  External Chain
+                </th>
+                <th
+                  style={{
+                    border: '2px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Symphony Channel
+                </th>
+                <th
+                  style={{
+                    border: '2px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  External Channel
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Osmosis Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-0
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-8743
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Stargaze Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-4
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-998
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Cosmos Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-7
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-4300
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Juno Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-11
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-943
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  Archway Testnet
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channel-10
+                </td>
+                <td
+                  style={{
+                    border: '1px solid white',
+                    textAlign: 'left',
+                    padding: '8px',
+                  }}
+                >
+                  channnel-495
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>

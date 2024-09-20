@@ -50,12 +50,12 @@ export const Development = () => (
           </Link>
           . This can come from personal funds or friends and family, but if you
           have a team and advisors, you can try one of the following:
-          <ul className="list-disc ml-5 mt-2">
-            <li>Incubators</li>
-            <li>Accelerators</li>
-            <li>Angel Investors</li>
-          </ul>
         </p>
+        <ul className="list-disc ml-5 mt-2">
+          <li>Incubators</li>
+          <li>Accelerators</li>
+          <li>Angel Investors</li>
+        </ul>
         <p className="mt-5">
           If you are a developer, then while you may have to learn a new
           development language or method, you can hold fundraising off until the
@@ -72,24 +72,23 @@ export const Development = () => (
           </p>
           <p className="mt-5">
             <strong>Steps:</strong>
-            <ul className="list-disc ml-5 mt-2">
-              <li>
-                Define the core features and functionalities of your concept.
-              </li>
-              <li>
-                Identify the best language, environment, and/or tools to address
-                these features and functions.
-              </li>
-              <li>
-                Develop the POC with a focus on demonstrability of your
-                solution.
-              </li>
-              <li>Conduct initial testing to identify and fix bugs.</li>
-              <li>
-                Gather user feedback (this can be your own) to refine the POC.
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>
+              Define the core features and functionalities of your concept.
+            </li>
+            <li>
+              Identify the best language, environment, and/or tools to address
+              these features and functions.
+            </li>
+            <li>
+              Develop the POC with a focus on demonstrability of your solution.
+            </li>
+            <li>Conduct initial testing to identify and fix bugs.</li>
+            <li>
+              Gather user feedback (this can be your own) to refine the POC.
+            </li>
+          </ul>
           <p className="mt-5">
             A refined POC may or may not be approaching an MVP, but regardless,
             it will be good to have to be able to demo your solution. Gather
@@ -116,22 +115,22 @@ export const Development = () => (
           </p>
           <p className="mt-5">
             <strong>Steps:</strong>
-            <ul className="list-disc ml-5 mt-2">
-              <li>Expand your development team to accelerate progress.</li>
-              <li>
-                Enhance and optimize the blockchain infrastructure for
-                scalability and security.
-              </li>
-              <li>
-                Conduct thorough testing, including security audits and
-                performance benchmarks.
-              </li>
-              <li>Prepare comprehensive documentation and user guides.</li>
-              <li>
-                Plan and execute a marketing strategy for the product launch.
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>Expand your development team to accelerate progress.</li>
+            <li>
+              Enhance and optimize the blockchain infrastructure for scalability
+              and security.
+            </li>
+            <li>
+              Conduct thorough testing, including security audits and
+              performance benchmarks.
+            </li>
+            <li>Prepare comprehensive documentation and user guides.</li>
+            <li>
+              Plan and execute a marketing strategy for the product launch.
+            </li>
+          </ul>
           <p className="mt-5">
             <strong>Funding:</strong> Series A funding to scale product
             development and expand the team.

@@ -113,25 +113,25 @@ export const Fundraising = () => (
           </h2>
           <p className="mt-5">
             Different types of fundraising options include:
-            <ul className="list-disc ml-5 mt-2">
-              <li>
-                Pre-Seed and Seed:
-                <ul className="list-disc ml-5 mt-2">
-                  <li>Angel Investors</li>
-                  <li>Family and Friends</li>
-                  <li>Incubators</li>
-                  <li>Accelerators</li>
-                </ul>
-              </li>
-              <li>
-                Series A and beyond:
-                <ul className="list-disc ml-5 mt-2">
-                  <li>Venture Capital</li>
-                  <li>Crowdfunding</li>
-                </ul>
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>
+              Pre-Seed and Seed:
+              <ul className="list-disc ml-5 mt-2">
+                <li>Angel Investors</li>
+                <li>Family and Friends</li>
+                <li>Incubators</li>
+                <li>Accelerators</li>
+              </ul>
+            </li>
+            <li>
+              Series A and beyond:
+              <ul className="list-disc ml-5 mt-2">
+                <li>Venture Capital</li>
+                <li>Crowdfunding</li>
+              </ul>
+            </li>
+          </ul>
           <p className="mt-5">
             <strong>Tip:</strong> Some fundraising sites, like YCombinator,
             provide example documents for the post-money safe for US and/or
@@ -151,66 +151,64 @@ export const Fundraising = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <p className="mt-5">
-            The stages of fundraising include:
-            <ul className="list-disc ml-5 mt-2">
-              <li>
-                <strong>Pre-Seed:</strong> Initial funding to validate the idea.
-                <p>
-                  <Link
-                    to={ROUTES.DOCUMENTATION.STARTUPS.INCEPTION}
-                    target="_blank"
-                    className="text-blue hover:text-blue-darker underline"
-                  >
-                    Inception
-                  </Link>{' '}
-                  - Validate the initial idea and build a prototype.
-                </p>
-              </li>
-              <li>
-                <strong>Seed:</strong> Funds to develop an MVP and conduct
-                market research.
-                <p>
-                  <Link
-                    to={ROUTES.DOCUMENTATION.STARTUPS.DEVELOPMENT}
-                    target="_blank"
-                    className="text-blue hover:text-blue-darker underline"
-                  >
-                    Development
-                  </Link>{' '}
-                  - Build an MVP and conduct initial market research.
-                </p>
-              </li>
-              <li>
-                <strong>Series A:</strong> Scale the product, expand the team,
-                and grow the user base.
-                <p>
-                  <Link
-                    to={ROUTES.DOCUMENTATION.STARTUPS.EXPANSION}
-                    target="_blank"
-                    className="text-blue hover:text-blue-darker underline"
-                  >
-                    Expansion
-                  </Link>{' '}
-                  - Scale the product and grow your user base.
-                </p>
-              </li>
-              <li>
-                <strong>Series B and beyond:</strong> Further scaling, expanding
-                into new markets, and improving the product.
-                <p>
-                  <Link
-                    to={ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION}
-                    target="_blank"
-                    className="text-blue hover:text-blue-darker underline"
-                  >
-                    Stabilization
-                  </Link>{' '}
-                  - Continue scaling and improve product features.
-                </p>
-              </li>
-            </ul>
-          </p>
+          <p className="mt-5">The stages of fundraising include:</p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>
+              <strong>Pre-Seed:</strong> Initial funding to validate the idea.
+              <p>
+                <Link
+                  to={ROUTES.DOCUMENTATION.STARTUPS.INCEPTION}
+                  target="_blank"
+                  className="text-blue hover:text-blue-darker underline"
+                >
+                  Inception
+                </Link>{' '}
+                - Validate the initial idea and build a prototype.
+              </p>
+            </li>
+            <li>
+              <strong>Seed:</strong> Funds to develop an MVP and conduct market
+              research.
+              <p>
+                <Link
+                  to={ROUTES.DOCUMENTATION.STARTUPS.DEVELOPMENT}
+                  target="_blank"
+                  className="text-blue hover:text-blue-darker underline"
+                >
+                  Development
+                </Link>{' '}
+                - Build an MVP and conduct initial market research.
+              </p>
+            </li>
+            <li>
+              <strong>Series A:</strong> Scale the product, expand the team, and
+              grow the user base.
+              <p>
+                <Link
+                  to={ROUTES.DOCUMENTATION.STARTUPS.EXPANSION}
+                  target="_blank"
+                  className="text-blue hover:text-blue-darker underline"
+                >
+                  Expansion
+                </Link>{' '}
+                - Scale the product and grow your user base.
+              </p>
+            </li>
+            <li>
+              <strong>Series B and beyond:</strong> Further scaling, expanding
+              into new markets, and improving the product.
+              <p>
+                <Link
+                  to={ROUTES.DOCUMENTATION.STARTUPS.STABILIZATION}
+                  target="_blank"
+                  className="text-blue hover:text-blue-darker underline"
+                >
+                  Stabilization
+                </Link>{' '}
+                - Continue scaling and improve product features.
+              </p>
+            </li>
+          </ul>
           <p className="mt-5">
             <strong>Tip:</strong> The above is based on theory, and matches what
             you will find from most sources. In practice, all of the above
@@ -233,21 +231,21 @@ export const Fundraising = () => (
           <p className="mt-5">
             The following sources show investors for multiple stages of
             investment, from angels to later series investments:
-            <ul className="list-disc ml-5 mt-2">
-              {INVESTOR_PLATFORMS.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={item.href}
-                    target={item.target}
-                    className="text-blue hover:text-blue-darker underline"
-                  >
-                    {item.label}
-                  </Link>{' '}
-                  - {item.description}
-                </li>
-              ))}
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            {INVESTOR_PLATFORMS.map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={item.href}
+                  target={item.target}
+                  className="text-blue hover:text-blue-darker underline"
+                >
+                  {item.label}
+                </Link>{' '}
+                - {item.description}
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div id={HEADINGS[4].id} className="mt-15">
@@ -257,21 +255,21 @@ export const Fundraising = () => (
           <p className="mt-5">
             For those with a good userbase already, these launchpads may help
             with funding and will not require waiting on an application:
-            <ul className="list-disc ml-5 mt-2">
-              {LAUNCHPADS.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={item.href}
-                    target={item.target}
-                    className="text-blue hover:text-blue-darker underline"
-                  >
-                    {item.label}
-                  </Link>{' '}
-                  - {item.description}
-                </li>
-              ))}
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            {LAUNCHPADS.map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={item.href}
+                  target={item.target}
+                  className="text-blue hover:text-blue-darker underline"
+                >
+                  {item.label}
+                </Link>{' '}
+                - {item.description}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

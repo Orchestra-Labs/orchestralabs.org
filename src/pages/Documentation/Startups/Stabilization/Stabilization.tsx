@@ -37,16 +37,14 @@ export const Stabilization = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[1].label}
           </h2>
-          <p className="mt-5">
-            Options for action at this stage include:
-            <ul className="list-disc ml-5 mt-2">
-              <li>Series C funding</li>
-              <li>Seeking new partnerships</li>
-              <li>Optimization of processes and expensees</li>
-              <li>Expansion into new markets</li>
-              <li>Expansion into new products or services</li>
-            </ul>
-          </p>
+          <p className="mt-5">Options for action at this stage include:</p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>Series C funding</li>
+            <li>Seeking new partnerships</li>
+            <li>Optimization of processes and expensees</li>
+            <li>Expansion into new markets</li>
+            <li>Expansion into new products or services</li>
+          </ul>
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

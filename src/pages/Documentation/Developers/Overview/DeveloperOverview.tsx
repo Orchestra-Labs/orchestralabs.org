@@ -34,7 +34,7 @@ const DOCUMENTATION_NOTES: String[] = [
 
 const DOCS_AND_GUIDES = [
   {
-    id: '1',
+    id: '0',
     label: 'Osmosis Documentation',
     target: '_blank',
     href: 'https://docs.osmosis.zone/',
@@ -63,7 +63,7 @@ export const DeveloperOverview = () => (
           </h2>
           <ul className="mt-10">
             {DOCUMENTATION_NOTES.map(item => (
-              <li className="mb-4">
+              <li key={String(item)} className="mb-4">
                 <p>- {item}</p>
               </li>
             ))}

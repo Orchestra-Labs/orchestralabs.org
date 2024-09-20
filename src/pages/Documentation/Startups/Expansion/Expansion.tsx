@@ -138,29 +138,28 @@ export const Expansion = () => (
           </h2>
           <p className="mt-5">
             <strong>Scaling Strategies:</strong>
-            <ul className="list-disc ml-5 mt-2">
-              <li>
-                Enhance and optimize your blockchain infrastructure for better
-                performance and security.
-              </li>
-              <li>
-                Expand your development team to accelerate progress and
-                introduce new features.
-              </li>
-              <li>
-                Conduct thorough testing, including security audits and
-                performance benchmarks.
-              </li>
-              <li>
-                Develop comprehensive documentation and user guides to support
-                adoption.
-              </li>
-              <li>
-                Implement a robust marketing strategy to attract and retain
-                users.
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>
+              Enhance and optimize your blockchain infrastructure for better
+              performance and security.
+            </li>
+            <li>
+              Expand your development team to accelerate progress and introduce
+              new features.
+            </li>
+            <li>
+              Conduct thorough testing, including security audits and
+              performance benchmarks.
+            </li>
+            <li>
+              Develop comprehensive documentation and user guides to support
+              adoption.
+            </li>
+            <li>
+              Implement a robust marketing strategy to attract and retain users.
+            </li>
+          </ul>
           <p className="mt-5">
             <strong>Funding for Scaling:</strong> Consider Series A funding to
             scale product development and expand the team. Seek strategic
@@ -183,23 +182,21 @@ export const Expansion = () => (
             other offerings can provide valuable insights and inspiration. Study
             these cases to understand best practices and potential pitfalls.
           </p>
-          <p className="mt-5">
-            Previous airdrop successes:
-            <ul className="list-disc ml-5 mt-2">
-              {AIRDROP_EXAMPLES.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={item.href}
-                    target={item.target}
-                    className="text-blue hover:text-blue-darker underline"
-                  >
-                    {item.label}
-                  </Link>{' '}
-                  - {item.description}
-                </li>
-              ))}
-            </ul>
-          </p>
+          <p className="mt-5">Previous airdrop successes:</p>
+          <ul className="list-disc ml-5 mt-2">
+            {AIRDROP_EXAMPLES.map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={item.href}
+                  target={item.target}
+                  className="text-blue hover:text-blue-darker underline"
+                >
+                  {item.label}
+                </Link>{' '}
+                - {item.description}
+              </li>
+            ))}
+          </ul>
           <p className="mt-5">
             <strong>Tip:</strong> Sites like{' '}
             <Link

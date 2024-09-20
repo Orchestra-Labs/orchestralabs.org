@@ -130,82 +130,88 @@ export const LevelProgression = () => (
             {HEADINGS[1].label}
           </h2>
 
-          <p id={LEVEL_DETAILS.reach.attendee.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.reach.attendee.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {ATTENDEE_TASKS.map(task => (
-                <p className="mb-4">- {task}</p>
-              ))}
-            </ul>
-          </p>
-
-          <p id={LEVEL_DETAILS.reach.amplifier.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.reach.amplifier.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {AMPLIFIER_TASKS.map(task => (
-                <p className="mb-4">- {task}</p>
-              ))}
-              <p className="mb-4">
-                - Complete the{' '}
-                <Link
-                  to="https://forms.gle/toCtHcBW9s8QNEqP8"
-                  target="_blank"
-                  className="text-blue hover:text-blue-darker underline"
-                >
-                  Amplifier Application
-                </Link>
-                . and have your submissions approved.
+          <p id={LEVEL_DETAILS.reach.attendee.id} className="mt-8"></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.reach.attendee.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {ATTENDEE_TASKS.map(task => (
+              <p key={String(task)} className="mb-4">
+                - {task}
               </p>
-            </ul>
-          </p>
+            ))}
+          </ul>
 
-          <p id={LEVEL_DETAILS.reach.instrumentalist.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.reach.instrumentalist.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {INSTRUMENTALIST_TASKS.map(task => (
-                <p className="mb-4">- {task}</p>
-              ))}
-              <p className="mb-4">
-                - Complete the{' '}
-                <Link
-                  to="https://forms.gle/yKScUhQv8Q7C6vEx7"
-                  target="_blank"
-                  className="text-blue hover:text-blue-darker underline"
-                >
-                  First Chair Application
-                </Link>{' '}
-                and be approved.
+          <p id={LEVEL_DETAILS.reach.amplifier.id} className="mt-8"></p>
+
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.reach.amplifier.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {AMPLIFIER_TASKS.map(task => (
+              <p key={String(task)} className="mb-4">
+                - {task}
               </p>
-            </ul>
-          </p>
+            ))}
+            <p className="mb-4">
+              - Complete the{' '}
+              <Link
+                to="https://forms.gle/toCtHcBW9s8QNEqP8"
+                target="_blank"
+                className="text-blue hover:text-blue-darker underline"
+              >
+                Amplifier Application
+              </Link>
+              . and have your submissions approved.
+            </p>
+          </ul>
 
-          <p id={LEVEL_DETAILS.reach.concertmaster.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.reach.concertmaster.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {CONCERTMASTER_TASKS.map(task => (
-                <p className="mb-4">- {task}</p>
-              ))}
-            </ul>
-          </p>
+          <p id={LEVEL_DETAILS.reach.instrumentalist.id} className="mt-8"></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.reach.instrumentalist.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {INSTRUMENTALIST_TASKS.map(task => (
+              <p key={String(task)} className="mb-4">
+                - {task}
+              </p>
+            ))}
+            <p className="mb-4">
+              - Complete the{' '}
+              <Link
+                to="https://forms.gle/yKScUhQv8Q7C6vEx7"
+                target="_blank"
+                className="text-blue hover:text-blue-darker underline"
+              >
+                First Chair Application
+              </Link>{' '}
+              and be approved.
+            </p>
+          </ul>
 
-          <p id={LEVEL_DETAILS.reach.soloist.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.reach.soloist.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {SOLOIST_TASKS.map(task => (
-                <p className="mb-4">- {task}</p>
-              ))}
-            </ul>
-          </p>
+          <p id={LEVEL_DETAILS.reach.concertmaster.id} className="mt-8"></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.reach.concertmaster.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {CONCERTMASTER_TASKS.map(task => (
+              <p key={String(task)} className="mb-4">
+                - {task}
+              </p>
+            ))}
+          </ul>
+
+          <p id={LEVEL_DETAILS.reach.soloist.id} className="mt-8"></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.reach.soloist.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {SOLOIST_TASKS.map(task => (
+              <p key={String(task)} className="mb-4">
+                - {task}
+              </p>
+            ))}
+          </ul>
 
           <p className="mt-8">
             <strong>Note:</strong> Level and time requirements may be waived for
@@ -214,7 +220,9 @@ export const LevelProgression = () => (
           </p>
           <ul className="list-disc pl-5 mt-4">
             {KOL_CRITERIA.map(criteria => (
-              <p className="mb-4">- {criteria}</p>
+              <p key={String(criteria)} className="mb-4">
+                - {criteria}
+              </p>
             ))}
           </ul>
         </div>
@@ -224,66 +232,80 @@ export const LevelProgression = () => (
             {HEADINGS[2].label}
           </h2>
 
-          <p id={LEVEL_DETAILS.responsibilities.attendee.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.responsibilities.attendee.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {ATTENDEE_RESPONSIBILITIES.map(responsibility => (
-                <p className="mb-4">- {responsibility}</p>
-              ))}
-            </ul>
-          </p>
+          <p
+            id={LEVEL_DETAILS.responsibilities.attendee.id}
+            className="mt-8"
+          ></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.responsibilities.attendee.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {ATTENDEE_RESPONSIBILITIES.map(responsibility => (
+              <p key={String(responsibility)} className="mb-4">
+                - {responsibility}
+              </p>
+            ))}
+          </ul>
 
-          <p id={LEVEL_DETAILS.responsibilities.amplifier.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.responsibilities.amplifier.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {AMPLIFIER_RESPONSIBILITIES.map(responsibility => (
-                <p className="mb-4">- {responsibility}</p>
-              ))}
-            </ul>
-          </p>
+          <p
+            id={LEVEL_DETAILS.responsibilities.amplifier.id}
+            className="mt-8"
+          ></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.responsibilities.amplifier.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {AMPLIFIER_RESPONSIBILITIES.map(responsibility => (
+              <p key={String(responsibility)} className="mb-4">
+                - {responsibility}
+              </p>
+            ))}
+          </ul>
 
           <p
             id={LEVEL_DETAILS.responsibilities.instrumentalist.id}
             className="mt-8"
-          >
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.responsibilities.instrumentalist.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {INSTRUMENTALIST_RESPONSIBILITIES.map(responsibility => (
-                <p className="mb-4">- {responsibility}</p>
-              ))}
-            </ul>
-          </p>
+          ></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.responsibilities.instrumentalist.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {INSTRUMENTALIST_RESPONSIBILITIES.map(responsibility => (
+              <p key={String(responsibility)} className="mb-4">
+                - {responsibility}
+              </p>
+            ))}
+          </ul>
 
           <p
             id={LEVEL_DETAILS.responsibilities.concertmaster.id}
             className="mt-8"
-          >
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.responsibilities.concertmaster.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {CONCERTMASTER_RESPONSIBILITIES.map(responsibility => (
-                <p className="mb-4">- {responsibility}</p>
-              ))}
-            </ul>
-          </p>
+          ></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.responsibilities.concertmaster.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {CONCERTMASTER_RESPONSIBILITIES.map(responsibility => (
+              <p key={String(responsibility)} className="mb-4">
+                - {responsibility}
+              </p>
+            ))}
+          </ul>
 
-          <p id={LEVEL_DETAILS.responsibilities.soloist.id} className="mt-8">
-            <h3 className="text-h5 font-semibold text-blue">
-              {LEVEL_DETAILS.responsibilities.soloist.label}:
-            </h3>
-            <ul className="list-disc pl-5 mt-4">
-              {SOLOIST_RESPONSIBILITIES.map(responsibility => (
-                <p className="mb-4">- {responsibility}</p>
-              ))}
-            </ul>
-          </p>
+          <p
+            id={LEVEL_DETAILS.responsibilities.soloist.id}
+            className="mt-8"
+          ></p>
+          <h3 className="text-h5 font-semibold text-blue">
+            {LEVEL_DETAILS.responsibilities.soloist.label}:
+          </h3>
+          <ul className="list-disc pl-5 mt-4">
+            {SOLOIST_RESPONSIBILITIES.map(responsibility => (
+              <p key={String(responsibility)} className="mb-4">
+                - {responsibility}
+              </p>
+            ))}
+          </ul>
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

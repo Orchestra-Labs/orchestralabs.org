@@ -96,15 +96,15 @@ export const AddSymphonyToWallet = () => (
           <p className="mt-5">
             Alternatively, if you've not created a wallet, use the create wallet
             documentation included here:
-            <p>
-              {'- '}
-              <Link
-                to={ROUTES.DOCUMENTATION.USERS.CREATE_WALLET}
-                className="text-blue hover:text-blue-darker underline mr-1"
-              >
-                Create A Wallet
-              </Link>
-            </p>
+          </p>
+          <p>
+            {'- '}
+            <Link
+              to={ROUTES.DOCUMENTATION.USERS.CREATE_WALLET}
+              className="text-blue hover:text-blue-darker underline mr-1"
+            >
+              Create A Wallet
+            </Link>
           </p>
           <p className="mt-5">
             After logging in to your wallet, navigate to a trusted source and

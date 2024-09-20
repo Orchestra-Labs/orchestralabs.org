@@ -89,13 +89,11 @@ export const BasicDetails = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
           </h2>
-          <p className="mt-5">
-            <ul className="list-disc pl-5 mt-5">
-              {WHAT_CAN_YOU_EARN.map(rule => (
-                <p>- {rule}</p>
-              ))}
-            </ul>
-          </p>
+          <div className="list-disc pl-5 mt-5">
+            {WHAT_CAN_YOU_EARN.map(item => (
+              <p key={String(item)}>- {item}</p>
+            ))}
+          </div>
           <p className="mt-5">
             <strong>Note: </strong>A full list of what you can earn through this
             program can be found broken down by level{' '}
@@ -147,11 +145,11 @@ export const BasicDetails = () => (
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[6].label}
           </h2>
-          <ul className="list-disc pl-5 mt-5">
-            {CODE_OF_CONDUCT.map(rule => (
-              <p>- {rule}</p>
+          <div className="list-disc pl-5 mt-5">
+            {CODE_OF_CONDUCT.map(item => (
+              <p key={String(item)}>- {item}</p>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />

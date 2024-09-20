@@ -63,35 +63,35 @@ export const Advisors = () => (
           </p>
           <p className="mt-5">
             <strong>Steps:</strong>
-            <ul className="list-disc ml-5 mt-2">
-              <li>
-                Identify the areas where you need the most guidance (e.g.,
-                technical, business development, marketing).
-              </li>
-              <li>
-                Research potential advisors who have a strong background in
-                these areas.
-              </li>
-              <li>
-                Utilize platforms like LinkedIn, industry conferences, and
-                networking events to connect with potential advisors.
-              </li>
-              <li>
-                Seek recommendations from your network and other entrepreneurs.
-              </li>
-              <li>
-                Consider using platforms such as{' '}
-                <Link
-                  to="Buidl.so"
-                  target="_blank"
-                  className="text-blue hover:text-blue-darker underline"
-                >
-                  Buidl.so
-                </Link>{' '}
-                to find advisors.
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>
+              Identify the areas where you need the most guidance (e.g.,
+              technical, business development, marketing).
+            </li>
+            <li>
+              Research potential advisors who have a strong background in these
+              areas.
+            </li>
+            <li>
+              Utilize platforms like LinkedIn, industry conferences, and
+              networking events to connect with potential advisors.
+            </li>
+            <li>
+              Seek recommendations from your network and other entrepreneurs.
+            </li>
+            <li>
+              Consider using platforms such as{' '}
+              <Link
+                to="Buidl.so"
+                target="_blank"
+                className="text-blue hover:text-blue-darker underline"
+              >
+                Buidl.so
+              </Link>{' '}
+              to find advisors.
+            </li>
+          </ul>
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
@@ -103,38 +103,38 @@ export const Advisors = () => (
           </p>
           <p className="mt-5">
             <strong>Steps:</strong>
-            <ul className="list-disc ml-5 mt-2">
-              <li>
-                Prepare a compelling pitch that outlines your project, its
-                potential, and why you need their expertise.
-              </li>
-              <li>
-                Be clear about what you are offering in return, whether it's
-                equity, tokens, or other forms of compensation.
-              </li>
-              <li>
-                Set up initial meetings to discuss your project and gauge their
-                interest and compatibility.
-              </li>
-              <li>
-                Establish clear expectations and goals for the advisory
-                relationship.
-              </li>
-              <li>
-                Draft a formal agreement outlining the terms of their
-                involvement and compensation. If you do not have, or cannot find
-                an agreement for this, you can use our{' '}
-                <Link
-                  to={exampleAgreement}
-                  target="_blank"
-                  className="text-blue hover:text-blue-darker underline"
-                >
-                  example agreement
-                </Link>
-                .
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>
+              Prepare a compelling pitch that outlines your project, its
+              potential, and why you need their expertise.
+            </li>
+            <li>
+              Be clear about what you are offering in return, whether it's
+              equity, tokens, or other forms of compensation.
+            </li>
+            <li>
+              Set up initial meetings to discuss your project and gauge their
+              interest and compatibility.
+            </li>
+            <li>
+              Establish clear expectations and goals for the advisory
+              relationship.
+            </li>
+            <li>
+              Draft a formal agreement outlining the terms of their involvement
+              and compensation. If you do not have, or cannot find an agreement
+              for this, you can use our{' '}
+              <Link
+                to={exampleAgreement}
+                target="_blank"
+                className="text-blue hover:text-blue-darker underline"
+              >
+                example agreement
+              </Link>
+              .
+            </li>
+          </ul>
           <p className="mt-5">
             <strong>Tip:</strong> While an initial meeting for money may be
             necessary, only sign on advisors willing to work for equity. This
@@ -152,29 +152,29 @@ export const Advisors = () => (
           </p>
           <p className="mt-5">
             <strong>Steps:</strong>
-            <ul className="list-disc ml-5 mt-2">
-              <li>
-                Schedule regular meetings to keep them updated and seek their
-                advice.
-              </li>
-              <li>
-                Leverage their network to open doors to potential investors,
-                partners, and customers.
-              </li>
-              <li>
-                Encourage them to actively participate in strategy sessions and
-                key decision-making processes.
-              </li>
-              <li>
-                Utilize their feedback to refine your product, marketing
-                strategies, and business model.
-              </li>
-              <li>
-                Show appreciation and recognize their contributions to maintain
-                a strong and positive relationship.
-              </li>
-            </ul>
           </p>
+          <ul className="list-disc ml-5 mt-2">
+            <li>
+              Schedule regular meetings to keep them updated and seek their
+              advice.
+            </li>
+            <li>
+              Leverage their network to open doors to potential investors,
+              partners, and customers.
+            </li>
+            <li>
+              Encourage them to actively participate in strategy sessions and
+              key decision-making processes.
+            </li>
+            <li>
+              Utilize their feedback to refine your product, marketing
+              strategies, and business model.
+            </li>
+            <li>
+              Show appreciation and recognize their contributions to maintain a
+              strong and positive relationship.
+            </li>
+          </ul>
           <p className="mt-5">
             <strong>Tip:</strong> Keep communication clear and consistent.
             Ensure that your advisors are well-informed about the progress and
