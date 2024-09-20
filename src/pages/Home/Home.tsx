@@ -7,7 +7,6 @@ import {
   HeroSection,
   HowItWorksSection,
   TrustedCompaniesSection,
-  CallToActionSection,
 } from '@/sections';
 import { InfoRowsSection } from '@/sections/InfoRowsSection';
 
@@ -86,6 +85,5 @@ export const Home = () => (
     />
     <TrustedCompaniesSection />
     <BlogArticlesSlider />
-    <CallToActionSection />
   </div>
 );
