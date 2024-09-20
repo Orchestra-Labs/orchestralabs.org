@@ -31,7 +31,9 @@ export const AmbassadorOverview = () => (
         <p className="mt-10">
           This documentation is designed to help you navigate the Ambassador
           program. It covers how to qualify, ranking up, and benefits of each
-          level.
+          level. If it seems a bit overwhelming, keep in mind the entire program
+          can be summarized as "talk to people about us", "invite people to join
+          us", and "talk to others in our community".
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
