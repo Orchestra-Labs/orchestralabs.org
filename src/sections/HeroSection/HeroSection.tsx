@@ -11,14 +11,14 @@ export const HeroSection = () => (
     <div className="flex justify-center items-center min-h-[inherit] relative z-[1] px-25px md:px-6">
       <div className="flex flex-col max-w-[882px] text-center items-center gap-4 mt-[-50%] md:-mt-40 xl:-mt-[120px]">
         <h1 className="font-semibold text-white text-h4 md:text-h2/[56px] xl:text-display2">
-          Discover truly decentralized real-world assets
+          Real Assets. <br /> Perfect Harmony.
         </h1>
-        <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl">
+        <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl mt-5">
           {/* Releasing soon via IDO */}
-          Testnet now live!
+          Become an Ambassador!
         </p>
         <Link
-          to={ROUTES.DOCUMENTATION.USERS.INCENTIVIZED_TESTNET}
+          to={ROUTES.DOCUMENTATION.AMBASSADORS.ROOT}
           // target="_blank"
           rel="noopener noreferrer"
           className={cn(
