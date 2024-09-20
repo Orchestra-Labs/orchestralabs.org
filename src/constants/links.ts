@@ -15,13 +15,6 @@ export const MAIN_LAYOUT_LINKS = [
   //   target: '_blank',
   //   href: 'https://testnet.ping.pub/symphony',
   // },
-  // {
-  //   id: '3',
-  //   label: 'Blogs',
-  //   target: '_blank',
-  //   rel: 'noopener noreferrer',
-  //   href: 'https://medium.com/@orchestra_labs',
-  // },
   {
     id: '3',
     label: 'Swap dApp',
@@ -29,9 +22,16 @@ export const MAIN_LAYOUT_LINKS = [
   },
   {
     id: '4',
-    label: 'Brand Kit',
-    href: 'https://www.figma.com/design/RMidyza0EkEnExu0YRw9iJ/Symphony-Brand-Kit?node-id=0-1&t=VJW7ckSbrgKCK5O5-1',
+    label: 'Blogs',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    href: 'https://medium.com/@orchestra_labs',
   },
+  // {
+  //   id: '4',
+  //   label: 'Brand Kit',
+  //   href: 'https://www.figma.com/design/RMidyza0EkEnExu0YRw9iJ/Symphony-Brand-Kit?node-id=0-1&t=VJW7ckSbrgKCK5O5-1',
+  // },
 ];
 
 export const EXPLORER_LAYOUT_LINKS = [
@@ -58,9 +58,26 @@ export const FOOTER_LINKS = [
     id: '1',
     name: 'COMPANY',
     links: [
-      { id: '1', name: 'About Us', href: ROUTES.DOCUMENTATION.ABOUT.ROOT },
-      { id: '2', name: 'Contact Us', href: 'dblackstone@orchestralabs.org' },
-      // { id: '3', name: 'Terms & Privacy', href: '#' },
+      {
+        id: '1',
+        label: 'About Us',
+        target: '',
+        href: ROUTES.DOCUMENTATION.ABOUT.ROOT,
+      },
+      {
+        id: '2',
+        label: 'Contact Us',
+        target: '',
+        href: 'dblackstone@orchestralabs.org',
+      },
+      // { id: '3', label: 'Terms & Privacy', href: '#' },
+      {
+        id: '3',
+        label: 'Brand Kit',
+        target: '_blank',
+
+        href: 'https://www.figma.com/design/RMidyza0EkEnExu0YRw9iJ/Symphony-Brand-Kit?node-id=0-1&t=VJW7ckSbrgKCK5O5-1',
+      },
     ],
   },
   {
@@ -69,15 +86,24 @@ export const FOOTER_LINKS = [
     links: [
       {
         id: '1',
-        name: 'Ambassador Program',
+        label: 'Ambassador Program',
+        target: '',
+
         href: ROUTES.DOCUMENTATION.AMBASSADORS.ROOT,
       },
       {
         id: '2',
-        name: 'Developer Documentation',
+        label: 'Developer Documentation',
+        target: '',
+
         href: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
       },
-      { id: '3', name: 'Knowledge Base', href: ROUTES.DOCUMENTATION.ROOT },
+      {
+        id: '3',
+        name: 'Knowledge Base',
+        target: '',
+        href: ROUTES.DOCUMENTATION.ROOT,
+      },
     ],
   },
 ];

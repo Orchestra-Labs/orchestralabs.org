@@ -45,14 +45,15 @@ export const Footer: React.FC = () => {
                       key={link.id}
                       className="text-lg text-white hover:underline"
                       to={link.href}
+                      target={link.target}
                       onClick={e => {
-                        if (link.name === 'Contact Us') {
+                        if (link.label === 'Contact Us') {
                           e.preventDefault();
                           copyToClipboard(link.href);
                         }
                       }}
                     >
-                      {link.name}
+                      {link.label}
                     </Link>
                   ))}
                 </div>
