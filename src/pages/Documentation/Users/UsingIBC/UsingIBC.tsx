@@ -312,7 +312,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channel-7
+                  channel-12
                 </td>
                 <td
                   style={{
@@ -321,7 +321,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channnel-4300
+                  channnel-4320
                 </td>
               </tr>
               <tr>
