@@ -12,7 +12,7 @@ export const BENEFITS_MAP: Record<number, string> = {
   3: 'Soundwave NFT',
   4: 'Access to exclusive giveaways and contests',
   5: 'Access to exclusive airdrops',
-  6: 'A "community builder" allocation from the airdrop',
+  6: 'A community builder allocation from the airdrop (extra 50%)',
   7: 'Early Access to Ecosystem Projects',
   8: 'Early Access to Symphony Alpha (Lowered Cliff/Vesting)',
   9: 'Community Grants to Run Initiatives',
