@@ -157,6 +157,17 @@ export const IncentivizedTestnet = () => (
             </Link>
             .
           </p>
+          <p className="mt-5">
+            To get the community builder allocation, increasing your airdrop
+            rewards, rise through the ambassador program detailed{' '}
+            <Link
+              to={ROUTES.DOCUMENTATION.AMBASSADORS.ROOT}
+              className="text-blue hover:text-blue-darker underline"
+            >
+              here
+            </Link>
+            .
+          </p>
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
