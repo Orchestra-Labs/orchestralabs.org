@@ -1,4 +1,4 @@
-import { PageNavigator, SectionNavigator } from '@/components';
+import { PageNavigator, SectionNavigator, ImageModal } from '@/components';
 import { NavItem } from '@/types';
 
 import locationAdvancedIBC from '@/assets/images/initial-location-advanced-ibc.png';
@@ -81,21 +81,16 @@ export const AdvancedIBC = () => (
             you're on that. Go to settings and enter the Advanced tab. Turn on
             Developer Mode.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={devMode}
-            alt="Turn on Dev Mode"
-          />
+          <ImageModal imageSrc={devMode} altText="Turn on Dev Mode" />
 
           <p className="mt-5">
             You can find the advanced IBC option in the bottom of the Keplr web
             wallet. Scroll down to find it, and be sure to grab the address of
             the wallet you want to send to along the way.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={locationAdvancedIBC}
-            alt="Where to find Advanced IBC"
+          <ImageModal
+            imageSrc={locationAdvancedIBC}
+            altText="Where to find Advanced IBC"
           />
 
           <p className="mt-5">
@@ -105,10 +100,9 @@ export const AdvancedIBC = () => (
             from, as assets on different chains can have the same name,
             especially if you've already done this transfer before.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={selectAsset}
-            alt="Select asset for transfer"
+          <ImageModal
+            imageSrc={selectAsset}
+            altText="Select asset for transfer"
           />
 
           <p className="mt-5">
@@ -118,17 +112,15 @@ export const AdvancedIBC = () => (
             exist, select them. if not, select to create a new IBC transfer
             channel.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={newIBCChannel}
-            alt="Keplr download"
+          <ImageModal
+            imageSrc={newIBCChannel}
+            altText="Create new IBC channel"
           />
 
           <p className="mt-5">Select your destination chain.</p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={selectDestinationChain}
-            alt="Select destination Chain"
+          <ImageModal
+            imageSrc={selectDestinationChain}
+            altText="Select destination Chain"
           />
 
           <p className="mt-5">
@@ -137,10 +129,9 @@ export const AdvancedIBC = () => (
             acceptable channels. A warning will pop up if the channel you enter
             does not exist as a valid option.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={sourceChannelID}
-            alt="Enter source channel ID"
+          <ImageModal
+            imageSrc={sourceChannelID}
+            altText="Enter source channel ID"
           />
 
           <p className="mt-5">
@@ -149,34 +140,24 @@ export const AdvancedIBC = () => (
             sending to the Osmosis testnet, this should be an Osmosis address.
             Symphony testnet requires a Symphony address.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={enterWalletAddress}
-            alt="Enter wallet address"
+          <ImageModal
+            imageSrc={enterWalletAddress}
+            altText="Enter wallet address"
           />
 
           <p className="mt-5">Enter the amount to send.</p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={enterAmount}
-            alt="Enter amount to send"
-          />
+          <ImageModal imageSrc={enterAmount} altText="Enter amount to send" />
 
           <p className="mt-5">
             Confirm the transaction, checking the details included.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={confirmIBCTransaction}
-            alt="Confirm transaction"
+          <ImageModal
+            imageSrc={confirmIBCTransaction}
+            altText="Confirm transaction"
           />
 
           <p className="mt-5">Verify the results from your account balances.</p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={verifyResults}
-            alt="Verify results"
-          />
+          <ImageModal imageSrc={verifyResults} altText="Verify results" />
 
           <p className="mt-5">
             <strong>Note:</strong> Keplr Mobile updates account balances much

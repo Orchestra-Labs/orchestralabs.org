@@ -1,6 +1,7 @@
 import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
+import { ImageModal } from '@/components/ImageModal';
 
 import stablecoinTrilemma from '@/assets/images/stablecoin-trilemma.png';
 import fiatBackedStablecoins from '@/assets/images/fiat-backed-stablecoins.png';
@@ -27,26 +28,10 @@ const HEADINGS = {
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
-  {
-    id: '1',
-    label: HEADINGS[1].label,
-    href: `#${HEADINGS[1].id}`,
-  },
-  {
-    id: '2',
-    label: HEADINGS[2].label,
-    href: `#${HEADINGS[2].id}`,
-  },
-  {
-    id: '3',
-    label: HEADINGS[3].label,
-    href: `#${HEADINGS[3].id}`,
-  },
-  {
-    id: '4',
-    label: HEADINGS[4].label,
-    href: `#${HEADINGS[4].id}`,
-  },
+  { id: '1', label: HEADINGS[1].label, href: `#${HEADINGS[1].id}` },
+  { id: '2', label: HEADINGS[2].label, href: `#${HEADINGS[2].id}` },
+  { id: '3', label: HEADINGS[3].label, href: `#${HEADINGS[3].id}` },
+  { id: '4', label: HEADINGS[4].label, href: `#${HEADINGS[4].id}` },
 ];
 
 export const TheStablecoinTrilemma = () => (
@@ -84,10 +69,9 @@ export const TheStablecoinTrilemma = () => (
             available to use while all of them just provide the utility of being
             a (relatively) stable cryptocurrency.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[355px] section-container mt-4"
-            src={stablecoinTrilemma}
-            alt="Stablecoin Trilemma"
+          <ImageModal
+            imageSrc={stablecoinTrilemma}
+            altText="Stablecoin Trilemma"
           />
           <p className="mt-5">
             Until today, every stablecoin had to balance three main goals. The
@@ -124,14 +108,14 @@ export const TheStablecoinTrilemma = () => (
             Achieving all three simultaneously has proven difficult.
           </p>
         </div>
+
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[2].label}
           </h2>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={fiatBackedStablecoins}
-            alt="Fiat Backed Stablecoins"
+          <ImageModal
+            imageSrc={fiatBackedStablecoins}
+            altText="Fiat Backed Stablecoins"
           />
           <p className="mt-5">
             Centralized stablecoins address the stablecoin trilemma by
@@ -139,22 +123,8 @@ export const TheStablecoinTrilemma = () => (
             traditional financial infrastructure, such as USDC or USDT, provide
             price stability and capital efficiency but introduce:
           </p>
-          <ul className="list-disc pl-5">
-            <li>
-              Unhedgeable custodial risk with bond collateral in regulated bank
-              accounts prone to censorship.
-            </li>
-            <li>
-              Critical reliance on existing banking infrastructure and
-              country-specific evolving regulations.
-            </li>
-            <li>
-              "Return-free" risk for the user, as the issuer internalizes yield
-              generated using backing assets while exporting the risk of depeg
-              to users.
-            </li>
-          </ul>
         </div>
+
         <div id={HEADINGS[3].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[3].label}
@@ -166,10 +136,9 @@ export const TheStablecoinTrilemma = () => (
             banking or financial infrastructure, have faced their own issues:
           </p>
           <ul className="list-disc pl-5">
-            <img
-              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={cryptoBackedStablecoins}
-              alt="Crypto Backed Stablecoins"
+            <ImageModal
+              imageSrc={cryptoBackedStablecoins}
+              altText="Crypto Backed Stablecoins"
             />
             <li className="mt-4">
               Crypto-backed stablecoins, also known as overcollateralized
@@ -178,10 +147,9 @@ export const TheStablecoinTrilemma = () => (
               overcollateralized stablecoins, such as DAI, will often auto-sell
               users when the price of the collateral drops.
             </li>
-            <img
-              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={algorithmicStablecoins}
-              alt="Algorithmic Stablecoins"
+            <ImageModal
+              imageSrc={algorithmicStablecoins}
+              altText="Algorithmic Stablecoins"
             />
             <li className="mt-4">
               Algorithmic stablecoins face significant challenges with their
@@ -191,6 +159,7 @@ export const TheStablecoinTrilemma = () => (
             </li>
           </ul>
         </div>
+
         <div id={HEADINGS[4].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[4].label}

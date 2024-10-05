@@ -1,5 +1,6 @@
 import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
+import { ImageModal } from '@/components/ImageModal';
 
 import marketSize from '@/assets/images/market-size.png';
 
@@ -39,11 +40,7 @@ export const SizeOfOpportunity = () => (
           Providing reliable tokenized real-world assets is not only the largest
           challenge in the space, but the largest opportunity.
         </p>
-        <img
-          className="w-3/4 max-w-[550px] mb-12.5 md:w-[45vw] md:max-w-[450px] md:mb-0 lg:w-[50vw] lg:max-w-[650px] section-container mt-4"
-          src={marketSize}
-          alt="Market Sizes"
-        />
+        <ImageModal imageSrc={marketSize} altText="Market Sizes" />
         <p className="mt-5">
           The stablecoin market is, at present, $180 billion, and stablecoins
           make up 59% of crypto-currency transaction volume. While this does

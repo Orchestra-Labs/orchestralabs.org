@@ -3,6 +3,7 @@ import { NavItem } from '@/types';
 import { SOCIAL_LINKS } from '@/constants';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/config/routes';
+import { ImageModal } from '@/components/ImageModal';
 
 import addDirectoryForNewPage from '@/assets/images/add-directory-for-new-page.png';
 import addToNavigationPages from '@/assets/images/add-to-navigation-pages.png';
@@ -69,10 +70,9 @@ export const Contributing = () => (
           <strong>Note: </strong>If your addition would be more appropriate
           under a new category, add that instead.
         </p>
-        <img
-          className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[355px] section-container mt-4"
-          src={addDirectoryForNewPage}
-          alt="Add Directory for New Page"
+        <ImageModal
+          imageSrc={addDirectoryForNewPage}
+          altText="Add Directory for New Page"
         />
 
         <p className="mt-5">
@@ -86,10 +86,9 @@ export const Contributing = () => (
             the documentation pages.
           </p>
         </ul>
-        <img
-          className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[355px] section-container mt-4"
-          src={addToNavigationPages}
-          alt="Add to Navigation Pages"
+        <ImageModal
+          imageSrc={addToNavigationPages}
+          altText="Add to Navigation Pages"
         />
 
         <p className="mt-5">
@@ -103,11 +102,7 @@ export const Contributing = () => (
           </Link>{' '}
           style, as it helps with the squash merge commit descriptions.
         </p>
-        <img
-          className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[355px] section-container mt-4"
-          src={commitStyle}
-          alt="Commit Style"
-        />
+        <ImageModal imageSrc={commitStyle} altText="Commit Style" />
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
     </div>

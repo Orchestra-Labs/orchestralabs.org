@@ -1,5 +1,6 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
+import { ImageModal } from '@/components/ImageModal';
 
 import keplrDownload from '@/assets/images/keplr-download.png';
 import addPassword from '@/assets/images/add-password.png';
@@ -102,47 +103,33 @@ export const CreateWallet = () => (
           <p className="mt-5">
             If you are setting up Keplr for the first time: In the initial
             pop-up window, choose the install button corresponding to your
-            browser or nobile system.
+            browser or mobile system.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={keplrDownload}
-            alt="Keplr download"
-          />
+          <ImageModal imageSrc={keplrDownload} altText="Keplr download" />
           <p className="mt-5">Install the wallet.</p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={playStoreInstallation}
-            alt="Play store installation"
+          <ImageModal
+            imageSrc={playStoreInstallation}
+            altText="Play store installation"
           />
           <p className="mt-5">
             Open the application and select to create a wallet.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={createNewWallet}
-            alt="Create new wallet"
-          />
+          <ImageModal imageSrc={createNewWallet} altText="Create new wallet" />
           <p className="mt-5">
             Keplr has options to create a wallet via a recovery phrase or via a
             social ID registration. Using a recovery phrase is recommended for
             security. Newer users may opt for connecting via social ID.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={createWalletOptions}
-            alt="Create wallet options"
+          <ImageModal
+            imageSrc={createWalletOptions}
+            altText="Create wallet options"
           />
           <p className="mt-5">
             Keplr wallets require a name for wallet management, and a password
             to keep the wallet secure. Enter these values and proceed to the
             next step.
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={addPassword}
-            alt="Add password"
-          />
+          <ImageModal imageSrc={addPassword} altText="Add password" />
           <p className="mt-5">
             Initially, Symphony will not show in the search, as it is a
             non-native chain to Keplr. To add Symphony to this wallet, follow
@@ -157,11 +144,7 @@ export const CreateWallet = () => (
               Add Symphony To A Wallet
             </Link>
           </p>
-          <img
-            className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-            src={initialWalletSearch}
-            alt="Info row"
-          />
+          <ImageModal imageSrc={initialWalletSearch} altText="Info row" />
         </div>
         <div id={HEADINGS[2].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">

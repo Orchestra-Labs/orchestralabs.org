@@ -1,4 +1,5 @@
 import { PageNavigator, SectionNavigator } from '@/components';
+import { ImageModal } from '@/components/ImageModal';
 
 import roadmap from '@/assets/images/symphony-roadmap.png';
 
@@ -16,11 +17,7 @@ export const Roadmap = () => (
           the way to payments and banking integrations. Check it out in the
           image below!
         </p>
-        <img
-          className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-          src={roadmap}
-          alt="Roadmap"
-        />
+        <ImageModal imageSrc={roadmap} altText="Symphony Roadmap" />
       </div>
       <SectionNavigator navigationItems={[]} />
     </div>

@@ -1,7 +1,7 @@
 import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
-
 import { Link } from 'react-router-dom';
+import { ImageModal } from '@/components/ImageModal';
 
 import soundwave from '@/assets/images/symphony-soundwave.png';
 
@@ -72,11 +72,7 @@ export const SoundwaveNFT = () => (
               Stargaze
             </Link>
             .
-            <img
-              className="w-3/4 max-w-[363px] mb-12.5 md:w-[36vw] md:max-w-[375px] md:mb-0 lg:w-[39.1vw] lg:max-w-[565px] section-container mt-4"
-              src={soundwave}
-              alt="The Symphony Soundwave"
-            />
+            <ImageModal imageSrc={soundwave} altText="The Symphony Soundwave" />
           </p>
         </div>
       </div>
