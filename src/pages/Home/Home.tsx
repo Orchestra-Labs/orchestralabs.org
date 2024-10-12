@@ -58,9 +58,9 @@ const FEATURED_LINKS_ROWS = [
   {
     id: 3,
     src: image6,
-    title: 'View the documentation',
+    title: 'Read about Us',
     description:
-      'Dive into our comprehensive documentation to unlock a wealth of knowledge and resources',
+      'We have a lot of information to share.  Read about us and our approach!',
     link: ROUTES.DOCUMENTATION.ROOT,
     linkLabel: 'Learn More',
   },
