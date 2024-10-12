@@ -2,12 +2,12 @@ import { ClassValue } from 'clsx';
 
 import evacodes from '@/assets/images/external/evacodes.png';
 import bloxxa from '@/assets/images/external/bloxxa.png';
-import google from '@/assets/images/external/google.png';
+// import google from '@/assets/images/external/google.png';
 import gexabyte from '@/assets/images/external/gexabyte.png';
-import medium from '@/assets/images/external/medium.png';
+// import medium from '@/assets/images/external/medium.png';
 import suave from '@/assets/images/external/suave.png';
 import swapAcross from '@/assets/images/external/swapacross.png';
-import waitlist from '@/assets/images/external/waitlist.png';
+// import waitlist from '@/assets/images/external/waitlist.png';
 import convoSpace from '@/assets/images/external/convo-space.png';
 import keplr from '@/assets/images/external/keplr.png';
 import pingPub from '@/assets/images/external/ping-pub.svg';
@@ -46,7 +46,7 @@ import icoHolder from '@/assets/images/external/icoholder.jpg';
 import citadelOne from '@/assets/images/external/citadel_one.png';
 import digitalJournal from '@/assets/images/external/digital-journal.jpg';
 import tradingView from '@/assets/images/external/trading-view.png';
-import monday from '@/assets/images/external/monday.png';
+// import monday from '@/assets/images/external/monday.png';
 import marketWatch from '@/assets/images/external/marketwatch.jpg';
 import businessInsider from '@/assets/images/external/business-insider.png';
 import shazoe from '@/assets/images/external/shazoe.jpg';
@@ -70,24 +70,24 @@ export const COMPANIES: Company[] = [
     src: bloxxa,
     logoClass: 'max-h-8',
   },
-  {
-    id: 3,
-    name: 'Google',
-    src: google,
-    logoClass: 'max-h-9',
-  },
+  // {
+  //   id: 3,
+  //   name: 'Google',
+  //   src: google,
+  //   logoClass: 'max-h-9',
+  // },
   {
     id: 4,
     name: 'Gexabyte',
     src: gexabyte,
     logoClass: 'max-h-10',
   },
-  {
-    id: 5,
-    name: 'Medium',
-    src: medium,
-    logoClass: 'max-h-7',
-  },
+  // {
+  //   id: 5,
+  //   name: 'Medium',
+  //   src: medium,
+  //   logoClass: 'max-h-7',
+  // },
   {
     id: 6,
     name: 'Suave',
@@ -100,12 +100,12 @@ export const COMPANIES: Company[] = [
     src: swapAcross,
     logoClass: 'max-h-9',
   },
-  {
-    id: 8,
-    name: 'Waitlist',
-    src: waitlist,
-    logoClass: 'max-h-8',
-  },
+  // {
+  //   id: 8,
+  //   name: 'Waitlist',
+  //   src: waitlist,
+  //   logoClass: 'max-h-8',
+  // },
   {
     id: 9,
     name: 'Convo Space',
@@ -334,12 +334,12 @@ export const COMPANIES: Company[] = [
     src: tradingView,
     logoClass: 'max-h-10',
   },
-  {
-    id: 47,
-    name: 'Monday',
-    src: monday,
-    logoClass: 'max-h-10',
-  },
+  // {
+  //   id: 47,
+  //   name: 'Monday',
+  //   src: monday,
+  //   logoClass: 'max-h-10',
+  // },
   {
     id: 48,
     name: 'MarketWatch',
