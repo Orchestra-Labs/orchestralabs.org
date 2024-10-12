@@ -1,21 +1,21 @@
 const ROWS = [
   {
     id: 1,
-    title: '10000 TPS',
-    subtitle: 'Transactions per second',
-    shadowText: '10000 TPS',
+    title: 'Every Currency',
+    subtitle: 'Pay in your currency!',
+    shadowText: 'Every currency',
   },
   {
     id: 2,
-    title: '< 3 seconds',
-    subtitle: 'Transaction finalization time',
-    shadowText: '< 3 seconds',
+    title: 'Every Metal',
+    subtitle: 'Save however you like!',
+    shadowText: 'Every metal',
   },
   {
     id: 3,
-    title: '0.00001',
-    subtitle: 'Transaction fee per MLD',
-    shadowText: '0.00001',
+    title: 'In One Click',
+    subtitle: 'Save in one currency, spend in another!',
+    shadowText: 'In one click',
   },
 ];
 

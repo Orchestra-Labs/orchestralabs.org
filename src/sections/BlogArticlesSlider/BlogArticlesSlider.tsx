@@ -44,7 +44,7 @@ export const BlogArticlesSlider = () => {
   }, []);
 
   return (
-    <section className="bg-background-dark-grey py-15 px-25px md:py-17.5 md:px-6 xl:py-22.5">
+    <section className="bg-background-black py-15 px-25px md:py-17.5 md:px-6 xl:py-22.5">
       <div className="section-container md:px-19 xl:px-[125px]">
         <Splide
           aria-label="Last posts slider"
