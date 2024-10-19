@@ -14,7 +14,7 @@ const ROWS = [
   {
     id: 3,
     title: 'In One Click',
-    subtitle: 'Save in one currency, spend in another!',
+    subtitle: 'Save in one, spend in another!',
     shadowText: 'In one click',
   },
 ];
