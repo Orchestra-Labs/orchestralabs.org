@@ -29,8 +29,8 @@ export const LevelBenefits = () => (
         <p className="mt-10">
           Below you will find a list of benefits according to level reached
           within the ambassador program. In addition to the below,
-          Instrumentalist earns an additional 50% on airdrops, Concertmaster
-          earns an additional 100%, and Soloist earns an additional 200%!
+          Instrumentalist earns an additional 25% on airdrops, Concertmaster
+          earns an additional 50%, and Soloist earns an additional 100%!
         </p>
         <div id={HEADINGS[1].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
