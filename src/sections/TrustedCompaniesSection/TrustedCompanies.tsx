@@ -50,6 +50,7 @@ import tradingView from '@/assets/images/external/trading-view.png';
 import marketWatch from '@/assets/images/external/marketwatch.jpg';
 import businessInsider from '@/assets/images/external/business-insider.png';
 import shazoe from '@/assets/images/external/shazoe.jpg';
+import buster from '@/assets/images/external/buster.png';
 
 type Company = {
   id: number;
@@ -356,6 +357,12 @@ export const COMPANIES: Company[] = [
     id: 50,
     name: 'Shazoe',
     src: shazoe,
+    logoClass: 'max-h-10',
+  },
+  {
+    id: 51,
+    name: 'Buster',
+    src: buster,
     logoClass: 'max-h-10',
   },
 ];
