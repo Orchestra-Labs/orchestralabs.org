@@ -244,7 +244,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channnel-8743
+                  channnel-9540
                 </td>
               </tr>
               <tr>
@@ -264,7 +264,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channel-4
+                  channel-2
                 </td>
                 <td
                   style={{
@@ -273,7 +273,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channnel-998
+                  channnel-1006
                 </td>
               </tr>
               <tr>
@@ -293,7 +293,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channel-12
+                  channel-1
                 </td>
                 <td
                   style={{
@@ -302,7 +302,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channnel-4320
+                  channnel-242
                 </td>
               </tr>
               <tr>
@@ -322,7 +322,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channel-11
+                  channel-3
                 </td>
                 <td
                   style={{
@@ -331,7 +331,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  channnel-943
+                  channnel-946
                 </td>
               </tr>
               <tr>
