@@ -106,4 +106,17 @@ export const FOOTER_LINKS = [
       },
     ],
   },
+  {
+    id: '3',
+    name: 'LEGAL',
+    links: [
+      {
+        id: '1',
+        label: 'Privacy Policy',
+        target: '',
+
+        href: ROUTES.PRIVACY_POLICY,
+      },
+    ],
+  },
 ];

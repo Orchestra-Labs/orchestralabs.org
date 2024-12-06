@@ -35,6 +35,7 @@ import {
   LevelProgression,
   MemeGuide,
   PasswordRecovery,
+  PrivacyPolicy,
   QualifyingUsers,
   Roadmap,
   SignIn,
@@ -73,6 +74,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.WHITEPAPER,
           element: <Whitepaper />,
+        },
+        {
+          path: ROUTES.PRIVACY_POLICY,
+          element: <PrivacyPolicy />,
         },
         {
           path: ROUTES.DOCUMENTATION.ROOT,

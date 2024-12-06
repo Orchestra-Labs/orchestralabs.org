@@ -9,6 +9,7 @@ const STARTUP_EXTENSION = '/startups';
 export const ROUTES = {
   HOME: '/',
   WHITEPAPER: '/whitepaper',
+  PRIVACY_POLICY: '/privacy-policy',
   EXPLORER: {
     ROOT: EXPLORER_ROOT,
     ACCOUNT: `${EXPLORER_ROOT}/account`,
