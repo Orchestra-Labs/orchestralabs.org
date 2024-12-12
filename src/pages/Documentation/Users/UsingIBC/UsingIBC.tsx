@@ -322,7 +322,7 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  Requires update
+                  channel-3
                 </td>
                 <td
                   style={{
@@ -331,10 +331,10 @@ export const AdvancedIBC = () => (
                     padding: '8px',
                   }}
                 >
-                  Requires update
+                  channel-946
                 </td>
               </tr>
-              <tr>
+              {/* <tr>
                 <td
                   style={{
                     border: '1px solid white',
@@ -362,7 +362,7 @@ export const AdvancedIBC = () => (
                 >
                   Requires update
                 </td>
-              </tr>
+              </tr> */}
             </tbody>
           </table>
         </div>
