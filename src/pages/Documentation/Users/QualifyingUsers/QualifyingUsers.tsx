@@ -64,6 +64,10 @@ const HEADINGS = {
     id: 'cewts',
     label: 'CEWTs',
   },
+  3.14: {
+    id: 'bad-kids',
+    label: 'Bad Kids',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -245,6 +249,12 @@ const QUALIFYING_NFTS: NavItem[] = [
     target: '_blank',
     href: `https://www.stargaze.zone/m/stars1wjq8m7n2wjfmfhrx7cdt04u3tkmf544d3clmedm7pjh8fs9qzteqfve4e0/tokens`,
   },
+  {
+    id: HEADINGS[3.14].id,
+    label: HEADINGS[3.14].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/m/stars19jq6mj84cnt9p7sagjxqf8hxtczwc8wlpuwe4sh62w45aheseues57n420/tokens`,
+  },
 ];
 
 export const QualifyingUsers = () => (
@@ -253,7 +263,7 @@ export const QualifyingUsers = () => (
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Qualifying For Airdrops
+          Qualifying For Testnet Rewards
         </h1>
         <p className="mt-5">
           Orchestra Labs has allocated 10% of the genesis supply of Melody

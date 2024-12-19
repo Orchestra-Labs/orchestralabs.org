@@ -87,9 +87,9 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
       },
       {
         id: '5',
-        label: 'Qualifying For Airdrops',
+        label: 'Qualifying For Testnet',
         description:
-          "How to qualify for airdrops with Symphony's incentivized testnet",
+          "How to qualify for rewards on Symphony's incentivized testnet",
         href: `${ROUTES.DOCUMENTATION.USERS.QUALIFYING_USERS}`,
       },
       {

@@ -22,8 +22,8 @@ const HEADINGS = {
     label: 'Example Tasks',
   },
   5: {
-    id: 'airdrop-policy',
-    label: 'Qualifying for Airdrops',
+    id: 'qualifying-users',
+    label: 'Qualifying for Testnet',
   },
 };
 
