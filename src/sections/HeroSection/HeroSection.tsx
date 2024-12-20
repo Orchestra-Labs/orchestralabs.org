@@ -11,14 +11,12 @@ export const HeroSection = () => (
     <div className="flex justify-center items-center min-h-[inherit] relative z-[1] px-25px md:px-6">
       <div className="flex flex-col max-w-[882px] text-center items-center gap-4 mt-[-50%] md:-mt-40 xl:-mt-[120px]">
         <h1 className="font-semibold text-white text-h4 md:text-h2/[56px] xl:text-display2">
-          <p>Your money,</p>{' '}
-          <p>
-            your <span className="text-blue">Symphony</span>
-          </p>
+          <span className="text-blue tracking-wide-30">SYMPHONY</span>
+          <p className="text-h5">The Stablecoin Chain</p>
         </h1>
         <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl mt-5">
           {/* Releasing soon via IDO */}
-          Become an Ambassador!
+          Yield-bearing stablecoins for every currency!
         </p>
         <Link
           to={ROUTES.DOCUMENTATION.AMBASSADORS.ROOT}
@@ -30,7 +28,7 @@ export const HeroSection = () => (
             'hover:bg-background-dark-grey-hover',
           )}
         >
-          Get Started
+          Become an ambassador!
         </Link>
       </div>
     </div>

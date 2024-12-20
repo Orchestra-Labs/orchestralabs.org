@@ -84,6 +84,10 @@ export default {
         22.5: '90px',
         '25px': '25px',
       },
+      letterSpacing: {
+        'wide-20': '0.2em',
+        'wide-30': '0.3em',
+      },
       padding: {
         25: '100px',
       },

@@ -13,9 +13,9 @@ const ROWS = [
   },
   {
     id: 3,
-    title: 'In One Click',
-    subtitle: 'Save in one, spend in another!',
-    shadowText: 'In one click',
+    title: 'Earning Yield',
+    subtitle: 'Gain APY on any medium!',
+    shadowText: 'Earning Yield',
   },
 ];
 
