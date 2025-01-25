@@ -198,7 +198,7 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
       "messages": [
         {
           "@type": "/symphony.market.v1beta1.MsgSwap",
-          "trader": "cosmos1exampleaddress",
+          "trader": "symphony1exampleaddress",
           "offer_coin": { "denom": "uluna", "amount": "1000" },
           "ask_denom": "usdt"
         }
@@ -221,8 +221,8 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
       "messages": [
         {
           "@type": "/symphony.market.v1beta1.MsgSwapSend",
-          "from_address": "cosmos1exampleaddress",
-          "to_address": "cosmos1destinationaddress",
+          "from_address": "symphony1exampleaddress",
+          "to_address": "symphony1destinationaddress",
           "offer_coin": { "denom": "uluna", "amount": "1000" },
           "ask_denom": "usdt"
         }
@@ -326,8 +326,8 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
         {
           "@type": "/symphony.oracle.v1beta1.MsgAggregateExchangeRatePrevote",
           "hash": "hash_value",
-          "feeder": "cosmos1feederaddress",
-          "validator": "cosmos1validatoraddress"
+          "feeder": "symphony1feederaddress",
+          "validator": "symphony1validatoraddress"
         }
       ]
     },
@@ -349,8 +349,8 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
           "@type": "/symphony.oracle.v1beta1.MsgAggregateExchangeRateVote",
           "salt": "randomsalt",
           "exchange_rates": "uluna:1.2,usdt:1.0",
-          "feeder": "cosmos1feederaddress",
-          "validator": "cosmos1validatoraddress"
+          "feeder": "symphony1feederaddress",
+          "validator": "symphony1validatoraddress"
         }
       ]
     },
@@ -370,8 +370,8 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
       "messages": [
         {
           "@type": "/symphony.oracle.v1beta1.MsgDelegateFeedConsent",
-          "operator": "cosmos1operatoraddress",
-          "delegate": "cosmos1delegateaddress"
+          "operator": "symphony1operatoraddress",
+          "delegate": "symphony1delegateaddress"
         }
       ]
     },
