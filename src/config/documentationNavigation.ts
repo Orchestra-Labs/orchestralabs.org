@@ -65,7 +65,7 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
         id: '1',
         label: 'Create A Wallet',
         description: 'Create a wallet to interact with Symphony',
-        href: `${ROUTES.DOCUMENTATION.USERS.CREATE_WALLET}`,
+        href: `https://chromewebstore.google.com/detail/aria-wallet/cgghllcclkhfpkjhgomhehlebgphifbm`,
       },
       {
         id: '2',
