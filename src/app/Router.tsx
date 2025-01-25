@@ -13,6 +13,7 @@ import {
   AllTokens,
   AllTransactions,
   AmbassadorOverview,
+  API_Guide,
   BasicDetails,
   BlockDetails,
   CICD_Guide,
@@ -200,12 +201,16 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <GenesisDelegation />,
         },
         {
-          path: ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE,
-          element: <CICD_Guide />,
-        },
-        {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.CONTRIBUTING,
           element: <Contributing />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.API_GUIDE,
+          element: <API_Guide />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE,
+          element: <CICD_Guide />,
         },
         // Startup Pages
         {
