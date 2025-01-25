@@ -28,10 +28,12 @@ export const API_Guide = () => (
           Symphony API Guide
         </h1>
         <p className="mt-10">
-          The following endpoints are built to handle Symphony's blockchain
-          operations. The most important endpoints for user interaction are the
-          simulation and send endpoints for swaps, allowing users to preview and
-          execute token exchanges efficiently.
+          Symphony follows the Cosmos standard, and as such most endpoints will
+          align to Cosmos documentation. The following endpoints are built to
+          handle Symphony's more unique blockchain operations. The most
+          important endpoints for user interaction are the simulation and send
+          endpoints for swaps, allowing users to preview and execute token
+          exchanges efficiently.
         </p>
 
         {/* SymphonyJS Section */}
