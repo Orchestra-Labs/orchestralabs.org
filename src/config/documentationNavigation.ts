@@ -181,15 +181,21 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
       },
       {
         id: '4',
-        label: 'CICD Guide',
-        description: 'Getting CICD up and running',
-        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE}`,
-      },
-      {
-        id: '5',
         label: 'Contributing',
         description: 'How to contribute as a developer',
         href: `${ROUTES.DOCUMENTATION.DEVELOPERS.CONTRIBUTING}`,
+      },
+      {
+        id: '5',
+        label: 'API Guide',
+        description: 'API Guide for Symphony Blockchain',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.API_GUIDE}`,
+      },
+      {
+        id: '6',
+        label: 'CICD Guide',
+        description: 'Getting CICD up and running',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE}`,
       },
     ],
   },

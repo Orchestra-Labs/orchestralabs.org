@@ -1,3 +1,4 @@
+export * from './CodeBlock';
 export * from './Footer';
 export * from './Header';
 export * from './ImageModal';
