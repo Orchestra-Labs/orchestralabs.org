@@ -9,6 +9,7 @@ const HEADINGS = {
   4: { id: 'mint', label: 'Mint Module' },
   5: { id: 'oracle', label: 'Oracle Module' },
   6: { id: 'treasury', label: 'Treasury Module' },
+  7: { id: 'examples', label: 'Example Code' },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -18,6 +19,34 @@ const NAVIGATION_ITEMS: NavItem[] = [
   { id: '4', label: HEADINGS[4].label, href: `#${HEADINGS[4].id}` },
   { id: '5', label: HEADINGS[5].label, href: `#${HEADINGS[5].id}` },
   { id: '6', label: HEADINGS[6].label, href: `#${HEADINGS[6].id}` },
+  { id: '7', label: HEADINGS[7].label, href: `#${HEADINGS[7].id}` },
+];
+
+const EXAMPLE_LINKS = [
+  {
+    title: 'Repository for Aria wallet (extension)',
+    href: 'https://github.com/Orchestra-Labs/Aria-Extension-Wallet',
+  },
+  {
+    title: 'Re-usable functions for querying nodes',
+    href: 'https://github.com/Orchestra-Labs/Aria-Extension-Wallet/blob/main/src/helpers/queryNodes.ts',
+  },
+  {
+    title: 'Basic Cosmos transaction sending',
+    href: 'https://github.com/Orchestra-Labs/Aria-Extension-Wallet/blob/main/src/helpers/sendTransactions.ts',
+  },
+  {
+    title: 'Use of our Swap protocol (Via Symphony JS)',
+    href: 'https://github.com/Orchestra-Labs/Aria-Extension-Wallet/blob/main/src/helpers/swapTransactions.ts',
+  },
+  {
+    title: 'Getting the list of assets available',
+    href: 'https://github.com/Orchestra-Labs/Aria-Extension-Wallet/blob/main/src/hooks/useExchangeAssets.ts',
+  },
+  {
+    title: 'Getting the full list of exchange rates',
+    href: 'https://github.com/Orchestra-Labs/Aria-Extension-Wallet/blob/main/src/hooks/useExchangeRate.ts',
+  },
 ];
 
 export const API_Guide = () => (
@@ -403,6 +432,35 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
             <strong>GET /symphony/treasury/v1beta1/params</strong> - Returns
             treasury module parameters.
           </p>
+        </div>
+
+        {/* Example Section */}
+        <div id={HEADINGS[7].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[7].label}
+          </h2>
+          <h3 className="mt-8 text-h5 font-semibold text-blue">How to get:</h3>
+          <p className="mt-10">
+            The following are link examples for utilization of the above
+            andpoints, as used in our own Aria wallet. Be sure to check imports,
+            as these use TypeScript and our SymphonyJS implementation!
+          </p>
+          <ul className="mt-10">
+            {EXAMPLE_LINKS.map(item => (
+              <li key={String(item)} className="mb-4">
+                <p>
+                  -{' '}
+                  <Link
+                    target="_blank"
+                    to={item.href}
+                    className="text-blue hover:text-blue-darker"
+                  >
+                    {item.title}
+                  </Link>
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
