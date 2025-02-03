@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { cn } from '@/helpers';
 
 import waves2 from '@/assets/images/waves-test.svg';
-import { ROUTES } from '@/config/routes';
+import { SOCIAL_LINKS } from '@/constants';
 
 export const HeroSection = () => (
   <div className="min-h-screen relative">
@@ -19,8 +19,8 @@ export const HeroSection = () => (
           Earn yield on anything!
         </p>
         <Link
-          to={ROUTES.DOCUMENTATION.AMBASSADORS.ROOT}
-          // target="_blank"
+          to={SOCIAL_LINKS[3].href}
+          target="_blank"
           rel="noopener noreferrer"
           className={cn(
             'inline-flex no-underline items-center justify-center mt-7 w-fit px-11 py-4 rounded-full bg-background-dark-grey',
@@ -28,7 +28,7 @@ export const HeroSection = () => (
             'hover:bg-background-dark-grey-hover',
           )}
         >
-          Become an ambassador!
+          Talk to Us!
         </Link>
       </div>
     </div>
