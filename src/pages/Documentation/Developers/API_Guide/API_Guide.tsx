@@ -1,5 +1,6 @@
 import { CodeBlock, PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
+import { Link } from 'react-router-dom';
 
 const HEADINGS = {
   1: { id: 'symphonyjs', label: 'Using SymphonyJS' },
@@ -29,11 +30,18 @@ export const API_Guide = () => (
         </h1>
         <p className="mt-10">
           Symphony follows the Cosmos standard, and as such most endpoints will
-          align to Cosmos documentation. The following endpoints are built to
-          handle Symphony's more unique blockchain operations. The most
-          important endpoints for user interaction are the simulation and send
-          endpoints for swaps, allowing users to preview and execute token
-          exchanges efficiently.
+          align to{' '}
+          <Link
+            target="_blank"
+            to="https://docs.cosmos.network/api"
+            className="text-blue hover:text-blue-darker"
+          >
+            Cosmos documentation
+          </Link>{' '}
+          . The following endpoints are built to handle Symphony's more unique
+          blockchain operations. The most important endpoints for user
+          interaction are the simulation and send endpoints for swaps, allowing
+          users to preview and execute token exchanges efficiently.
         </p>
 
         {/* SymphonyJS Section */}
