@@ -68,6 +68,14 @@ const HEADINGS = {
     id: 'bad-kids',
     label: 'Bad Kids',
   },
+  3.15: {
+    id: 'celestine-sloths',
+    label: 'Celestine Sloths',
+  },
+  3.16: {
+    id: 'mad-scientists',
+    label: 'Mad Scientists',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -170,11 +178,25 @@ const NAVIGATION_ITEMS: NavItem[] = [
         description:
           'stars1wjq8m7n2wjfmfhrx7cdt04u3tkmf544d3clmedm7pjh8fs9qzteqfve4e0',
       },
+      {
+        id: HEADINGS[3.14].id,
+        label: HEADINGS[3.14].label,
+        href: `#${HEADINGS[3.14].id}`,
+        description:
+          'stars10n0m58ztlr9wvwkgjuek2m2k0dn5pgrhfw9eahg9p8e5qtvn964suc995j',
+      },
+      {
+        id: HEADINGS[3.15].id,
+        label: HEADINGS[3.15].label,
+        href: `#${HEADINGS[3.15].id}`,
+        description:
+          'stars1v8avajk64z7pppeu45ce6vv8wuxmwacdff484lqvv0vnka0cwgdqdk64sf',
+      },
     ],
   },
 ];
 
-const QUALIFYING_COINS = ['OSMO', 'ATOM', 'ARCH', 'KUJI'];
+const QUALIFYING_COINS = ['OSMO', 'ATOM', 'ARCH', 'STARS', 'OM'];
 
 const QUALIFYING_NFTS: NavItem[] = [
   {
@@ -267,9 +289,9 @@ export const QualifyingUsers = () => (
         </h1>
         <p className="mt-5">
           Orchestra Labs has allocated 10% of the genesis supply of Melody
-          (MLD), as airdrops for the incentivized testnet. To qualify for these
-          airdropped testnet rewards, meet one of the criteria below when the
-          snapshot is taken:
+          (MLD), as airdrops for the incentivized testnet and the following
+          airdrop. To qualify for these airdropped rewards, meet one of the
+          criteria below when the snapshot is taken:
         </p>
 
         <div id={HEADINGS[1].id} className="mt-15">
