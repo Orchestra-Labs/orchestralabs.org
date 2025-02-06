@@ -23,7 +23,7 @@ const HEADINGS = {
   },
   5: {
     id: 'qualifying-users',
-    label: 'Qualifying for Testnet',
+    label: 'Qualifying for Airdrops',
   },
 };
 

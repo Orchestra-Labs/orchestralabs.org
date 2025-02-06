@@ -76,6 +76,10 @@ const HEADINGS = {
     id: 'mad-scientists',
     label: 'Mad Scientists',
   },
+  3.17: {
+    id: 'expedition',
+    label: 'Expedition',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -190,7 +194,21 @@ const NAVIGATION_ITEMS: NavItem[] = [
         label: HEADINGS[3.15].label,
         href: `#${HEADINGS[3.15].id}`,
         description:
+          'stars10n0m58ztlr9wvwkgjuek2m2k0dn5pgrhfw9eahg9p8e5qtvn964suc995j',
+      },
+      {
+        id: HEADINGS[3.16].id,
+        label: HEADINGS[3.16].label,
+        href: `#${HEADINGS[3.16].id}`,
+        description:
           'stars1v8avajk64z7pppeu45ce6vv8wuxmwacdff484lqvv0vnka0cwgdqdk64sf',
+      },
+      {
+        id: HEADINGS[3.17].id,
+        label: HEADINGS[3.17].label,
+        href: `#${HEADINGS[3.17].id}`,
+        description:
+          'stars16srrs6zyl60n2avmp5hlkrc4k37q8spyzjtza7fhtpjchdjumxpq0rrnqm',
       },
     ],
   },
@@ -277,6 +295,24 @@ const QUALIFYING_NFTS: NavItem[] = [
     target: '_blank',
     href: `https://www.stargaze.zone/m/stars19jq6mj84cnt9p7sagjxqf8hxtczwc8wlpuwe4sh62w45aheseues57n420/tokens`,
   },
+  {
+    id: HEADINGS[3.15].id,
+    label: HEADINGS[3.15].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/m/stars10n0m58ztlr9wvwkgjuek2m2k0dn5pgrhfw9eahg9p8e5qtvn964suc995j/tokens`,
+  },
+  {
+    id: HEADINGS[3.16].id,
+    label: HEADINGS[3.16].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/m/stars1v8avajk64z7pppeu45ce6vv8wuxmwacdff484lqvv0vnka0cwgdqdk64sf/tokens`,
+  },
+  {
+    id: HEADINGS[3.17].id,
+    label: HEADINGS[3.17].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/m/stars16srrs6zyl60n2avmp5hlkrc4k37q8spyzjtza7fhtpjchdjumxpq0rrnqm/tokens`,
+  },
 ];
 
 export const QualifyingUsers = () => (
@@ -285,7 +321,7 @@ export const QualifyingUsers = () => (
     <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
       <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
         <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Qualifying For Testnet Rewards
+          Qualifying For Airdrops
         </h1>
         <p className="mt-5">
           Orchestra Labs has allocated 10% of the genesis supply of Melody
