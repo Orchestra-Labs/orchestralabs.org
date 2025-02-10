@@ -439,7 +439,6 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[7].label}
           </h2>
-          <h3 className="mt-8 text-h5 font-semibold text-blue">How to get:</h3>
           <p className="mt-10">
             The following are link examples for utilization of the above
             andpoints, as used in our own Aria wallet. Be sure to check imports,
