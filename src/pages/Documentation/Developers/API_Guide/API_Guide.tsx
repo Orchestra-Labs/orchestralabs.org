@@ -185,7 +185,7 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
             Returns the current epoch for a specified identifier.
           </p>
           <p className="mt-2">
-            <strong>Query Parameters:</strong> identifier (string, required).
+            - <strong>Query Parameters:</strong> identifier (string, required).
           </p>
         </div>
 
@@ -201,7 +201,7 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
             simulated swap amount.
           </p>
           <p className="mt-2">
-            <strong>Query Parameters:</strong>
+            - <strong>Query Parameters:</strong>
           </p>
           <ul>
             <li>
@@ -226,7 +226,7 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
             transaction.
           </p>
           <p className="mt-2">
-            <strong>Payload:</strong>
+            - <strong>Payload:</strong>
           </p>
           <CodeBlock
             code={`{
@@ -236,7 +236,7 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
         {
           "@type": "/symphony.market.v1beta1.MsgSwap",
           "trader": "symphony1exampleaddress",
-          "offer_coin": { "denom": "uluna", "amount": "1000" },
+          "offer_coin": { "denom": "note", "amount": "1000" },
           "ask_denom": "usdt"
         }
       ]
@@ -260,7 +260,7 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
           "@type": "/symphony.market.v1beta1.MsgSwapSend",
           "from_address": "symphony1exampleaddress",
           "to_address": "symphony1destinationaddress",
-          "offer_coin": { "denom": "uluna", "amount": "1000" },
+          "offer_coin": { "denom": "note", "amount": "1000" },
           "ask_denom": "usdt"
         }
       ]
@@ -314,11 +314,12 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
             - Returns exchange rate for a specific denomination.
           </p>
           <p className="mt-2">
-            <strong>Path Parameters:</strong>
+            - <strong>Path Parameters:</strong>
           </p>
           <ul>
             <li>
-              <code>denom</code> (string, required): The denomination to query.
+              - <code>denom</code> (string, required): The denomination to
+              query.
             </li>
           </ul>
           <p className="mt-5">
@@ -332,11 +333,12 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
             - Returns tobin tax for a specific denomination.
           </p>
           <p className="mt-2">
-            <strong>Path Parameters:</strong>
+            - <strong>Path Parameters:</strong>
           </p>
           <ul>
             <li>
-              <code>denom</code> (string, required): The denomination to query.
+              - <code>denom</code> (string, required): The denomination to
+              query.
             </li>
           </ul>
           <p className="mt-5">
@@ -385,7 +387,7 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
         {
           "@type": "/symphony.oracle.v1beta1.MsgAggregateExchangeRateVote",
           "salt": "randomsalt",
-          "exchange_rates": "uluna:1.2,usdt:1.0",
+          "exchange_rates": "note:1.2,usdt:1.0",
           "feeder": "symphony1feederaddress",
           "validator": "symphony1validatoraddress"
         }
