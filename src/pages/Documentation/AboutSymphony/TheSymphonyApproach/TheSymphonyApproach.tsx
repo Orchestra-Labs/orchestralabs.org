@@ -7,7 +7,7 @@ import { ImageModal } from '@/components/ImageModal';
 import arbitrageRebalancing from '@/assets/images/schema.png';
 import supplySideRebalancing from '@/assets/images/schema2.png';
 import elasticReserves from '@/assets/images/schema3.png';
-import devNetDropTest from '@/assets/images/dev-net-drop-test-data.png';
+import testNetDropTest from '@/assets/images/dev-net-drop-test-data.png';
 
 const HEADINGS = {
   1: {
@@ -146,9 +146,13 @@ export const TheSymphonyApproach = () => {
             <p className="mt-5">
               At Orchestra Labs, unlike other stablecoins, we don't ask you to
               blindly trust our word and tell you it works, we want to show you
-              it works. As such, below is the data on this run from our dev-net.
+              it works. As such, below is the data on this run from our
+              test-net.
             </p>
-            <ImageModal imageSrc={devNetDropTest} altText="Dev-net drop-test" />
+            <ImageModal
+              imageSrc={testNetDropTest}
+              altText="Test-net drop-test"
+            />
           </div>
         </div>
         <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
