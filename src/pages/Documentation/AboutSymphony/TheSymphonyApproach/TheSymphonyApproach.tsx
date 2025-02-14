@@ -81,8 +81,12 @@ export const TheSymphonyApproach = () => {
               {HEADINGS[1].label}
             </h2>
             <p className="mt-5">
-              Symphony's algorithmic nature comes into play with its initial use
-              of arbitrage rebalancing.
+              Symphony's price comes from information cleaning and middle-market
+              pricing, but exchanges don't use this, leading to Symphony's first
+              balancer: arbitrage. Symphony's algorithmic nature comes into play
+              with this initial use of reverse-arbitrage rebalancing, acting as
+              a peg in the river so that these exchanges can rebalance against
+              us!
               <ImageModal
                 imageSrc={arbitrageRebalancing}
                 altText="Arbitrage rebalancing"
@@ -105,10 +109,10 @@ export const TheSymphonyApproach = () => {
             </h2>
             <p className="mt-5">
               Symphony's crypto-backed nature comes into play with the second of
-              its safeguards, triggering outside another allowable margin, and
-              utilizing the 2:1 elastic reserves. These reserves are kept at 2:1
-              at minimum. When the value of the coin rises, these reserves rise
-              past that minimum quickly and easily, making the system more
+              its safeguards, triggering after large drops in the value of MLD,
+              and utilizing the 2:1 elastic reserves. These reserves are kept at
+              2:1 at minimum. When the value of the coin rises, these reserves
+              rise past that minimum quickly and easily, making the system more
               secure as circulating supply falls.
             </p>
             <ImageModal imageSrc={elasticReserves} altText="Elastic reserves" />
@@ -116,7 +120,7 @@ export const TheSymphonyApproach = () => {
               The third of Symphony's safeguards is its reserve fee, taken only
               when the reserve balance falls below a 2:1 backing against assets.
               This allows Symphony to safeguard its assets in the unlikely case
-              the arbitrage peg falls below 50%.
+              the value of the collateral falls below 50%.
             </p>{' '}
           </div>
 
