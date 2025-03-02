@@ -64,4 +64,11 @@ export const ADDRESS_BOOKS: NavItem[] = [
     href: 'https://files.shazoe.xyz/testnets/symphony/addrbook.json',
     description: 'The address book needed to start a node',
   },
+    {
+    id: '10',
+    label: 'Nodeist',
+    target: '_blank',
+    href: 'https://t-ss.nodeist.net/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
 ];
