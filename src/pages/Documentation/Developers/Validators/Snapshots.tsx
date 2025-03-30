@@ -43,11 +43,18 @@ export const SNAPSHOTS: NavItem[] = [
     href: 'https://storage.crouton.digital/testnet/symphony/snapshots/symphony_latest.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
-    {
+  {
     id: '7',
     label: 'Shazoe',
     target: '_blank',
     href: 'https://snapshot1.shazoe.xyz/testnets/snapshot1-symphony.tar.lz4',
+    description: 'Snapshots to speed up validator synchronization',
+  },
+  {
+    id: '8',
+    label: 'Buster',
+    target: '_blank',
+    href: 'https://snapshot.busternode.xyz/testnets/symphony/snapshot-symphony.tar.lz4',
     description: 'Snapshots to speed up validator synchronization',
   },
 ];
