@@ -5,32 +5,25 @@ import { ROUTES } from '@/config/routes';
 export const MAIN_LAYOUT_LINKS = [
   {
     id: '1',
-    label: 'Whitepaper',
-    href: ROUTES.WHITEPAPER,
+    label: 'Airdrop Tracker',
+    href: 'https://airdrop-tracker.orchestralabs.org/',
   },
-  { id: '2', label: 'Documentation', href: ROUTES.DOCUMENTATION.ROOT },
-  // {
-  //   id: '3',
-  //   label: 'Explorer',
-  //   target: '_blank',
-  //   href: 'https://testnet.ping.pub/symphony',
-  // },
   {
-    id: '3',
+    id: '2',
     label: 'Swap dApp',
     href: 'https://swap.orchestralabs.org/',
   },
   {
-    id: '4',
-    label: 'Blogs',
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    href: 'https://medium.com/@orchestra_labs',
+    id: '3',
+    label: 'Whitepaper',
+    href: ROUTES.WHITEPAPER,
   },
+  { id: '4', label: 'Documentation', href: ROUTES.DOCUMENTATION.ROOT },
   // {
-  //   id: '4',
-  //   label: 'Brand Kit',
-  //   href: 'https://www.figma.com/design/RMidyza0EkEnExu0YRw9iJ/Symphony-Brand-Kit?node-id=0-1&t=VJW7ckSbrgKCK5O5-1',
+  //   id: '5',
+  //   label: 'Explorer',
+  //   target: '_blank',
+  //   href: 'https://testnet.ping.pub/symphony',
   // },
 ];
 
@@ -43,13 +36,13 @@ export const EXPLORER_LAYOUT_LINKS = [
 
 export const SOCIAL_LINKS = [
   { id: '1', href: 'https://twitter.com/orchestra_labs', Icon: XIcon },
-  { id: '2', href: 'https://t.me/+xFieHCYYyx41NGQx', Icon: Telegram },
-  { id: '3', href: 'https://github.com/Orchestra-Labs', Icon: GitHub },
   {
-    id: '4',
+    id: '2',
     href: 'https://discord.gg/symphony-1162823265975279636',
     Icon: Discord,
   },
+  { id: '3', href: 'https://t.me/+xFieHCYYyx41NGQx', Icon: Telegram },
+  { id: '4', href: 'https://github.com/Orchestra-Labs', Icon: GitHub },
   { id: '5', href: 'https://linktr.ee/OrchestraLabs', Icon: LinkTree },
 ];
 
@@ -100,9 +93,16 @@ export const FOOTER_LINKS = [
       },
       {
         id: '3',
-        name: 'Knowledge Base',
+        label: 'Knowledge Base',
         target: '',
         href: ROUTES.DOCUMENTATION.ROOT,
+      },
+      {
+        id: '4',
+        label: 'Blogs',
+        target: '_blank',
+        rel: 'noopener noreferrer',
+        href: 'https://medium.com/@orchestra_labs',
       },
     ],
   },

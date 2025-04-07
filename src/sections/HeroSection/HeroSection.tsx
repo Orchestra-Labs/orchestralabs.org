@@ -19,7 +19,7 @@ export const HeroSection = () => (
           Earn yield on anything!
         </p>
         <Link
-          to={SOCIAL_LINKS[3].href}
+          to={SOCIAL_LINKS[1].href}
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
@@ -28,7 +28,7 @@ export const HeroSection = () => (
             'hover:bg-background-dark-grey-hover',
           )}
         >
-          Talk to Us!
+          Join our Testnet!
         </Link>
       </div>
     </div>
