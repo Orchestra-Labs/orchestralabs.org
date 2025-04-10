@@ -6,8 +6,8 @@ import walletConnectDiagram from '@/assets/images/wallet-connect.png';
 
 const HEADINGS = {
   1: {
-    id: 'walletconnect-diagram',
-    label: 'Walletconnect Diagram',
+    id: 'function-diagram',
+    label: 'Function Diagram',
   },
 };
 
