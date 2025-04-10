@@ -196,6 +196,12 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
         description: 'Getting CICD up and running',
         href: `${ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE}`,
       },
+      {
+        id: '7',
+        label: 'WalletConnect',
+        description: 'WalletConnect function diagram',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.WALLETCONNECT}`,
+      },
     ],
   },
   STARTUP_INFORMATION: {

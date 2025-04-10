@@ -53,6 +53,7 @@ import {
   TweetGuide,
   UserOverview,
   Validators,
+  WalletConnect,
   Whitepaper,
   WhyDecentralizedRWAs,
 } from '@/pages';
@@ -211,6 +212,10 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
         {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.CICD_GUIDE,
           element: <CICD_Guide />,
+        },
+        {
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.WALLETCONNECT,
+          element: <WalletConnect />,
         },
         // Startup Pages
         {
