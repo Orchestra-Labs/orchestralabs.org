@@ -1,5 +1,5 @@
 import { PageNavigator, SectionNavigator } from '@/components';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
 import { ImageModal } from '@/components/ImageModal';

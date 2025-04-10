@@ -11,7 +11,7 @@ import enterAmount from '@/assets/images/enter-amount.png';
 import confirmIBCTransaction from '@/assets/images/confirm-ibc-transaction.png';
 import verifyResults from '@/assets/images/initial-location-advanced-ibc.png';
 import devMode from '@/assets/images/dev-mode.png';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import { Link } from 'react-router-dom';
 
 const HEADINGS = {

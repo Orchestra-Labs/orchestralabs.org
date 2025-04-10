@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Copy, Question } from '@/assets/icons';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import { Badge } from '@/ui-kit';
 
 const TRANSACTION = {

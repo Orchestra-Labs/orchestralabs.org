@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { Logo } from '@/assets/icons/Logo';
 import { MobileMenu, SocialLinks } from '@/components';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import { MAIN_LAYOUT_LINKS } from '@/constants';
 import { BurgerButton } from '@/ui-kit';
 

@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import { Copy, List, Question } from '@/assets/icons';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import {
   Badge,
   Table,

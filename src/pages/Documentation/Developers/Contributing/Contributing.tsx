@@ -2,7 +2,7 @@ import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import { SOCIAL_LINKS } from '@/constants';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import { ImageModal } from '@/components/ImageModal';
 
 import commitStyle from '@/assets/images/commit-style.png';

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { EyeOpen } from '@/assets/icons';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import { Button, Input } from '@/ui-kit';
 
 export const SignUp = () => (

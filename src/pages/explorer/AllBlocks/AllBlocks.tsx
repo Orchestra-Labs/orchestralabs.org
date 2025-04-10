@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Copy } from '@/assets/icons';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import {
   Progress,
   Table,

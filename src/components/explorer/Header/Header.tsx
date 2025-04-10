@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { Logo } from '@/assets/icons/Logo';
 import { MobileMenu, NavItems } from '@/components';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import { EXPLORER_LAYOUT_LINKS } from '@/constants';
 import {
   BurgerButton,

@@ -1,7 +1,7 @@
 import React, { lazy } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import {
   AboutSymphonyOverview,
   AccountDetails,

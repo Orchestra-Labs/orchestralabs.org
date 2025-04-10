@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/ui-kit';
-import { DOCUMENTATION_NAVIGATION } from '@/config/documentationNavigation';
+import { DOCUMENTATION_NAVIGATION } from '@/config/';
 
 export const PageNavigator = () => {
   const location = useLocation();

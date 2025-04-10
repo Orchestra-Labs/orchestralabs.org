@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import { Button, Input } from '@/ui-kit';
 
 export const PasswordRecovery = () => (

@@ -4,7 +4,7 @@ import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 import { Blocks, Clock, List, LogoIcon } from '@/assets/icons';
 import { ShortListView } from '@/components';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 import {
   Input,
   Select,

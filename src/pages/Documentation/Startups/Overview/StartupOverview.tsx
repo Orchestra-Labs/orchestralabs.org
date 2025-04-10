@@ -1,5 +1,5 @@
 import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
-import { DOCUMENTATION_NAVIGATION } from '@/config/documentationNavigation';
+import { DOCUMENTATION_NAVIGATION } from '@/config/';
 import { NavItem } from '@/types';
 
 const HEADINGS = {

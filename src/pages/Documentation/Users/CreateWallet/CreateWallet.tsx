@@ -9,7 +9,7 @@ import createNewWallet from '@/assets/images/create-new-wallet.png';
 import createWalletOptions from '@/assets/images/create-wallet-options.png';
 import playStoreInstallation from '@/assets/images/play-store-installation.png';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 
 const HEADINGS = {
   1: {

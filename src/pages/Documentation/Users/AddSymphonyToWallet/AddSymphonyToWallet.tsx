@@ -17,7 +17,7 @@ import approveConnection from '@/assets/images/approve-connection.png';
 import selectAddChain from '@/assets/images/select-and-add-chain.png';
 
 import { Link } from 'react-router-dom';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 
 const HEADINGS = {
   1: {

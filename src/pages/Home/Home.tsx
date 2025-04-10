@@ -12,7 +12,7 @@ import { InfoRowsSection } from '@/sections/InfoRowsSection';
 import image1 from '@/assets/images/info-image1.png';
 import image2 from '@/assets/images/info-image2.png';
 import image3 from '@/assets/images/info-image3.png';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 
 const BENEFITS_ROWS = [
   {

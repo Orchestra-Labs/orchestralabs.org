@@ -1,76 +1,78 @@
-const EXPLORER_ROOT = '/explorer';
-const DOCUMENTATION_ROOT = '/documentation';
-const ABOUT_EXTENSION = '/about';
-const AMBASSADOR_EXTENSION = '/ambassadors';
-const USER_EXTENSION = '/users';
-const DEVELOPER_EXTENSION = '/developers';
-const STARTUP_EXTENSION = '/startups';
+const path = (base: string, ...parts: string[]) => [base, ...parts].join('/');
+
+const DOCUMENTATION = '/documentation';
+const ABOUT = path(DOCUMENTATION, 'about');
+const AMBASSADORS = path(DOCUMENTATION, 'ambassadors');
+const USERS = path(DOCUMENTATION, 'users');
+const DEVELOPERS = path(DOCUMENTATION, 'developers');
+const STARTUPS = path(DOCUMENTATION, 'startups');
+const EXPLORER = '/explorer';
 
 export const ROUTES = {
   HOME: '/',
   WHITEPAPER: '/whitepaper',
   PRIVACY_POLICY: '/privacy-policy',
   EXPLORER: {
-    ROOT: EXPLORER_ROOT,
-    ACCOUNT: `${EXPLORER_ROOT}/account`,
-    TOKENS: `${EXPLORER_ROOT}/tokens`,
-    BLOCKS: `${EXPLORER_ROOT}/blocks`,
-    TRANSACTIONS: `${EXPLORER_ROOT}/transactions`,
-    SIGN_IN: `${EXPLORER_ROOT}/sign-in`,
-    SIGN_UP: `${EXPLORER_ROOT}/sign-up`,
-    PASSWORD_RECOVERY: `${EXPLORER_ROOT}/password-recovery`,
+    ROOT: EXPLORER,
+    ACCOUNT: path(EXPLORER, 'account'),
+    TOKENS: path(EXPLORER, 'tokens'),
+    BLOCKS: path(EXPLORER, 'blocks'),
+    TRANSACTIONS: path(EXPLORER, 'transactions'),
+    SIGN_IN: path(EXPLORER, 'sign-in'),
+    SIGN_UP: path(EXPLORER, 'sign-up'),
+    PASSWORD_RECOVERY: path(EXPLORER, 'password-recovery'),
   },
   DOCUMENTATION: {
-    ROOT: DOCUMENTATION_ROOT,
+    ROOT: DOCUMENTATION,
     ABOUT: {
-      ROOT: `${DOCUMENTATION_ROOT}${ABOUT_EXTENSION}`,
-      WHY_DECENTRALIZED_RWAS: `${DOCUMENTATION_ROOT}${ABOUT_EXTENSION}/why-decentralized-rwas`,
-      THE_STABLECOIN_TRILEMMA: `${DOCUMENTATION_ROOT}${ABOUT_EXTENSION}/the-stablecoin-trilemma`,
-      THE_SYMPHONY_APPROACH: `${DOCUMENTATION_ROOT}${ABOUT_EXTENSION}/approach`,
-      SYMPHONY_IMPACT: `${DOCUMENTATION_ROOT}${ABOUT_EXTENSION}/impact`,
-      SIZE_OF_OPPORTUNITY: `${DOCUMENTATION_ROOT}${ABOUT_EXTENSION}/size-of-opportunity`,
-      TOKENOMICS: `${DOCUMENTATION_ROOT}${ABOUT_EXTENSION}/tokenomics`,
-      ROADMAP: `${DOCUMENTATION_ROOT}${ABOUT_EXTENSION}/roadmap`,
+      ROOT: ABOUT,
+      WHY_DECENTRALIZED_RWAS: path(ABOUT, 'why-decentralized-rwas'),
+      THE_STABLECOIN_TRILEMMA: path(ABOUT, 'the-stablecoin-trilemma'),
+      THE_SYMPHONY_APPROACH: path(ABOUT, 'approach'),
+      SYMPHONY_IMPACT: path(ABOUT, 'impact'),
+      SIZE_OF_OPPORTUNITY: path(ABOUT, 'size-of-opportunity'),
+      TOKENOMICS: path(ABOUT, 'tokenomics'),
+      ROADMAP: path(ABOUT, 'roadmap'),
     },
     AMBASSADORS: {
-      ROOT: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}`,
-      BASIC_DETAILS: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}/basic-details`,
-      EXAMPLE_TASKS: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}/example-tasks`,
-      LEVEL_BENEFITS: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}/level-benefits`,
-      LEVEL_PROGRESSION: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}/level-progression`,
-      ADDITIONAL_ROLES: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}/additional-roles`,
-      TWEET_GUIDE: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}/tweet-guide`,
-      MEME_GUIDE: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}/meme-guide`,
-      COMMUNITY_PAGES: `${DOCUMENTATION_ROOT}${AMBASSADOR_EXTENSION}/community-pages`,
+      ROOT: AMBASSADORS,
+      BASIC_DETAILS: path(AMBASSADORS, 'basic-details'),
+      EXAMPLE_TASKS: path(AMBASSADORS, 'example-tasks'),
+      LEVEL_BENEFITS: path(AMBASSADORS, 'level-benefits'),
+      LEVEL_PROGRESSION: path(AMBASSADORS, 'level-progression'),
+      ADDITIONAL_ROLES: path(AMBASSADORS, 'additional-roles'),
+      TWEET_GUIDE: path(AMBASSADORS, 'tweet-guide'),
+      MEME_GUIDE: path(AMBASSADORS, 'meme-guide'),
+      COMMUNITY_PAGES: path(AMBASSADORS, 'community-pages'),
     },
     USERS: {
-      ROOT: `${DOCUMENTATION_ROOT}${USER_EXTENSION}`,
-      CREATE_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/create-wallet`,
-      ADD_SYMPHONY_TO_WALLET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/add-symphony-to-wallet`,
-      USING_IBC: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/using-ibc`,
-      INCENTIVIZED_TESTNET: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/incentivized-testnet`,
-      QUALIFYING_USERS: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/qualifying-users`,
-      SOUNDWAVE_NFT: `${DOCUMENTATION_ROOT}${USER_EXTENSION}/soundwave-nft`,
+      ROOT: USERS,
+      CREATE_WALLET: path(USERS, 'create-wallet'),
+      ADD_SYMPHONY_TO_WALLET: path(USERS, 'add-symphony-to-wallet'),
+      USING_IBC: path(USERS, 'using-ibc'),
+      INCENTIVIZED_TESTNET: path(USERS, 'incentivized-testnet'),
+      QUALIFYING_USERS: path(USERS, 'qualifying-users'),
+      SOUNDWAVE_NFT: path(USERS, 'soundwave-nft'),
     },
     DEVELOPERS: {
-      ROOT: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}`,
-      EXPLORERS: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}/explorers`,
-      VALIDATORS: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}/validators`,
-      GENESIS_DELEGATION: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}/genesis-delegation`,
-      CICD_GUIDE: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}/cicd-guide`,
-      CONTRIBUTING: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}/contributing`,
-      API_GUIDE: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}/api-guide`,
-      WALLETCONNECT: `${DOCUMENTATION_ROOT}${DEVELOPER_EXTENSION}/walletconnect`,
+      ROOT: DEVELOPERS,
+      EXPLORERS: path(DEVELOPERS, 'explorers'),
+      VALIDATORS: path(DEVELOPERS, 'validators'),
+      GENESIS_DELEGATION: path(DEVELOPERS, 'genesis-delegation'),
+      CICD_GUIDE: path(DEVELOPERS, 'cicd-guide'),
+      CONTRIBUTING: path(DEVELOPERS, 'contributing'),
+      API_GUIDE: path(DEVELOPERS, 'api-guide'),
+      WALLETCONNECT: path(DEVELOPERS, 'walletconnect'),
     },
     STARTUPS: {
-      ROOT: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}`,
-      INCEPTION: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/inception`,
-      DEVELOPMENT: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/development`,
-      EXPANSION: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/expansion`,
-      STABILIZATION: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/stabilization`,
-      ADVISORS: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/advisors`,
-      FUNDRAISING: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/fundraising`,
-      CASE_STUDIES: `${DOCUMENTATION_ROOT}${STARTUP_EXTENSION}/case-studies`,
+      ROOT: STARTUPS,
+      INCEPTION: path(STARTUPS, 'inception'),
+      DEVELOPMENT: path(STARTUPS, 'development'),
+      EXPANSION: path(STARTUPS, 'expansion'),
+      STABILIZATION: path(STARTUPS, 'stabilization'),
+      ADVISORS: path(STARTUPS, 'advisors'),
+      FUNDRAISING: path(STARTUPS, 'fundraising'),
+      CASE_STUDIES: path(STARTUPS, 'case-studies'),
     },
   },
 };

@@ -1,6 +1,6 @@
 import { Discord, GitHub, Telegram, XIcon } from '@/assets/icons';
 import { LinkTree } from '@/assets/icons/LinkTree';
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '@/config/';
 
 export const MAIN_LAYOUT_LINKS = [
   {
