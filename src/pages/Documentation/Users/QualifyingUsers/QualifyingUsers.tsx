@@ -214,7 +214,18 @@ const NAVIGATION_ITEMS: NavItem[] = [
   },
 ];
 
-const QUALIFYING_COINS = ['OSMO', 'ATOM', 'ARCH', 'STARS', 'OM'];
+const QUALIFYING_COINS = [
+  'OSMO',
+  'ATOM',
+  'ARCH',
+  'STARS',
+  'OM',
+  'ELYS',
+  'STRD',
+  'stATOM',
+  'stOSMO',
+  'stSTARS',
+];
 
 const QUALIFYING_NFTS: NavItem[] = [
   {
