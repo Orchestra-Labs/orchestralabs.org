@@ -2,12 +2,10 @@ import { PageNavigator, SectionNavigator } from '@/components';
 import { NavItem } from '@/types';
 import {
   ATTENDEE_RESPONSIBILITIES,
-  AMPLIFIER_TASKS,
   CONCERTMASTER_RESPONSIBILITIES,
   CONCERTMASTER_TASKS,
   INSTRUMENTALIST_RESPONSIBILITIES,
   AMPLIFIER_RESPONSIBILITIES,
-  INSTRUMENTALIST_TASKS,
   KOL_CRITERIA,
   SOLOIST_RESPONSIBILITIES,
   SOLOIST_TASKS,
@@ -148,11 +146,6 @@ export const LevelProgression = () => (
             {LEVEL_DETAILS.reach.amplifier.label}:
           </h3>
           <ul className="list-disc pl-5 mt-4">
-            {AMPLIFIER_TASKS.map(task => (
-              <p key={String(task)} className="mb-4">
-                - {task}
-              </p>
-            ))}
             <p className="mb-4">
               - Complete tasks on{' '}
               <Link
@@ -161,8 +154,8 @@ export const LevelProgression = () => (
                 className="text-blue hover:text-blue-darker underline"
               >
                 Centrifuge
-              </Link>
-              .
+              </Link>{' '}
+              and be approved.
             </p>
           </ul>
 
@@ -171,19 +164,14 @@ export const LevelProgression = () => (
             {LEVEL_DETAILS.reach.instrumentalist.label}:
           </h3>
           <ul className="list-disc pl-5 mt-4">
-            {INSTRUMENTALIST_TASKS.map(task => (
-              <p key={String(task)} className="mb-4">
-                - {task}
-              </p>
-            ))}
             <p className="mb-4">
-              - Complete the{' '}
+              - Complete tasks on{' '}
               <Link
-                to="https://forms.gle/yKScUhQv8Q7C6vEx7"
+                to="https://centrifuge.digital/symphony"
                 target="_blank"
                 className="text-blue hover:text-blue-darker underline"
               >
-                First Chair Application
+                Centrifuge
               </Link>{' '}
               and be approved.
             </p>
