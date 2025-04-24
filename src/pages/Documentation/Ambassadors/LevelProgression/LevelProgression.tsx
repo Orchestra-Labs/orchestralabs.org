@@ -154,15 +154,15 @@ export const LevelProgression = () => (
               </p>
             ))}
             <p className="mb-4">
-              - Complete the{' '}
+              - Complete tasks on{' '}
               <Link
-                to="https://forms.gle/toCtHcBW9s8QNEqP8"
+                to="https://centrifuge.digital/symphony"
                 target="_blank"
                 className="text-blue hover:text-blue-darker underline"
               >
-                Amplifier Application
+                Centrifuge
               </Link>
-              . and have your submissions approved.
+              .
             </p>
           </ul>
 

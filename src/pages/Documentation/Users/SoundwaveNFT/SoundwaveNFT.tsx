@@ -40,9 +40,21 @@ export const SoundwaveNFT = () => (
         <p className="mt-10">
           Symphony's Soundwave is an NFT used to designate a group of users that
           have helped amplify the message that the Symphony blockchain has
-          arrived on the market. These NFTs can be obtained through giveaways on
-          various marketing efforts that come on an as-announced basis. Those
-          holding the Soundwave NFT receive the benefits outlined below:
+          arrived on the market. The best way to get them is by completing tasks
+          on{' '}
+          <Link
+            to="https://centrifuge.digital/symphony"
+            target="_blank"
+            className="text-blue hover:text-blue-darker underline"
+          >
+            Centrifuge
+          </Link>
+          .
+        </p>
+        <p className="mt-10">
+          These NFTs can be obtained through giveaways on various marketing
+          efforts that come on an as-announced basis. Those holding the
+          Soundwave NFT receive the benefits outlined below:
         </p>
 
         <div id={HEADINGS[1].id} className="mt-15">

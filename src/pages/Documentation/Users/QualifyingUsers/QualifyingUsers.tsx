@@ -221,6 +221,7 @@ const QUALIFYING_COINS = [
   'STARS',
   'OM',
   'ELYS',
+  'FLIX',
   'STRD',
   'stATOM',
   'stOSMO',
