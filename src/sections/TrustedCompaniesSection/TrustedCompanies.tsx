@@ -358,4 +358,10 @@ export const COMPANIES: Company[] = [
     src: shazoe,
     logoClass: 'max-h-10',
   },
+    {
+    id: 51,
+    name: 'Unity Nodes',
+    src: unitynodes,
+    logoClass: 'max-h-10',
+  },
 ];
