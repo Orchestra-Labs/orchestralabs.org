@@ -57,11 +57,18 @@ export const ADDRESS_BOOKS: NavItem[] = [
     href: 'https://storage.crouton.digital/testnet/symphony/files/addrbook.json',
     description: 'The address book needed to start a node',
   },
-    {
+  {
     id: '9',
     label: 'Shazoe',
     target: '_blank',
     href: 'https://files.shazoe.xyz/testnets/symphony/addrbook.json',
+    description: 'The address book needed to start a node',
+  },
+  {
+    id: '10',
+    label: 'Buster',
+    target: '_blank',
+    href: 'https://snapshot.busternode.xyz/testnets/symphony/addrbook.json',
     description: 'The address book needed to start a node',
   },
 ];
