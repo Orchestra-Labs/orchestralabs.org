@@ -58,7 +58,7 @@ export const ROUTES = {
       ROOT: DEVELOPERS,
       EXPLORERS: path(DEVELOPERS, 'explorers'),
       VALIDATORS: path(DEVELOPERS, 'validators'),
-      GENESIS_DELEGATION: path(DEVELOPERS, 'genesis-delegation'),
+      FOUNDATION_DELEGATION: path(DEVELOPERS, 'foundation-delegation'),
       CICD_GUIDE: path(DEVELOPERS, 'cicd-guide'),
       CONTRIBUTING: path(DEVELOPERS, 'contributing'),
       API_GUIDE: path(DEVELOPERS, 'api-guide'),

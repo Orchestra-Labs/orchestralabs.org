@@ -27,8 +27,8 @@ import {
   Expansion,
   ExplorerMain,
   Explorers,
+  FoundationDelegation,
   Fundraising,
-  GenesisDelegation,
   Home,
   IncentivizedTestnet,
   Inception,
@@ -198,8 +198,8 @@ export const AppRouter: React.FC = (): React.ReactElement | null =>
           element: <Validators />,
         },
         {
-          path: ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION,
-          element: <GenesisDelegation />,
+          path: ROUTES.DOCUMENTATION.DEVELOPERS.FOUNDATION_DELEGATION,
+          element: <FoundationDelegation />,
         },
         {
           path: ROUTES.DOCUMENTATION.DEVELOPERS.CONTRIBUTING,
