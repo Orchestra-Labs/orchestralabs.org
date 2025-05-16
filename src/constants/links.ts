@@ -5,12 +5,12 @@ import { ROUTES } from '@/config/';
 export const MAIN_LAYOUT_LINKS = [
   {
     id: '1',
-    label: 'Airdrop Tracker',
+    label: 'Airdrop',
     href: 'https://airdrop-tracker.orchestralabs.org/',
   },
   {
     id: '2',
-    label: 'Swap dApp',
+    label: 'Swap',
     href: 'https://swap.orchestralabs.org/',
   },
   {
@@ -18,7 +18,7 @@ export const MAIN_LAYOUT_LINKS = [
     label: 'Whitepaper',
     href: ROUTES.WHITEPAPER,
   },
-  { id: '4', label: 'Documentation', href: ROUTES.DOCUMENTATION.ROOT },
+  { id: '4', label: 'Learn', href: ROUTES.DOCUMENTATION.ROOT },
   // {
   //   id: '5',
   //   label: 'Explorer',
@@ -86,16 +86,16 @@ export const FOOTER_LINKS = [
       },
       {
         id: '2',
-        label: 'Developer Documentation',
-        target: '',
-
-        href: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
-      },
-      {
-        id: '3',
         label: 'Knowledge Base',
         target: '',
         href: ROUTES.DOCUMENTATION.ROOT,
+      },
+      {
+        id: '3',
+        label: 'Developer Docs',
+        target: '',
+
+        href: ROUTES.DOCUMENTATION.DEVELOPERS.ROOT,
       },
       {
         id: '4',
