@@ -119,8 +119,9 @@ export const TheSymphonyApproach = () => {
             <p className="mt-5">
               The third of Symphony's safeguards is its reserve fee, taken only
               when the reserve balance falls below a 2:1 backing against assets.
-              This allows Symphony to safeguard its assets in the unlikely case
-              the value of the collateral falls below 50%.
+              This allows Symphony to avoid force-selling users while still
+              safeguarding those users in the unlikely case the value of the
+              collateral falls below 50%.
             </p>
           </div>
 
