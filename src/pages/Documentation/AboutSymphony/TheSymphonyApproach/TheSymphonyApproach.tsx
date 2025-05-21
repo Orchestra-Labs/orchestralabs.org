@@ -4,7 +4,7 @@ import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
 import { ImageModal } from '@/components/ImageModal';
 
-import arbitrageRebalancing from '@/assets/images/schema.png';
+// import arbitrageRebalancing from '@/assets/images/schema.png';
 import supplySideRebalancing from '@/assets/images/schema2.png';
 import elasticReserves from '@/assets/images/schema3.png';
 import testNetDropTest from '@/assets/images/dev-net-drop-test-data.png';
@@ -83,19 +83,9 @@ export const TheSymphonyApproach = () => {
             <p className="mt-5">
               Symphony's price comes from information cleaning and middle-market
               pricing. This avoiding of price discovery prevents falling off
-              peg. In crypto, however, exchanges don't use this, leading to
-              Symphony's first balancer: arbitrage. Symphony's algorithmic
-              nature comes into play with this initial use of reverse-arbitrage
-              rebalancing, acting as a peg in the river so that these exchanges
-              can rebalance against us!
-              <ImageModal
-                imageSrc={arbitrageRebalancing}
-                altText="Arbitrage rebalancing"
-              />
-            </p>
-            <p className="mt-5">
-              This algorithmic side of our system is further utilized with the
-              third of Symphony's safeguards, viewable below.
+              peg. This information cleaning approach is Symphony's first
+              balancer, removing the depeg possibility and allowing us to focus
+              on the supply of collateral alone.
             </p>
             <ImageModal
               imageSrc={supplySideRebalancing}
@@ -132,11 +122,10 @@ export const TheSymphonyApproach = () => {
             <p className="mt-5">
               While either of the previous two safeguards would have prevented
               the UST hyper-inflation crash, further safeguards, such as the
-              delayed transactions and partial transactions, as well as the
-              multi-key reserves, do not yet have infographics, but are also an
-              essential part of ensuring Symphony is able to maintain the
-              reliability of its tokenized assets even down to a 99% loss in
-              value.
+              maximum cap on coins, as well as the multi-key reserves, do not
+              yet have infographics, but are also an essential part of ensuring
+              Symphony is able to maintain the reliability of its tokenized
+              assets even down to a 99% loss in value.
             </p>
           </div>
 
