@@ -11,8 +11,8 @@ import testNetDropTest from '@/assets/images/dev-net-drop-test-data.png';
 
 const HEADINGS = {
   1: {
-    id: 'algorithmic-and-crypto-backed',
-    label: 'Algorithmic and Crypto-Backed',
+    id: 'the-rock-in-the-river',
+    label: 'The Rock in the River',
   },
   2: {
     id: 'the-dual-elasticity-system',
@@ -82,20 +82,20 @@ export const TheSymphonyApproach = () => {
             </h2>
             <p className="mt-5">
               Symphony's price comes from information cleaning and middle-market
-              pricing, but exchanges don't use this, leading to Symphony's first
-              balancer: arbitrage. Symphony's algorithmic nature comes into play
-              with this initial use of reverse-arbitrage rebalancing, acting as
-              a peg in the river so that these exchanges can rebalance against
-              us!
+              pricing. This avoiding of price discovery prevents falling off
+              peg. In crypto, however, exchanges don't use this, leading to
+              Symphony's first balancer: arbitrage. Symphony's algorithmic
+              nature comes into play with this initial use of reverse-arbitrage
+              rebalancing, acting as a peg in the river so that these exchanges
+              can rebalance against us!
               <ImageModal
                 imageSrc={arbitrageRebalancing}
                 altText="Arbitrage rebalancing"
               />
             </p>
             <p className="mt-5">
-              This algorithmic nature is further utilized with the first of
-              Symphony's safeguards, the override of peg once arbitrage falls
-              off by the allowable margin.
+              This algorithmic side of our system is further utilized with the
+              third of Symphony's safeguards, viewable below.
             </p>
             <ImageModal
               imageSrc={supplySideRebalancing}
@@ -121,7 +121,7 @@ export const TheSymphonyApproach = () => {
               when the reserve balance falls below a 2:1 backing against assets.
               This allows Symphony to safeguard its assets in the unlikely case
               the value of the collateral falls below 50%.
-            </p>{' '}
+            </p>
           </div>
 
           <div id={HEADINGS[3].id} className="mt-15">
