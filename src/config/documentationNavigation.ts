@@ -174,9 +174,9 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
       },
       {
         id: '3',
-        label: 'Genesis Delegation',
-        description: 'Genesis Delegation program information',
-        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION}`,
+        label: 'Foundation Delegation',
+        description: 'Foundation Delegation program information',
+        href: `${ROUTES.DOCUMENTATION.DEVELOPERS.FOUNDATION_DELEGATION}`,
       },
       {
         id: '4',

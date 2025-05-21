@@ -58,10 +58,10 @@ export const Validators = () => (
           Validators
         </h1>
         <p className="mt-10">
-          For interested validators, you can find information on our genesis
+          For interested validators, you can find information on our foundation
           delegation criteria{' '}
           <Link
-            to={ROUTES.DOCUMENTATION.DEVELOPERS.GENESIS_DELEGATION}
+            to={ROUTES.DOCUMENTATION.DEVELOPERS.FOUNDATION_DELEGATION}
             className="text-blue hover:text-blue-darker underline"
           >
             here
