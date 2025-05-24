@@ -57,6 +57,11 @@ export const IncentivizedTestnet = () => (
           The Incentivized Testnet
         </h1>
         <p className="mt-10">
+          While the phase 1 airdrop (incentivized testnet) has concluded, you
+          can still see the details of it below:
+        </p>
+
+        <p className="mt-10">
           Symphony's incentivized testnet offers a unique opportunity to test
           out and experience our top-tier stablecoin balancing system prior to
           its mainnet launch. This guide will walk you through the process of

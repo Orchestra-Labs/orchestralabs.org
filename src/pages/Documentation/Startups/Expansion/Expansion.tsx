@@ -200,11 +200,11 @@ export const Expansion = () => (
           <p className="mt-5">
             <strong>Tip:</strong> Sites like{' '}
             <Link
-              to="https://zealy.io/"
+              to="https://centrifuge.digital/symphony"
               target="_blank"
               className="text-blue hover:text-blue-darker underline"
             >
-              Zealy
+              Centrifuge
             </Link>{' '}
             can be used to keep track of an ongoing testnet so users can be
             rewarded even if you restart from genesis!
