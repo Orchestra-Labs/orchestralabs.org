@@ -80,6 +80,10 @@ const HEADINGS = {
     id: 'expedition',
     label: 'Expedition',
   },
+  3.18: {
+    id: 'red-planet',
+    label: 'Red Planet',
+  },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -210,6 +214,13 @@ const NAVIGATION_ITEMS: NavItem[] = [
         description:
           'stars16srrs6zyl60n2avmp5hlkrc4k37q8spyzjtza7fhtpjchdjumxpq0rrnqm',
       },
+      {
+        id: HEADINGS[3.18].id,
+        label: HEADINGS[3.18].label,
+        href: `#${HEADINGS[3.18].id}`,
+        description:
+          'stars1vk8fmh259xr4yz9qqh4x3xfrck80nvl9fu6d9gcaqjksx94xc6nqxzea0t',
+      },
     ],
   },
 ];
@@ -324,6 +335,12 @@ const QUALIFYING_NFTS: NavItem[] = [
     label: HEADINGS[3.17].label,
     target: '_blank',
     href: `https://www.stargaze.zone/m/stars16srrs6zyl60n2avmp5hlkrc4k37q8spyzjtza7fhtpjchdjumxpq0rrnqm/tokens`,
+  },
+  {
+    id: HEADINGS[3.17].id,
+    label: HEADINGS[3.17].label,
+    target: '_blank',
+    href: `https://www.stargaze.zone/m/stars1vk8fmh259xr4yz9qqh4x3xfrck80nvl9fu6d9gcaqjksx94xc6nqxzea0t/tokens`,
   },
 ];
 
