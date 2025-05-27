@@ -82,7 +82,7 @@ const HEADINGS = {
   },
   3.18: {
     id: 'red-planet',
-    label: 'Red Planet',
+    label: 'Red Planet NFT',
   },
 };
 
