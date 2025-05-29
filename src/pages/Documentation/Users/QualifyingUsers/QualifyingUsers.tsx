@@ -337,12 +337,6 @@ const QUALIFYING_NFTS: NavItem[] = [
     href: `https://www.stargaze.zone/m/stars16srrs6zyl60n2avmp5hlkrc4k37q8spyzjtza7fhtpjchdjumxpq0rrnqm/tokens`,
   },
   {
-    id: HEADINGS[3.17].id,
-    label: HEADINGS[3.17].label,
-    target: '_blank',
-    href: `https://www.stargaze.zone/m/stars1vk8fmh259xr4yz9qqh4x3xfrck80nvl9fu6d9gcaqjksx94xc6nqxzea0t/tokens`,
-  },
-  {
     id: HEADINGS[3.18].id,
     label: HEADINGS[3.18].label,
     target: '_blank',
