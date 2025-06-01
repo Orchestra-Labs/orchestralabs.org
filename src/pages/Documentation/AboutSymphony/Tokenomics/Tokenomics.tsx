@@ -1,5 +1,6 @@
-import { PageNavigator, SectionNavigator } from '@/components';
-import { Link } from 'react-router-dom';
+import { ImageModal, PageNavigator, SectionNavigator } from '@/components';
+
+import tokenomics from '@/assets/images/symphony-tokenomics.png';
 
 export const Tokenomics = () => (
   <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
@@ -10,23 +11,12 @@ export const Tokenomics = () => (
           Tokenomics
         </h1>
         <p className="mt-10">
-          Symphony's tokenomics is planned out to grant a greater share to the
+          Symphony's tokenomics are planned out to grant a greater share to the
           userbase while allowing portions to be kept back for fundraising or
-          ecosystem incentives as needed. To view this roadmap, check out the
-          link below!
+          ecosystem incentives as needed. While this variant is only showing
+          tokenomics at the chain level, check it out below!
         </p>
-        <p className="mt-5">
-          {'See tokenomics on '}
-          <Link
-            to={
-              'https://docs.google.com/spreadsheets/d/1NVGXcyUoRvqwty3p-gtIdJMQCDbkGuOp3D0beyMn3Ig/edit?usp=sharing'
-            }
-            target="_blank"
-            className="text-blue hover:text-blue-darker underline mr-1"
-          >
-            Google Sheets
-          </Link>
-        </p>
+        <ImageModal imageSrc={tokenomics} altText="Symphony Tokenomics" />
       </div>
       <SectionNavigator navigationItems={[]} />
     </div>
