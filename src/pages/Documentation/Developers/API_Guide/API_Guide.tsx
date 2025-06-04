@@ -9,7 +9,8 @@ const HEADINGS = {
   4: { id: 'mint', label: 'Mint Module' },
   5: { id: 'oracle', label: 'Oracle Module' },
   6: { id: 'treasury', label: 'Treasury Module' },
-  7: { id: 'examples', label: 'Example Code' },
+  7: { id: 'stablestaking', label: 'Stablestaking Module' },
+  8: { id: 'examples', label: 'Example Code' },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -20,6 +21,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
   { id: '5', label: HEADINGS[5].label, href: `#${HEADINGS[5].id}` },
   { id: '6', label: HEADINGS[6].label, href: `#${HEADINGS[6].id}` },
   { id: '7', label: HEADINGS[7].label, href: `#${HEADINGS[7].id}` },
+  { id: '8', label: HEADINGS[8].label, href: `#${HEADINGS[8].id}` },
 ];
 
 const EXAMPLE_LINKS = [
@@ -66,11 +68,9 @@ export const API_Guide = () => (
             className="text-blue hover:text-blue-darker"
           >
             Cosmos documentation
-          </Link>{' '}
+          </Link>
           . The following endpoints are built to handle Symphony's more unique
-          blockchain operations. The most important endpoints for user
-          interaction are the simulation and send endpoints for swaps, allowing
-          users to preview and execute token exchanges efficiently.
+          blockchain operations.
         </p>
 
         {/* SymphonyJS Section */}
@@ -436,10 +436,81 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
           </p>
         </div>
 
-        {/* Example Section */}
+        {/* Stablestaking Module */}
         <div id={HEADINGS[7].id} className="mt-15">
           <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
             {HEADINGS[7].label}
+          </h2>
+
+          <h3 className="mt-5 text-white font-semibold">Stake Tokens</h3>
+          <p className="mt-5">
+            <strong>POST /symphony/stablestaking/v1beta1/stake_tokens</strong> –
+            Stakes a specified amount of tokens.
+          </p>
+          <p className="mt-2">
+            - <strong>Payload:</strong>
+          </p>
+          <CodeBlock
+            code={`{
+  "staker": "symphony1exampleaddress",
+  "amount": {
+    "denom": "note",
+    "amount": "1000"
+  }
+}`}
+          />
+          <p className="mt-2">
+            - <strong>Response:</strong>
+          </p>
+          <CodeBlock
+            code={`{
+  "staker": "symphony1exampleaddress",
+  "amount": {
+    "denom": "note",
+    "amount": "1000"
+  },
+  "total_staked": "1000000",
+  "total_shares": "999000"
+}`}
+          />
+
+          <h3 className="mt-10 text-white font-semibold">Unstake Tokens</h3>
+          <p className="mt-5">
+            <strong>POST /symphony/stablestaking/v1beta1/unstake_tokens</strong>{' '}
+            – Initiates unstaking of a previously staked token amount.
+          </p>
+          <p className="mt-2">
+            - <strong>Payload:</strong>
+          </p>
+          <CodeBlock
+            code={`{
+  "staker": "symphony1exampleaddress",
+  "amount": {
+    "denom": "note",
+    "amount": "1000"
+  }
+}`}
+          />
+          <p className="mt-2">
+            - <strong>Response:</strong>
+          </p>
+          <CodeBlock
+            code={`{
+  "staker": "symphony1exampleaddress",
+  "amount": {
+    "denom": "note",
+    "amount": "1000"
+  },
+  "total_staked": "900000",
+  "total_shares": "899000"
+}`}
+          />
+        </div>
+
+        {/* Example Section */}
+        <div id={HEADINGS[8].id} className="mt-15">
+          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+            {HEADINGS[8].label}
           </h2>
           <p className="mt-10">
             The following are link examples for utilization of the above
