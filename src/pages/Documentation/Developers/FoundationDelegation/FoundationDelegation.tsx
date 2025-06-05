@@ -77,7 +77,7 @@ export const FoundationDelegation = () => (
           This program aims to incentivize high performing validators through
           the delegation of protocol-owned MLD to validators against carefully
           curated selection guidelines. The foundation delegation program is
-          expected to start at a 10M MLD delegation and will remain constant
+          expected to start at a 1M MLD delegation and will remain constant
           throughout the initial 4-month period except for exceptional
           circumstances.
         </p>
