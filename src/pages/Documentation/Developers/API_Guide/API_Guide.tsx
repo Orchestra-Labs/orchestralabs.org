@@ -451,6 +451,62 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
             {HEADINGS[7].label}
           </h2>
 
+          <h3 className="mt-10 text-white font-semibold">Query Endpoints</h3>
+
+          <p className="mt-5">
+            <strong>GET /symphony/stablestaking/v1beta1/user_unbonding</strong>{' '}
+            – Gets the unbonding entry for a given address and denom.
+          </p>
+          <p className="mt-2">
+            - <strong>Query:</strong> <code>address</code>, <code>denom</code>
+          </p>
+
+          <p className="mt-5">
+            <strong>
+              GET /symphony/stablestaking/v1beta1/user_total_unbonding
+            </strong>{' '}
+            – Gets all unbonding entries for a user.
+          </p>
+          <p className="mt-2">
+            - <strong>Query:</strong> <code>address</code>
+          </p>
+
+          <p className="mt-5">
+            <strong>
+              GET /symphony/stablestaking/v1beta1/user_total_stake
+            </strong>{' '}
+            – Gets the total stake across all denoms for a user.
+          </p>
+          <p className="mt-2">
+            - <strong>Query:</strong> <code>address</code>
+          </p>
+
+          <p className="mt-5">
+            <strong>GET /symphony/stablestaking/v1beta1/user_stake</strong> –
+            Gets stake info for a specific token.
+          </p>
+          <p className="mt-2">
+            - <strong>Query:</strong> <code>address</code>, <code>token</code>
+          </p>
+
+          <p className="mt-5">
+            <strong>GET /symphony/stablestaking/v1beta1/stable_pools</strong> –
+            Gets a list of all available staking pools.
+          </p>
+
+          <p className="mt-5">
+            <strong>GET /symphony/stablestaking/v1beta1/stable_pool</strong> –
+            Gets staking pool details for a specific denom.
+          </p>
+          <p className="mt-2">
+            - <strong>Query:</strong> <code>denom</code>
+          </p>
+
+          <p className="mt-5">
+            <strong>GET /symphony/stablestaking/v1beta1/params</strong> – Gets
+            the stable staking module parameters.
+          </p>
+
           <h3 className="mt-5 text-white font-semibold">Stake Tokens</h3>
           <p className="mt-5">
             <strong>POST /symphony/stablestaking/v1beta1/stake_tokens</strong> –
