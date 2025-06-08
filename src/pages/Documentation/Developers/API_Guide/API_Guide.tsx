@@ -71,13 +71,13 @@ export const API_Guide = () => (
           </Link>
           . The following endpoints are built to handle Symphony's more unique
           blockchain operations. For a live list of available endpoints from a
-          running Symphony node, you can view the Swagger API reference{' '}
+          running Symphony node, you can view the{' '}
           <Link
             to="http://34.67.182.102:1317/swagger/"
             target="_blank"
             className="text-blue hover:text-blue-darker"
           >
-            here
+            Swagger API reference here
           </Link>
           .
         </p>
