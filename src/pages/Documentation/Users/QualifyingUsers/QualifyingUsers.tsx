@@ -1,9 +1,12 @@
-import { PageNavigator, SectionNavigator } from '@/components';
+import { DocumentationLayout } from '@/components';
 import { NavItem } from '@/types';
-
 import { Link } from 'react-router-dom';
 
 const HEADINGS = {
+  0: {
+    id: 'qualifying-for-airdrops',
+    label: 'Qualifying For Airdrops',
+  },
   1: {
     id: 'staking',
     label: 'Staking',
@@ -16,87 +19,29 @@ const HEADINGS = {
     id: 'nfts',
     label: 'NFTs',
   },
-  3.1: {
-    id: 'soundwave',
-    label: 'Soundwave',
-  },
-  3.2: {
-    id: 'geckies',
-    label: 'Geckies',
-  },
-  3.3: {
-    id: 'archies',
-    label: 'Archies',
-  },
-  3.4: {
-    id: 'snails',
-    label: 'SNAILS',
-  },
-  3.5: {
-    id: 'defi-geeks',
-    label: 'Defi Geeks',
-  },
-  3.6: {
-    id: 'defi-geeks-members',
-    label: 'Defi Geeks Members',
-  },
-  3.7: {
-    id: 'metahuahua',
-    label: 'MetaHuahuas',
-  },
-  3.8: {
-    id: 'creepy-companions',
-    label: 'Creepy Companions',
-  },
-  3.9: {
-    id: 'necropolis',
-    label: 'Necropolis',
-  },
-  3.11: {
-    id: 'pixel-wizards',
-    label: 'Pixel Wizards',
-  },
-  3.12: {
-    id: 'pixel-witches',
-    label: 'Pixel Witches',
-  },
-  3.13: {
-    id: 'cewts',
-    label: 'CEWTs',
-  },
-  3.14: {
-    id: 'bad-kids',
-    label: 'Bad Kids',
-  },
-  3.15: {
-    id: 'celestine-sloths',
-    label: 'Celestine Sloths',
-  },
-  3.16: {
-    id: 'mad-scientists',
-    label: 'Mad Scientists',
-  },
-  3.17: {
-    id: 'expedition',
-    label: 'Expedition',
-  },
-  3.18: {
-    id: 'red-planet',
-    label: 'Red Planet NFT',
-  },
+  3.1: { id: 'soundwave', label: 'Soundwave' },
+  3.2: { id: 'geckies', label: 'Geckies' },
+  3.3: { id: 'archies', label: 'Archies' },
+  3.4: { id: 'snails', label: 'SNAILS' },
+  3.5: { id: 'defi-geeks', label: 'Defi Geeks' },
+  3.6: { id: 'defi-geeks-members', label: 'Defi Geeks Members' },
+  3.7: { id: 'metahuahua', label: 'MetaHuahuas' },
+  3.8: { id: 'creepy-companions', label: 'Creepy Companions' },
+  3.9: { id: 'necropolis', label: 'Necropolis' },
+  3.11: { id: 'pixel-wizards', label: 'Pixel Wizards' },
+  3.12: { id: 'pixel-witches', label: 'Pixel Witches' },
+  3.13: { id: 'cewts', label: 'CEWTs' },
+  3.14: { id: 'bad-kids', label: 'Bad Kids' },
+  3.15: { id: 'celestine-sloths', label: 'Celestine Sloths' },
+  3.16: { id: 'mad-scientists', label: 'Mad Scientists' },
+  3.17: { id: 'expedition', label: 'Expedition' },
+  3.18: { id: 'red-planet', label: 'Red Planet NFT' },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
-  {
-    id: '1',
-    label: HEADINGS[1].label,
-    href: `#${HEADINGS[1].id}`,
-  },
-  {
-    id: '2',
-    label: HEADINGS[2].label,
-    href: `#${HEADINGS[2].id}`,
-  },
+  { id: '0', label: HEADINGS[0].label, href: `#${HEADINGS[0].id}` },
+  { id: '1', label: HEADINGS[1].label, href: `#${HEADINGS[1].id}` },
+  { id: '2', label: HEADINGS[2].label, href: `#${HEADINGS[2].id}` },
   {
     id: '3',
     label: HEADINGS[3].label,
@@ -345,75 +290,65 @@ const QUALIFYING_NFTS: NavItem[] = [
 ];
 
 export const QualifyingUsers = () => (
-  <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
-    <PageNavigator />
-    <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
-      <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
-        <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Qualifying For Airdrops
-        </h1>
-        <p className="mt-5">
-          Orchestra Labs has allocated 10% of the genesis supply of Melody
-          (MLD), as airdrops for the incentivized testnet and the following
-          airdrop. To qualify for these airdropped rewards, meet one of the
-          criteria below when the snapshot is taken:
-        </p>
+  <DocumentationLayout navigationItems={NAVIGATION_ITEMS} heading={HEADINGS[0]}>
+    <p className="mt-5">
+      Orchestra Labs has allocated 10% of the genesis supply of Melody (MLD), as
+      airdrops for the incentivized testnet and the following airdrop. To
+      qualify for these airdropped rewards, meet one of the criteria below when
+      the snapshot is taken:
+    </p>
 
-        <div id={HEADINGS[1].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[1].label}
-          </h2>
-          <p className="mt-5">
-            Stakers of {'>100'} USD of select Cosmos ecosystem coins:
-          </p>
-          <ul className="mt-5">
-            {QUALIFYING_COINS.map(item => (
-              <li key={String(item)} className="mb-4">
-                <p className="ml-5">- {item}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div id={HEADINGS[2].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[2].label}
-          </h2>
-          <p className="mt-5">
-            Participants in the Symphony pre-sale rounds. Look out for
-            announcements of these on our social media sites!
-          </p>
-        </div>
-
-        <div id={HEADINGS[3].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
-          </h2>
-          <p className="mt-5">Holders of select Cosmos ecosystem NFTs:</p>
-          <ul className="mt-5">
-            {QUALIFYING_NFTS.map(item => (
-              <li key={String(item.label)} id={item.id} className="mb-4">
-                <p className="ml-5">
-                  -{' '}
-                  <Link
-                    to={item.href}
-                    target={item.target}
-                    className="text-blue hover:text-blue-darker underline mr-1"
-                  >
-                    {item.label}
-                  </Link>
-                </p>{' '}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-5">
-            <strong>Note:</strong> Soundwave NFTs are not sold, but rather
-            earned through community building efforts as are announced
-            regularly.
-          </p>
-        </div>
-      </div>
+    <div id={HEADINGS[1].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[1].label}
+      </h2>
+      <p className="mt-5">
+        Stakers of {'>100'} USD of select Cosmos ecosystem coins:
+      </p>
+      <ul className="mt-5">
+        {QUALIFYING_COINS.map(item => (
+          <li key={item} className="mb-4">
+            <p className="ml-5">- {item}</p>
+          </li>
+        ))}
+      </ul>
     </div>
-    <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
-  </div>
+
+    <div id={HEADINGS[2].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[2].label}
+      </h2>
+      <p className="mt-5">
+        Participants in the Symphony pre-sale rounds. Look out for announcements
+        of these on our social media sites!
+      </p>
+    </div>
+
+    <div id={HEADINGS[3].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[3].label}
+      </h2>
+      <p className="mt-5">Holders of select Cosmos ecosystem NFTs:</p>
+      <ul className="mt-5">
+        {QUALIFYING_NFTS.map(item => (
+          <li key={item.label} id={item.id} className="mb-4">
+            <p className="ml-5">
+              -{' '}
+              <Link
+                to={item.href}
+                target={item.target}
+                className="text-blue hover:text-blue-darker underline mr-1"
+              >
+                {item.label}
+              </Link>
+            </p>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-5">
+        <strong>Note:</strong> Soundwave NFTs are not sold, but rather earned
+        through community building efforts as are announced regularly.
+      </p>
+    </div>
+  </DocumentationLayout>
 );

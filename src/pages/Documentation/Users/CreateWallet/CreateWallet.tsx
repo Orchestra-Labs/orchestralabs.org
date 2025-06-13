@@ -1,4 +1,4 @@
-import { ListLinks, PageNavigator, SectionNavigator } from '@/components';
+import { ListLinks, DocumentationLayout } from '@/components';
 import { NavItem } from '@/types';
 import { ImageModal } from '@/components/ImageModal';
 
@@ -12,6 +12,10 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '@/config/';
 
 const HEADINGS = {
+  0: {
+    id: 'create-a-wallet',
+    label: 'Create A Wallet',
+  },
   1: {
     id: 'general-setup',
     label: 'General Wallet Setup',
@@ -22,6 +26,7 @@ const HEADINGS = {
   },
 };
 
+// TODO: update this list and remove keplr guide
 const CONNECTED_WALLETS: NavItem[] = [
   {
     id: 'keplr-wallet',
@@ -40,6 +45,7 @@ const CONNECTED_WALLETS: NavItem[] = [
 ];
 
 const NAVIGATION_ITEMS: NavItem[] = [
+  { id: '0', label: HEADINGS[0].label, href: `#${HEADINGS[0].id}` },
   {
     id: '1',
     label: HEADINGS[1].label,
@@ -65,95 +71,84 @@ const NAVIGATION_ITEMS: NavItem[] = [
 ];
 
 export const CreateWallet = () => (
-  <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
-    <PageNavigator />
-    <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
-      <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
-        <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Create A Wallet
-        </h1>
-        <p className="mt-10">
-          The first step with any chain is to set up a wallet. A walkthrough for
-          this is below. All wallets will operate in a similar manner whether as
-          a web extension or mobile application. Given Symphony was first
-          connected to Keplr, the screenshots in the instructions will match
-          their systems. Links to the various connected wallets can be found
-          below the walkthrough in the "Connected Wallets" section.
-        </p>
-        <div id={HEADINGS[1].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[1].label}
-          </h2>
-          <p className="mt-5">
-            While the links to all connected wallets and chain searches can be
-            found below, due to Symphony's more difficult non-native
-            installation on Keplr, the Keplr Wallet link and instructions are
-            also included here:
-          </p>
-          <p>
-            {'- '}
-            <Link
-              to="https://www.keplr.app/download"
-              target="_blank"
-              className="text-blue hover:text-blue-darker underline mr-1"
-            >
-              Keplr Wallet
-            </Link>
-          </p>
-          <p className="mt-5">
-            If you are setting up Keplr for the first time: In the initial
-            pop-up window, choose the install button corresponding to your
-            browser or mobile system.
-          </p>
-          <ImageModal imageSrc={keplrDownload} altText="Keplr download" />
-          <p className="mt-5">Install the wallet.</p>
-          <ImageModal
-            imageSrc={playStoreInstallation}
-            altText="Play store installation"
-          />
-          <p className="mt-5">
-            Open the application and select to create a wallet.
-          </p>
-          <ImageModal imageSrc={createNewWallet} altText="Create new wallet" />
-          <p className="mt-5">
-            Keplr has options to create a wallet via a recovery phrase or via a
-            social ID registration. Using a recovery phrase is recommended for
-            security. Newer users may opt for connecting via social ID.
-          </p>
-          <ImageModal
-            imageSrc={createWalletOptions}
-            altText="Create wallet options"
-          />
-          <p className="mt-5">
-            Keplr wallets require a name for wallet management, and a password
-            to keep the wallet secure. Enter these values and proceed to the
-            next step.
-          </p>
-          <ImageModal imageSrc={addPassword} altText="Add password" />
-          <p className="mt-5">
-            Initially, Symphony will not show in the search, as it is a
-            non-native chain to Keplr. To add Symphony to this wallet, follow
-            the documentation on how included here:
-          </p>
-          <p>
-            {'- '}
-            <Link
-              to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
-              className="text-blue hover:text-blue-darker underline mr-1"
-            >
-              Add Symphony To A Wallet
-            </Link>
-          </p>
-          <ImageModal imageSrc={initialWalletSearch} altText="Info row" />
-        </div>
-        <div id={HEADINGS[2].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[2].label}
-          </h2>
-          <ListLinks listLinks={CONNECTED_WALLETS} />
-        </div>
-      </div>
-      <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
+  <DocumentationLayout navigationItems={NAVIGATION_ITEMS} heading={HEADINGS[0]}>
+    <p className="mt-10">
+      The first step with any chain is to set up a wallet. A walkthrough for
+      this is below. All wallets will operate in a similar manner whether as a
+      web extension or mobile application. Given Symphony was first connected to
+      Keplr, the screenshots in the instructions will match their systems. Links
+      to the various connected wallets can be found below the walkthrough in the
+      "Connected Wallets" section.
+    </p>
+    <div id={HEADINGS[1].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[1].label}
+      </h2>
+      <p className="mt-5">
+        While the links to all connected wallets and chain searches can be found
+        below, due to Symphony's more difficult non-native installation on
+        Keplr, the Keplr Wallet link and instructions are also included here:
+      </p>
+      <p>
+        {'- '}
+        <Link
+          to="https://www.keplr.app/download"
+          target="_blank"
+          className="text-blue hover:text-blue-darker underline mr-1"
+        >
+          Keplr Wallet
+        </Link>
+      </p>
+      <p className="mt-5">
+        If you are setting up Keplr for the first time: In the initial pop-up
+        window, choose the install button corresponding to your browser or
+        mobile system.
+      </p>
+      <ImageModal imageSrc={keplrDownload} altText="Keplr download" />
+      <p className="mt-5">Install the wallet.</p>
+      <ImageModal
+        imageSrc={playStoreInstallation}
+        altText="Play store installation"
+      />
+      <p className="mt-5">
+        Open the application and select to create a wallet.
+      </p>
+      <ImageModal imageSrc={createNewWallet} altText="Create new wallet" />
+      <p className="mt-5">
+        Keplr has options to create a wallet via a recovery phrase or via a
+        social ID registration. Using a recovery phrase is recommended for
+        security. Newer users may opt for connecting via social ID.
+      </p>
+      <ImageModal
+        imageSrc={createWalletOptions}
+        altText="Create wallet options"
+      />
+      <p className="mt-5">
+        Keplr wallets require a name for wallet management, and a password to
+        keep the wallet secure. Enter these values and proceed to the next step.
+      </p>
+      <ImageModal imageSrc={addPassword} altText="Add password" />
+      <p className="mt-5">
+        Initially, Symphony will not show in the search, as it is a non-native
+        chain to Keplr. To add Symphony to this wallet, follow the documentation
+        on how included here:
+      </p>
+      <p>
+        {'- '}
+        <Link
+          to={ROUTES.DOCUMENTATION.USERS.ADD_SYMPHONY_TO_WALLET}
+          className="text-blue hover:text-blue-darker underline mr-1"
+        >
+          Add Symphony To A Wallet
+        </Link>
+      </p>
+      <ImageModal imageSrc={initialWalletSearch} altText="Info row" />
     </div>
-  </div>
+    <div id={HEADINGS[2].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[2].label}
+      </h2>
+      <ListLinks listLinks={CONNECTED_WALLETS} />
+    </div>
+  </DocumentationLayout>
 );

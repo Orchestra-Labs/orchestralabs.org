@@ -1,4 +1,6 @@
+export * from './AutoNav';
 export * from './CodeBlock';
+export * from './DocumentationLayout';
 export * from './Footer';
 export * from './Header';
 export * from './ImageModal';

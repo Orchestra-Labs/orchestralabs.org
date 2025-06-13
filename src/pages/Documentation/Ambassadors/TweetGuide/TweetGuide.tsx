@@ -1,7 +1,11 @@
-import { PageNavigator, SectionNavigator } from '@/components';
+import { DocumentationLayout } from '@/components';
 import { NavItem } from '@/types';
 
 const HEADINGS = {
+  0: {
+    id: 'post-guide',
+    label: 'Post Guide',
+  },
   1: {
     id: 'how-to',
     label: 'How To',
@@ -9,19 +13,20 @@ const HEADINGS = {
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
+  { id: '0', label: HEADINGS[0].label, href: `#${HEADINGS[0].id}` },
   { id: '1', label: HEADINGS[1].label, href: `#${HEADINGS[1].id}` },
 ];
 
-const TWEET_GUIDE = [
+const POST_GUIDE = [
   {
     title: 'Write meaningful content',
     content:
-      'Quantity isn’t quality. The focus should be on the quality of your tweets. Try to post meaningful and relevant content that adds value to your audience.',
+      'Quantity isn’t quality. The focus should be on the quality of your posts. Try to post meaningful and relevant content that adds value to your audience.',
   },
   {
     title: 'Go deep',
     content:
-      'Writing in-depth tweets or threads can enhance your understanding of Symphony, and it also allows readers to learn more about Symphony through your content.',
+      'Writing in-depth posts or threads can enhance your understanding of Symphony, and it also allows readers to learn more about Symphony through your content.',
   },
   {
     title: 'Proofread your tweet',
@@ -31,7 +36,7 @@ const TWEET_GUIDE = [
   {
     title: 'Formatting your tweet',
     content:
-      'Ensure your tweets are well-formatted. Don’t make it just a large piece of text without breaking it up. Add spaces where needed, and use emojis wisely (1-2 per tweet).',
+      'Ensure your posts are well-formatted. Don’t make it just a large piece of text without breaking it up. Add spaces where needed, and use emojis wisely (1-2 per tweet).',
   },
   {
     title: 'Pay attention to tags/mentions',
@@ -51,32 +56,21 @@ const TWEET_GUIDE = [
 ];
 
 export const TweetGuide = () => (
-  <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
-    <PageNavigator />
-    <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
-      <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
-        <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Tweet Guide
-        </h1>
-        <p className="mt-10">
-          Below is a guide to creating tweets for aspiring Symphony ambassadors:
-        </p>
+  <DocumentationLayout navigationItems={NAVIGATION_ITEMS} heading={HEADINGS[0]}>
+    <p className="mt-10">
+      Below is a guide to creating posts for aspiring Symphony ambassadors:
+    </p>
 
-        <div id={HEADINGS[1].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[1].label}
-          </h2>
-          {TWEET_GUIDE.map((section, index) => (
-            <div key={index} className="mt-5">
-              <h3 className="text-h5 font-semibold text-blue">
-                {section.title}
-              </h3>
-              <p className="mt-2">{section.content}</p>
-            </div>
-          ))}
+    <div id={HEADINGS[1].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[1].label}
+      </h2>
+      {POST_GUIDE.map((section, index) => (
+        <div key={index} className="mt-5">
+          <h3 className="text-h5 font-semibold text-blue">{section.title}</h3>
+          <p className="mt-2">{section.content}</p>
         </div>
-      </div>
-      <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
+      ))}
     </div>
-  </div>
+  </DocumentationLayout>
 );

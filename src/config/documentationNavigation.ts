@@ -62,11 +62,13 @@ export const DOCUMENTATION_NAVIGATION: Record<string, NavItem> = {
     href: `${ROUTES.DOCUMENTATION.USERS.ROOT}`,
     subList: [
       {
+        // TODO: route to page and update create wallet page
         id: '1',
         label: 'Create A Wallet',
         description: 'Create a wallet to interact with Symphony',
         href: `https://chromewebstore.google.com/detail/aria-wallet/cgghllcclkhfpkjhgomhehlebgphifbm`,
       },
+      // TODO: update this page too
       {
         id: '2',
         label: 'Add Symphony To A Wallet',

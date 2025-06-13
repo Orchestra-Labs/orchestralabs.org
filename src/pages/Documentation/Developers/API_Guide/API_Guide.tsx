@@ -1,8 +1,12 @@
-import { CodeBlock, PageNavigator, SectionNavigator } from '@/components';
+import { CodeBlock, DocumentationLayout } from '@/components';
 import { NavItem } from '@/types';
 import { Link } from 'react-router-dom';
 
 const HEADINGS = {
+  0: {
+    id: 'symphony-api-guide',
+    label: 'Symphony API Guide',
+  },
   1: { id: 'symphonyjs', label: 'Using SymphonyJS' },
   2: { id: 'epochs', label: 'Epochs Module' },
   3: { id: 'market', label: 'Market Module' },
@@ -14,6 +18,7 @@ const HEADINGS = {
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
+  { id: '0', label: HEADINGS[0].label, href: `#${HEADINGS[0].id}` },
   { id: '1', label: HEADINGS[1].label, href: `#${HEADINGS[1].id}` },
   { id: '2', label: HEADINGS[2].label, href: `#${HEADINGS[2].id}` },
   { id: '3', label: HEADINGS[3].label, href: `#${HEADINGS[3].id}` },
@@ -52,59 +57,51 @@ const EXAMPLE_LINKS = [
 ];
 
 export const API_Guide = () => (
-  <div className="mt-[84px] lg:mt-[104px] mb-0 bg-background-dark-grey flex flex-col md:flex-row">
-    <PageNavigator />
-    <div className="page-container my-0 flex flex-col-reverse md:flex-row pt-[26px] gap-5 lg:gap-10 xl:gap-15 pl-25px md:pl-12 xl:pl-17">
-      <div className="my-0 pt-6 pt-8 lg:pt-11 pb-9 md:pb-14 xl:pb-19 text-body-md text-grey">
-        <h1 className="text-white font-semibold text-h2 md:text-h1 xl:text-display2">
-          Symphony API Guide
-        </h1>
-        <p className="mt-10">
-          Symphony follows the Cosmos standard, and as such most endpoints will
-          align to{' '}
-          <Link
-            target="_blank"
-            to="https://docs.cosmos.network/api"
-            className="text-blue hover:text-blue-darker"
-          >
-            Cosmos documentation
-          </Link>
-          . The following endpoints are built to handle Symphony's more unique
-          blockchain operations. For a live list of available endpoints from a
-          running Symphony node, you can view the{' '}
-          <Link
-            to="http://34.67.182.102:1317/swagger/"
-            target="_blank"
-            className="text-blue hover:text-blue-darker"
-          >
-            Swagger API reference here
-          </Link>
-          .
-        </p>
+  <DocumentationLayout navigationItems={NAVIGATION_ITEMS} heading={HEADINGS[0]}>
+    <p className="mt-10">
+      Symphony follows the Cosmos standard, and as such most endpoints will
+      align to{' '}
+      <Link
+        target="_blank"
+        to="https://docs.cosmos.network/api"
+        className="text-blue hover:text-blue-darker"
+      >
+        Cosmos documentation
+      </Link>
+      . The following endpoints are built to handle Symphony's more unique
+      blockchain operations. For a live list of available endpoints from a
+      running Symphony node, you can view the{' '}
+      <Link
+        to="http://34.67.182.102:1317/swagger/"
+        target="_blank"
+        className="text-blue hover:text-blue-darker"
+      >
+        Swagger API reference here
+      </Link>
+      .
+    </p>
 
-        {/* SymphonyJS Section */}
-        <div id={HEADINGS[1].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[1].label}
-          </h2>
-          <h3 className="mt-5 text-white font-semibold">
-            Installing SymphonyJS
-          </h3>
-          <p className="mt-5">
-            Ensure you have installed <code>@orchestra-labs/symphonyjs</code> in
-            your project:
-          </p>
-          <CodeBlock code={`npm install @orchestra-labs/symphonyjs@^1.0.29`} />
+    {/* SymphonyJS Section */}
+    <div id={HEADINGS[1].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[1].label}
+      </h2>
+      <h3 className="mt-5 text-white font-semibold">Installing SymphonyJS</h3>
+      <p className="mt-5">
+        Ensure you have installed <code>@orchestra-labs/symphonyjs</code> in
+        your project:
+      </p>
+      <CodeBlock code={`npm install @orchestra-labs/symphonyjs@^1.0.29`} />
 
-          <h3 className="mt-5 text-white font-semibold">
-            Initializing a Symphony Client
-          </h3>
-          <p>
-            Before making transactions, you must initialize a SymphonyJS signing
-            client.
-          </p>
-          <CodeBlock
-            code={`import { getSigningSymphonyClient } from '@orchestra-labs/symphonyjs';
+      <h3 className="mt-5 text-white font-semibold">
+        Initializing a Symphony Client
+      </h3>
+      <p>
+        Before making transactions, you must initialize a SymphonyJS signing
+        client.
+      </p>
+      <CodeBlock
+        code={`import { getSigningSymphonyClient } from '@orchestra-labs/symphonyjs';
 import { DirectSecp256k1HdWallet } from '@cosmjs/proto-signing';
 
 async function getClient(mnemonic, rpcEndpoint) {
@@ -114,16 +111,12 @@ async function getClient(mnemonic, rpcEndpoint) {
     signer: offlineSigner
   });
 }`}
-          />
+      />
 
-          <h3 className="mt-5 text-white font-semibold">
-            Performing RPC Queries
-          </h3>
-          <p>
-            Use SymphonyJS to perform RPC queries using your signing client:
-          </p>
-          <CodeBlock
-            code={`import { performRpcQuery } from './queryNodes';
+      <h3 className="mt-5 text-white font-semibold">Performing RPC Queries</h3>
+      <p>Use SymphonyJS to perform RPC queries using your signing client:</p>
+      <CodeBlock
+        code={`import { performRpcQuery } from './queryNodes';
 
 async function queryBlockchain(client, walletAddress, messages, feeDenom, simulateOnly) {
   const result = await performRpcQuery(
@@ -135,17 +128,16 @@ async function queryBlockchain(client, walletAddress, messages, feeDenom, simula
   );
   console.log('Query result:', result);
 }`}
-          />
+      />
 
-          <h3 className="mt-5 text-white font-semibold">
-            Simulating a Swap Transaction
-          </h3>
-          <p>
-            Use SymphonyJS to <strong>simulate</strong> a swap before executing
-            it:
-          </p>
-          <CodeBlock
-            code={`import { symphony } from '@orchestra-labs/symphonyjs';
+      <h3 className="mt-5 text-white font-semibold">
+        Simulating a Swap Transaction
+      </h3>
+      <p>
+        Use SymphonyJS to <strong>simulate</strong> a swap before executing it:
+      </p>
+      <CodeBlock
+        code={`import { symphony } from '@orchestra-labs/symphonyjs';
 
 async function simulateSwap(client, fromAddress, offerCoin, askDenom) {
   const swapMessage = symphony.market.v1beta1.MessageComposer.withTypeUrl.swap({
@@ -157,14 +149,14 @@ async function simulateSwap(client, fromAddress, offerCoin, askDenom) {
   const tx = await client.simulate([swapMessage], {});
   console.log('Estimated Gas:', tx);
 }`}
-          />
+      />
 
-          <h3 className="mt-5 text-white font-semibold">
-            Executing a Swap Transaction
-          </h3>
-          <p>Use SymphonyJS to execute a swap transaction:</p>
-          <CodeBlock
-            code={`import { symphony } from '@orchestra-labs/symphonyjs';
+      <h3 className="mt-5 text-white font-semibold">
+        Executing a Swap Transaction
+      </h3>
+      <p>Use SymphonyJS to execute a swap transaction:</p>
+      <CodeBlock
+        code={`import { symphony } from '@orchestra-labs/symphonyjs';
 
 async function executeSwap(client, fromAddress, recipientAddress, offerCoin, askDenom) {
   const swapMessage = symphony.market.v1beta1.MessageComposer.withTypeUrl.swapSend({
@@ -177,68 +169,67 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
   const tx = await client.signAndBroadcast(fromAddress, [swapMessage], { gas: "200000" });
   console.log('Transaction Hash:', tx);
 }`}
-          />
-        </div>
+      />
+    </div>
 
-        {/* Epochs Module */}
-        <div id={HEADINGS[2].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[2].label}
-          </h2>
-          <p className="mt-5">
-            <strong>GET /symphony/epochs/v1beta1/epochs</strong> - Returns
-            information about running epochs.
-          </p>
-          <p className="mt-5">
-            <strong>GET /symphony/epochs/v1beta1/current_epoch</strong> -
-            Returns the current epoch for a specified identifier.
-          </p>
-          <p className="mt-2">
-            - <strong>Query Parameters:</strong> identifier (string, required).
-          </p>
-        </div>
+    {/* Epochs Module */}
+    <div id={HEADINGS[2].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[2].label}
+      </h2>
+      <p className="mt-5">
+        <strong>GET /symphony/epochs/v1beta1/epochs</strong> - Returns
+        information about running epochs.
+      </p>
+      <p className="mt-5">
+        <strong>GET /symphony/epochs/v1beta1/current_epoch</strong> - Returns
+        the current epoch for a specified identifier.
+      </p>
+      <p className="mt-2">
+        - <strong>Query Parameters:</strong> identifier (string, required).
+      </p>
+    </div>
 
-        {/* Market Module */}
-        <div id={HEADINGS[3].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[3].label}
-          </h2>
+    {/* Market Module */}
+    <div id={HEADINGS[3].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[3].label}
+      </h2>
 
-          <h3 className="mt-5 text-white font-semibold">Simulate Swap</h3>
-          <p className="mt-5">
-            <strong>GET /symphony/market/v1beta1/swap</strong> - Returns
-            simulated swap amount.
-          </p>
-          <p className="mt-2">
-            - <strong>Query Parameters:</strong>
-          </p>
-          <ul>
-            <li>
-              <code>offer_coin</code> (string, required): The coin being offered
-              (format: "amount" + "denom", e.g. "1000note").
-            </li>
-            <li>
-              <code>ask_denom</code> (string, required): The denomination to
-              swap to.
-            </li>
-          </ul>
-          <p className="mt-5">
-            <strong>GET /symphony/market/v1beta1/params</strong> - Returns
-            market module parameters.
-          </p>
-          <p className="mt-5">
-            <strong>GET /symphony/market/v1beta1/exchange_requirements</strong>{' '}
-            - Returns exchange requirements information.
-          </p>
-          <p className="mt-5">
-            <strong>POST /cosmos.tx.v1beta1/txs</strong> - Sends a swap
-            transaction.
-          </p>
-          <p className="mt-2">
-            - <strong>Payload:</strong>
-          </p>
-          <CodeBlock
-            code={`{
+      <h3 className="mt-5 text-white font-semibold">Simulate Swap</h3>
+      <p className="mt-5">
+        <strong>GET /symphony/market/v1beta1/swap</strong> - Returns simulated
+        swap amount.
+      </p>
+      <p className="mt-2">
+        - <strong>Query Parameters:</strong>
+      </p>
+      <ul>
+        <li>
+          <code>offer_coin</code> (string, required): The coin being offered
+          (format: "amount" + "denom", e.g. "1000note").
+        </li>
+        <li>
+          <code>ask_denom</code> (string, required): The denomination to swap
+          to.
+        </li>
+      </ul>
+      <p className="mt-5">
+        <strong>GET /symphony/market/v1beta1/params</strong> - Returns market
+        module parameters.
+      </p>
+      <p className="mt-5">
+        <strong>GET /symphony/market/v1beta1/exchange_requirements</strong> -
+        Returns exchange requirements information.
+      </p>
+      <p className="mt-5">
+        <strong>POST /cosmos.tx.v1beta1/txs</strong> - Sends a swap transaction.
+      </p>
+      <p className="mt-2">
+        - <strong>Payload:</strong>
+      </p>
+      <CodeBlock
+        code={`{
   "tx": {
     "body": {
       "messages": [
@@ -254,14 +245,14 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
     "signatures": ["base64signature"]
   }
 }`}
-          />
+      />
 
-          <p className="mt-5">
-            <strong>POST /cosmos.tx.v1beta1/txs</strong> - Swaps tokens and
-            sends them to another address.
-          </p>
-          <CodeBlock
-            code={`{
+      <p className="mt-5">
+        <strong>POST /cosmos.tx.v1beta1/txs</strong> - Swaps tokens and sends
+        them to another address.
+      </p>
+      <CodeBlock
+        code={`{
   "tx": {
     "body": {
       "messages": [
@@ -278,13 +269,13 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
     "signatures": ["base64signature"]
   }
 }`}
-          />
+      />
 
-          <p className="mt-5">
-            <strong>MsgSwap</strong> - Swaps one denomination for another.
-          </p>
-          <CodeBlock
-            code={`{
+      <p className="mt-5">
+        <strong>MsgSwap</strong> - Swaps one denomination for another.
+      </p>
+      <CodeBlock
+        code={`{
   "type": "symphony/MsgSwapSend",
   "value": {
     "from_address": "symphony1exampleaddress",
@@ -293,81 +284,80 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
     "ask_denom": "usdt"
   }
 }`}
-          />
-        </div>
+      />
+    </div>
 
-        {/* Mint Module */}
-        <div id={HEADINGS[4].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[4].label}
-          </h2>
-          <p className="mt-5">
-            <strong>GET /symphony/mint/v1beta1/params</strong> - Returns the
-            current minting module parameters.
-          </p>
-          <p className="mt-5">
-            <strong>GET /symphony/mint/v1beta1/epoch_provisions</strong> -
-            Returns the current minting epoch provisions value.
-          </p>
-        </div>
+    {/* Mint Module */}
+    <div id={HEADINGS[4].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[4].label}
+      </h2>
+      <p className="mt-5">
+        <strong>GET /symphony/mint/v1beta1/params</strong> - Returns the current
+        minting module parameters.
+      </p>
+      <p className="mt-5">
+        <strong>GET /symphony/mint/v1beta1/epoch_provisions</strong> - Returns
+        the current minting epoch provisions value.
+      </p>
+    </div>
 
-        {/* Oracle Module */}
-        <div id={HEADINGS[5].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[5].label}
-          </h2>
-          <p className="mt-5">
-            <strong>
-              GET /symphony/oracle/v1beta1/denoms/{'{'}denom{'}'}/exchange_rate
-            </strong>{' '}
-            - Returns exchange rate for a specific denomination.
-          </p>
-          <p className="mt-2">
-            - <strong>Path Parameters:</strong>
-          </p>
-          <ul>
-            <li>
-              - <code>denom</code> (string, required): The denomination to
-              query.
-            </li>
-          </ul>
-          <p className="mt-5">
-            <strong>GET /symphony/oracle/v1beta1/denoms/exchange_rates</strong>{' '}
-            - Returns exchange rates for all denominations.
-          </p>
-          <p className="mt-5">
-            <strong>
-              GET /symphony/oracle/v1beta1/denoms/{'{'}denom{'}'}/tobin_tax
-            </strong>{' '}
-            - Returns tobin tax for a specific denomination.
-          </p>
-          <p className="mt-2">
-            - <strong>Path Parameters:</strong>
-          </p>
-          <ul>
-            <li>
-              - <code>denom</code> (string, required): The denomination to
-              query.
-            </li>
-          </ul>
-          <p className="mt-5">
-            <strong>GET /symphony/oracle/v1beta1/denoms/actives</strong> -
-            Returns all active denominations.
-          </p>
-          <p className="mt-5">
-            <strong>GET /symphony/oracle/v1beta1/denoms/vote_targets</strong> -
-            Returns all vote target denominations.
-          </p>
-          <p className="mt-5">
-            <strong>GET /symphony/oracle/v1beta1/params</strong> - Returns
-            oracle module parameters.
-          </p>
-          <p className="mt-5">
-            <strong>POST /cosmos.tx.v1beta1/txs</strong> - Submits an exchange
-            rate prevote.
-          </p>
-          <CodeBlock
-            code={`{
+    {/* Oracle Module */}
+    <div id={HEADINGS[5].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[5].label}
+      </h2>
+      <p className="mt-5">
+        <strong>
+          GET /symphony/oracle/v1beta1/denoms/{'{'}denom{'}'}
+          /exchange_rate
+        </strong>{' '}
+        - Returns exchange rate for a specific denomination.
+      </p>
+      <p className="mt-2">
+        - <strong>Path Parameters:</strong>
+      </p>
+      <ul>
+        <li>
+          - <code>denom</code> (string, required): The denomination to query.
+        </li>
+      </ul>
+      <p className="mt-5">
+        <strong>GET /symphony/oracle/v1beta1/denoms/exchange_rates</strong> -
+        Returns exchange rates for all denominations.
+      </p>
+      <p className="mt-5">
+        <strong>
+          GET /symphony/oracle/v1beta1/denoms/{'{'}denom{'}'}/tobin_tax
+        </strong>{' '}
+        - Returns tobin tax for a specific denomination.
+      </p>
+      <p className="mt-2">
+        - <strong>Path Parameters:</strong>
+      </p>
+      <ul>
+        <li>
+          - <code>denom</code> (string, required): The denomination to query.
+        </li>
+      </ul>
+      <p className="mt-5">
+        <strong>GET /symphony/oracle/v1beta1/denoms/actives</strong> - Returns
+        all active denominations.
+      </p>
+      <p className="mt-5">
+        <strong>GET /symphony/oracle/v1beta1/denoms/vote_targets</strong> -
+        Returns all vote target denominations.
+      </p>
+      <p className="mt-5">
+        <strong>GET /symphony/oracle/v1beta1/params</strong> - Returns oracle
+        module parameters.
+      </p>
+      <p className="mt-5">
+        <strong>POST /cosmos.tx.v1beta1/txs</strong> - Submits an exchange rate
+        prevote.
+      </p>
+      <CodeBlock
+        code={`{
   "tx": {
     "body": {
       "messages": [
@@ -383,13 +373,13 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
     "signatures": ["base64signature"]
   }
 }`}
-          />
-          <p className="mt-5">
-            <strong>POST /cosmos.tx.v1beta1/txs</strong> - Submits an exchange
-            rate vote.
-          </p>
-          <CodeBlock
-            code={`{
+      />
+      <p className="mt-5">
+        <strong>POST /cosmos.tx.v1beta1/txs</strong> - Submits an exchange rate
+        vote.
+      </p>
+      <CodeBlock
+        code={`{
   "tx": {
     "body": {
       "messages": [
@@ -406,13 +396,13 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
     "signatures": ["base64signature"]
   }
 }`}
-          />
-          <p className="mt-5">
-            <strong>POST /cosmos.tx.v1beta1/txs</strong> - Delegates oracle
-            voting rights to another address.
-          </p>
-          <CodeBlock
-            code={`{
+      />
+      <p className="mt-5">
+        <strong>POST /cosmos.tx.v1beta1/txs</strong> - Delegates oracle voting
+        rights to another address.
+      </p>
+      <CodeBlock
+        code={`{
   "tx": {
     "body": {
       "messages": [
@@ -427,108 +417,106 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
     "signatures": ["base64signature"]
   }
 }`}
-          />
-        </div>
+      />
+    </div>
 
-        {/* Treasury Module */}
-        <div id={HEADINGS[6].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[6].label}
-          </h2>
-          <p className="mt-5">
-            <strong>GET /symphony/treasury/v1beta1/tax_rate</strong> - Returns
-            the current tax rate.
-          </p>
-          <p className="mt-5">
-            <strong>GET /symphony/treasury/v1beta1/params</strong> - Returns
-            treasury module parameters.
-          </p>
-        </div>
+    {/* Treasury Module */}
+    <div id={HEADINGS[6].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[6].label}
+      </h2>
+      <p className="mt-5">
+        <strong>GET /symphony/treasury/v1beta1/tax_rate</strong> - Returns the
+        current tax rate.
+      </p>
+      <p className="mt-5">
+        <strong>GET /symphony/treasury/v1beta1/params</strong> - Returns
+        treasury module parameters.
+      </p>
+    </div>
 
-        {/* Stablestaking Module */}
-        <div id={HEADINGS[7].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[7].label}
-          </h2>
+    {/* Stablestaking Module */}
+    <div id={HEADINGS[7].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[7].label}
+      </h2>
 
-          <h3 className="mt-10 text-white font-semibold">Query Endpoints</h3>
+      <h3 className="mt-10 text-white font-semibold">Query Endpoints</h3>
 
-          <p className="mt-5">
-            <strong>GET /symphony/stablestaking/v1beta1/user_unbonding</strong>{' '}
-            – Gets the unbonding entry for a given address and denom.
-          </p>
-          <p className="mt-2">
-            - <strong>Query:</strong> <code>address</code>, <code>denom</code>
-          </p>
+      <p className="mt-5">
+        <strong>GET /symphony/stablestaking/v1beta1/user_unbonding</strong> –
+        Gets the unbonding entry for a given address and denom.
+      </p>
+      <p className="mt-2">
+        - <strong>Query:</strong> <code>address</code>, <code>denom</code>
+      </p>
 
-          <p className="mt-5">
-            <strong>
-              GET /symphony/stablestaking/v1beta1/user_total_unbonding
-            </strong>{' '}
-            – Gets all unbonding entries for a user.
-          </p>
-          <p className="mt-2">
-            - <strong>Query:</strong> <code>address</code>
-          </p>
+      <p className="mt-5">
+        <strong>
+          GET /symphony/stablestaking/v1beta1/user_total_unbonding
+        </strong>{' '}
+        – Gets all unbonding entries for a user.
+      </p>
+      <p className="mt-2">
+        - <strong>Query:</strong> <code>address</code>
+      </p>
 
-          <p className="mt-5">
-            <strong>
-              GET /symphony/stablestaking/v1beta1/user_total_stake
-            </strong>{' '}
-            – Gets the total stake across all denoms for a user.
-          </p>
-          <p className="mt-2">
-            - <strong>Query:</strong> <code>address</code>
-          </p>
+      <p className="mt-5">
+        <strong>GET /symphony/stablestaking/v1beta1/user_total_stake</strong> –
+        Gets the total stake across all denoms for a user.
+      </p>
+      <p className="mt-2">
+        - <strong>Query:</strong> <code>address</code>
+      </p>
 
-          <p className="mt-5">
-            <strong>GET /symphony/stablestaking/v1beta1/user_stake</strong> –
-            Gets stake info for a specific token.
-          </p>
-          <p className="mt-2">
-            - <strong>Query:</strong> <code>address</code>, <code>token</code>
-          </p>
+      <p className="mt-5">
+        <strong>GET /symphony/stablestaking/v1beta1/user_stake</strong> – Gets
+        stake info for a specific token.
+      </p>
+      <p className="mt-2">
+        - <strong>Query:</strong> <code>address</code>, <code>token</code>
+      </p>
 
-          <p className="mt-5">
-            <strong>GET /symphony/stablestaking/v1beta1/stable_pools</strong> –
-            Gets a list of all available staking pools.
-          </p>
+      <p className="mt-5">
+        <strong>GET /symphony/stablestaking/v1beta1/stable_pools</strong> – Gets
+        a list of all available staking pools.
+      </p>
 
-          <p className="mt-5">
-            <strong>GET /symphony/stablestaking/v1beta1/stable_pool</strong> –
-            Gets staking pool details for a specific denom.
-          </p>
-          <p className="mt-2">
-            - <strong>Query:</strong> <code>denom</code>
-          </p>
+      <p className="mt-5">
+        <strong>GET /symphony/stablestaking/v1beta1/stable_pool</strong> – Gets
+        staking pool details for a specific denom.
+      </p>
+      <p className="mt-2">
+        - <strong>Query:</strong> <code>denom</code>
+      </p>
 
-          <p className="mt-5">
-            <strong>GET /symphony/stablestaking/v1beta1/params</strong> – Gets
-            the stable staking module parameters.
-          </p>
+      <p className="mt-5">
+        <strong>GET /symphony/stablestaking/v1beta1/params</strong> – Gets the
+        stable staking module parameters.
+      </p>
 
-          <h3 className="mt-5 text-white font-semibold">Stake Tokens</h3>
-          <p className="mt-5">
-            <strong>POST /symphony/stablestaking/v1beta1/stake_tokens</strong> –
-            Stakes a specified amount of tokens.
-          </p>
-          <p className="mt-2">
-            - <strong>Payload:</strong>
-          </p>
-          <CodeBlock
-            code={`{
+      <h3 className="mt-5 text-white font-semibold">Stake Tokens</h3>
+      <p className="mt-5">
+        <strong>POST /symphony/stablestaking/v1beta1/stake_tokens</strong> –
+        Stakes a specified amount of tokens.
+      </p>
+      <p className="mt-2">
+        - <strong>Payload:</strong>
+      </p>
+      <CodeBlock
+        code={`{
   "staker": "symphony1exampleaddress",
   "amount": {
     "denom": "note",
     "amount": "1000"
   }
 }`}
-          />
-          <p className="mt-2">
-            - <strong>Response:</strong>
-          </p>
-          <CodeBlock
-            code={`{
+      />
+      <p className="mt-2">
+        - <strong>Response:</strong>
+      </p>
+      <CodeBlock
+        code={`{
   "staker": "symphony1exampleaddress",
   "amount": {
     "denom": "note",
@@ -537,30 +525,30 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
   "total_staked": "1000000",
   "total_shares": "999000"
 }`}
-          />
+      />
 
-          <h3 className="mt-10 text-white font-semibold">Unstake Tokens</h3>
-          <p className="mt-5">
-            <strong>POST /symphony/stablestaking/v1beta1/unstake_tokens</strong>{' '}
-            – Initiates unstaking of a previously staked token amount.
-          </p>
-          <p className="mt-2">
-            - <strong>Payload:</strong>
-          </p>
-          <CodeBlock
-            code={`{
+      <h3 className="mt-10 text-white font-semibold">Unstake Tokens</h3>
+      <p className="mt-5">
+        <strong>POST /symphony/stablestaking/v1beta1/unstake_tokens</strong> –
+        Initiates unstaking of a previously staked token amount.
+      </p>
+      <p className="mt-2">
+        - <strong>Payload:</strong>
+      </p>
+      <CodeBlock
+        code={`{
   "staker": "symphony1exampleaddress",
   "amount": {
     "denom": "note",
     "amount": "1000"
   }
 }`}
-          />
-          <p className="mt-2">
-            - <strong>Response:</strong>
-          </p>
-          <CodeBlock
-            code={`{
+      />
+      <p className="mt-2">
+        - <strong>Response:</strong>
+      </p>
+      <CodeBlock
+        code={`{
   "staker": "symphony1exampleaddress",
   "amount": {
     "denom": "note",
@@ -569,38 +557,35 @@ async function executeSwap(client, fromAddress, recipientAddress, offerCoin, ask
   "total_staked": "900000",
   "total_shares": "899000"
 }`}
-          />
-        </div>
-
-        {/* Example Section */}
-        <div id={HEADINGS[8].id} className="mt-15">
-          <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-            {HEADINGS[8].label}
-          </h2>
-          <p className="mt-10">
-            The following are link examples for utilization of the above
-            andpoints, as used in our own Aria wallet. Be sure to check imports,
-            as these use TypeScript and our SymphonyJS implementation!
-          </p>
-          <ul className="mt-10">
-            {EXAMPLE_LINKS.map(item => (
-              <li key={String(item)} className="mb-4">
-                <p>
-                  -{' '}
-                  <Link
-                    target="_blank"
-                    to={item.href}
-                    className="text-blue hover:text-blue-darker"
-                  >
-                    {item.title}
-                  </Link>
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <SectionNavigator navigationItems={NAVIGATION_ITEMS} />
+      />
     </div>
-  </div>
+
+    {/* Example Section */}
+    <div id={HEADINGS[8].id} className="mt-15">
+      <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+        {HEADINGS[8].label}
+      </h2>
+      <p className="mt-10">
+        The following are link examples for utilization of the above andpoints,
+        as used in our own Aria wallet. Be sure to check imports, as these use
+        TypeScript and our SymphonyJS implementation!
+      </p>
+      <ul className="mt-10">
+        {EXAMPLE_LINKS.map(item => (
+          <li key={String(item)} className="mb-4">
+            <p>
+              -{' '}
+              <Link
+                target="_blank"
+                to={item.href}
+                className="text-blue hover:text-blue-darker"
+              >
+                {item.title}
+              </Link>
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </DocumentationLayout>
 );
