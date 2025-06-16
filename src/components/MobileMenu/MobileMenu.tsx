@@ -18,14 +18,14 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
   toggle,
 }) => (
   <aside
-    className={cn(
-      'fixed right-0 top-0 w-full h-screen px-[25px] py-20 transition-transform ease-in-out duration-300 bg-background-black z-[5] translate-x-full',
-      opened && 'translate-x-0',
-    )}
-  >
-    <div className="flex flex-col items-center mt-16">
-      <NavItems items={links} onClick={toggle} className="flex-col gap-5" />
-      <SocialLinks className="mt-10" linkClassName="text-white" />
-    </div>
+  className={cn(
+    'fixed right-0 top-0 w-full h-screen px-[25px] py-20 transition-transform ease-in-out duration-300 bg-background-black z-[5] translate-x-full',
+    opened && 'translate-x-0',
+  )}
+>
+  <div className="flex flex-col items-center mt-16 overflow-y-auto max-h-[calc(100vh-8rem)] px-2">
+    <NavItems items={links} onClick={toggle} className="flex-col gap-5" />
+    <SocialLinks className="mt-10" linkClassName="text-white" />
+  </div>
   </aside>
 );
