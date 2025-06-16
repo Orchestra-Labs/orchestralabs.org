@@ -64,7 +64,7 @@ export const BasicDetails = () => (
         {HEADINGS[1].label}
       </h2>
       <p className="mt-5">
-        Everyone in the Symphony Discord server will start off with the Attendee
+        Everyone in the Symphony Discord server will start off with the Verified
         role. As a result, everyone on Discord is automatically entered into the
         Ambassador Program! Writers, designers, developers, traders, memers, and
         more are welcome to join!

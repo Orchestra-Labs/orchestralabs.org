@@ -1,7 +1,7 @@
 import { DocumentationLayout } from '@/components';
 import { NavItem } from '@/types';
 import {
-  ATTENDEE_RESPONSIBILITIES,
+  VERIFIED_RESPONSIBILITIES,
   CONCERTMASTER_RESPONSIBILITIES,
   CONCERTMASTER_TASKS,
   INSTRUMENTALIST_RESPONSIBILITIES,
@@ -9,7 +9,7 @@ import {
   KOL_CRITERIA,
   SOLOIST_RESPONSIBILITIES,
   SOLOIST_TASKS,
-  ATTENDEE_TASKS,
+  VERIFIED_TASKS,
 } from './levelTasksAndResponsibilities';
 import { Link } from 'react-router-dom';
 
@@ -30,10 +30,10 @@ const HEADINGS = {
 
 const LEVEL_DETAILS = {
   reach: {
-    attendee: {
-      id: 'reaching-attendee',
-      label: 'Attendee',
-      href: '#reaching-attendee',
+    verified: {
+      id: 'reaching-verified',
+      label: 'Verified',
+      href: '#reaching-verified',
     },
     amplifier: {
       id: 'reaching-amplifier',
@@ -57,10 +57,10 @@ const LEVEL_DETAILS = {
     },
   },
   responsibilities: {
-    attendee: {
-      id: 'attendee-responsibilities',
-      label: 'Attendee',
-      href: '#attendee-responsibilities',
+    verified: {
+      id: 'verified-responsibilities',
+      label: 'Verified',
+      href: '#verified-responsibilities',
     },
     amplifier: {
       id: 'amplifier-responsibilities',
@@ -96,7 +96,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[1].label,
     href: `#${HEADINGS[1].id}`,
     subList: [
-      LEVEL_DETAILS.reach.attendee,
+      LEVEL_DETAILS.reach.verified,
       LEVEL_DETAILS.reach.amplifier,
       LEVEL_DETAILS.reach.instrumentalist,
       LEVEL_DETAILS.reach.concertmaster,
@@ -108,7 +108,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
     label: HEADINGS[2].label,
     href: `#${HEADINGS[2].id}`,
     subList: [
-      LEVEL_DETAILS.responsibilities.attendee,
+      LEVEL_DETAILS.responsibilities.verified,
       LEVEL_DETAILS.responsibilities.amplifier,
       LEVEL_DETAILS.responsibilities.instrumentalist,
       LEVEL_DETAILS.responsibilities.concertmaster,
@@ -131,12 +131,12 @@ export const LevelProgression = () => (
         {HEADINGS[1].label}
       </h2>
 
-      <p id={LEVEL_DETAILS.reach.attendee.id} className="mt-8"></p>
+      <p id={LEVEL_DETAILS.reach.verified.id} className="mt-8"></p>
       <h3 className="text-h5 font-semibold text-blue">
-        {LEVEL_DETAILS.reach.attendee.label}:
+        {LEVEL_DETAILS.reach.verified.label}:
       </h3>
       <ul className="list-disc pl-5 mt-4">
-        {ATTENDEE_TASKS.map(task => (
+        {VERIFIED_TASKS.map(task => (
           <p key={String(task)} className="mb-4">
             - {task}
           </p>
@@ -223,12 +223,12 @@ export const LevelProgression = () => (
         {HEADINGS[2].label}
       </h2>
 
-      <p id={LEVEL_DETAILS.responsibilities.attendee.id} className="mt-8"></p>
+      <p id={LEVEL_DETAILS.responsibilities.verified.id} className="mt-8"></p>
       <h3 className="text-h5 font-semibold text-blue">
-        {LEVEL_DETAILS.responsibilities.attendee.label}:
+        {LEVEL_DETAILS.responsibilities.verified.label}:
       </h3>
       <ul className="list-disc pl-5 mt-4">
-        {ATTENDEE_RESPONSIBILITIES.map(responsibility => (
+        {VERIFIED_RESPONSIBILITIES.map(responsibility => (
           <p key={String(responsibility)} className="mb-4">
             - {responsibility}
           </p>

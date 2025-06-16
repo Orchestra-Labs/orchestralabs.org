@@ -1,4 +1,4 @@
-export const ATTENDEE_TASKS = ['Join us on Discord.'];
+export const VERIFIED_TASKS = ['Join us on Discord.'];
 
 export const AMPLIFIER_TASKS = [
   'Follow Orchestra Labs on Twitter.',
@@ -33,7 +33,7 @@ export const KOL_CRITERIA = [
   'Own a group with 1K+ real members',
 ];
 
-export const ATTENDEE_RESPONSIBILITIES = [
+export const VERIFIED_RESPONSIBILITIES = [
   'Engage broadly and actively in community activities.',
 ];
 
