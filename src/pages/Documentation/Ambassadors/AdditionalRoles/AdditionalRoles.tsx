@@ -2,7 +2,7 @@ import { DocumentationLayout } from '@/components';
 import { NavItem } from '@/types';
 
 const HEADINGS = {
-  0: { id: 'role-details', label: 'Role Details' },
+  0: { id: 'additional-roles', label: 'Additional Roles' },
   1: {
     id: 'socialite',
     label: 'Socialite',
@@ -74,7 +74,11 @@ const PROMOTER_BENEFIT = [
 
 export const AdditionaRoles = () => (
   <DocumentationLayout navigationItems={NAVIGATION_ITEMS} heading={HEADINGS[0]}>
-    <p className="mt-10">Additional roles not in the regular level system:</p>
+    <p className="mt-10">
+      We also have additional roles that don't stand in the regulat level
+      system. These can be gained (and lost) by level of activity in certain
+      areas:
+    </p>
 
     <div id={HEADINGS[1].id} className="mt-15">
       <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
