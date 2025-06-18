@@ -5,12 +5,12 @@ import { Check } from '@/assets/icons';
 
 const HEADINGS = {
   0: {
-    id: 'level-benefits',
-    label: 'Level Benefits',
+    id: 'Benefits',
+    label: 'Benefits',
   },
   1: {
-    id: 'level-benefits',
-    label: 'Level Benefits',
+    id: 'By Level',
+    label: 'By Level',
   },
 };
 
