@@ -1,5 +1,5 @@
 export const LEVELS = [
-  'Attendee',
+  'Verified',
   'Amplifier',
   'Instrumentalist',
   'Concertmaster',
@@ -25,7 +25,7 @@ export const BENEFITS_MAP: Record<number, string> = {
 };
 
 export const LEVELS_MAP: Record<string, Record<number, boolean>> = {
-  Attendee: {
+  Verified: {
     1: true,
     2: false,
     3: false,
