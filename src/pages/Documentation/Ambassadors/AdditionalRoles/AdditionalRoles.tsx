@@ -45,6 +45,7 @@ const PROMOTER_HOW_TO_GET = [
 ];
 
 const SOCIALITE_BENEFIT = [
+  'Earn 10% bonus on advice, questions, and similar contributions in Discord Events scoring',
   'Access to group with Mods and Orchestra Labs team',
   'Opportunity for virtual hangouts with team',
   'Early access to Symphony projects and dApps',
@@ -52,22 +53,22 @@ const SOCIALITE_BENEFIT = [
 ];
 
 const ARTIST_BENEFIT = [
+  'Earn 10% bonus on posts, images, and similar contributions in Discord Events scoring',
   'Addition to featured list on Twitter (improved chances of retweets)',
-  'Extra Discord XP per image after reaching First Chair',
   'Increased likelihood of promotion via community leaders',
   'New role',
 ];
 
 const SATIRIST_BENEFIT = [
+  'Earn 10% bonus on posts, memes, and similar contributions in Discord Events scoring',
   'Addition to featured list on Twitter (improved chances of retweets)',
-  'Extra Discord XP per meme after reaching First Chair',
   'Increased likelihood of promotion via community leaders',
   'New role',
 ];
 
 const PROMOTER_BENEFIT = [
+  'Earn 10% bonus on posts, invites, and similar contributions in Discord Events scoring',
   'Addition to featured list on Twitter (improved chances of retweets)',
-  'Extra Discord XP per tweet after reaching First Chair',
   'Increased likelihood of promotion via community leaders',
   'New role',
 ];
