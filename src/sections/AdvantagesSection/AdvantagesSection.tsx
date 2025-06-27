@@ -1,21 +1,21 @@
 const ROWS = [
   {
     id: 1,
-    title: 'Every Currency',
-    subtitle: 'Pay in your currency!',
-    shadowText: 'Every currency',
+    title: 'Any Currency',
+    subtitle: 'Pay in anything!',
+    shadowText: 'Any currency',
   },
   {
     id: 2,
-    title: 'Every Metal',
-    subtitle: 'Save however you like!',
-    shadowText: 'Every metal',
+    title: 'Any Metal',
+    subtitle: 'Save in anything!',
+    shadowText: 'Any metal',
   },
   {
     id: 3,
-    title: 'Earning Yield',
-    subtitle: 'Gain APY on any medium!',
-    shadowText: 'Earning Yield',
+    title: 'Any Stablecoin',
+    subtitle: 'Simplify your experience!',
+    shadowText: 'Any Stablecoin',
   },
 ];
 

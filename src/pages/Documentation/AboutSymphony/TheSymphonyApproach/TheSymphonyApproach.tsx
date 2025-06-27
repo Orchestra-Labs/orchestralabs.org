@@ -10,10 +10,14 @@ import testNetDropTest from '@/assets/images/dev-net-drop-test-data.png';
 
 const HEADINGS = {
   0: { id: 'symphony-approach', label: "Symphony's Approach" },
-  1: { id: 'the-rock-in-the-river', label: 'The Rock in the River' },
-  2: { id: 'the-dual-elasticity-system', label: 'The Dual-Elasticity System' },
-  3: { id: 'other-safeguards', label: 'Other Safeguards' },
-  4: { id: 'proof-it-works', label: 'Proof it Works' },
+  1: {
+    id: 'stablecoin-interchangeability',
+    label: 'Stablecoin Interchangeability',
+  },
+  2: { id: 'the-rock-in-the-river', label: 'The Rock in the River' },
+  3: { id: 'the-dual-elasticity-system', label: 'The Dual-Elasticity System' },
+  4: { id: 'other-safeguards', label: 'Other Safeguards' },
+  5: { id: 'proof-it-works', label: 'Proof it Works' },
 };
 
 const NAVIGATION_ITEMS: NavItem[] = [
@@ -22,6 +26,7 @@ const NAVIGATION_ITEMS: NavItem[] = [
   { id: '2', label: HEADINGS[2].label, href: `#${HEADINGS[2].id}` },
   { id: '3', label: HEADINGS[3].label, href: `#${HEADINGS[3].id}` },
   { id: '4', label: HEADINGS[4].label, href: `#${HEADINGS[4].id}` },
+  { id: '5', label: HEADINGS[5].label, href: `#${HEADINGS[5].id}` },
 ];
 
 export const TheSymphonyApproach = () => {
@@ -40,10 +45,9 @@ export const TheSymphonyApproach = () => {
         </Link>
         {', '}
         stablecoins of all types have had their issues. Symphony, however,
-        addresses these issues by combining the best aspects of various
-        approaches with multiple safeguards. Its dual-elasticity system is both
-        algorithmic and crypto-backed, while focusing on supply-side solutions
-        rather than price-side patches.
+        addresses these issues both by combining the best aspects of various
+        approaches with multiple safeguards and offering interchangeability
+        between current options.
       </p>
 
       <div id={HEADINGS[1].id} className="mt-15">
@@ -51,11 +55,31 @@ export const TheSymphonyApproach = () => {
           {HEADINGS[1].label}
         </h2>
         <p className="mt-5">
-          Symphony's price comes from information cleaning and middle-market
-          pricing. This avoiding of price discovery prevents falling off peg.
-          This information cleaning approach is Symphony's first balancer,
-          removing the depeg possibility and allowing us to focus on the supply
-          of collateral alone.
+          On Symphony we don't just offer stablecoins, we offer the connective
+          tissue between them. Our system enables automatic trading between
+          stablecoins depending on the user’s needs. Whether you hold USDT,
+          EURC, or local currency-backed assets, Symphony makes them
+          interchangeable in real-time. This removes friction from cross-border
+          payments and stablecoin utility, allowing the right asset to flow
+          wherever it’s needed. Further, any profits from trades between
+          stablecoins go directly to supporting our reserves, enabling
+          additional security with our own stablecoin suite!
+        </p>
+      </div>
+
+      <div id={HEADINGS[2].id} className="mt-15">
+        <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
+          {HEADINGS[2].label}
+        </h2>
+        <p className="mt-5">
+          Symphony's stablecoin suite operates on a dual-elasticity system that
+          allows for overcollateralization over time, lowering initial price
+          entry while keeping a high level of security. The prices for the
+          stablecoins in this suite come from information cleaning and
+          middle-market exchange rates. This avoiding of price discovery
+          prevents falling off peg. This information cleaning approach is
+          Symphony's first balancer, removing the depeg possibility and allowing
+          us to focus on the supply of collateral alone.
         </p>
         <ImageModal
           imageSrc={supplySideRebalancing}
@@ -63,9 +87,9 @@ export const TheSymphonyApproach = () => {
         />
       </div>
 
-      <div id={HEADINGS[2].id} className="mt-15">
+      <div id={HEADINGS[3].id} className="mt-15">
         <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-          {HEADINGS[2].label}
+          {HEADINGS[3].label}
         </h2>
         <p className="mt-5">
           Symphony's crypto-backed nature comes into play with the second of its
@@ -85,9 +109,9 @@ export const TheSymphonyApproach = () => {
         </p>
       </div>
 
-      <div id={HEADINGS[3].id} className="mt-15">
+      <div id={HEADINGS[4].id} className="mt-15">
         <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-          {HEADINGS[3].label}
+          {HEADINGS[4].label}
         </h2>
         <p className="mt-5">
           While either of the previous two safeguards would have prevented the
@@ -99,9 +123,9 @@ export const TheSymphonyApproach = () => {
         </p>
       </div>
 
-      <div id={HEADINGS[4].id} className="mt-15">
+      <div id={HEADINGS[5].id} className="mt-15">
         <h2 className="text-h4 md:text-h3 xl:text-h1 font-semibold text-white">
-          {HEADINGS[4].label}
+          {HEADINGS[5].label}
         </h2>
         <p className="mt-5">
           At Orchestra Labs, unlike other stablecoins, we don't ask you to

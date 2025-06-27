@@ -16,7 +16,7 @@ export const HeroSection = () => (
         </h1>
         <p className="text-grey text-body-md md:text-body-lg xl:text-body-xl mt-5">
           {/* Releasing soon via IDO */}
-          Earn yield on anything!
+          Any stablecoin, any chain. Just a click away!
         </p>
         <Link
           to={SOCIAL_LINKS[1].href}
