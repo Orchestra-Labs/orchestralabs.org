@@ -46,6 +46,29 @@ export const SOCIAL_LINKS = [
   { id: '5', href: 'https://linktr.ee/OrchestraLabs', Icon: LinkTree },
 ];
 
+export enum ExternalLinks {
+  OSMOSIS_POOL = 'https://app.osmosis.zone/pool/3084',
+  GOOGLE_EXTENSION_STORE = 'https://chromewebstore.google.com/detail/cgghllcclkhfpkjhgomhehlebgphifbm/preview?hl=en&authuser=0',
+}
+
+export enum ExternalLinkLabels {
+  OSMOSIS_POOL = 'Osmosis Pool',
+  GOOGLE_EXTENSION_STORE = 'Google Extension Store',
+}
+
+export const SYMPHONY_LINKS = {
+  [ExternalLinkLabels.OSMOSIS_POOL]: {
+    id: 'Osmosis Pool',
+    href: ExternalLinks.OSMOSIS_POOL,
+    Icon: undefined,
+  },
+  [ExternalLinkLabels.GOOGLE_EXTENSION_STORE]: {
+    id: 'Google Extension Store',
+    href: ExternalLinks.GOOGLE_EXTENSION_STORE,
+    Icon: XIcon,
+  },
+};
+
 export const FOOTER_LINKS = [
   {
     id: '1',

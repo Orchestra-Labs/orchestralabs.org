@@ -13,6 +13,7 @@ import image1 from '@/assets/images/info-image1.png';
 import image2 from '@/assets/images/info-image2.png';
 import image3 from '@/assets/images/info-image3.png';
 import { ROUTES } from '@/config/';
+import { ExternalLinks } from '@/constants';
 
 const BENEFITS_ROWS = [
   {
@@ -42,7 +43,7 @@ const FEATURED_LINKS_ROWS = [
     src: image4,
     title: 'Create a Wallet',
     description: 'Get started on your blockchain journey!',
-    link: ROUTES.DOCUMENTATION.USERS.CREATE_WALLET,
+    link: ExternalLinks.GOOGLE_EXTENSION_STORE,
     linkLabel: 'Get Started',
   },
   {
