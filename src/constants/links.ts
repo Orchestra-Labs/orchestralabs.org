@@ -48,7 +48,7 @@ export const SOCIAL_LINKS = [
 
 export enum ExternalLinks {
   OSMOSIS_POOL = 'https://app.osmosis.zone/pool/3084',
-  GOOGLE_EXTENSION_STORE = 'https://chromewebstore.google.com/detail/cgghllcclkhfpkjhgomhehlebgphifbm/',
+  GOOGLE_EXTENSION_STORE = 'https://chromewebstore.google.com/detail/aria-wallet/cgghllcclkhfpkjhgomhehlebgphifbm',
 }
 
 export enum ExternalLinkLabels {
