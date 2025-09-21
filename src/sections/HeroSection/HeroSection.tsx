@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { cn } from '@/helpers';
 
 import waves2 from '@/assets/images/waves-test.svg';
-import { ExternalLinkLabels } from '@/constants';
+import { ExternalLinks } from '@/constants';
 
 export const HeroSection = () => (
   <div className="min-h-screen relative">
@@ -19,7 +19,7 @@ export const HeroSection = () => (
           Any stablecoin, any chain. Just a click away!
         </p>
         <Link
-          to={ExternalLinkLabels.GOOGLE_EXTENSION_STORE}
+          to={ExternalLinks.GOOGLE_EXTENSION_STORE}
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
