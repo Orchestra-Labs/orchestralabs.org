@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { cn } from '@/helpers';
 
 import waves2 from '@/assets/images/waves-test.svg';
-import { SOCIAL_LINKS } from '@/constants';
+import { ExternalLinkLabels } from '@/constants';
 
 export const HeroSection = () => (
   <div className="min-h-screen relative">
@@ -19,7 +19,7 @@ export const HeroSection = () => (
           Any stablecoin, any chain. Just a click away!
         </p>
         <Link
-          to={SOCIAL_LINKS[1].href}
+          to={ExternalLinkLabels.GOOGLE_EXTENSION_STORE}
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
@@ -28,7 +28,7 @@ export const HeroSection = () => (
             'hover:bg-background-dark-grey-hover',
           )}
         >
-          Join our Testnet!
+          Try our Wallet!
         </Link>
       </div>
     </div>
