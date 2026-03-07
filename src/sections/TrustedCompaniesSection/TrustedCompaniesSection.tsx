@@ -43,8 +43,8 @@ export const TrustedCompaniesSection = () => (
         }}
       >
         <SplideTrack>
-          {COMPANIES.map(company => (
-            <SplideSlide key={company.id}>
+          {COMPANIES.map(company => {
+            const content = (
               <div className="bg-background-dark-grey p-5 h-20 flex items-center justify-center">
                 <img
                   className={cn(
@@ -55,8 +55,19 @@ export const TrustedCompaniesSection = () => (
                   alt={company.name}
                 />
               </div>
-            </SplideSlide>
-          ))}
+            );
+            return (
+              <SplideSlide key={company.id}>
+                {company.href ? (
+                  <a href={company.href} target="_blank" rel="noopener noreferrer">
+                    {content}
+                  </a>
+                ) : (
+                  content
+                )}
+              </SplideSlide>
+            );
+          })}
         </SplideTrack>
       </Splide>
     </div>
